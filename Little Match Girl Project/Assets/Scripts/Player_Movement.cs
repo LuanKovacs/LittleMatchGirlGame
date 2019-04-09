@@ -15,20 +15,15 @@ public class Player_Movement : MonoBehaviour
     public float moveSpeed = 6f;
     public Animator anim;
 
-    bool jump = false;
-    bool gotHit = false;
     Vector3 movement;
     Vector3 forward, right;
     Rigidbody playerRigidbody;
     int floorMask;
-    int platformMask;
     float camRayLength = 100f;
 
     void Awake()
     {
-        floorMask = LayerMask.GetMask("worldFloor");
-        platformMask = LayerMask.GetMask("Platform");
-
+        floorMask = LayerMask.GetMask("worldFloor");;
         playerRigidbody = GetComponent<Rigidbody>();
 
         forward = Camera.main.transform.forward;
