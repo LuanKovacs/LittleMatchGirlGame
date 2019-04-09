@@ -582,6 +582,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PS_Parent
       objectReference: {fileID: 0}
+    - target: {fileID: 6516168474449721135, guid: eac92f7535297bd4880e721c538b5ec4,
+        type: 3}
+      propertyPath: m_TagString
+      value: Bonfire
+      objectReference: {fileID: 0}
     - target: {fileID: 6519281800432781929, guid: eac92f7535297bd4880e721c538b5ec4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -639,3 +644,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eac92f7535297bd4880e721c538b5ec4, type: 3}
+--- !u!1 &6737749131917585755 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6516168474449721135, guid: eac92f7535297bd4880e721c538b5ec4,
+    type: 3}
+  m_PrefabInstance: {fileID: 571780780809280116}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6737749131917585756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6737749131917585755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc32c07e4abfec8459c8191a6741ccd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
