@@ -14,6 +14,7 @@ public class Enemy_AI : MonoBehaviour
     public float maxEnemyHP;
     public float curEnemyHP;
     public float atkDmanage;
+    public GameObject hurtBox;
     public Transform head;
     public float turnSpeed = 3f;
 
@@ -31,6 +32,11 @@ public class Enemy_AI : MonoBehaviour
     void SightDetection()
     {
 
+    }
+
+    void Attack()
+    {
+        
     }
 
     void LookAt()

@@ -170,6 +170,7 @@ MonoBehaviour:
   scareRadius: 8
   fleeRadius: 30
   speed: 5
+  isHunting: 0
   canFlee: 0
 --- !u!1 &8878467156523568798
 GameObject:

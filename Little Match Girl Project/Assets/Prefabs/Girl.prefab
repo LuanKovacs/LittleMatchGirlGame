@@ -145,5 +145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  followRadius: 5
-  moveSpeed: 5
+  isFollowing: 1
+  followDistance: 4
+  speed: 5
+  senseRadius: 25

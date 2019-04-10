@@ -55,7 +55,6 @@ public class EnemyMovement : MonoBehaviour {
         {
             isHunting = true;
             HuntTarget();
-            print("Hunt");
         }
     }
 
@@ -83,7 +82,6 @@ public class EnemyMovement : MonoBehaviour {
                 }
                 agent.destination = transform.position + fleePosition;
                 agent.speed = Mathf.Clamp(fleePosition.magnitude, 0f, speed);
-                print("test fleeing");
             }
             StopCoroutine("Flee");
             yield return null;
@@ -92,7 +90,7 @@ public class EnemyMovement : MonoBehaviour {
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.green;
+        Gizmos.color = Color.black;
         Gizmos.DrawWireSphere(transform.position, scareRadius);
 
         Gizmos.color = Color.yellow;
