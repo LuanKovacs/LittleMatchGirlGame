@@ -13,6 +13,7 @@ public class EnemyMovement : MonoBehaviour {
     public float scareRadius = 10f;
     public float fleeRadius = 10f;
     public float speed;
+    public bool isHunting;
     public bool canFlee;
 
     float distance;
@@ -21,6 +22,7 @@ public class EnemyMovement : MonoBehaviour {
 
     private void Start()
     {
+        isHunting = true;
         HuntTarget();
     }
 
@@ -33,7 +35,7 @@ public class EnemyMovement : MonoBehaviour {
 
     public void HuntTarget()
     {
-        if (agent.enabled == true)
+        if (agent.enabled == true && isHunting)
         {
             target = GameObject.FindGameObjectWithTag("Player");
             agent.destination = target.transform.position;
@@ -49,8 +51,9 @@ public class EnemyMovement : MonoBehaviour {
             StartCoroutine("Flee");
             canFlee = true;
         }
-        else if (!canFlee)
+        else if (!canFlee && !isHunting)
         {
+            isHunting = true;
             HuntTarget();
             print("Hunt");
         }
