@@ -45,9 +45,9 @@ public class Player_Health : MonoBehaviour
     }
 
 
-    public void DamageHP(float hp)
+    public void DamageHP(float damage)
     {
-
+        curHP -= damage;
     }
 
 

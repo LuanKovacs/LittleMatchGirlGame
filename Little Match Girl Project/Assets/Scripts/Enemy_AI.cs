@@ -25,7 +25,7 @@ public class Enemy_AI : MonoBehaviour
     private void Awake()
     {
         target = GameObject.FindGameObjectWithTag("Player");
-
+       
         curEnemyHP = maxEnemyHP;
     }
 
@@ -34,7 +34,7 @@ public class Enemy_AI : MonoBehaviour
 
     }
 
-    void Attack()
+    public void Attack()
     {
         
     }

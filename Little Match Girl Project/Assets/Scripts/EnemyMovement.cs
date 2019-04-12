@@ -14,7 +14,6 @@ public class EnemyMovement : MonoBehaviour {
     public float fleeRadius = 10f;
     public float speed;
     public bool isHunting;
-    public bool canFlee;
 
     float distance;
     int fireMask;
@@ -23,7 +22,6 @@ public class EnemyMovement : MonoBehaviour {
     private void Start()
     {
         isHunting = true;
-        HuntTarget();
     }
 
 	private void Awake()
@@ -35,7 +33,7 @@ public class EnemyMovement : MonoBehaviour {
 
     public void HuntTarget()
     {
-        if (agent.enabled == true && isHunting)
+        if (agent.enabled == true)
         {
             target = GameObject.FindGameObjectWithTag("Player");
             agent.destination = target.transform.position;
@@ -47,13 +45,12 @@ public class EnemyMovement : MonoBehaviour {
         distance = Vector3.Distance(target.transform.position, transform.position);
 
         if (Physics.CheckSphere(transform.position, scareRadius, fireMask))
-        {
-            StartCoroutine("Flee");
-            canFlee = true;
+        { 
+            isHunting = false;
+            StartCoroutine("Flee"); 
         }
-        else if (!canFlee && !isHunting)
+        if (isHunting)// && Physics.CheckSphere(transform.position, scareRadius, fireMask))
         {
-            isHunting = true;
             HuntTarget();
         }
     }
@@ -83,9 +80,9 @@ public class EnemyMovement : MonoBehaviour {
                 agent.destination = transform.position + fleePosition;
                 agent.speed = Mathf.Clamp(fleePosition.magnitude, 0f, speed);
             }
-            StopCoroutine("Flee");
             yield return null;
         }
+        StopCoroutine("Flee");
     }//End Flee
 
     private void OnDrawGizmos()
