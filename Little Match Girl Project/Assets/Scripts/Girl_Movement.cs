@@ -14,15 +14,18 @@ public class Girl_Movement : MonoBehaviour
     public float followDistance = 5f;
     public float speed = 5f;
     public float senseRadius = 15f;
+    public float followRadius = 3f;
 
     float distance;
     int poiMask;
+    int followMask;
     private UnityEngine.AI.NavMeshAgent agent;
 
     private void Awake() 
     {
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         poiMask = LayerMask.GetMask("PointOfInterest");
+        followMask = LayerMask.GetMask("Follow");
         agent.speed = speed;
     }
 
@@ -30,25 +33,38 @@ public class Girl_Movement : MonoBehaviour
     {
         distance = Vector3.Distance(target.transform.position, transform.position);
 
-        FindPOI();
+        //FindPOI();
 
         if (!isFollowing)
         {
-           StartCoroutine("MoveToPOI");
+            StartCoroutine("MoveToPOI");
         }
         else if (distance > followDistance && isFollowing)
         {
             FollowPlayer();
         }
+      
+        //FollowPlayer();
     }
 
     void FollowPlayer()
     {
-       // target = GameObject.FindGameObjectWithTag("Player");
-        agent.destination = target.transform.position;
+        // target = GameObject.FindGameObjectWithTag("Player");
+       agent.destination = target.transform.position;
+
     }
 
-   IEnumerator MoveToPOI()
+    void OnDrawGizmosSelected()
+    {
+        if (target != null)
+        {
+            Gizmos.color = Color.blue;
+            Gizmos.DrawLine(transform.position, target.transform.position);
+        }
+    }
+
+
+    IEnumerator MoveToPOI()
     {
         while (agent.enabled == true)
         {
@@ -92,6 +108,8 @@ public class Girl_Movement : MonoBehaviour
     {
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, senseRadius);
+
+        Gizmos.DrawWireSphere(transform.position, followRadius);
     }
 
 }//End
