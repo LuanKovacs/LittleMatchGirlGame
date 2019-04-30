@@ -17,17 +17,19 @@ public class EnemyMovement : MonoBehaviour {
 
     float distance;
     int fireMask;
+    int playerMask;
     private UnityEngine.AI.NavMeshAgent agent;
 
     private void Start()
     {
-        isHunting = true;
+       // isHunting = true;
     }
 
 	private void Awake()
     {
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         fireMask = LayerMask.GetMask("Fire");
+        playerMask = LayerMask.GetMask("Player");
         agent.speed = speed;
     }
 
@@ -48,7 +50,12 @@ public class EnemyMovement : MonoBehaviour {
         { 
             isHunting = false;
             StartCoroutine("Flee"); 
+        } 
+        else if (!isHunting && Physics.CheckSphere(transform.position, scareRadius, playerMask))
+        {
+            isHunting = true;
         }
+
         if (isHunting)// && Physics.CheckSphere(transform.position, scareRadius, fireMask))
         {
             HuntTarget();
