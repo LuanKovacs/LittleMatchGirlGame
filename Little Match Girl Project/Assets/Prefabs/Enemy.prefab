@@ -59,6 +59,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   damage: 30
+  atkDelay: 5
+  knockbackForce: 1000
 --- !u!1 &8878467155874023311
 GameObject:
   m_ObjectHideFlags: 0
@@ -210,7 +212,7 @@ MonoBehaviour:
   maxEnemyHP: 100
   curEnemyHP: 100
   atkDmanage: 30
-  hurtBox: {fileID: 0}
+  hurtBox: {fileID: 232133781}
   head: {fileID: 8878467157040024806}
   turnSpeed: 3
   chasePlayer: 0

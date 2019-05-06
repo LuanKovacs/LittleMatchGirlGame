@@ -38,9 +38,9 @@ public class Enemy_AI : MonoBehaviour
     {
         distance = Vector3.Distance(target.transform.position, transform.position);
 
-        if(distance < 3f)
+        if(distance < 3f && atkPlayer)
         {
-            Attack();
+         //   Attack();
         } else {}
     }
 
