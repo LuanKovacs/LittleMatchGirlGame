@@ -34,9 +34,19 @@ public class Enemy_AI : MonoBehaviour
 
     }
 
+    void Update()
+    {
+        distance = Vector3.Distance(target.transform.position, transform.position);
+
+        if(distance < 3f)
+        {
+            Attack();
+        } else {}
+    }
+
     public void Attack()
     {
-        
+        hurtBox.SetActive(true);
     }
 
     void LookAt()

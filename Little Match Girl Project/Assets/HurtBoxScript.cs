@@ -36,6 +36,7 @@ public class HurtBoxScript : MonoBehaviour
         {
             canDamage = false;
             playerHPref.DamageHP(damage);
+            gameObject.SetActive(false);
         }
     }
 
