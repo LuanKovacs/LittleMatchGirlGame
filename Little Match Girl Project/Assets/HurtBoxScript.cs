@@ -28,10 +28,11 @@ public class HurtBoxScript : MonoBehaviour
 //      canDamage = true;
     }
 
-    private void OnTriggerStay(Collider other) 
+    private void OnTriggerEnter(Collider other) 
     {
-        if (target && canDamage == true)
+        if (other.tag == "Player")
         {
+             print("testTrigger");
             //  SendDamage();
             StartCoroutine("SendDamage");
         }
@@ -42,8 +43,9 @@ public class HurtBoxScript : MonoBehaviour
     {
         knockbackDir = target.transform.position - transform.position;
 
-        if(canDamage == true)
+        if(canDamage)
         {
+            print("test");
             canDamage = false;
             playerHPref.DamageHP(damage);
 
@@ -52,8 +54,8 @@ public class HurtBoxScript : MonoBehaviour
             //gameObject.SetActive(false
             yield return new WaitForSeconds(atkDelay);
             canDamage = true;
-            yield break;
         }
+         yield break;
     }
 
 

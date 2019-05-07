@@ -64,30 +64,32 @@ public class EnemyMovement : MonoBehaviour {
 
     IEnumerator Flee()
     {
-        while (agent.enabled == true)
-        {
-            if (Physics.CheckSphere(transform.position, fleeRadius, fireMask))
+        if(!isHunting){
+            while (agent.enabled == true)
             {
-                Vector3 fleePosition = new Vector3(0, 0, 0);
+                if (Physics.CheckSphere(transform.position, fleeRadius, fireMask))
+                {
+                    Vector3 fleePosition = new Vector3(0, 0, 0);
 
-                Collider[] hitColliders = Physics.OverlapSphere(transform.position, fleeRadius, fireMask);
-                if (hitColliders.Length > 1)
-                {
-                    for (int i = 0; i < hitColliders.Length; i++)
+                    Collider[] hitColliders = Physics.OverlapSphere(transform.position, fleeRadius, fireMask);
+                    if (hitColliders.Length > 1)
                     {
-                        Vector3 fleeDirection = transform.position - hitColliders[i].transform.position;
-                        fleePosition += fleeDirection.normalized * (10f - fleeDirection.magnitude);
+                        for (int i = 0; i < hitColliders.Length; i++)
+                        {
+                            Vector3 fleeDirection = transform.position - hitColliders[i].transform.position;
+                            fleePosition += fleeDirection.normalized * (10f - fleeDirection.magnitude);
+                        }
                     }
+                    else
+                    {
+                        Vector3 fleeDirection = transform.position - hitColliders[0].transform.position;
+                        fleePosition = fleeDirection.normalized * fleeRadius;
+                    }
+                    agent.destination = transform.position + fleePosition;
+                    agent.speed = Mathf.Clamp(fleePosition.magnitude, 0f, speed);
                 }
-                else
-                {
-                    Vector3 fleeDirection = transform.position - hitColliders[0].transform.position;
-                    fleePosition = fleeDirection.normalized * fleeRadius;
-                }
-                agent.destination = transform.position + fleePosition;
-                agent.speed = Mathf.Clamp(fleePosition.magnitude, 0f, speed);
+                yield return null;
             }
-            yield return null;
         }
         StopCoroutine("Flee");
     }//End Flee
