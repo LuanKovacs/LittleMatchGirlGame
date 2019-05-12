@@ -19,6 +19,7 @@ public class EnemyMovement : MonoBehaviour {
     int fireMask;
     int playerMask;
     private UnityEngine.AI.NavMeshAgent agent;
+    Vector3 fleePosition;
 
     private void Start()
     {
@@ -30,6 +31,7 @@ public class EnemyMovement : MonoBehaviour {
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         fireMask = LayerMask.GetMask("Fire");
         playerMask = LayerMask.GetMask("Player");
+        target = GameObject.FindGameObjectWithTag("Player");
         agent.speed = speed;
     }
 
@@ -69,7 +71,7 @@ public class EnemyMovement : MonoBehaviour {
             {
                 if (Physics.CheckSphere(transform.position, fleeRadius, fireMask))
                 {
-                    Vector3 fleePosition = new Vector3(0, 0, 0);
+                 //   Vector3 fleePosition = new Vector3(0, 0, 0);
 
                     Collider[] hitColliders = Physics.OverlapSphere(transform.position, fleeRadius, fireMask);
                     if (hitColliders.Length > 1)
