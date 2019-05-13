@@ -11,7 +11,7 @@ public class Player_Movement : MonoBehaviour
 {
 
     public bool mouseTurning;
-
+    public bool canMove = true;
     public float moveSpeed = 6f;
     public Animator anim;
 
@@ -37,26 +37,30 @@ public class Player_Movement : MonoBehaviour
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
 
-        Move(h, v);
-        // anim.Play("Run");
- //       Vector3 movement = new Vector3(h, 0f, v);
-
-        Vector3 direction = new Vector3(Input.GetAxis("HorizontalKey"), 0, Input.GetAxis("VerticalKey"));
-        Vector3 rightMovement = right * moveSpeed * Time.deltaTime * Input.GetAxis("HorizontalKey");
-        Vector3 upMovement = forward * moveSpeed * Time.deltaTime * Input.GetAxis("VerticalKey");
-        Vector3 movement = Vector3.Normalize(rightMovement + upMovement);
-
-        movement = Vector3.ClampMagnitude(movement, 1.0f);
-
-        transform.Translate(movement * moveSpeed * Time.fixedDeltaTime, Space.World);
-
-        if (mouseTurning)
+        if (canMove)
         {
-            MouseTurning();
-        } 
-        else
-        {
-            MoveTurn();
+            Move(h, v);
+
+            // anim.Play("Run");
+            //       Vector3 movement = new Vector3(h, 0f, v);
+
+            Vector3 direction = new Vector3(Input.GetAxis("HorizontalKey"), 0, Input.GetAxis("VerticalKey"));
+            Vector3 rightMovement = right * moveSpeed * Time.deltaTime * Input.GetAxis("HorizontalKey");
+            Vector3 upMovement = forward * moveSpeed * Time.deltaTime * Input.GetAxis("VerticalKey");
+            Vector3 movement = Vector3.Normalize(rightMovement + upMovement);
+
+            movement = Vector3.ClampMagnitude(movement, 1.0f);
+
+            transform.Translate(movement * moveSpeed * Time.fixedDeltaTime, Space.World);
+
+            if (mouseTurning)
+            {
+                MouseTurning();
+            }
+            else
+            {
+                MoveTurn();
+            }
         }
     }
 
@@ -92,6 +96,11 @@ public class Player_Movement : MonoBehaviour
 
             playerRigidbody.MoveRotation(wantedRotation);
         }
+    }
+
+    public void Knockback(bool ableToMove)
+    {
+        canMove = ableToMove;
     }
 
 }//End

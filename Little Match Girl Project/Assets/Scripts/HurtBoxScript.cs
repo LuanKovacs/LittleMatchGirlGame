@@ -6,12 +6,11 @@ public class HurtBoxScript : MonoBehaviour
 {
     public GameObject target;
     public float damage = 30;
-    public float atkDelay = 1f;
     public float knockbackForce = 500f;
 
-    bool canDamage;
     Enemy_AI enemyRef;
     Player_Health playerHPref;
+    Player_Movement playerMoveRef;
     Rigidbody playerRBref;
     Vector3 knockbackDir;
 
@@ -20,42 +19,32 @@ public class HurtBoxScript : MonoBehaviour
         enemyRef = GetComponentInParent<Enemy_AI>();
         playerHPref = target.GetComponentInParent<Player_Health>();
         playerRBref = target.GetComponentInParent<Rigidbody>();
-        canDamage = true;
+        playerMoveRef = target.GetComponent<Player_Movement>();
+
     }
 
-    void OnEnable()
-    {
-//      canDamage = true;
-    }
 
     private void OnTriggerEnter(Collider other) 
     {
         if (other.tag == "Player")
         {
              print("testTrigger");
-            //  SendDamage();
-            StartCoroutine("SendDamage");
+              SendDamage();
         }
         else { }
     }
 
-    IEnumerator SendDamage()
+    void SendDamage()
     {
         knockbackDir = target.transform.position - transform.position;
 
-        if(canDamage)
-        {
-            print("test");
-            canDamage = false;
-            playerHPref.DamageHP(damage);
+        print("test");
 
-            playerRBref.AddForce(knockbackDir.normalized * knockbackForce);
+        playerHPref.DamageHP(damage);
 
-            //gameObject.SetActive(false
-            yield return new WaitForSeconds(atkDelay);
-            canDamage = true;
-        }
-         yield break;
+        playerRBref.AddForce(knockbackDir.normalized * knockbackForce);
+        gameObject.SetActive(false);
+
     }
 
 

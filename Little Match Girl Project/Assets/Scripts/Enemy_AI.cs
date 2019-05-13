@@ -13,13 +13,14 @@ public class Enemy_AI : MonoBehaviour
     public GameObject target;
     public float maxEnemyHP;
     public float curEnemyHP;
-    public float atkDmanage;
+    public float atkDamage;
     public GameObject hurtBox;
-    public Transform head;
+//    public Transform head;
     public float turnSpeed = 3f;
 
     public bool chasePlayer;
     public bool atkPlayer;
+    public float atkDelay = 1f;
     float distance;
 
     private void Awake()
@@ -38,18 +39,28 @@ public class Enemy_AI : MonoBehaviour
     {
         distance = Vector3.Distance(target.transform.position, transform.position);
 
-        if(distance < 3f && atkPlayer)
+        if(distance <= 3f && !atkPlayer)
         {
-         //   Attack();
+            print("testAtk");
+            StartCoroutine("Attack");
         } else {}
     }
 
-    public void Attack()
+    IEnumerator Attack()
     {
+
+        atkPlayer = true;
         hurtBox.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        hurtBox.SetActive(false);
+        yield return new WaitForSeconds(atkDelay);     
+        atkPlayer = false;
+        yield break;
+        
     }
 
-    void LookAt()
+
+/*    void LookAt()
     {
         Quaternion wantedRotation = Quaternion.LookRotation(target.transform.position - head.position);
         Quaternion lerpedRotation = Quaternion.Lerp(head.rotation, wantedRotation, turnSpeed * Time.deltaTime);
@@ -67,5 +78,6 @@ public class Enemy_AI : MonoBehaviour
 
         head.rotation = Quaternion.Euler(0, lerpedRotation.eulerAngles.y, 0);
     }
+*/
 
 }//End
