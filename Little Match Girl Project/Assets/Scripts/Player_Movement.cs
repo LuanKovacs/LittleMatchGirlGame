@@ -13,6 +13,8 @@ public class Player_Movement : MonoBehaviour
     public bool mouseTurning;
     public bool canMove = true;
     public float moveSpeed = 6f;
+    public float walkSpeed = 6f;
+    public float sprintSpeed = 8f;
     public Animator anim;
 
     Vector3 movement;
@@ -61,6 +63,15 @@ public class Player_Movement : MonoBehaviour
             {
                 MoveTurn();
             }
+        }
+
+        if (Input.GetKey("left shift"))
+        {
+            moveSpeed = sprintSpeed;
+            
+        } else if (Input.GetKeyUp("left shift"))
+        {
+            moveSpeed = walkSpeed;
         }
     }
 

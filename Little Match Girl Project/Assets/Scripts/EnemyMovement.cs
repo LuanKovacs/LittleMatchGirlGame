@@ -10,6 +10,7 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour {
 
 	public GameObject target;
+    public float alertRadius = 5f;
     public float scareRadius = 10f;
     public float fleeRadius = 10f;
     public float speed;
@@ -19,6 +20,7 @@ public class EnemyMovement : MonoBehaviour {
     int fireMask;
     int playerMask;
     private UnityEngine.AI.NavMeshAgent agent;
+    Enemy_AI enemyAI;
     Vector3 fleePosition;
 
     private void Start()
@@ -29,6 +31,7 @@ public class EnemyMovement : MonoBehaviour {
 	private void Awake()
     {
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+        enemyAI = GetComponent<Enemy_AI>();
         fireMask = LayerMask.GetMask("Fire");
         playerMask = LayerMask.GetMask("Player");
         target = GameObject.FindGameObjectWithTag("Player");
@@ -51,11 +54,13 @@ public class EnemyMovement : MonoBehaviour {
         if (Physics.CheckSphere(transform.position, scareRadius, fireMask))
         { 
             isHunting = false;
-            StartCoroutine("Flee"); 
+            enemyAI.chasePlayer = false;
+            StartCoroutine("Flee");
         } 
-        else if (!isHunting && Physics.CheckSphere(transform.position, scareRadius, playerMask))
+        else if (!isHunting && Physics.CheckSphere(transform.position, alertRadius, playerMask))
         {
             isHunting = true;
+            enemyAI.chasePlayer = true;
         }
 
         if (isHunting)// && Physics.CheckSphere(transform.position, scareRadius, fireMask))
@@ -100,7 +105,8 @@ public class EnemyMovement : MonoBehaviour {
     {
         Gizmos.color = Color.black;
         Gizmos.DrawWireSphere(transform.position, scareRadius);
-
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, alertRadius);
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, fleeRadius);
     }
