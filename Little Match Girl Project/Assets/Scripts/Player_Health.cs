@@ -7,11 +7,16 @@ public class Player_Health : MonoBehaviour
     public float maxHP = 100;
     public float curHP;
     public bool gainHP;
+    bool isDead;
+
+    Player_Movement playerMove;
+    Rigidbody playerRBref;
 
     private void Start() 
     {
         curHP = maxHP;
-
+        playerMove = GetComponent<Player_Movement>();
+         playerRBref = GetComponentInParent<Rigidbody>();
     }
         
     private void Update() 
@@ -31,6 +36,15 @@ public class Player_Health : MonoBehaviour
         if (gainHP == false && curHP >= 0)
         {
             curHP = curHP -= 0.1f * Time.deltaTime;
+        }
+        if(isDead)
+        {
+            playerRBref.velocity = Vector3.zero;
+            playerMove.canMove = false;
+        }
+        else if(curHP <= 0 && !isDead)
+        {
+            isDead = true;
         }
     }
 

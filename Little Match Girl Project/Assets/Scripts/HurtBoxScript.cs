@@ -41,7 +41,7 @@ public class HurtBoxScript : MonoBehaviour
         print("test");
 
         playerHPref.DamageHP(damage);
-
+        
         playerRBref.AddForce(knockbackDir.normalized * knockbackForce);
         gameObject.SetActive(false);
 
