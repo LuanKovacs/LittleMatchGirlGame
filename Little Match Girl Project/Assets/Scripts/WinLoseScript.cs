@@ -14,6 +14,7 @@ public class WinLoseScript : MonoBehaviour
     public GameObject losePanel;
     public GameObject winPanel;
     public GameObject Doors;
+    public GameObject roadBlock;
     public int goalCount;
     public int litBonfires;
     public int sceneNumber;
@@ -35,6 +36,7 @@ public class WinLoseScript : MonoBehaviour
     {
         if (litBonfires == goalCount && !exitOpen)
         {
+            roadBlock.SetActive(false);
             Doors.SetActive(true);
             exitOpen = true;
             gameObject.GetComponent<BoxCollider>().enabled = true;
@@ -47,6 +49,7 @@ public class WinLoseScript : MonoBehaviour
         {
             winPanel.SetActive(true);
             other.GetComponent<Player_Movement>().enabled = false;
+            StartCoroutine("LoadScene1");
         }
     }
 
@@ -59,6 +62,13 @@ public class WinLoseScript : MonoBehaviour
     IEnumerator LoadScene()
     {
         yield return new WaitForSeconds(3);
+        SceneManager.LoadScene(sceneNumber);
+        yield break;
+    }
+
+    IEnumerator LoadScene1()
+    {
+        yield return new WaitForSeconds(5);
         SceneManager.LoadScene(sceneNumber);
         yield break;
     }
