@@ -6,6 +6,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class WinLoseScript : MonoBehaviour
 {
@@ -13,23 +14,30 @@ public class WinLoseScript : MonoBehaviour
     public GameObject losePanel;
     public GameObject winPanel;
     public GameObject Doors;
+    public int goalCount;
+    public int litBonfires;
+    public int sceneNumber;
 
-    public int litBonfires = 0;
     bool exitOpen;
-    // Start is called before the first frame update
-    void Start()
+
+    private void OnEnable()
     {
-        
+        EventManager.StartListening("Dead", Dead);
+    }
+
+    private void OnDisable()
+    {
+        EventManager.StopListening("Dead", Dead);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (litBonfires == 4 && !exitOpen)
+        if (litBonfires == goalCount && !exitOpen)
         {
-            Doors.SetActive(false);
+            Doors.SetActive(true);
             exitOpen = true;
-         //   gameObject.GetComponnet<BoxCollider>().enabled = true;
+            gameObject.GetComponent<BoxCollider>().enabled = true;
         }
     }
 
@@ -38,9 +46,21 @@ public class WinLoseScript : MonoBehaviour
         if(other.tag == "Player")
         {
             winPanel.SetActive(true);
-          //  other.gameObject.GetComponnet<Player_Movement>().enabled = false;
+            other.GetComponent<Player_Movement>().enabled = false;
         }
     }
 
+    void Dead()
+    {
+        losePanel.SetActive(true);
+        StartCoroutine("LoadScene");
+    }
+
+    IEnumerator LoadScene()
+    {
+        yield return new WaitForSeconds(3);
+        SceneManager.LoadScene(sceneNumber);
+        yield break;
+    }
 
 }//End

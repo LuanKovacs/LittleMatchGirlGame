@@ -11,11 +11,12 @@ public class LightBonfireScript : MonoBehaviour
 {
 
     public GameObject partFire;
-
+    WinLoseScript wlref;
+    bool lit;
     // Start is called before the first frame update
     void Start()
     {
-        
+        wlref = GameObject.Find("winTrigger").GetComponent<WinLoseScript>();
     }
 
     // Update is called once per frame
@@ -26,9 +27,11 @@ public class LightBonfireScript : MonoBehaviour
 
     void OnTriggerEnter(Collider other) 
     {
-        if(other.gameObject.tag == "Player")
+        if(other.gameObject.tag == "Player" && !lit)
         {
+            lit = true;
             partFire.SetActive(true);
+            wlref.litBonfires += 1;
         }
     }
 }//End

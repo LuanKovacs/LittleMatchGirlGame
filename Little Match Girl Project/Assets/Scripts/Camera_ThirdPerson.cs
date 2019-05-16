@@ -52,43 +52,43 @@ public class Camera_ThirdPerson : MonoBehaviour
         }
     }
 
-/*    private void Update()
-    {
-        if (canLockOn == true && target == null)
+    /*    private void Update()
         {
-            GetNewTarget();
-        } 
-        else
-        {
-            relPos = target.position - transform.position;
-            newRot = Quaternion.LookRotation(relPos);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, newRot, Time.time * smoothLook);
+            if (canLockOn == true && target == null)
+            {
+                GetNewTarget();
+            } 
+            else
+            {
+                relPos = target.position - transform.position;
+                newRot = Quaternion.LookRotation(relPos);
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, newRot, Time.time * smoothLook);
+            }
+
         }
 
-    }
-
-    void GetNewTarget()
-    {
-
-        GameObject[] possibleTargets;
-        possibleTargets = GameObject.FindGameObjectsWithTag("Enemy");
-
-
-        if (possibleTargets.Length > 0)
+        void GetNewTarget()
         {
-            Vector3 closestTarget = possibleTargets[0].transform.position;
-            float closestDistance = (possibleTargets[0].transform.position - player.position).sqrMagnitude;
-            for (int i = 0; i < possibleTargets.Length; i++)
-            {
-                Vector3 offset = possibleTargets[i].transform.position - player.position;
-                float sqrLen = offset.sqrMagnitude;
-                if (sqrLen < closestDistance)
-                    closestTarget = possibleTargets[i].transform.position;
-                    closestDistance = sqrLen;
 
-                    target = possibleTargets[i].transform;
+            GameObject[] possibleTargets;
+            possibleTargets = GameObject.FindGameObjectsWithTag("Enemy");
+
+
+            if (possibleTargets.Length > 0)
+            {
+                Vector3 closestTarget = possibleTargets[0].transform.position;
+                float closestDistance = (possibleTargets[0].transform.position - player.position).sqrMagnitude;
+                for (int i = 0; i < possibleTargets.Length; i++)
+                {
+                    Vector3 offset = possibleTargets[i].transform.position - player.position;
+                    float sqrLen = offset.sqrMagnitude;
+                    if (sqrLen < closestDistance)
+                        closestTarget = possibleTargets[i].transform.position;
+                        closestDistance = sqrLen;
+
+                        target = possibleTargets[i].transform;
+                    }
                 }
             }
-        }
-*/
+    */
 }//End

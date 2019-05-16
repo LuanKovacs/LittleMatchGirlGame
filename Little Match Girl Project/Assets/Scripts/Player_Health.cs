@@ -41,10 +41,12 @@ public class Player_Health : MonoBehaviour
         {
             playerRBref.velocity = Vector3.zero;
             playerMove.canMove = false;
+            EventManager.TriggerEvent("Dead");
         }
         else if(curHP <= 0 && !isDead)
         {
             isDead = true;
+            //gameObject.tag = "Dead";
         }
     }
 
