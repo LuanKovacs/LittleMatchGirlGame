@@ -103,11 +103,12 @@ MonoBehaviour:
   target: {fileID: 0}
   maxEnemyHP: 100
   curEnemyHP: 100
-  atkDmanage: 30
+  atkDamage: 0
   hurtBox: {fileID: 8857283194001906433}
   turnSpeed: 3
   chasePlayer: 0
   atkPlayer: 0
+  atkDelay: 1
 --- !u!114 &134477923956246546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,6 +122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  alertRadius: 5
   scareRadius: 8
   fleeRadius: 30
   speed: 3
@@ -184,7 +186,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   damage: 30
-  atkDelay: 2
   knockbackForce: 1000
 --- !u!1001 &134477923706921527
 PrefabInstance:

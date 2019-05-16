@@ -474,11 +474,6 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1695840132}
-    - target: {fileID: 8857283194001906444, guid: fa95d4ae59daae64d87bfb9bb3b8cabd,
-        type: 3}
-      propertyPath: knockbackForce
-      value: 500
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa95d4ae59daae64d87bfb9bb3b8cabd, type: 3}
 --- !u!1 &518499141
@@ -543,6 +538,7 @@ MonoBehaviour:
   Doors: {fileID: 518499141}
   goalCount: 3
   litBonfires: 0
+  sceneNumber: 0
 --- !u!1 &597879948 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3879000142147429165, guid: 71ed154f9717e1c459c83e60ea552316,
@@ -678,7 +674,7 @@ PrefabInstance:
     - target: {fileID: 1794021119742313126, guid: 42ee0a00e626a9341a38d56c868d43a0,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1794021119742313126, guid: 42ee0a00e626a9341a38d56c868d43a0,
         type: 3}
@@ -700,11 +696,6 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1695840132}
-    - target: {fileID: 7193095652115747253, guid: 42ee0a00e626a9341a38d56c868d43a0,
-        type: 3}
-      propertyPath: knockbackForce
-      value: 500
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 42ee0a00e626a9341a38d56c868d43a0, type: 3}
 --- !u!1 &818610263
@@ -1376,7 +1367,7 @@ PrefabInstance:
     - target: {fileID: 6800190127136041557, guid: 71ed154f9717e1c459c83e60ea552316,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6800190127136041557, guid: 71ed154f9717e1c459c83e60ea552316,
         type: 3}
@@ -1392,11 +1383,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5394980873160712592, guid: 71ed154f9717e1c459c83e60ea552316,
-        type: 3}
-      propertyPath: maxHP
-      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71ed154f9717e1c459c83e60ea552316, type: 3}
