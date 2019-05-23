@@ -7,6 +7,7 @@ public class Player_Health : MonoBehaviour
     public float maxHP = 100;
     public float curHP;
     public bool gainHP;
+    public float drainHP = 0.1f;
     bool isDead;
 
     Player_Movement playerMove;
@@ -35,7 +36,7 @@ public class Player_Health : MonoBehaviour
         //drain HP
         if (gainHP == false && curHP >= 0)
         {
-            curHP = curHP -= 0.1f * Time.deltaTime;
+            curHP = curHP -= drainHP * Time.deltaTime;
         }
         if(isDead)
         {
