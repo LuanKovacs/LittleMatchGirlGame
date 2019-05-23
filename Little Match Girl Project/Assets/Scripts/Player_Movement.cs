@@ -12,11 +12,17 @@ public class Player_Movement : MonoBehaviour
 
     public bool mouseTurning;
     public bool canMove = true;
-    public float moveSpeed = 6f;
     public float walkSpeed = 6f;
     public float sprintSpeed = 8f;
     public Animator anim;
 
+    public float maxStam = 100;
+    public float curStam;
+    public bool gainStam = true;
+    public float regenStam = 5.0f;
+    public float drainStam = 0.1f;
+
+    float moveSpeed;
     Vector3 movement;
     Vector3 forward, right;
     Rigidbody playerRigidbody;
@@ -32,6 +38,32 @@ public class Player_Movement : MonoBehaviour
         forward.y = 0;
         forward = Vector3.Normalize(forward);
         right = Quaternion.Euler(new Vector3(0, 90, 0)) * forward;
+    }
+
+    private void Start()
+    {
+        moveSpeed = walkSpeed;
+        curStam = maxStam;
+    }
+
+    private void Update()
+    {
+        //gain HP
+        if (gainStam == true && curStam <= maxStam)
+        {
+            curStam = curStam += regenStam * Time.deltaTime;
+
+            if (curStam > maxStam)
+            {
+                curStam = maxStam;
+            }
+        }
+
+        //drain HP
+        if (curStam >= 0 && Input.GetKey(KeyCode.LeftShift))
+        {
+            curStam = curStam -= drainStam * Time.deltaTime;
+        }
     }
 
     void FixedUpdate()
@@ -67,11 +99,16 @@ public class Player_Movement : MonoBehaviour
 
         if (Input.GetKey("left shift"))
         {
-            moveSpeed = sprintSpeed;
-            
-        } else if (Input.GetKeyUp("left shift"))
-        {
-            moveSpeed = walkSpeed;
+           if(curStam >= 0)
+            {
+                gainStam = false;
+                moveSpeed = sprintSpeed;
+
+            } else if (gainStam == false && curStam <= 0 || Input.GetKeyUp(KeyCode.LeftShift))
+            {
+                gainStam = true;
+                moveSpeed = walkSpeed;
+            }
         }
     }
 
@@ -112,6 +149,11 @@ public class Player_Movement : MonoBehaviour
     public void Knockback(bool ableToMove)
     {
         canMove = ableToMove;
+    }
+
+    private void OnGUI()
+    {
+        GUI.Label(new Rect(10, 20, 100, 20), "Stamina/" + curStam.ToString());
     }
 
 }//End

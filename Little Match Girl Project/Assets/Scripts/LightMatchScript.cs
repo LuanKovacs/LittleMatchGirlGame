@@ -10,14 +10,19 @@ using UnityEngine;
 public class LightMatchScript : MonoBehaviour
 {
     public GameObject match;
-    public int matchCount = 1;
+    public int maxMatches = 3;
+    public int curMatches = 0;
     public bool isLit;
     public float maxMatchTime = 30f;
 
     private void Update() 
     {
-        if (!isLit && Input.GetKeyDown(KeyCode.Space))
+        if (!isLit && Input.GetKeyDown(KeyCode.Space) && curMatches >= 1)
         {
+            if (curMatches > 0)
+            {
+                curMatches -= 1;
+            }
             StartCoroutine("LightMatch");
             print("Space");
         }
@@ -37,5 +42,13 @@ public class LightMatchScript : MonoBehaviour
         print("Test");
     }
 
+    public void GainMatch()
+    {
+        curMatches = maxMatches;
+    }
 
+    private void OnGUI()
+    {
+        GUI.Label(new Rect(10, 30, 100, 20), "Matches/" + curMatches.ToString());
+    }
 }//End

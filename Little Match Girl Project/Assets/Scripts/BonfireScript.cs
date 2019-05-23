@@ -9,18 +9,13 @@ using UnityEngine;
 
 public class BonfireScript : MonoBehaviour
 {
-    Player_Health playerhpRef;
-
-    private void Start()
-    {
-        playerhpRef = GetComponent<Player_Health>();
-    }
 
     void OnTriggerEnter(Collider other) 
     {
         if(other.gameObject.tag == "Player")
         {
             other.gameObject.GetComponent<Player_Health>().GainHP(true);
+            other.gameObject.GetComponent<LightMatchScript>().GainMatch();
         }
 
     }
@@ -32,4 +27,5 @@ public class BonfireScript : MonoBehaviour
             other.gameObject.GetComponent<Player_Health>().GainHP(false);
         }
     }
+
 }//End
