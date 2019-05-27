@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2135953345944681143}
   - component: {fileID: 8360304437302571672}
   - component: {fileID: 8360304437302571673}
-  - component: {fileID: 4089958445239267860}
   m_Layer: 0
   m_Name: Bonfire
   m_TagString: Untagged
@@ -61,13 +60,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   partFire: {fileID: 823423476217535103}
---- !u!65 &4089958445239267860
+--- !u!65 &9132497108978367108
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8360304437302571671}
+  m_GameObject: {fileID: 8823695188581689298}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
@@ -229,6 +228,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 453c06eb08ea44c48acd80cb5b1f0964, type: 3}
+--- !u!1 &8823695188581689298 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 453c06eb08ea44c48acd80cb5b1f0964,
+    type: 3}
+  m_PrefabInstance: {fileID: 8823695188581785970}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8823695188581661682 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 453c06eb08ea44c48acd80cb5b1f0964,

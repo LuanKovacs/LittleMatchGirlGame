@@ -15,6 +15,7 @@ public class EnemyMovement : MonoBehaviour {
     public float fleeRadius = 10f;
     public float speed;
     public bool isHunting;
+    public bool scared;
 
     float distance;
     int fireMask;
@@ -52,14 +53,16 @@ public class EnemyMovement : MonoBehaviour {
         distance = Vector3.Distance(target.transform.position, transform.position);
 
         if (Physics.CheckSphere(transform.position, scareRadius, fireMask))
-        { 
+        {
             isHunting = false;
             enemyAI.chasePlayer = false;
-            StartCoroutine("Flee");
-        } 
+            scared = true;
+            //StartCoroutine("Flee");
+        }
         else if (!isHunting && Physics.CheckSphere(transform.position, alertRadius, playerMask))
         {
             isHunting = true;
+           // scared = false;
             enemyAI.chasePlayer = true;
         }
 
@@ -67,16 +70,23 @@ public class EnemyMovement : MonoBehaviour {
         {
             HuntTarget();
         }
+
+        if (scared)
+        {
+            Flee();
+        }
     }
 
-    IEnumerator Flee()
+    //IEnumerator Flee()
+    void Flee()
     {
-        if(!isHunting){
-            while (agent.enabled == true)
+       // if(!isHunting){
+       //while
+            if (agent.enabled == true)
             {
                 if (Physics.CheckSphere(transform.position, fleeRadius, fireMask))
                 {
-                 //   Vector3 fleePosition = new Vector3(0, 0, 0);
+                    Vector3 fleePosition = new Vector3(0, 0, 0);
 
                     Collider[] hitColliders = Physics.OverlapSphere(transform.position, fleeRadius, fireMask);
                     if (hitColliders.Length > 1)
@@ -95,10 +105,10 @@ public class EnemyMovement : MonoBehaviour {
                     agent.destination = transform.position + fleePosition;
                     agent.speed = Mathf.Clamp(fleePosition.magnitude, 0f, speed);
                 }
-                yield return null;
-            }
+             //   yield return null;
+          //  }
         }
-        StopCoroutine("Flee");
+       // StopCoroutine("Flee");
     }//End Flee
 
     private void OnDrawGizmos()
