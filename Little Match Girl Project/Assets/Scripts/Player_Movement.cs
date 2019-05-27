@@ -22,6 +22,7 @@ public class Player_Movement : MonoBehaviour
     public float regenStam = 5.0f;
     public float drainStam = 0.1f;
 
+    bool sprinting;
     float moveSpeed;
     Vector3 movement;
     Vector3 forward, right;
@@ -97,18 +98,21 @@ public class Player_Movement : MonoBehaviour
             }
         }
 
-        if (Input.GetKey("left shift"))
+        if (Input.GetKey("left shift") && !sprinting)
         {
+            sprinting = true;
            if(curStam >= 0)
             {
                 gainStam = false;
                 moveSpeed = sprintSpeed;
 
-            } else if (gainStam == false && curStam <= 0 || Input.GetKeyUp(KeyCode.LeftShift))
-            {
-                gainStam = true;
-                moveSpeed = walkSpeed;
-            }
+            } 
+        }
+        else if (sprinting)
+        {
+            sprinting = false;
+            gainStam = true;
+            moveSpeed = walkSpeed;
         }
     }
 
