@@ -13,6 +13,9 @@ GameObject:
   - component: {fileID: 6642331854684170045}
   - component: {fileID: 6303690944257025511}
   - component: {fileID: 6639569509496399420}
+  - component: {fileID: 30662724}
+  - component: {fileID: 30662723}
+  - component: {fileID: 30662722}
   m_Layer: 0
   m_Name: Girl
   m_TagString: Untagged
@@ -58,7 +61,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5389938730896543289}
-  m_Enabled: 1
+  m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 0.49999997
   m_Speed: 3.5
@@ -93,7 +96,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5389938730896543289}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa76a9feb71ed2741aa56cdee8c98ae1, type: 3}
   m_Name: 
@@ -103,7 +106,62 @@ MonoBehaviour:
   followDistance: 1
   speed: 9
   senseRadius: 25
-  followRadius: 3
+  followRadius: 1
+--- !u!114 &30662724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5389938730896543289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ecd277ea89f2994da7b85687bb5f556, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mouseTurning: 0
+  canMove: 1
+  walkSpeed: 4
+  sprintSpeed: 7
+  anim: {fileID: 0}
+  maxStam: 100
+  curStam: 0
+  gainStam: 1
+  regenStam: 30
+  drainStam: 50
+--- !u!114 &30662723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5389938730896543289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a704456efe2dfe4d888064a75013d2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 100
+  curHP: 0
+  gainHP: 0
+  drainHP: 0.1
+--- !u!114 &30662722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5389938730896543289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfc65cdc05040f64497049dec68ab100, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  match: {fileID: 0}
+  maxMatches: 2
+  curMatches: 0
+  isLit: 0
+  maxMatchTime: 10
 --- !u!1001 &8568576233208678567
 PrefabInstance:
   m_ObjectHideFlags: 0
