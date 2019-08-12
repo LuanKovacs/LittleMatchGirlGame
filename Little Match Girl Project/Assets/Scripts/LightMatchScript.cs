@@ -33,12 +33,11 @@ public class LightMatchScript : MonoBehaviour
         
         isLit = true;
         match.SetActive(true);
-
+        GetComponent<Player_Health>().GainHP(true);
         yield return new WaitForSeconds(maxMatchTime);
-
         isLit = false;
         match.SetActive(false);
-
+        GetComponent<Player_Health>().GainHP(false);
         print("Test");
     }
 
