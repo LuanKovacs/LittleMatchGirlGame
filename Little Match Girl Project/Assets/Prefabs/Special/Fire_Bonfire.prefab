@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8360304437302571672}
   - component: {fileID: 8360304437302571673}
   m_Layer: 0
-  m_Name: Bonfire
+  m_Name: Fire_Bonfire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,7 +46,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 3
+  m_Radius: 5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8360304437302571673
 MonoBehaviour:
@@ -72,8 +72,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 147.38222, y: 105.064445, z: 147.41151}
-  m_Center: {x: 0, y: 45.32758, z: -0.000022888184}
+  m_Size: {x: 2.2107332, y: 1.5759667, z: 2.2111726}
+  m_Center: {x: 0, y: 0.6799137, z: -0.00000035762787}
 --- !u!65 &9132497108978367108
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -102,17 +102,17 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 869c560f37af1ad41b1ffe6c199a6433,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.02
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 869c560f37af1ad41b1ffe6c199a6433,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.09
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 869c560f37af1ad41b1ffe6c199a6433,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.01
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 869c560f37af1ad41b1ffe6c199a6433,
         type: 3}
@@ -157,18 +157,23 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 869c560f37af1ad41b1ffe6c199a6433,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.018271
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 869c560f37af1ad41b1ffe6c199a6433,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.018271
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 869c560f37af1ad41b1ffe6c199a6433,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.018271
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -1504981713932161579, guid: 869c560f37af1ad41b1ffe6c199a6433,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 54e5dd47459d3ce4f8bcb856e17de350, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 869c560f37af1ad41b1ffe6c199a6433, type: 3}
 --- !u!1 &8782752498798734122 stripped
@@ -194,11 +199,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PS_Fire
-      objectReference: {fileID: 0}
-    - target: {fileID: 6516168474449721135, guid: eac92f7535297bd4880e721c538b5ec4,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6519281800432781929, guid: eac92f7535297bd4880e721c538b5ec4,
         type: 3}
@@ -276,6 +276,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2135953345944681143}
     m_Modifications:
+    - target: {fileID: 100000, guid: 453c06eb08ea44c48acd80cb5b1f0964, type: 3}
+      propertyPath: m_Name
+      value: stone fire pit1_L
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 453c06eb08ea44c48acd80cb5b1f0964, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 453c06eb08ea44c48acd80cb5b1f0964, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -331,14 +339,6 @@ PrefabInstance:
     - target: {fileID: 400000, guid: 453c06eb08ea44c48acd80cb5b1f0964, type: 3}
       propertyPath: m_LocalScale.z
       value: 0.79647064
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 453c06eb08ea44c48acd80cb5b1f0964, type: 3}
-      propertyPath: m_Name
-      value: stone fire pit1_L
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 453c06eb08ea44c48acd80cb5b1f0964, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 453c06eb08ea44c48acd80cb5b1f0964, type: 3}
       propertyPath: m_Materials.Array.data[0]
