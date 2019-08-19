@@ -14,10 +14,14 @@ public class Camera_ThirdPerson : MonoBehaviour
 //    public Transform target;
     
     public bool canFollow = true;
-    public bool canLockOn;
+    //public bool canLockOn;
     public float smoothMove = 5f;
     public float smoothLook = 5f;
   
+    public bool canClamp;
+
+    public Vector3 minCamPos;
+    public Vector3 maxCamPos;
     Vector3 cameraOffsetFromTarget;
     Quaternion newRot;
     Vector3 relPos;
@@ -49,6 +53,11 @@ public class Camera_ThirdPerson : MonoBehaviour
             Quaternion wantedRotation = Quaternion.LookRotation(player.position - transform.position);
             transform.rotation = Quaternion.Lerp(transform.rotation, wantedRotation, Time.time * smoothLook);
             //Smooth look at 
+        }
+        
+        if (canClamp)
+        {
+          //  transform.position = new Vector3(Mathf.Clamp (transform.position.x, minCamPos, maxCamPos), transform.position.y, transform.position.z);
         }
     }
 
