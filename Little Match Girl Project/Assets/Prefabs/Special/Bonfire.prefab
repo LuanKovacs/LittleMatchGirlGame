@@ -107,7 +107,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 869c560f37af1ad41b1ffe6c199a6433,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.03420438
+      value: -0.09
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 869c560f37af1ad41b1ffe6c199a6433,
         type: 3}
@@ -153,6 +153,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 869c560f37af1ad41b1ffe6c199a6433,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.018271
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 869c560f37af1ad41b1ffe6c199a6433,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.018271
+      objectReference: {fileID: 0}
+    - target: {fileID: -4216859302048453862, guid: 869c560f37af1ad41b1ffe6c199a6433,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.018271
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 869c560f37af1ad41b1ffe6c199a6433, type: 3}
@@ -261,14 +276,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2135953345944681143}
     m_Modifications:
-    - target: {fileID: 100000, guid: 453c06eb08ea44c48acd80cb5b1f0964, type: 3}
-      propertyPath: m_Name
-      value: stone fire pit1_L
-      objectReference: {fileID: 0}
-    - target: {fileID: 100000, guid: 453c06eb08ea44c48acd80cb5b1f0964, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 453c06eb08ea44c48acd80cb5b1f0964, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -325,6 +332,18 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.79647064
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 453c06eb08ea44c48acd80cb5b1f0964, type: 3}
+      propertyPath: m_Name
+      value: stone fire pit1_L
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 453c06eb08ea44c48acd80cb5b1f0964, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 453c06eb08ea44c48acd80cb5b1f0964, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 54e5dd47459d3ce4f8bcb856e17de350, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 453c06eb08ea44c48acd80cb5b1f0964, type: 3}
 --- !u!1 &8823695188581689298 stripped
