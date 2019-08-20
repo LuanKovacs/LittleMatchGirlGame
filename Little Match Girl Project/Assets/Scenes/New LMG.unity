@@ -1024,8 +1024,8 @@ Terrain:
   m_TerrainData: {fileID: 15600000, guid: 82724632f184be041bbc7f85ce778fbf, type: 2}
   m_TreeDistance: 5000
   m_TreeBillboardDistance: 50
-  m_TreeCrossFadeLength: 5
-  m_TreeMaximumFullLODCount: 50
+  m_TreeCrossFadeLength: 200
+  m_TreeMaximumFullLODCount: 100
   m_DetailObjectDistance: 80
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
@@ -1501,57 +1501,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6639569509496399420, guid: 8479216ae4f7b1a48bfad669461d667d,
-        type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 30662724, guid: 8479216ae4f7b1a48bfad669461d667d, type: 3}
-      propertyPath: walkSpeed
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 613840120, guid: 8479216ae4f7b1a48bfad669461d667d, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1759567099337768262, guid: 8479216ae4f7b1a48bfad669461d667d,
         type: 3}
-      propertyPath: m_Mass
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6642331854684170045, guid: 8479216ae4f7b1a48bfad669461d667d,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6303690944257025511, guid: 8479216ae4f7b1a48bfad669461d667d,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6303690944257025511, guid: 8479216ae4f7b1a48bfad669461d667d,
-        type: 3}
-      propertyPath: m_Center.y
-      value: 1.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6303690944257025511, guid: 8479216ae4f7b1a48bfad669461d667d,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6303690944257025511, guid: 8479216ae4f7b1a48bfad669461d667d,
-        type: 3}
-      propertyPath: m_Size.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6303690944257025511, guid: 8479216ae4f7b1a48bfad669461d667d,
-        type: 3}
-      propertyPath: m_Center.z
-      value: 0.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 613840122, guid: 8479216ae4f7b1a48bfad669461d667d, type: 3}
-      propertyPath: m_Enabled
-      value: 1
+      propertyPath: m_Drag
+      value: Infinity
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8479216ae4f7b1a48bfad669461d667d, type: 3}

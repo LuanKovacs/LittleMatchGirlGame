@@ -217,6 +217,6 @@ QualitySettings:
     resolutionScalingFixedDPIFactor: 1
     excludedTargetPlatforms: []
   m_PerPlatformDefaultQuality:
-    Android: 0
-    Standalone: 0
+    Android: 4
+    Standalone: 4
     Windows Store Apps: 0
