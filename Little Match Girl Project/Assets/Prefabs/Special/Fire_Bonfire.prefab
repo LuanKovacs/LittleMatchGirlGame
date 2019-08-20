@@ -163,6 +163,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PS_fireBonfire
       objectReference: {fileID: 0}
+    - target: {fileID: 6516168474449721135, guid: eac92f7535297bd4880e721c538b5ec4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6519281800432781929, guid: eac92f7535297bd4880e721c538b5ec4,
         type: 3}
       propertyPath: m_LocalPosition.x
