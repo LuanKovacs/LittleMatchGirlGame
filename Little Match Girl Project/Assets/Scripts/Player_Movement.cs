@@ -1,4 +1,4 @@
-﻿/*Player Character Movement/Jump Script
+﻿ /*Player Character Movement/Jump Script
  * Ricardo III Ticlao
  * 04/06/2019
  */
@@ -49,7 +49,7 @@ public class Player_Movement : MonoBehaviour
 
     private void Update()
     {
-        //gain HP
+        //gain Stam
         if (gainStam == true && curStam <= maxStam)
         {
             curStam = curStam += regenStam * Time.deltaTime;
@@ -60,7 +60,7 @@ public class Player_Movement : MonoBehaviour
             }
         }
 
-        //drain HP
+        //drain Stam
         if (curStam >= 0 && Input.GetKey(KeyCode.LeftShift))
         {
             curStam = curStam -= drainStam * Time.deltaTime;
@@ -100,6 +100,7 @@ public class Player_Movement : MonoBehaviour
 
         if (Input.GetKey("left shift") && !sprinting)
         {
+            //print("Sptrinting");
             sprinting = true;
            if(curStam >= 0)
             {
@@ -108,8 +109,9 @@ public class Player_Movement : MonoBehaviour
 
             } 
         }
-        else if (sprinting)
+        else if (sprinting && Input.GetKeyUp("left shift"))
         {
+           // print("Not Sprinting");
             sprinting = false;
             gainStam = true;
             moveSpeed = walkSpeed;

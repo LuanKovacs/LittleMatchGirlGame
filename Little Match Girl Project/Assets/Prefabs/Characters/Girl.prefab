@@ -5018,7 +5018,7 @@ MonoBehaviour:
   curStam: 0
   gainStam: 1
   regenStam: 30
-  drainStam: 50
+  drainStam: 15
 --- !u!114 &30662723
 MonoBehaviour:
   m_ObjectHideFlags: 0
