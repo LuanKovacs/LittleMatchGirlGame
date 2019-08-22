@@ -21,7 +21,7 @@ public class Player_Health : MonoBehaviour
         curHP = maxHP;
         Ice.canvasRenderer.SetAlpha(0.0f);//Tianna!!!!
         playerMove = GetComponent<Player_Movement>();
-         playerRBref = GetComponentInParent<Rigidbody>();
+        playerRBref = GetComponentInParent<Rigidbody>();
     }
         
     private void Update() 
@@ -30,11 +30,12 @@ public class Player_Health : MonoBehaviour
         if (gainHP == true && curHP <= maxHP)
         {
             curHP = curHP += 10.0f * Time.deltaTime;
-            Ice.CrossFadeAlpha(0, -curHP, false);//Tianna!!!!
+            Ice.CrossFadeAlpha(-curHP,140 , false);//Tianna!!!!
 
             if (curHP > maxHP)
             {
                 curHP = maxHP;
+                Ice.canvasRenderer.SetAlpha(0.0f);//Tianna!!!!
             }
         }
 
@@ -52,7 +53,7 @@ public class Player_Health : MonoBehaviour
         }
         else if(curHP <= 0 && !isDead)
         {
-            Ice.canvasRenderer.SetAlpha(0.0f);//Tianna!!!!
+            Ice.canvasRenderer.SetAlpha(1.0f);//Tianna!!!!
             isDead = true;
             //gameObject.tag = "Dead";
         }
