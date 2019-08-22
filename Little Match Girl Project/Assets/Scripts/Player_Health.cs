@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;//Tianna!!!!
 
 public class Player_Health : MonoBehaviour
 {
@@ -9,6 +11,7 @@ public class Player_Health : MonoBehaviour
     public bool gainHP;
     public float drainHP = 0.1f;
     bool isDead;
+    public Image Ice;//Tianna!!!!
 
     Player_Movement playerMove;
     Rigidbody playerRBref;
@@ -16,6 +19,7 @@ public class Player_Health : MonoBehaviour
     private void Start() 
     {
         curHP = maxHP;
+        Ice.canvasRenderer.SetAlpha(0.0f);//Tianna!!!!
         playerMove = GetComponent<Player_Movement>();
          playerRBref = GetComponentInParent<Rigidbody>();
     }
@@ -26,8 +30,9 @@ public class Player_Health : MonoBehaviour
         if (gainHP == true && curHP <= maxHP)
         {
             curHP = curHP += 10.0f * Time.deltaTime;
-                
-            if(curHP > maxHP)
+            Ice.CrossFadeAlpha(0, -curHP, false);//Tianna!!!!
+
+            if (curHP > maxHP)
             {
                 curHP = maxHP;
             }
@@ -37,6 +42,7 @@ public class Player_Health : MonoBehaviour
         if (gainHP == false && curHP >= 0)
         {
             curHP = curHP -= drainHP * Time.deltaTime;
+            Ice.CrossFadeAlpha(1, curHP, false);//Tianna!!!!
         }
         if(isDead)
         {
@@ -46,6 +52,7 @@ public class Player_Health : MonoBehaviour
         }
         else if(curHP <= 0 && !isDead)
         {
+            Ice.canvasRenderer.SetAlpha(0.0f);//Tianna!!!!
             isDead = true;
             //gameObject.tag = "Dead";
         }
