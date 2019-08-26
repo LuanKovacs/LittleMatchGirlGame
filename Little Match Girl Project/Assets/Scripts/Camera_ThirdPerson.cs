@@ -25,15 +25,30 @@ public class Camera_ThirdPerson : MonoBehaviour
     Vector3 cameraOffsetFromTarget;
     Quaternion newRot;
     Vector3 relPos;
+    Vector3 newPos;
+    float newClampPos;
+
+    private void OnEnable()
+    {
+        EventManager.StartListening("ClampCamera", ClampCamera);
+        EventManager.StartListening("UnClampCamera", UnClampCamera);
+    }
+
+    private void OnDisable()
+    {
+        EventManager.StopListening("ClampCamera", ClampCamera);
+        EventManager.StopListening("UnClampCamera", UnClampCamera);
+    }
 
     private void Awake()
     {
-        transform.position = new Vector3(player.position.x, 43.12f, -38.02f);
+        transform.position = new Vector3(player.position.x, player.position.y + 43.12f, player.position.z - 38.02f);
     }
 
     // Use this for initialization
     void Start()
     { //Built in function which is run once when the script is enabled or before any Update function
+
         if (canFollow == true)
         {
             cameraOffsetFromTarget = transform.position - player.position;
@@ -43,6 +58,18 @@ public class Camera_ThirdPerson : MonoBehaviour
     public void CanLook(bool PlayerDied)
     {
         canFollow = PlayerDied;
+    }
+
+    public void ClampCamera()
+    {
+        Vector3 newPos = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        newClampPos = newPos.x;
+        canClamp = true;
+    }
+
+    public void UnClampCamera()
+    {
+        canClamp = false;
     }
 
     void LateUpdate()
@@ -60,9 +87,9 @@ public class Camera_ThirdPerson : MonoBehaviour
             //Smooth look at 
         }
         
-        if (canClamp)
+        if (canClamp == true)
         {
-            transform.position = new Vector3(Mathf.Clamp (transform.position.x, maxLeft, maxRight), transform.position.y, transform.position.z);
+            transform.position = new Vector3(Mathf.Clamp (transform.position.x, newClampPos - maxLeft, newClampPos - maxRight), transform.position.y, transform.position.z);
         }
     }
 
