@@ -20,11 +20,16 @@ public class Camera_ThirdPerson : MonoBehaviour
   
     public bool canClamp;
 
-    public Vector3 minCamPos;
-    public Vector3 maxCamPos;
+    public float maxLeft;
+    public float maxRight;
     Vector3 cameraOffsetFromTarget;
     Quaternion newRot;
     Vector3 relPos;
+
+    private void Awake()
+    {
+        transform.position = new Vector3(player.position.x, 43.12f, -38.02f);
+    }
 
     // Use this for initialization
     void Start()
@@ -57,7 +62,7 @@ public class Camera_ThirdPerson : MonoBehaviour
         
         if (canClamp)
         {
-          //  transform.position = new Vector3(Mathf.Clamp (transform.position.x, minCamPos, maxCamPos), transform.position.y, transform.position.z);
+            transform.position = new Vector3(Mathf.Clamp (transform.position.x, maxLeft, maxRight), transform.position.y, transform.position.z);
         }
     }
 

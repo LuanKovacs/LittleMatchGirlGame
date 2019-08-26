@@ -593,7 +593,7 @@ PrefabInstance:
     - target: {fileID: 585597263956118419, guid: 458dc8e52e983eb4cbbee44a10c37025,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.53
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 585597263956118419, guid: 458dc8e52e983eb4cbbee44a10c37025,
         type: 3}
@@ -650,6 +650,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 30662726}
+    - target: {fileID: 3863815648084960619, guid: 458dc8e52e983eb4cbbee44a10c37025,
+        type: 3}
+      propertyPath: canClamp
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3863815648084960618, guid: 458dc8e52e983eb4cbbee44a10c37025,
         type: 3}
       propertyPath: m_FOVAxisMode
@@ -1585,6 +1590,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_MatchWidthOrHeight
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7719619600574734234, guid: a41571cec04eb1748ae81f38f3ea4ff9,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.00048828125
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a41571cec04eb1748ae81f38f3ea4ff9, type: 3}
@@ -4008,7 +4018,7 @@ PrefabInstance:
     - target: {fileID: 3217641975529333674, guid: 8479216ae4f7b1a48bfad669461d667d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.52999973
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3217641975529333674, guid: 8479216ae4f7b1a48bfad669461d667d,
         type: 3}
