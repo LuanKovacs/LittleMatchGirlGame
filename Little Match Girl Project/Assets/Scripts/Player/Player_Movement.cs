@@ -29,7 +29,8 @@ public class Player_Movement : MonoBehaviour
     Rigidbody playerRigidbody;
     int floorMask;
     float camRayLength = 100f;
-
+    RaycastHit hit;
+    LayerMask mask;
     void Awake()
     {
         floorMask = LayerMask.GetMask("worldFloor");;
@@ -49,6 +50,18 @@ public class Player_Movement : MonoBehaviour
 
     private void Update()
     {
+        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward),out hit, 3))
+        {
+            if (hit.collider.tag == "Interactable")
+            {
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                   TriggerEventScript tEvent = hit.collider.GetComponent<TriggerEventScript>();
+                    tEvent.CallEvent();
+                }
+            }
+        }
+
         //gain Stam
         if (gainStam == true && curStam <= maxStam)
         {
