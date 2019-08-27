@@ -2,33 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PuzzleManager : MonoBehaviour
+public class Game_Manager : MonoBehaviour
 {
 
     private void OnEnable()
     {
         EventManager.StartListening("BridgePuzzle", BridgePuzzle);
-       // EventManager.StartListening("UnClampCamera", UnClampCamera);
+        EventManager.StartListening("UnlockMatches", UnlockMatches);
     }
 
     private void OnDisable()
     {
         EventManager.StopListening("BridgePuzzle", BridgePuzzle);
-       // EventManager.StopListening("UnClampCamera", UnClampCamera);
+        EventManager.StopListening("UnlockMatches", UnlockMatches);
     }
 
+    public GameObject Player;
     public GameObject puzzleSetBridge;
-
-    // Start is called before the first frame update
-    void Start()
+    
+    void UnlockMatches()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        LightMatchScript lightMatch = Player.GetComponent<LightMatchScript>();
+        lightMatch.enabled = true;
     }
 
     void BridgePuzzle()

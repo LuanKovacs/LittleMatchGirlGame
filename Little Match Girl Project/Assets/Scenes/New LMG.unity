@@ -2870,6 +2870,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9a31461c1edb1f4686717093f616382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 65835767}
   puzzleSetBridge: {fileID: 197100378}
 --- !u!4 &1494043404 stripped
 Transform:
@@ -4560,7 +4561,7 @@ PrefabInstance:
     - target: {fileID: 5688627282107369169, guid: c6f0a37e02aef654e890bf9d427e4011,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.02
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5688627282107369169, guid: c6f0a37e02aef654e890bf9d427e4011,
         type: 3}
@@ -4606,6 +4607,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8035553456139325897, guid: c6f0a37e02aef654e890bf9d427e4011,
+        type: 3}
+      propertyPath: callEvent
+      value: UnlockMatches
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6f0a37e02aef654e890bf9d427e4011, type: 3}
@@ -4708,7 +4714,7 @@ PrefabInstance:
     - target: {fileID: 3217641975529333674, guid: 8479216ae4f7b1a48bfad669461d667d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 76.8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3217641975529333674, guid: 8479216ae4f7b1a48bfad669461d667d,
         type: 3}
@@ -4718,7 +4724,7 @@ PrefabInstance:
     - target: {fileID: 3217641975529333674, guid: 8479216ae4f7b1a48bfad669461d667d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 283.39
+      value: -9.34
       objectReference: {fileID: 0}
     - target: {fileID: 3217641975529333674, guid: 8479216ae4f7b1a48bfad669461d667d,
         type: 3}
@@ -4779,6 +4785,10 @@ PrefabInstance:
     - target: {fileID: 30662724, guid: 8479216ae4f7b1a48bfad669461d667d, type: 3}
       propertyPath: curStam
       value: Infinity
+      objectReference: {fileID: 0}
+    - target: {fileID: 30662722, guid: 8479216ae4f7b1a48bfad669461d667d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8479216ae4f7b1a48bfad669461d667d, type: 3}
