@@ -7,7 +7,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Camera_ThirdPerson : MonoBehaviour
+public class CameraTopDown : MonoBehaviour
 {
 
     public Transform player;

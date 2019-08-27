@@ -10,7 +10,7 @@ public class PuzzleMusic : MonoBehaviour
     public int goal = 3;
     public GameObject Bridge;
 
-    public Camera_ThirdPerson mainCamera;
+    public CameraTopDown mainCamera;
     public GameObject direcLight;
     int curGoal;
     bool PuzzleComplete;
