@@ -39,6 +39,7 @@ public class TriggerEventScript : MonoBehaviour
 
     public void CallEvent()
     {
+        print(callEvent);
         EventManager.TriggerEvent(callEvent);
         gameObject.SetActive(false);
     }
