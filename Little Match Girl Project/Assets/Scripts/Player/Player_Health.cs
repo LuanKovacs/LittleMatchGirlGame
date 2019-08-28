@@ -9,17 +9,20 @@ public class Player_Health : MonoBehaviour
     public float maxHP = 100;
     public float curHP;
     public bool gainHP;
-    public float drainHP = 0.1f;
+    public float maxDrainHP;
+    float curDrainHP;
     bool isDead;
-    public Image Ice;//Tianna!!!!
+    public Image HealthPanel;//Tianna!!!!
 
     Player_Movement playerMove;
     Rigidbody playerRBref;
 
     private void Start() 
     {
+        curDrainHP = maxDrainHP;
         curHP = maxHP;
-        Ice.canvasRenderer.SetAlpha(0.0f);//Tianna!!!!
+        HealthPanel.canvasRenderer.SetAlpha(0.0f);//Tianna!!!!
+        //HealthPanel.alpha = 0.0f;
         playerMove = GetComponent<Player_Movement>();
         playerRBref = GetComponentInParent<Rigidbody>();
     }
@@ -30,20 +33,22 @@ public class Player_Health : MonoBehaviour
         if (gainHP == true && curHP <= maxHP)
         {
             curHP = curHP += 10.0f * Time.deltaTime;
-            Ice.CrossFadeAlpha(-curHP,140 , false);//Tianna!!!!
-
+            HealthPanel.CrossFadeAlpha(0, curHP , false);//Tianna!!!!
+            //HealthPanel.alpha = curHP / 100;
             if (curHP > maxHP)
             {
                 curHP = maxHP;
-                Ice.canvasRenderer.SetAlpha(0.0f);//Tianna!!!!
+                HealthPanel.canvasRenderer.SetAlpha(0.0f);//Tianna!!!!
+               // HealthPanel.alpha = 0.0f;
             }
         }
 
         //drain HP
         if (gainHP == false && curHP >= 0)
         {
-            curHP = curHP -= drainHP * Time.deltaTime;
-            Ice.CrossFadeAlpha(1, curHP, false);//Tianna!!!!
+            curHP = curHP -= curDrainHP * Time.deltaTime;
+            HealthPanel.CrossFadeAlpha(1, curHP, false);//Tianna!!!!
+            //HealthPanel.alpha = curHP;
         }
         if(isDead)
         {
@@ -53,7 +58,8 @@ public class Player_Health : MonoBehaviour
         }
         else if(curHP <= 0 && !isDead)
         {
-            Ice.canvasRenderer.SetAlpha(1.0f);//Tianna!!!!
+           // HealthPanel.alpha = 1.0f;
+            HealthPanel.canvasRenderer.SetAlpha(1.0f);//Tianna!!!!
             isDead = true;
             //gameObject.tag = "Dead";
         }
@@ -69,6 +75,15 @@ public class Player_Health : MonoBehaviour
         gainHP = can;
     }
 
+    public void DrainHp(float newDrain)
+    {
+        curDrainHP = newDrain;
+    }
+
+    public void ResetDrain()
+    {
+        curDrainHP = maxDrainHP;
+    }
 
     public void DamageHP(float damage)
     {

@@ -59,7 +59,6 @@ public class Game_Manager : MonoBehaviour
     void DarkRoomEnd()
     {
         RenderSettings.ambientLight = setColor;
-        //RenderSettings.ambientIntensity = 0.0f;
         EventManager.StopListening("DarkRoomEnd", DarkRoomEnd);
     }
 }
