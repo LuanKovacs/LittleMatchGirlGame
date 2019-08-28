@@ -26,7 +26,7 @@ public class Game_Manager : MonoBehaviour
     public GameObject Player;
     public GameObject puzzleSetBridge;
 
-    Color setColor = new Color(16.0f,26.0f,46.0f);
+    Color32 setColor = new Color32(51,66,91, 0);
 
     void UnlockMatches()
     {
@@ -59,6 +59,7 @@ public class Game_Manager : MonoBehaviour
     void DarkRoomEnd()
     {
         RenderSettings.ambientLight = setColor;
+        //RenderSettings.ambientIntensity = 0.0f;
         EventManager.StopListening("DarkRoomEnd", DarkRoomEnd);
     }
 }
