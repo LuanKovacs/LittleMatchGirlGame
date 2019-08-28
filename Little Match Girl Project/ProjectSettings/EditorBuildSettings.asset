@@ -8,10 +8,13 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
-    path: Assets/Scenes/TestingScene.unity
+  - enabled: 0
+    path: Assets/Scenes/trash/TestingScene.unity
     guid: 96bfe25d0728b604395eda9a78924478
-  - enabled: 1
-    path: Assets/Scenes/Level prototype 2.unity
+  - enabled: 0
+    path: Assets/Scenes/trash/Level prototype 2.unity
     guid: 1a48b8e03bc39654cbbb49ca920c77cf
+  - enabled: 1
+    path: Assets/Scenes/trash/level prototype 4.unity
+    guid: 89389985f0b52944ba827dd59557d70c
   m_configObjects: {}

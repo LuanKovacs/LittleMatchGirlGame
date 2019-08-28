@@ -27,7 +27,7 @@ public class Girl_Movement : MonoBehaviour
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         poiMask = LayerMask.GetMask("PointOfInterest");
         followMask = LayerMask.GetMask("Follow");
-        agent.speed = speed;
+        //agent.speed = speed;
     }
 
     private void Update() 

@@ -7,6 +7,8 @@ TagManager:
   - Enemy
   - Bonfire
   - Dead
+  - PuzzleAnswer
+  - Interactable
   layers:
   - Default
   - TransparentFX
