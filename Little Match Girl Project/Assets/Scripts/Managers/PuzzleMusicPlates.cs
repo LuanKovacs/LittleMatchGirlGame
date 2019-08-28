@@ -25,14 +25,17 @@ public class PuzzleMusicPlates : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (gameObject.tag == "PuzzleAnswer" && other.tag == "Player")
+        if (other.tag == "Player")
         {
-            gameObject.tag = "Untagged";
-            puzzleManager.AddGoal();
-        }
-        else
-        {
-            puzzleManager.ResetGoal();
+            if (gameObject.tag == "PuzzleAnswer")
+            {
+                gameObject.tag = "Untagged";
+                puzzleManager.AddGoal();
+            }
+            else        
+            {
+                puzzleManager.ResetGoal();
+            }
         }
     }
 

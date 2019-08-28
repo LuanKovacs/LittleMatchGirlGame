@@ -15,6 +15,10 @@ public class PuzzleMusic : MonoBehaviour
     int curGoal;
     bool PuzzleComplete;
 
+    void OnEnable()
+    {
+        Plate1.tag = "PuzzleAnswer";
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -55,9 +59,9 @@ public class PuzzleMusic : MonoBehaviour
     public void ResetGoal()
     {
         PuzzleComplete = false;
-        Plate1.tag = "PuzzleAnswer";
-        if (curGoal < 0)
+        if (curGoal > 0)
         {
+            Plate1.tag = "PuzzleAnswer";
             print("RestGoal");
             curGoal = 0;
         }
