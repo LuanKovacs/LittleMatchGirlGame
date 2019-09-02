@@ -23,6 +23,7 @@ public class Player_Movement : MonoBehaviour
     public float drainStam = 0.1f;
 
     bool sprinting;
+    bool playWalk;
     float moveSpeed;
     Vector3 movement;
     Vector3 forward, right;
@@ -100,7 +101,7 @@ public class Player_Movement : MonoBehaviour
         {
             Move(h, v);
 
-             anim.Play("Walk");
+            anim.Play("Base Layer.Walk");       
             //       Vector3 movement = new Vector3(h, 0f, v);
 
             Vector3 direction = new Vector3(Input.GetAxis("HorizontalKey"), 0, Input.GetAxis("VerticalKey"));
@@ -121,6 +122,10 @@ public class Player_Movement : MonoBehaviour
                 MoveTurn();
             }
         }
+        else
+        {
+            anim.Play("Base Layer.Idle"); 
+        }
 
         if (Input.GetKey("left shift") && !sprinting)
         {
@@ -130,7 +135,6 @@ public class Player_Movement : MonoBehaviour
             {
                 gainStam = false;
                 moveSpeed = sprintSpeed;
-
             } 
         }
         else if (sprinting && Input.GetKeyUp("left shift"))

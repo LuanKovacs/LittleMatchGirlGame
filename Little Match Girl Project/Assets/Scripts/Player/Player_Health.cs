@@ -29,11 +29,12 @@ public class Player_Health : MonoBehaviour
         
     private void Update() 
     {
+        curDrainHP = maxDrainHP;
         //gain HP
         if (gainHP == true && curHP <= maxHP)
         {
             curHP = curHP += 10.0f * Time.deltaTime;
-            HealthPanel.CrossFadeAlpha(0, curHP , false);//Tianna!!!!
+            HealthPanel.CrossFadeAlpha(-curHP, 100 , false);//Tianna!!!!
             //HealthPanel.alpha = curHP / 100;
             if (curHP > maxHP)
             {
@@ -47,7 +48,7 @@ public class Player_Health : MonoBehaviour
         if (gainHP == false && curHP >= 0)
         {
             curHP = curHP -= curDrainHP * Time.deltaTime;
-            HealthPanel.CrossFadeAlpha(1, curHP, false);//Tianna!!!!
+            HealthPanel.CrossFadeAlpha(1, curHP, true);//Tianna!!!!
             //HealthPanel.alpha = curHP;
         }
         if(isDead)
