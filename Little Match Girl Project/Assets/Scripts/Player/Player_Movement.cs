@@ -49,19 +49,13 @@ public class Player_Movement : MonoBehaviour
         curStam = maxStam;
     }
 
-    private void OnDrawGizmos()
-    {
-        if (Physics.Raycast(transform.position * 1.0f, transform.TransformDirection(Vector3.forward), out hit, 3))
-        {
-            Gizmos.color = Color.green;
-            Gizmos.DrawLine(transform.position * 1.0f, transform.TransformDirection(Vector3.forward));
-            //it works but wrong
-        }
-    }
+
 
     private void Update()
     {
-        if (Physics.Raycast(transform.position * 1.0f, transform.TransformDirection(Vector3.forward),out hit, 3))
+        Vector3 originpos = transform.position + Vector3.up* 0.2f;
+        Debug.DrawRay(originpos, Vector3.forward * 3, Color.red);
+        if (Physics.Raycast(originpos, transform.forward,out hit, 3))
         {
             if (hit.collider.tag == "Interactable")
             {
