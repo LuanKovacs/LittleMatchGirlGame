@@ -100,7 +100,7 @@ public class Player_Movement : MonoBehaviour
         {
             Move(h, v);
 
-            // anim.Play("Run");
+             anim.Play("Walk");
             //       Vector3 movement = new Vector3(h, 0f, v);
 
             Vector3 direction = new Vector3(Input.GetAxis("HorizontalKey"), 0, Input.GetAxis("VerticalKey"));
