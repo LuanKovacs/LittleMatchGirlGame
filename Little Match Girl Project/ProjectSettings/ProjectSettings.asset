@@ -611,7 +611,31 @@ PlayerSettings:
   XboxOneGameRating: {}
   XboxOneIsContentPackage: 0
   XboxOneEnableGPUVariability: 0
-  XboxOneSockets: {}
+  XboxOneSockets:
+    WwiseCommandSocket:
+      m_Name: WwiseCommandSocket
+      m_Port: 24025
+      m_Protocol: 0
+      m_Usages: 00000000010000000400000007000000
+      m_TemplateName: WwiseCommand
+      m_SessionRequirment: 0
+      m_DeviceUsages: 00000000
+    WwiseDiscoverySocket:
+      m_Name: WwiseDiscoverySocket
+      m_Port: 24024
+      m_Protocol: 1
+      m_Usages: 00000000010000000400000007000000
+      m_TemplateName: WwiseDiscovery
+      m_SessionRequirment: 0
+      m_DeviceUsages: 00000000
+    WwiseNotificationSocket:
+      m_Name: WwiseNotificationSocket
+      m_Port: 24026
+      m_Protocol: 0
+      m_Usages: 00000000010000000400000007000000
+      m_TemplateName: WwiseNotification
+      m_SessionRequirment: 0
+      m_DeviceUsages: 00000000
   XboxOneSplashScreen: {fileID: 0}
   XboxOneAllowedProductIds: []
   XboxOnePersistentLocalStorageSize: 0
@@ -643,10 +667,10 @@ PlayerSettings:
   facebookXfbml: 0
   facebookFrictionlessRequests: 1
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: a55915b1-56e7-4199-8bee-f3e9cf6d17c9
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: controller
+  organizationId: ai-tsumae
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
