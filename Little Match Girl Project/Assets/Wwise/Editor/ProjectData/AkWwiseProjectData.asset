@@ -255,8 +255,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Footsteps
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.434021
+      minDuration: 0.323265
     - name: Lighting_match
       guid: f8fc443404590546b307e79734ed7f25
       id: 3936468003
@@ -267,8 +267,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Lighting_match
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.528934
+      minDuration: 0.880987
     - name: Match_blown_out
       guid: 2bcb451aebcd1c49a7595caf92eda9cf
       id: 33754718
@@ -279,8 +279,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Match_blown_out
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.516577
+      minDuration: 0.254053
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
@@ -495,5 +495,7 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /The Little Match Girl
+  - /The Little Match Girl/Events
+  - /The Little Match Girl/Events/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
