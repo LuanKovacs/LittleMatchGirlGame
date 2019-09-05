@@ -5024,16 +5024,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CharacterModel&Rig
       objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 578735c3a0fee1646aa8db879a906129,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 6aae4161405e8734b92dc1892fc09226, type: 2}
-    - target: {fileID: -6057140222963153312, guid: 578735c3a0fee1646aa8db879a906129,
-        type: 3}
-      propertyPath: m_Avatar
-      value: 
-      objectReference: {fileID: 9000000, guid: 2c837d6617507ee44b38a0e3d675c39e, type: 3}
     - target: {fileID: -4216859302048453862, guid: 578735c3a0fee1646aa8db879a906129,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5104,6 +5094,16 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2.5
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 578735c3a0fee1646aa8db879a906129,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 6aae4161405e8734b92dc1892fc09226, type: 2}
+    - target: {fileID: -6057140222963153312, guid: 578735c3a0fee1646aa8db879a906129,
+        type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: 2c837d6617507ee44b38a0e3d675c39e, type: 3}
     - target: {fileID: -1149613533337950434, guid: 578735c3a0fee1646aa8db879a906129,
         type: 3}
       propertyPath: m_Materials.Array.data[0]

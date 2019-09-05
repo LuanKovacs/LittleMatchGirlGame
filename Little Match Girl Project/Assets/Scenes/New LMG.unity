@@ -315,31 +315,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a704456efe2dfe4d888064a75013d2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &65835773
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 65835767}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9441a184848ed2240b437919bb49434d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: 9864aaa1ae8d9d44
-  useOtherObject: 0
-  data:
-    idInternal: 0
-    valueGuidInternal: 
-    groupIdInternal: 0
-    groupGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: f42a60d8f7713724e8142b2543a48fe8,
-      type: 2}
-  valueIdInternal: 0
-  groupIdInternal: 0
-  valueGuidInternal: 
-  groupGuidInternal: 
 --- !u!1 &67161994
 GameObject:
   m_ObjectHideFlags: 0
