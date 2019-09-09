@@ -53,7 +53,9 @@ public class Player_Health : MonoBehaviour
         }
         if(isDead)
         {
-            playerRBref.velocity = Vector3.zero;
+            //playerRBref.velocity = Vector3.zero;
+            playerRBref.constraints = RigidbodyConstraints.None;
+            playerRBref.AddTorque(transform.right * 5 * 5);
             playerMove.canMove = false;
             EventManager.TriggerEvent("Dead");
         }
@@ -89,6 +91,12 @@ public class Player_Health : MonoBehaviour
     public void DamageHP(float damage)
     {
         curHP -= damage;
+    }
+
+    public void PleaseDie()
+    {
+        if(!isDead)
+        isDead = true;
     }
 
 

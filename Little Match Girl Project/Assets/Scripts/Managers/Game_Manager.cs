@@ -14,6 +14,8 @@ public class Game_Manager : MonoBehaviour
 
         EventManager.StartListening("DarkRoomStart", DarkRoomStart);
         EventManager.StartListening("DarkRoomEnd", DarkRoomEnd);
+        
+        EventManager.StartListening("PlayerDeath", PlayerDeath);
     }
 
     private void OnDisable()
@@ -25,9 +27,12 @@ public class Game_Manager : MonoBehaviour
 
         EventManager.StopListening("DarkRoomStart", DarkRoomStart);
         EventManager.StopListening("DarkRoomEnd", DarkRoomEnd);
+
+         EventManager.StopListening("PlayerDeath", PlayerDeath);
     }
 
     public GameObject Player;
+    public GameObject CameraMain;
     public GameObject Monster;
     public GameObject puzzleSetBridge;
 
@@ -75,5 +80,12 @@ public class Game_Manager : MonoBehaviour
     {
         RenderSettings.ambientLight = setColor;
         EventManager.StopListening("DarkRoomEnd", DarkRoomEnd);
+    }
+
+    void PlayerDeath()
+    {
+        CameraMain.GetComponent<CameraTopDown>().enabled = false;
+        Player.GetComponent<Player_Health>().PleaseDie();
+
     }
 }
