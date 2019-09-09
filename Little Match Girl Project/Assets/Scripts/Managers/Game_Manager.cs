@@ -9,21 +9,31 @@ public class Game_Manager : MonoBehaviour
     {
         EventManager.StartListening("BridgePuzzle", BridgePuzzle);
         EventManager.StartListening("UnlockMatches", UnlockMatches);
+        EventManager.StartListening("BeginChase", BeginChase);
+        EventManager.StartListening("EndChase", EndChase);
 
         EventManager.StartListening("DarkRoomStart", DarkRoomStart);
         EventManager.StartListening("DarkRoomEnd", DarkRoomEnd);
+        
+        EventManager.StartListening("PlayerDeath", PlayerDeath);
     }
 
     private void OnDisable()
     {
         EventManager.StopListening("BridgePuzzle", BridgePuzzle);
         EventManager.StopListening("UnlockMatches", UnlockMatches);
+        EventManager.StopListening("BeginChase", BeginChase);
+        EventManager.StartListening("EndChase", EndChase);
 
         EventManager.StopListening("DarkRoomStart", DarkRoomStart);
         EventManager.StopListening("DarkRoomEnd", DarkRoomEnd);
+
+         EventManager.StopListening("PlayerDeath", PlayerDeath);
     }
 
     public GameObject Player;
+    public GameObject CameraMain;
+    public GameObject Monster;
     public GameObject puzzleSetBridge;
 
     Color32 setColor = new Color32(51,66,91, 0);
@@ -39,6 +49,16 @@ public class Game_Manager : MonoBehaviour
     {
         puzzleSetBridge.SetActive(true);
         EventManager.StopListening("BridgePuzzle", BridgePuzzle);
+    }
+    
+    void BeginChase()
+    {
+        Monster.SetActive(true);
+    }
+
+    void EndChase()
+    {
+        Monster.SetActive(false);
     }
 
     void DarkRoomStart()
@@ -60,5 +80,12 @@ public class Game_Manager : MonoBehaviour
     {
         RenderSettings.ambientLight = setColor;
         EventManager.StopListening("DarkRoomEnd", DarkRoomEnd);
+    }
+
+    void PlayerDeath()
+    {
+        CameraMain.GetComponent<CameraTopDown>().enabled = false;
+        Player.GetComponent<Player_Health>().PleaseDie();
+
     }
 }

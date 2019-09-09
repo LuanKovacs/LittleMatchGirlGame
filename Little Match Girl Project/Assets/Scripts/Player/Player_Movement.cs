@@ -23,6 +23,7 @@ public class Player_Movement : MonoBehaviour
     public float drainStam = 0.1f;
 
     bool sprinting;
+    bool playWalk;
     float moveSpeed;
     Vector3 movement;
     Vector3 forward, right;
@@ -48,19 +49,13 @@ public class Player_Movement : MonoBehaviour
         curStam = maxStam;
     }
 
-    private void OnDrawGizmos()
-    {
-        if (Physics.Raycast(transform.position * 1.0f, transform.TransformDirection(Vector3.forward), out hit, 3))
-        {
-            Gizmos.color = Color.green;
-            Gizmos.DrawLine(transform.position * 1.0f, transform.TransformDirection(Vector3.forward));
-            //it works but wrong
-        }
-    }
+
 
     private void Update()
     {
-        if (Physics.Raycast(transform.position * 1.0f, transform.TransformDirection(Vector3.forward),out hit, 3))
+        Vector3 originpos = transform.position + Vector3.up* 0.2f;
+        Debug.DrawRay(originpos, Vector3.forward * 3, Color.red);
+        if (Physics.Raycast(originpos, transform.forward,out hit, 3))
         {
             if (hit.collider.tag == "Interactable")
             {
@@ -100,7 +95,8 @@ public class Player_Movement : MonoBehaviour
         {
             Move(h, v);
 
-             anim.Play("Walk");
+            anim.Play("Base Layer.Walk");
+            AkSoundEngine.PostEvent("Footsteps", gameObject);
             //       Vector3 movement = new Vector3(h, 0f, v);
 
             Vector3 direction = new Vector3(Input.GetAxis("HorizontalKey"), 0, Input.GetAxis("VerticalKey"));
@@ -121,6 +117,10 @@ public class Player_Movement : MonoBehaviour
                 MoveTurn();
             }
         }
+        else
+        {
+            anim.Play("Base Layer.Idle"); 
+        }
 
         if (Input.GetKey("left shift") && !sprinting)
         {
@@ -130,7 +130,6 @@ public class Player_Movement : MonoBehaviour
             {
                 gainStam = false;
                 moveSpeed = sprintSpeed;
-
             } 
         }
         else if (sprinting && Input.GetKeyUp("left shift"))
