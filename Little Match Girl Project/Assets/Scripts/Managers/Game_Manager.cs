@@ -85,7 +85,12 @@ public class Game_Manager : MonoBehaviour
     void PlayerDeath()
     {
         CameraMain.GetComponent<CameraTopDown>().enabled = false;
-        Player.GetComponent<Player_Health>().PleaseDie();
+        StartCoroutine("DeathState");
+    }
 
+    IEnumerator DeathState()
+    {
+        yield return new WaitForSeconds(0.5f);
+        Player.GetComponent<Player_Health>().PleaseDie();
     }
 }
