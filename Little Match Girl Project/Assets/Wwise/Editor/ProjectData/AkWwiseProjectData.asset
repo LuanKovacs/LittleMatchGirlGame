@@ -17,13 +17,13 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 7088943df08b964eb4e15964e5ea23a4
     GuidInternal: 
-    m_lastTime: -8586345513198357768
+    m_lastTime: -8586335748552195642
     List: []
   - PhysicalPath: Virtual Acoustics\Factory Reflect Acoustic Textures.wwu
     ParentPhysicalPath: 
     guid: 6b663d46a83ca54f8b4a5fef12b883f6
     GuidInternal: 
-    m_lastTime: -8586345513198106828
+    m_lastTime: -8586335748551420419
     List:
     - name: Acoustic_Banner
       guid: f2532d2fccda8e408b8898b1b52a26d6
@@ -184,14 +184,14 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 5da860a7320f214c8557a594aaff2ede
     GuidInternal: 
-    m_lastTime: -8586345513299914396
+    m_lastTime: -8586335748869452188
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 9aa07b7b919d034cbfac28f5e84093ed
     GuidInternal: 
-    m_lastTime: -8586345513199538986
+    m_lastTime: -8586335748557789484
     List:
     - name: Main
       guid: 78e40f0c79cc634ab6594fb6dfeac57d
@@ -207,32 +207,56 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 64f993c54fe3884e8614176382be8be1
     GuidInternal: 
-    m_lastTime: -8586345513310063217
+    m_lastTime: -8586335748882879011
     List:
-    - name: Ambience_1
-      guid: a08dd160bb841c4da96541221b4021d8
-      id: 1625584349
+    - name: Blizzard_creature
+      guid: 9e97aa33606ccd46bda42410631fcc70
+      id: 3037339097
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: Ambience_1
+      - ElementName: Blizzard_creature
         ObjectType: 3
-      Path: Default Work Unit\Ambience_1
+      Path: Default Work Unit\Blizzard_creature
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
-    - name: Ambience_2
-      guid: 8d239257b18552439f9bf29ca8d5e23d
-      id: 1625584350
+    - name: Branches_snapping
+      guid: 553cc2354c3d634c8f5f8da49e1c55ec
+      id: 1870191356
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: Ambience_2
+      - ElementName: Branches_snapping
         ObjectType: 3
-      Path: Default Work Unit\Ambience_2
+      Path: Default Work Unit\Branches_snapping
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 1.64199
+      minDuration: 0.360473
+    - name: Crow_scare
+      guid: 4430fd6d3e94d3469d9bbff4017d088e
+      id: 1962582049
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Crow_scare
+        ObjectType: 3
+      Path: Default Work Unit\Crow_scare
+      maxAttenuation: 0
+      maxDuration: 1.641791
+      minDuration: 0.932472
+    - name: Crows
+      guid: 684ed3ebc209ae4087f2c66352144bb3
+      id: 2848348995
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Crows
+        ObjectType: 3
+      Path: Default Work Unit\Crows
+      maxAttenuation: 0
+      maxDuration: 0.702165
+      minDuration: 0.284008
     - name: Fire_crackling
       guid: 5fab4c3591409645af76d0f6c58ec815
       id: 2109043066
@@ -257,6 +281,30 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.434021
       minDuration: 0.323265
+    - name: Girl_breathing
+      guid: 0e940475c82bbf4eba1c4eae2c808357
+      id: 2073873008
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Girl_breathing
+        ObjectType: 3
+      Path: Default Work Unit\Girl_breathing
+      maxAttenuation: 0
+      maxDuration: 1.222417
+      minDuration: 0.680455
+    - name: Heart_beat
+      guid: 92136a1fafe4bc41989bc0baec6d2e8c
+      id: 3589338066
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Heart_beat
+        ObjectType: 3
+      Path: Default Work Unit\Heart_beat
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Lighting_match
       guid: f8fc443404590546b307e79734ed7f25
       id: 3936468003
@@ -281,12 +329,72 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.516577
       minDuration: 0.254053
+    - name: Sticks_cracking
+      guid: 3b3b1517d888184e83b07d445f16a201
+      id: 670208879
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Sticks_cracking
+        ObjectType: 3
+      Path: Default Work Unit\Sticks_cracking
+      maxAttenuation: 0
+      maxDuration: 2.609534
+      minDuration: 0.282049
+    - name: Striking_match
+      guid: 27f098cfb58fdb40bcfbcb9377da98f5
+      id: 4101366284
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Striking_match
+        ObjectType: 3
+      Path: Default Work Unit\Striking_match
+      maxAttenuation: 0
+      maxDuration: 0.345792
+      minDuration: 0.2
+    - name: Wind_1
+      guid: a08dd160bb841c4da96541221b4021d8
+      id: 2062015187
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Wind_1
+        ObjectType: 3
+      Path: Default Work Unit\Wind_1
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Wind_2
+      guid: 8d239257b18552439f9bf29ca8d5e23d
+      id: 2062015184
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Wind_2
+        ObjectType: 3
+      Path: Default Work Unit\Wind_2
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Wings_flapping
+      guid: 2c8d406c887d35419fcbb2047d99eb21
+      id: 3164481935
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Wings_flapping
+        ObjectType: 3
+      Path: Default Work Unit\Wings_flapping
+      maxAttenuation: 0
+      maxDuration: 3.510363
+      minDuration: 1.303179
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 171087b9c16ee04ca5319ced4eadbd03
     GuidInternal: 
-    m_lastTime: -8586345513309843808
+    m_lastTime: -8586335748881744185
     List:
     - name: Ambience_1
       guid: 9f1138ff043be244a2f2517d822fe8e8
@@ -306,6 +414,24 @@ MonoBehaviour:
       - ElementName: Ambience_2
         ObjectType: 13
       Path: Default Work Unit\Ambience_2
+    - name: Blizzard_creature
+      guid: 7b0fcf2636a59343b10566e91549e142
+      id: 3037339097
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Blizzard_creature
+        ObjectType: 13
+      Path: Default Work Unit\Blizzard_creature
+    - name: Crow_reverb
+      guid: 6101ea4b5c7aa841b777a8ff95fa32e9
+      id: 958934735
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Crow_reverb
+        ObjectType: 13
+      Path: Default Work Unit\Crow_reverb
     - name: Fire_crackling
       guid: decff30ebe1cc04ba2dcaab6469a5e11
       id: 2109043066
@@ -315,11 +441,29 @@ MonoBehaviour:
       - ElementName: Fire_crackling
         ObjectType: 13
       Path: Default Work Unit\Fire_crackling
+    - name: Girl_breathing_reverb
+      guid: 6655ff7d4747004583b44b6972c4a8a2
+      id: 3039458159
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Girl_breathing_reverb
+        ObjectType: 13
+      Path: Default Work Unit\Girl_breathing_reverb
+    - name: Heart_beat_volume
+      guid: 3cd72927cfff5540a258f2f5de841118
+      id: 4219873143
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Heart_beat_volume
+        ObjectType: 13
+      Path: Default Work Unit\Heart_beat_volume
   - PhysicalPath: Game Parameters\Factory Motion.wwu
     ParentPhysicalPath: 
     guid: 225213d7dbd1d042adc0930743567776
     GuidInternal: 
-    m_lastTime: -8586345513309664898
+    m_lastTime: -8586335748880908028
     List:
     - name: Playback_Rate
       guid: e37e38283ac11643b9c3db5c521624af
@@ -343,7 +487,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 5577163b42fb8b4598bf96f557afb3b9
     GuidInternal: 
-    m_lastTime: -8586345513309466034
+    m_lastTime: -8586335748880010084
     List:
     - name: SS_Air_Fear
       guid: 59062ef746431c4ea1b1dab46a05101e
@@ -440,14 +584,14 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: cb7859a7e3309241b097e9acc2281136
     GuidInternal: 
-    m_lastTime: -8586345513199088929
+    m_lastTime: -8586335748555545561
     List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 52b745dd242a0e49a76596bf54391944
     GuidInternal: 
-    m_lastTime: -8586345513198854962
+    m_lastTime: -8586335748554654220
     List:
     - name: Footsteps
       guid: f3f4ab7a39a06b499f7171361f589d1b
@@ -491,14 +635,11 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 05ef5a421b540a43b1289fee46e1bbcb
     GuidInternal: 
-    m_lastTime: -8586345513198648481
+    m_lastTime: -8586335748553533247
     List: []
   ExpandedItems:
   - /The Little Match Girl
   - /The Little Match Girl/Events
   - /The Little Match Girl/Events/Default Work Unit
-  - /The Little Match Girl/Switches
-  - /The Little Match Girl/Switches/Default Work Unit
-  - /The Little Match Girl/Switches/Default Work Unit/Footsteps
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
