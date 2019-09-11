@@ -1,7 +1,7 @@
-﻿ /*Player Character Movement/Jump Script
- * Ricardo III Ticlao
- * 04/06/2019
- */
+﻿/*Player Character Movement/Jump Script
+* Ricardo III Ticlao
+* 04/06/2019
+*/
 
 using System.Collections;
 using System.Collections.Generic;
@@ -23,7 +23,6 @@ public class Player_Movement : MonoBehaviour
     public float drainStam = 0.1f;
 
     bool sprinting;
-    bool playWalk;
     float moveSpeed;
     Vector3 movement;
     Vector3 forward, right;
@@ -34,7 +33,7 @@ public class Player_Movement : MonoBehaviour
     LayerMask mask;
     void Awake()
     {
-        floorMask = LayerMask.GetMask("worldFloor");;
+        floorMask = LayerMask.GetMask("worldFloor"); ;
         playerRigidbody = GetComponent<Rigidbody>();
 
         forward = Camera.main.transform.forward;
@@ -49,20 +48,26 @@ public class Player_Movement : MonoBehaviour
         curStam = maxStam;
     }
 
-
+    private void OnDrawGizmos()
+    {
+        if (Physics.Raycast(transform.position * 1.0f, transform.TransformDirection(Vector3.forward), out hit, 3))
+        {
+            Gizmos.color = Color.green;
+            Gizmos.DrawLine(transform.position * 1.0f, transform.TransformDirection(Vector3.forward));
+            //it works but wrong
+        }
+    }
 
     private void Update()
     {
-        Vector3 originpos = transform.position + Vector3.up* 0.2f;
-        Debug.DrawRay(originpos, Vector3.forward * 3, Color.red);
-        if (Physics.Raycast(originpos, transform.forward,out hit, 3))
+        if (Physics.Raycast(transform.position * 1.0f, transform.TransformDirection(Vector3.forward), out hit, 3))
         {
             if (hit.collider.tag == "Interactable")
             {
                 if (Input.GetKeyDown(KeyCode.E))
                 {
                     print("interact");
-                   TriggerEventScript tEvent = hit.collider.GetComponent<TriggerEventScript>();
+                    TriggerEventScript tEvent = hit.collider.GetComponent<TriggerEventScript>();
                     tEvent.CallEvent();
                 }
             }
@@ -95,8 +100,7 @@ public class Player_Movement : MonoBehaviour
         {
             Move(h, v);
 
-            anim.Play("Base Layer.Walk");
-            AkSoundEngine.PostEvent("Footsteps", gameObject);
+            // anim.Play("Run");
             //       Vector3 movement = new Vector3(h, 0f, v);
 
             Vector3 direction = new Vector3(Input.GetAxis("HorizontalKey"), 0, Input.GetAxis("VerticalKey"));
@@ -105,6 +109,8 @@ public class Player_Movement : MonoBehaviour
             Vector3 movement = Vector3.Normalize(rightMovement + upMovement);
 
             movement = Vector3.ClampMagnitude(movement, 1.0f);
+
+            anim.SetFloat("Speed", movement.magnitude);
 
             transform.Translate(movement * moveSpeed * Time.fixedDeltaTime, Space.World);
 
@@ -117,24 +123,21 @@ public class Player_Movement : MonoBehaviour
                 MoveTurn();
             }
         }
-        else
-        {
-            anim.Play("Base Layer.Idle"); 
-        }
 
         if (Input.GetKey("left shift") && !sprinting)
         {
             //print("Sptrinting");
             sprinting = true;
-           if(curStam >= 0)
+            if (curStam >= 0)
             {
                 gainStam = false;
                 moveSpeed = sprintSpeed;
-            } 
+
+            }
         }
         else if (sprinting && Input.GetKeyUp("left shift"))
         {
-           // print("Not Sprinting");
+            // print("Not Sprinting");
             sprinting = false;
             gainStam = true;
             moveSpeed = walkSpeed;

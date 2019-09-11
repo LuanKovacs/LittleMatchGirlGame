@@ -16,8 +16,7 @@ GameObject:
   - component: {fileID: -4205664740889798839}
   - component: {fileID: -3372985331437962604}
   - component: {fileID: 1082410880258959334}
-  - component: {fileID: 5588947075037058827}
-  - component: {fileID: 4126514159108199879}
+  - component: {fileID: 8936615233158020857}
   - component: {fileID: 7705006104040547887}
   m_Layer: 0
   m_Name: Main Camera
@@ -192,7 +191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDefaultListener: 1
   listenerId: 0
---- !u!114 &5588947075037058827
+--- !u!114 &8936615233158020857
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -204,41 +203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7738f38ca4b5874c81ee85243a6390b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerList: 
-  useOtherObject: 0
-  actionOnEventType: 0
-  curveInterpolation: 4
-  enableActionOnEvent: 0
-  data:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 6c15158f04717d44cbe671f92e5ac2ad,
-      type: 2}
-  useCallbacks: 0
-  Callbacks: []
-  playingId: 0
-  soundEmitterObject: {fileID: 0}
-  transitionDuration: 0
-  eventIdInternal: 0
-  valueGuidInternal: 
-  m_callbackDataInternal: {fileID: 0}
-  MultiPositionType: 1
-  multiPositionTypeLabel: 0
-  LargeModePositions: []
-  multiPositionArray: []
---- !u!114 &4126514159108199879
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 585597263956118418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7738f38ca4b5874c81ee85243a6390b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: 
+  triggerList: f7e1664c
   useOtherObject: 0
   actionOnEventType: 0
   curveInterpolation: 4

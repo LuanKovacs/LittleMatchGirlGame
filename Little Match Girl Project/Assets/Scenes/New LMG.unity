@@ -258,8 +258,6 @@ GameObject:
   m_Component:
   - component: {fileID: 62243706}
   - component: {fileID: 62243707}
-  - component: {fileID: 62243709}
-  - component: {fileID: 62243708}
   m_Layer: 0
   m_Name: Monster
   m_TagString: Untagged
@@ -299,62 +297,6 @@ MonoBehaviour:
   targetPos: {fileID: 1990442664}
   speed: 1
   move: 0
---- !u!114 &62243708
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 62243705}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7738f38ca4b5874c81ee85243a6390b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: f2d9e0ecae8d9d44
-  useOtherObject: 0
-  actionOnEventType: 4
-  curveInterpolation: 0
-  enableActionOnEvent: 0
-  data:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 1b18c61a71cd8cc4eb682fd33af60029,
-      type: 2}
-  useCallbacks: 0
-  Callbacks: []
-  playingId: 0
-  soundEmitterObject: {fileID: 0}
-  transitionDuration: 1.5
-  eventIdInternal: 0
-  valueGuidInternal: 
-  m_callbackDataInternal: {fileID: 0}
-  MultiPositionType: 1
-  multiPositionTypeLabel: 0
-  LargeModePositions: []
-  multiPositionArray: []
---- !u!114 &62243709
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 62243705}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d087ca66f113b949a6de9cb7fc96ef9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_listeners:
-    initialListenerList: []
-    useDefaultListeners: 1
-  isEnvironmentAware: 1
-  isStaticObject: 0
-  m_positionOffsetData:
-    KeepMe: 0
-    positionOffset: {x: 0, y: 0, z: 0}
-  m_posOffsetData: {fileID: 0}
-  listenerMask: 1
 --- !u!1 &65835767 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5389938730896543289, guid: 8479216ae4f7b1a48bfad669461d667d,
@@ -807,8 +749,6 @@ GameObject:
   - component: {fileID: 146937069}
   - component: {fileID: 146937068}
   - component: {fileID: 146937070}
-  - component: {fileID: 146937072}
-  - component: {fileID: 146937071}
   m_Layer: 5
   m_Name: HealthPanel
   m_TagString: Untagged
@@ -885,62 +825,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &146937071
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 146937066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c7738f38ca4b5874c81ee85243a6390b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: ae8d9d44
-  useOtherObject: 0
-  actionOnEventType: 0
-  curveInterpolation: 4
-  enableActionOnEvent: 0
-  data:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 438ee8bdb1e7eb14dbe009bab45d6516,
-      type: 2}
-  useCallbacks: 0
-  Callbacks: []
-  playingId: 0
-  soundEmitterObject: {fileID: 0}
-  transitionDuration: 0
-  eventIdInternal: 0
-  valueGuidInternal: 
-  m_callbackDataInternal: {fileID: 0}
-  MultiPositionType: 1
-  multiPositionTypeLabel: 0
-  LargeModePositions: []
-  multiPositionArray: []
---- !u!114 &146937072
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 146937066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d087ca66f113b949a6de9cb7fc96ef9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_listeners:
-    initialListenerList: []
-    useDefaultListeners: 1
-  isEnvironmentAware: 1
-  isStaticObject: 0
-  m_positionOffsetData:
-    KeepMe: 0
-    positionOffset: {x: 0, y: 0, z: 0}
-  m_posOffsetData: {fileID: 0}
-  listenerMask: 1
 --- !u!1 &153601502
 GameObject:
   m_ObjectHideFlags: 0
@@ -2669,25 +2553,20 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5588947075037058827, guid: 458dc8e52e983eb4cbbee44a10c37025,
+    - target: {fileID: -3372985331437962604, guid: 458dc8e52e983eb4cbbee44a10c37025,
         type: 3}
       propertyPath: triggerList.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5588947075037058827, guid: 458dc8e52e983eb4cbbee44a10c37025,
         type: 3}
-      propertyPath: triggerList.Array.data[0]
-      value: 1281810935
-      objectReference: {fileID: 0}
-    - target: {fileID: 4126514159108199879, guid: 458dc8e52e983eb4cbbee44a10c37025,
-        type: 3}
-      propertyPath: triggerList.Array.size
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4126514159108199879, guid: 458dc8e52e983eb4cbbee44a10c37025,
         type: 3}
-      propertyPath: triggerList.Array.data[0]
-      value: 1281810935
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3863815648084960617, guid: 458dc8e52e983eb4cbbee44a10c37025, type: 3}
@@ -9416,7 +9295,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: f42d65e01f3a1704ca087c0b3a6003fa,
+    WwiseObjectReference: {fileID: 11400000, guid: 481b20e53af4fb342b3a81d5567bf3cc,
       type: 2}
   useCallbacks: 0
   Callbacks: []
@@ -10671,7 +10550,7 @@ PrefabInstance:
     - target: {fileID: 3217641975529333674, guid: 8479216ae4f7b1a48bfad669461d667d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.5
+      value: 79.09
       objectReference: {fileID: 0}
     - target: {fileID: 3217641975529333674, guid: 8479216ae4f7b1a48bfad669461d667d,
         type: 3}
@@ -10681,7 +10560,7 @@ PrefabInstance:
     - target: {fileID: 3217641975529333674, guid: 8479216ae4f7b1a48bfad669461d667d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.2
+      value: 990.38
       objectReference: {fileID: 0}
     - target: {fileID: 3217641975529333674, guid: 8479216ae4f7b1a48bfad669461d667d,
         type: 3}
