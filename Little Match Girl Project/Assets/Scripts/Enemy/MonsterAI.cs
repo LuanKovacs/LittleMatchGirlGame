@@ -24,10 +24,12 @@ public class MonsterAI : MonoBehaviour
     {
         if (move)
         {
-        transform.position = Vector3.Lerp(transform.position, targetPos.position, speed * Time.deltaTime);
-        transform.position = new Vector3(Mathf.Clamp(transform.position.x, transform.position.x, transform.position.x), 
-                                                     transform.position.y, 
-                                         Mathf.Clamp(transform.position.z, transform.position.z, targetPos.position.z));
+            float dist = Vector3.Distance(transform.position, targetPos.position);
+            float minDist = 2.0f;
+            transform.position = Vector3.Lerp(transform.position, targetPos.position, speed * Time.deltaTime);
+        
+            //transform.position = Vector3.MoveTowards(transform.position, targetPos.position, speed * Time.deltaTime);
+            //transform.position = new Vector3(Mathf.Clamp (transform.position.x, transform.position.x - 1f , transform.position.x - 1f), transform.position.y, transform.position.z);
         }
     }
 
