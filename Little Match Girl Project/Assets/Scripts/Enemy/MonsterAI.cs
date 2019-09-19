@@ -19,8 +19,7 @@ public class MonsterAI : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (move)
         {

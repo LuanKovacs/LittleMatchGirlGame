@@ -10,8 +10,8 @@ public class Player_Health : MonoBehaviour
     public float curHP;
     public bool gainHP;
     public float maxDrainHP;
-    float curDrainHP;
-    bool isDead;
+    public float curDrainHP;
+    public bool isDead;
     public Image HealthPanel;//Tianna!!!!
     public GameObject healthTUT;
 
@@ -32,7 +32,7 @@ public class Player_Health : MonoBehaviour
 
     private void Update()
     {
-        curDrainHP = maxDrainHP;
+       
         //gain HP
         if (gainHP == true && curHP <= maxHP)
         {
@@ -69,6 +69,7 @@ public class Player_Health : MonoBehaviour
                 //healthTUT.CrossFadeAlpha(0, 20, true);
             }
         }
+
         if (isDead)
         {
             //playerRBref.velocity = Vector3.zero;
@@ -77,7 +78,8 @@ public class Player_Health : MonoBehaviour
             playerMove.canMove = false;
             EventManager.TriggerEvent("Dead");
         }
-        else if (curHP <= 0 && !isDead)
+
+        if (curHP <= 0 && !isDead)
         {
             // HealthPanel.alpha = 1.0f;
             HealthPanel.canvasRenderer.SetAlpha(1.0f);//Tianna!!!!
@@ -98,6 +100,7 @@ public class Player_Health : MonoBehaviour
 
     public void DrainHp(float newDrain)
     {
+        print("TestNewDrain");
         curDrainHP = newDrain;
     }
 
@@ -114,7 +117,8 @@ public class Player_Health : MonoBehaviour
     public void PleaseDie()
     {
         if (!isDead)
-            isDead = true;
+        curHP = 0.0f;
+        isDead = true;
     }
 
 

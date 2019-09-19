@@ -23,6 +23,7 @@ public class MonsterFogDamage : MonoBehaviour
         if (other.tag == "Player")
         {
             playerHpRef.DrainHp(newDrainAmount);
+            //playerHpRef.PleaseDie();
         }
     }
 
@@ -30,7 +31,7 @@ public class MonsterFogDamage : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            playerHpRef.ResetDrain();
+            playerHpRef.ResetDrain();           
         }
     }
 }

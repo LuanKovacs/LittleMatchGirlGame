@@ -33,8 +33,8 @@ public class Game_Manager : MonoBehaviour
 
     public GameObject Player;
     public GameObject CameraMain;
-    public GameObject Monster;
     public GameObject puzzleSetBridge;
+    public GameObject ForestMonsterChase;
 
     Color32 setColor = new Color32(51,66,91, 0);
 
@@ -53,12 +53,12 @@ public class Game_Manager : MonoBehaviour
     
     void BeginChase()
     {
-        Monster.SetActive(true);
+        ForestMonsterChase.SetActive(true);
     }
 
     void EndChase()
     {
-        Monster.SetActive(false);
+        ForestMonsterChase.SetActive(false);
     }
 
     void DarkRoomStart()
