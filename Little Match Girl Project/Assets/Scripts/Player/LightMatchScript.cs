@@ -6,6 +6,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LightMatchScript : MonoBehaviour
 {
@@ -14,17 +15,27 @@ public class LightMatchScript : MonoBehaviour
     public int curMatches = 0;
     public bool isLit;
     public float maxMatchTime = 30f;
+    public GameObject matchTUT;//***Tianna!!***
+
+    private void Start()
+    {
+        matchTUT.GetComponent<CanvasGroup>().alpha = 1;//***Tianna!!***
+    }
 
     private void Update() 
     {
+
         if (!isLit && Input.GetKeyDown(KeyCode.Space) && curMatches >= 1)
         {
+            matchTUT.GetComponent<CanvasGroup>().alpha = 0;//***Tianna!!***
+
             if (curMatches > 0)
             {
                 curMatches -= 1;
             }
             StartCoroutine("LightMatch");
             print("Space");
+
         }
     }
 

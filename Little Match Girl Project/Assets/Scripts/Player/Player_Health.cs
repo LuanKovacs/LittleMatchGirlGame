@@ -13,19 +13,18 @@ public class Player_Health : MonoBehaviour
     public float curDrainHP;
     public bool isDead;
     public Image HealthPanel;//Tianna!!!!
-    public GameObject healthTUT;
+    public GameObject matchTUT;
 
     Player_Movement playerMove;
     Rigidbody playerRBref;
 
     private void Start()
     {
+        matchTUT.GetComponent<CanvasGroup>().alpha = 0;
+        //matchTUT.canvasRenderer.SetAlpha(0f);
         curDrainHP = maxDrainHP;
         curHP = maxHP;
         HealthPanel.canvasRenderer.SetAlpha(0.0f);//Tianna!!!!
-        healthTUT.SetActive(false);
-        //healthTUT.canvasRenderer.SetAlpha(0.0f);
-        //HealthPanel.alpha = 0.0f;
         playerMove = GetComponent<Player_Movement>();
         playerRBref = GetComponentInParent<Rigidbody>();
     }
@@ -52,22 +51,7 @@ public class Player_Health : MonoBehaviour
         {
             curHP = curHP -= curDrainHP * Time.deltaTime;
             HealthPanel.CrossFadeAlpha(1, curHP, true);//Tianna!!!!
-            //HealthPanel.alpha = curHP;
-            if (curHP <= 70)
-            {
-                //Debug.Log("Fade In");
-                healthTUT.SetActive(true);
-                //healthTUT.canvasRenderer.SetAlpha(1f);
-                //healthTUT.CrossFadeAlpha(1, 20, true);
 
-            }
-            if (curHP >= 70)
-            {
-                //Debug.Log("Fade Out");
-                healthTUT.SetActive(false);
-                //healthTUT.canvasRenderer.SetAlpha(0.0f);
-                //healthTUT.CrossFadeAlpha(0, 20, true);
-            }
         }
 
         if (isDead)
@@ -86,6 +70,12 @@ public class Player_Health : MonoBehaviour
             isDead = true;
             //gameObject.tag = "Dead";
         }
+
+        /*LightMatchScript lightMatch = gameObject.GetComponent<LightMatchScript>();
+        if(lightMatch.enabled)
+        {
+            healthTUT.SetActive(true);
+        }*/
     }
 
     private void OnGUI()
