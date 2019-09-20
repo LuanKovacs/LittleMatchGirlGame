@@ -11,7 +11,8 @@ public class PuzzleMusic : MonoBehaviour
     public GameObject Bridge;
 
     public CameraTopDown mainCamera;
-    public GameObject direcLight;
+    public GameObject playerLight;
+    public GameObject dirLight;
     int curGoal;
     bool PuzzleComplete;
 
@@ -19,10 +20,19 @@ public class PuzzleMusic : MonoBehaviour
     {
         Plate1.tag = "PuzzleAnswer";
     }
+
+    private void Awake()
+    {
+        playerLight = GameObject.Find("PlayerLight");
+        dirLight = GameObject.Find("Directional Light");
+    }
     // Start is called before the first frame update
     void Start()
     {
-        direcLight.SetActive(false);
+
+        playerLight.SetActive(false);
+        dirLight.SetActive(false);
+
         mainCamera.CanLook(false);
         Plate1.tag = "PuzzleAnswer";
     }
@@ -44,7 +54,8 @@ public class PuzzleMusic : MonoBehaviour
         {      
             ResetGoal();
             mainCamera.CanLook(true);
-            direcLight.SetActive(true);
+            playerLight.SetActive(true);
+            dirLight.SetActive(true);
             Bridge.SetActive(true);
             gameObject.SetActive(false);
         }
