@@ -107,7 +107,7 @@ public class Player_Health : MonoBehaviour
     public void PleaseDie()
     {
         if (!isDead)
-        curHP = 0.0f;
+        //curHP = 0.0f;
         isDead = true;
     }
 

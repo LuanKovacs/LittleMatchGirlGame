@@ -65,10 +65,14 @@ public class Game_Manager : MonoBehaviour
     {
         GameObject Forest = GameObject.Find("Terrain_Forest");
         GameObject startDark = GameObject.Find("DarkroomCheckPoint");
-        GameObject dirLight = GameObject.Find("Directional Light Night");
+        GameObject dirLight = GameObject.Find("Directional Light");
+        //GameObject dirLightN = GameObject.Find("Directional Light Night");
+        GameObject playerLight = GameObject.Find("PlayerLight");
 
         Player.transform.position = startDark.transform.position;
+        playerLight.SetActive(false);
         dirLight.SetActive(false);
+        //dirLightN.SetActive(true);
         Forest.SetActive(false); //not permitted it says...
         //Destroy(Forest);
         RenderSettings.ambientLight = Color.black;
