@@ -5087,8 +5087,10 @@ MonoBehaviour:
   curHP: 0
   gainHP: 0
   maxDrainHP: 0
+  curDrainHP: 0
+  isDead: 0
   HealthPanel: {fileID: 0}
-  healthTUT: {fileID: 0}
+  matchTUT: {fileID: 0}
 --- !u!114 &30662722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5106,6 +5108,7 @@ MonoBehaviour:
   curMatches: 1000
   isLit: 0
   maxMatchTime: 10
+  matchTUT: {fileID: 0}
 --- !u!1 &7364628137727275440
 GameObject:
   m_ObjectHideFlags: 0

@@ -15,6 +15,8 @@ public class Player_Movement : MonoBehaviour
     public float walkSpeed = 6f;
     public float sprintSpeed = 8f;
     public Animator anim;
+    public GameObject SpntCol;
+    public GameObject SpntPan;
 
     public float maxStam = 100;
     public float curStam;
@@ -46,6 +48,7 @@ public class Player_Movement : MonoBehaviour
     {
         moveSpeed = walkSpeed;
         curStam = maxStam;
+        SpntPan.GetComponent<CanvasGroup>().alpha = 0;//***Tianna!!***
     }
 
     private void OnDrawGizmos()
@@ -88,6 +91,13 @@ public class Player_Movement : MonoBehaviour
         if (curStam >= 0 && Input.GetKey(KeyCode.LeftShift))
         {
             curStam = curStam -= drainStam * Time.deltaTime;
+        }
+
+        if (Input.GetKey("left shift"))//***Tianna!!***
+        {
+
+            SpntPan.GetComponent<CanvasGroup>().alpha = 0;//***Tianna!!***
+
         }
     }
 
@@ -188,4 +198,12 @@ public class Player_Movement : MonoBehaviour
         GUI.Label(new Rect(10, 20, 100, 20), "Stamina/" + curStam.ToString());
     }
 
+    private void OnTriggerEnter(Collider col)//***Tianna!!***
+    {
+        if (col.gameObject == SpntCol)//***Tianna!!***
+        {
+            SpntPan.GetComponent<CanvasGroup>().alpha = 1;//***Tianna!!***
+        }
+    }
+ 
 }//End

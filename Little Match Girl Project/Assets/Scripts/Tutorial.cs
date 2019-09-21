@@ -5,12 +5,15 @@ using UnityEngine;
 public class Tutorial : MonoBehaviour
 {
     public GameObject IntTUT;//***Tianna!!***
+    private Transform camera;
 
+    //camera = Camera.main.transform;
 
     // Start is called before the first frame update
     void Start()
     {
         IntTUT.GetComponent<CanvasGroup>().alpha = 0;//***Tianna!!***
+        IntTUT.transform.LookAt(camera);
 
     }
 
