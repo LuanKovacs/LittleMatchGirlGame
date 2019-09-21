@@ -35,7 +35,6 @@ public class LightMatchScript : MonoBehaviour
             }
             StartCoroutine("LightMatch");
             print("Space");
-
         }
     }
 
