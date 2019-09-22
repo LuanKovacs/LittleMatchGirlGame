@@ -7,6 +7,7 @@ public class MonsterTargetMove : MonoBehaviour
     public Transform target;
     public float speed = 8.0f;
     public GameObject player;
+    public GameObject PSburst;
     Player_Health playerHPref;
 
     void Awake()
@@ -23,6 +24,14 @@ public class MonsterTargetMove : MonoBehaviour
         else 
         {
             transform.position = Vector3.MoveTowards(transform.position, playerHPref.transform.position, speed * Time.deltaTime);
+        }
+    }
+
+    private void OnTriggerEnter(Collider fire)//***Tianna!!***
+    {
+        if (fire.gameObject == target)//***Tianna!!***
+        {
+            PSburst.SetActive(true);
         }
     }
 }
