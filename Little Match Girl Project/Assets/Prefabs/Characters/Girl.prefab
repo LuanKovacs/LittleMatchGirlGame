@@ -5063,9 +5063,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseTurning: 0
   canMove: 1
-  walkSpeed: 6
-  sprintSpeed: 10
+  walkSpeed: 1
+  sprintSpeed: 1.25
   anim: {fileID: 2819438241137929759}
+  SpntCol: {fileID: 0}
+  SpntPan: {fileID: 0}
   maxStam: 100
   curStam: 0
   gainStam: 1

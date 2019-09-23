@@ -114,15 +114,15 @@ public class Player_Movement : MonoBehaviour
             //       Vector3 movement = new Vector3(h, 0f, v);
 
             Vector3 direction = new Vector3(Input.GetAxis("HorizontalKey"), 0, Input.GetAxis("VerticalKey"));
-            Vector3 rightMovement = right * moveSpeed * Time.deltaTime * Input.GetAxis("HorizontalKey");
-            Vector3 upMovement = forward * moveSpeed * Time.deltaTime * Input.GetAxis("VerticalKey");
+            Vector3 rightMovement = right * Input.GetAxis("HorizontalKey");
+            Vector3 upMovement = forward * Input.GetAxis("VerticalKey");
             Vector3 movement = Vector3.Normalize(rightMovement + upMovement);
 
-            movement = Vector3.ClampMagnitude(movement, 1.0f);
+            movement = Vector3.ClampMagnitude(movement, 1.0f) * moveSpeed;
 
             anim.SetFloat("Speed", movement.magnitude);
 
-            transform.Translate(movement * moveSpeed * Time.fixedDeltaTime, Space.World);
+            transform.Translate(movement * Time.fixedDeltaTime, Space.World);
 
             if (mouseTurning)
             {

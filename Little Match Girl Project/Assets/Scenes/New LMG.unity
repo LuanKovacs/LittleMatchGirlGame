@@ -29369,6 +29369,14 @@ PrefabInstance:
       propertyPath: SpntPan
       value: 
       objectReference: {fileID: 351086941}
+    - target: {fileID: 30662724, guid: 8479216ae4f7b1a48bfad669461d667d, type: 3}
+      propertyPath: walkSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 30662724, guid: 8479216ae4f7b1a48bfad669461d667d, type: 3}
+      propertyPath: sprintSpeed
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 30662722, guid: 8479216ae4f7b1a48bfad669461d667d, type: 3}
       propertyPath: m_Enabled
       value: 0
