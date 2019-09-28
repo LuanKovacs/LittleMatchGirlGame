@@ -89,9 +89,9 @@ public class Player_Movement : MonoBehaviour
             curStam = curStam -= drainStam * Time.deltaTime;
         }
 
-        if (Input.GetKey("left shift"))//***Tianna!!***
+        if (Input.GetKey("left shift") && SpntPan.GetComponent<CanvasGroup>().alpha == 1)//***Tianna!!***
         {
-
+            //Sprint TUT
             SpntPan.GetComponent<CanvasGroup>().alpha = 0;//***Tianna!!***
 
         }

@@ -13,12 +13,6 @@ public class PauseScript : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape) && !isPaused)
         {
-            pauseMenu.GetComponent<CanvasGroup>().alpha = 1f;
-            isPaused = true;
-
-            Time.timeScale = 0.0f;
-            print("TestPause");
-
 
         }
 
@@ -26,11 +20,17 @@ public class PauseScript : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape) && isPaused)
         {
-            pauseMenu.GetComponent<CanvasGroup>().alpha = 0f;
-            isPaused = false;
-
-            Time.timeScale = 1.0f;
+            UnPause();
         }
+    }
+
+    public void Pause()
+    {
+        pauseMenu.GetComponent<CanvasGroup>().alpha = 1f;
+        isPaused = true;
+
+        Time.timeScale = 0.0f;
+        print("TestPause");
     }
 
     public void UnPause()
