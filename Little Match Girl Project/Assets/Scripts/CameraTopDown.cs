@@ -42,7 +42,7 @@ public class CameraTopDown : MonoBehaviour
 
     private void Awake()
     {
-        transform.position = new Vector3(player.position.x, player.position.y + 43.12f, player.position.z - 38.02f);
+       transform.position = new Vector3(player.position.x, player.position.y + 43.12f, player.position.z - 38.02f);
     }
 
     // Use this for initialization
@@ -72,8 +72,8 @@ public class CameraTopDown : MonoBehaviour
         canClamp = false;
     }
 
-    void LateUpdate()
-    { //LateUpdate = end of frame, good for camera control
+    void FixedUpdate()
+    { 
         if (canFollow == true)
         {
             Vector3 targetCamPos = player.position + cameraOffsetFromTarget;
@@ -83,7 +83,7 @@ public class CameraTopDown : MonoBehaviour
             //Lerp = smoothing movement or move in percentages each time
 
             Quaternion wantedRotation = Quaternion.LookRotation(player.position - transform.position);
-            transform.rotation = Quaternion.Lerp(transform.rotation, wantedRotation, Time.time * smoothLook);
+            transform.rotation = Quaternion.Lerp(transform.rotation, wantedRotation, Time.deltaTime * smoothLook);
             //Smooth look at 
         }
         

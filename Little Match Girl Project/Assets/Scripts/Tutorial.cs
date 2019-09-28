@@ -26,7 +26,7 @@ public class Tutorial : MonoBehaviour
     {
         if (player.gameObject.tag == "Player")//***Tianna!!***
         {
-            Debug.Log("you have collided");//***Tianna!!***
+            //Debug.Log("you have collided");//***Tianna!!***
             IntTUT.GetComponent<CanvasGroup>().alpha = 1;//***Tianna!!***
         }
     }

@@ -28,7 +28,7 @@ public class Game_Manager : MonoBehaviour
         EventManager.StopListening("DarkRoomStart", DarkRoomStart);
         EventManager.StopListening("DarkRoomEnd", DarkRoomEnd);
 
-         EventManager.StopListening("PlayerDeath", PlayerDeath);
+        EventManager.StopListening("PlayerDeath", PlayerDeath);
     }
 
     public GameObject Player;
@@ -38,11 +38,25 @@ public class Game_Manager : MonoBehaviour
 
     Color32 setColor = new Color32(51,66,91, 0);
 
+    public void StartGame()
+    {
+        CameraMain.GetComponent<CameraTopDown>().enabled = true;
+        StartCoroutine("GameStart");
+    }
+
+    IEnumerator GameStart()
+    {
+        yield return new WaitForSeconds(1);
+        Player.GetComponent<Player_Health>().enabled = true;
+        Player.GetComponent<Player_Movement>().enabled = true;
+    }
+
     void UnlockMatches()
     {
         LightMatchScript lightMatch = Player.GetComponent<LightMatchScript>();
         lightMatch.enabled = true;
         EventManager.StopListening("UnlockMatches", UnlockMatches);
+        print("Test");
     }
 
     void BridgePuzzle()

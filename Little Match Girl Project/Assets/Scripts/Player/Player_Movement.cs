@@ -38,10 +38,6 @@ public class Player_Movement : MonoBehaviour
         floorMask = LayerMask.GetMask("worldFloor"); ;
         playerRigidbody = GetComponent<Rigidbody>();
 
-        forward = Camera.main.transform.forward;
-        forward.y = 0;
-        forward = Vector3.Normalize(forward);
-        right = Quaternion.Euler(new Vector3(0, 90, 0)) * forward;
     }
 
     private void Start()
@@ -103,6 +99,14 @@ public class Player_Movement : MonoBehaviour
 
     void FixedUpdate()
     {
+        forward = Camera.main.transform.forward;
+        forward.y = 0;
+        forward = Vector3.Normalize(forward);
+        //right = Quaternion.Euler(new Vector3(0, 90, 0)) * forward;
+        right = Camera.main.transform.right;
+        right.y = 0;
+        right = Vector3.Normalize(right);
+
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
 

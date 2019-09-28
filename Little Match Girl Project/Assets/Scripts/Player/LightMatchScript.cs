@@ -19,7 +19,7 @@ public class LightMatchScript : MonoBehaviour
 
     private void Start()
     {
-        matchTUT.GetComponent<CanvasGroup>().alpha = 1;//***Tianna!!***
+        matchTUT.GetComponent<CanvasGroup>().alpha = 0;//***Tianna!!***
     }
 
     private void Update() 
