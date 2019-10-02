@@ -45186,7 +45186,7 @@ PrefabInstance:
     - target: {fileID: 8729739892369836287, guid: 84fe333ec0ea52241b785924b47a7ee0,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5727767247742843628, guid: 84fe333ec0ea52241b785924b47a7ee0,
         type: 3}
@@ -45278,6 +45278,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1858018843}
     m_Modifications:
+    - target: {fileID: 4571173691209179531, guid: 6db9991d038fb52448e96deba3fe174c,
+        type: 3}
+      propertyPath: m_Name
+      value: lantern
+      objectReference: {fileID: 0}
     - target: {fileID: 5747985291421508597, guid: 6db9991d038fb52448e96deba3fe174c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -45332,11 +45337,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4571173691209179531, guid: 6db9991d038fb52448e96deba3fe174c,
-        type: 3}
-      propertyPath: m_Name
-      value: lantern
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6db9991d038fb52448e96deba3fe174c, type: 3}
@@ -46047,7 +46047,7 @@ PrefabInstance:
     - target: {fileID: 4548531036243307334, guid: 08c6211ab8007434fb3ddc5ae6304427,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 667932664586164565, guid: 08c6211ab8007434fb3ddc5ae6304427,
         type: 3}
@@ -46644,11 +46644,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5006512736453335234}
     m_Modifications:
-    - target: {fileID: 3169313629952965545, guid: d9498df130942c547bcf8cf4612db6ec,
-        type: 3}
-      propertyPath: m_Name
-      value: trash_bonfire
-      objectReference: {fileID: 0}
     - target: {fileID: 2134970297436113338, guid: d9498df130942c547bcf8cf4612db6ec,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -46718,6 +46713,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 0.0003540039
+      objectReference: {fileID: 0}
+    - target: {fileID: 3169313629952965545, guid: d9498df130942c547bcf8cf4612db6ec,
+        type: 3}
+      propertyPath: m_Name
+      value: trash_bonfire
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9498df130942c547bcf8cf4612db6ec, type: 3}
