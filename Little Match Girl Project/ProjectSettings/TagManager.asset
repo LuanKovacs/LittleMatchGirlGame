@@ -9,6 +9,7 @@ TagManager:
   - Dead
   - PuzzleAnswer
   - Interactable
+  - Checkpoints
   layers:
   - Default
   - TransparentFX

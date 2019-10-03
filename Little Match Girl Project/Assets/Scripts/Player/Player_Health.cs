@@ -18,6 +18,13 @@ public class Player_Health : MonoBehaviour
     Player_Movement playerMove;
     Rigidbody playerRBref;
 
+    private void OnEnable() 
+    {
+        curDrainHP = maxDrainHP;
+        curHP = maxHP;
+        isDead = false;
+    }
+
     private void Start()
     {
         matchTUT.GetComponent<CanvasGroup>().alpha = 0;
@@ -60,7 +67,6 @@ public class Player_Health : MonoBehaviour
             playerRBref.constraints = RigidbodyConstraints.None;
             playerRBref.AddTorque(transform.right * 5 * 5);
             playerMove.canMove = false;
-            EventManager.TriggerEvent("Dead");
         }
 
         if (curHP <= 0 && !isDead)

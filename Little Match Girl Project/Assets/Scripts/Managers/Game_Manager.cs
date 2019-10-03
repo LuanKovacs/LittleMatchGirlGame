@@ -36,12 +36,14 @@ public class Game_Manager : MonoBehaviour
     public GameObject puzzleSetBridge;
     public GameObject ForestMonsterChase;
 
+    public GameObject losePanel;
+    
     Color32 setColor = new Color32(51,66,91, 0);
 
     public void StartGame()
     {
         CameraMain.GetComponent<CameraTopDown>().enabled = true;
-        StartCoroutine("GameStart");
+        StartCoroutine(GameStart());
     }
 
     IEnumerator GameStart()
@@ -103,12 +105,24 @@ public class Game_Manager : MonoBehaviour
     void PlayerDeath()
     {
         CameraMain.GetComponent<CameraTopDown>().enabled = false;
-        StartCoroutine("DeathState");
+        StartCoroutine(DeathState());
     }
 
     IEnumerator DeathState()
     {
+        losePanel.SetActive(true);
+         Player.GetComponent<Player_Health>().PleaseDie();
         yield return new WaitForSeconds(0.5f);
-        Player.GetComponent<Player_Health>().PleaseDie();
+
+        Player.GetComponent<Player_Health>().enabled = false;
+
+        yield return new WaitForSeconds(3.0f);
+        Player.transform.rotation = Quaternion.identity;
+        CameraMain.GetComponent<CameraTopDown>().enabled = true;
+        GetComponent<RespawnCheckpoint>().Respawn();
+        losePanel.SetActive(false);
+        Player.GetComponent<Player_Health>().enabled = true;
+        
+
     }
 }

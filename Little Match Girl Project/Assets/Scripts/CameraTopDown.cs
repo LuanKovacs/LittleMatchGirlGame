@@ -42,7 +42,7 @@ public class CameraTopDown : MonoBehaviour
 
     private void Awake()
     {
-       //transform.position = new Vector3(player.position.x, player.position.y + 43.12f, player.position.z - 38.02f);
+       transform.position = new Vector3(player.position.x, player.position.y + 43.12f, player.position.z - 38.02f);
     }
 
     // Use this for initialization

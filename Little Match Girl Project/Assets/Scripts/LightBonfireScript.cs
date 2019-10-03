@@ -16,7 +16,7 @@ public class LightBonfireScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        wlref = GameObject.Find("winTrigger").GetComponent<WinLoseScript>();
+        //wlref = GameObject.Find("winTrigger").GetComponent<WinLoseScript>();
     }
 
     // Update is called once per frame
