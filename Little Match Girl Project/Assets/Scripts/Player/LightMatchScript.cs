@@ -16,10 +16,18 @@ public class LightMatchScript : MonoBehaviour
     public bool isLit;
     public float maxMatchTime = 30f;
     public GameObject matchTUT;//***Tianna!!***
+    //public GameObject objwthspt;
 
     private void Start()
     {
         matchTUT.GetComponent<CanvasGroup>().alpha = 1;//***Tianna!!***
+
+        /*objwthspt = objwthspt.GetComponent("callEvent");
+        if (objwthspt = "DarkRoomStart")
+        {
+            Debug.Log("Bigger Match");
+        }*/
+
     }
 
     private void Update() 
