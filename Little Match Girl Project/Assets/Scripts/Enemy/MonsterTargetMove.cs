@@ -28,11 +28,5 @@ public class MonsterTargetMove : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider fire)//***Tianna!!***
-    {
-        if (fire.gameObject == target)//***Tianna!!***
-        {
-            burst.SetActive(true);
-        }
-    }
+
 }
