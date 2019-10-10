@@ -5,7 +5,9 @@ using UnityEngine;
 public class BrightenMatch : MonoBehaviour
 {
     public Light lt;
-    public GameObject trigger;
+    public GameObject startTrigger;
+    public GameObject endTrigger;
+    public float Brightness;
 
 
     // Start is called before the first frame update
@@ -22,9 +24,14 @@ public class BrightenMatch : MonoBehaviour
 
     void OnTriggerEnter(Collider darkCol)
     {
-        if (darkCol.gameObject == trigger)
+        if (darkCol.gameObject == startTrigger)
         {
-           lt.intensity = 2f;
+           lt.intensity = Brightness;
+        }
+
+        if (darkCol.gameObject == endTrigger)
+        {
+            lt.intensity = 0.5f;
         }
     }
 
