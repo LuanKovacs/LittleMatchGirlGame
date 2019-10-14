@@ -20,6 +20,7 @@ public class MonsterTargetMove : MonoBehaviour
     {
         if (!playerHPref.isDead)
         {
+            
             transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
         }
         else 

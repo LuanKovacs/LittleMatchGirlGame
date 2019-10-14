@@ -7,7 +7,8 @@ public class BrightenMatch : MonoBehaviour
     public Light lt;
     public GameObject startTrigger;
     public GameObject endTrigger;
-    public float Brightness;
+    public float intensityOG; //RT update
+    public float intensityNew;
 
 
     // Start is called before the first frame update
@@ -26,12 +27,14 @@ public class BrightenMatch : MonoBehaviour
     {
         if (darkCol.gameObject == startTrigger)
         {
-           lt.intensity = Brightness;
+           lt.spotAngle = 125.9f;
+           lt.intensity = intensityNew;
         }
 
         if (darkCol.gameObject == endTrigger)
         {
-            lt.intensity = 0.5f;
+            lt.spotAngle = 87.7f;
+            lt.intensity = intensityOG;
         }
     }
 

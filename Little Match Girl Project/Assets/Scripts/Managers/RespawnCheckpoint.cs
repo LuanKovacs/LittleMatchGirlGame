@@ -53,7 +53,7 @@ public class RespawnCheckpoint : MonoBehaviour
             {
                 closestDistSqr = distSqrToTarget;
                 respawnTarget = checkP.transform;
-
+                
                 Player.position = checkP.transform.position;//Teleport player
                 print("Respawn");
             }

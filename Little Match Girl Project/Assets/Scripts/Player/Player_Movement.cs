@@ -33,6 +33,12 @@ public class Player_Movement : MonoBehaviour
     float camRayLength = 100f;
     RaycastHit hit;
     LayerMask mask;
+
+    void OnEnable()
+    {
+        canMove = true;
+    }
+
     void Awake()
     {
         floorMask = LayerMask.GetMask("worldFloor"); ;

@@ -18,11 +18,14 @@ public class Player_Health : MonoBehaviour
     Player_Movement playerMove;
     Rigidbody playerRBref;
 
-    private void OnEnable() 
+    public void Revive() 
     {
         curDrainHP = maxDrainHP;
         curHP = maxHP;
         isDead = false;
+        playerRBref.constraints = RigidbodyConstraints.FreezeRotationX;
+        playerRBref.constraints = RigidbodyConstraints.FreezeRotationZ;
+        playerMove.canMove = true;
     }
 
     private void Start()
@@ -34,6 +37,7 @@ public class Player_Health : MonoBehaviour
         HealthPanel.canvasRenderer.SetAlpha(0.0f);//Tianna!!!!
         playerMove = GetComponent<Player_Movement>();
         playerRBref = GetComponentInParent<Rigidbody>();
+
     }
 
     private void Update()
@@ -67,6 +71,7 @@ public class Player_Health : MonoBehaviour
             playerRBref.constraints = RigidbodyConstraints.None;
             playerRBref.AddTorque(transform.right * 5 * 5);
             playerMove.canMove = false;
+            EventManager.TriggerEvent("PlayerDeath");
         }
 
         if (curHP <= 0 && !isDead)
@@ -115,6 +120,7 @@ public class Player_Health : MonoBehaviour
         if (!isDead)
         //curHP = 0.0f;
         isDead = true;
+    
     }
 
 

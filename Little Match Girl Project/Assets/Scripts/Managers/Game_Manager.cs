@@ -74,7 +74,9 @@ public class Game_Manager : MonoBehaviour
 
     void EndChase()
     {
-        ForestMonsterChase.SetActive(false);
+        //ForestMonsterChase.SetActive(false);
+        //Disable Monster
+        //Play Burst Particles
     }
 
     void DarkRoomStart()
@@ -89,8 +91,16 @@ public class Game_Manager : MonoBehaviour
         playerLight.SetActive(false);
         dirLight.SetActive(false);
         //dirLightN.SetActive(true);
-        Forest.SetActive(false); //not permitted it says...
+
+
+        //Forest.SetActive(false); //not permitted it says...
         //Destroy(Forest);
+
+       /*  foreach (GameObject child in Forest)
+        {
+            child.gameObject.SetActive(false);
+        }*/
+
         RenderSettings.ambientLight = Color.black;
 
         EventManager.StopListening("DarkRoomStart", DarkRoomStart);
@@ -111,15 +121,17 @@ public class Game_Manager : MonoBehaviour
     IEnumerator DeathState()
     {
         losePanel.SetActive(true);
-         Player.GetComponent<Player_Health>().PleaseDie();
+        Player.GetComponent<Player_Health>().PleaseDie();
         yield return new WaitForSeconds(0.5f);
 
         Player.GetComponent<Player_Health>().enabled = false;
 
         yield return new WaitForSeconds(3.0f);
-        Player.transform.rotation = Quaternion.identity;
         CameraMain.GetComponent<CameraTopDown>().enabled = true;
         GetComponent<RespawnCheckpoint>().Respawn();
+        Player.transform.rotation = Quaternion.identity;
+        Player.GetComponent<Player_Health>().Revive();
+
         losePanel.SetActive(false);
         Player.GetComponent<Player_Health>().enabled = true;
         

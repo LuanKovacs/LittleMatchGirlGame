@@ -18,7 +18,7 @@ public class PS_Burst : MonoBehaviour
         
     }
 
-        void OnTriggerEnter(Collider col)//***Tianna!!***
+    void OnTriggerEnter(Collider col)//***Tianna!!***
     {
 
           Debug.Log("The Crow has Landed!");

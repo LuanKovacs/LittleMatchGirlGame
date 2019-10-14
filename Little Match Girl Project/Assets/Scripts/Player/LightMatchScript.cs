@@ -18,6 +18,9 @@ public class LightMatchScript : MonoBehaviour
     public GameObject matchTUT;//***Tianna!!***
     //public GameObject objwthspt;
 
+    public GameObject spotLightReg;
+    public GameObject spotLightDA;
+
     private void Start()
     {
         matchTUT.GetComponent<CanvasGroup>().alpha = 1;//***Tianna!!***
