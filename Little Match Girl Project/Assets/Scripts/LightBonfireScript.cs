@@ -31,7 +31,7 @@ public class LightBonfireScript : MonoBehaviour
         {
             lit = true;
             partFire.SetActive(true);
-            wlref.litBonfires += 1;
+            //wlref.litBonfires += 1;
         }
     }
 }//End

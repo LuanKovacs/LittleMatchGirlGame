@@ -14,7 +14,10 @@ public class Game_Manager : MonoBehaviour
 
         EventManager.StartListening("DarkRoomStart", DarkRoomStart);
         EventManager.StartListening("DarkRoomEnd", DarkRoomEnd);
-        
+
+        EventManager.StartListening("ChurchTransition", ChurchTransition);
+        EventManager.StartListening("ChurchExit", ChurchExit);
+
         EventManager.StartListening("PlayerDeath", PlayerDeath);
     }
 
@@ -28,16 +31,22 @@ public class Game_Manager : MonoBehaviour
         EventManager.StopListening("DarkRoomStart", DarkRoomStart);
         EventManager.StopListening("DarkRoomEnd", DarkRoomEnd);
 
+        EventManager.StopListening("ChurchTransition", ChurchTransition);
+        EventManager.StopListening("ChurchExit", ChurchExit);
+
         EventManager.StopListening("PlayerDeath", PlayerDeath);
     }
 
     public GameObject Player;
     public GameObject CameraMain;
     public GameObject puzzleSetBridge;
-    public GameObject ForestMonsterChase;
+    public GameObject ForestChase;
+    public GameObject Monster;
+    public GameObject ChurchPuzzle;
+    public GameObject RuinedChurch;
 
     public GameObject losePanel;
-    
+    public GameObject allLighting;
     Color32 setColor = new Color32(51,66,91, 0);
 
     public void StartGame()
@@ -69,7 +78,7 @@ public class Game_Manager : MonoBehaviour
     
     void BeginChase()
     {
-        ForestMonsterChase.SetActive(true);
+        ForestChase.SetActive(true);
     }
 
     void EndChase()
@@ -83,13 +92,14 @@ public class Game_Manager : MonoBehaviour
     {
         GameObject Forest = GameObject.Find("Terrain_Forest");
         GameObject startDark = GameObject.Find("DarkroomCheckPoint");
-        GameObject dirLight = GameObject.Find("Directional Light");
+       // GameObject dirLight = GameObject.Find("Directional Light");
         //GameObject dirLightN = GameObject.Find("Directional Light Night");
-        GameObject playerLight = GameObject.Find("PlayerLight");
+       // GameObject playerLight = GameObject.Find("PlayerLight");
 
         Player.transform.position = startDark.transform.position;
-        playerLight.SetActive(false);
-        dirLight.SetActive(false);
+       // playerLight.SetActive(false);
+        //dirLight.SetActive(false);
+        allLighting.SetActive(false);
         //dirLightN.SetActive(true);
 
 
@@ -108,8 +118,32 @@ public class Game_Manager : MonoBehaviour
 
     void DarkRoomEnd()
     {
+        GameObject startChurch = GameObject.Find("ChurchStart");
+
         RenderSettings.ambientLight = setColor;
+
+        ChurchPuzzle.SetActive(true);
+        CameraMain.SetActive(false);
+
+        Player.transform.position = startChurch.transform.position;
+
         EventManager.StopListening("DarkRoomEnd", DarkRoomEnd);
+    }
+
+    void ChurchTransition()
+    {
+        GameObject.Find("ChurchFBX_P").SetActive(false);
+        GameObject.Find("ChurchLight").SetActive(false);
+        RuinedChurch.SetActive(true);
+    }
+
+    void ChurchExit()
+    {
+        GameObject startGrave = GameObject.Find("GraveStart");
+        ChurchPuzzle.SetActive(false);
+        allLighting.SetActive(true);
+        CameraMain.SetActive(true);
+        Player.transform.position = startGrave.transform.position;
     }
 
     void PlayerDeath()
