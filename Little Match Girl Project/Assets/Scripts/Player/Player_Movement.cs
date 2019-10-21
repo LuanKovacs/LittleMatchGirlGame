@@ -69,7 +69,7 @@ public class Player_Movement : MonoBehaviour
         {
             if (hit.collider.tag == "Interactable")
             {
-                if (Input.GetKeyDown(KeyCode.E))
+                if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown("joystick button 2"))
                 {
                     print("interact");
                     TriggerEventScript tEvent = hit.collider.GetComponent<TriggerEventScript>();
@@ -144,7 +144,7 @@ public class Player_Movement : MonoBehaviour
             }
         }
 
-        if (Input.GetKey("left shift") && !sprinting)
+        if (Input.GetKey("left shift") && !sprinting || Input.GetKey("joystick button 0") && !sprinting)
         {
             //print("Sptrinting");
             sprinting = true;
@@ -155,7 +155,7 @@ public class Player_Movement : MonoBehaviour
 
             }
         }
-        else if (sprinting && Input.GetKeyUp("left shift"))
+        else if (sprinting && Input.GetKeyUp("left shift") || sprinting && Input.GetKeyUp("joystick button 0"))
         {
             // print("Not Sprinting");
             sprinting = false;
