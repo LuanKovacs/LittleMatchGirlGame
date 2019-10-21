@@ -23,8 +23,8 @@ public class Player_Health : MonoBehaviour
         curDrainHP = maxDrainHP;
         curHP = maxHP;
         isDead = false;
-        playerRBref.constraints = RigidbodyConstraints.FreezeRotationX;
-        playerRBref.constraints = RigidbodyConstraints.FreezeRotationZ;
+        playerRBref.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+
         playerMove.canMove = true;
     }
 
@@ -34,7 +34,7 @@ public class Player_Health : MonoBehaviour
         //matchTUT.canvasRenderer.SetAlpha(0f);
         curDrainHP = maxDrainHP;
         curHP = maxHP;
-        HealthPanel.canvasRenderer.SetAlpha(0.0f);//Tianna!!!!
+        //HealthPanel.canvasRenderer.SetAlpha(0.0f);//Tianna!!!!
         playerMove = GetComponent<Player_Movement>();
         playerRBref = GetComponentInParent<Rigidbody>();
 
@@ -48,12 +48,12 @@ public class Player_Health : MonoBehaviour
         {
             curHP = curHP += 10.0f * Time.deltaTime;
             HealthPanel.CrossFadeAlpha(-curHP, 100, false);//Tianna!!!!
-            //HealthPanel.alpha = curHP / 100;
+            //HealthPanel.alpha -= Time.deltaTime / curHP;
             if (curHP > maxHP)
             {
                 curHP = maxHP;
                 HealthPanel.canvasRenderer.SetAlpha(0.0f);//Tianna!!!!
-                                                          // HealthPanel.alpha = 0.0f;
+                //HealthPanel.alpha = 0.0f;
             }
         }
 
@@ -62,6 +62,7 @@ public class Player_Health : MonoBehaviour
         {
             curHP = curHP -= curDrainHP * Time.deltaTime;
             HealthPanel.CrossFadeAlpha(1, curHP, true);//Tianna!!!!
+            //HealthPanel.alpha += Time.deltaTime / curHP;
 
         }
 
@@ -76,7 +77,7 @@ public class Player_Health : MonoBehaviour
 
         if (curHP <= 0 && !isDead)
         {
-            // HealthPanel.alpha = 1.0f;
+            //HealthPanel.alpha = 1.0f;
             HealthPanel.canvasRenderer.SetAlpha(1.0f);//Tianna!!!!
             isDead = true;
             //gameObject.tag = "Dead";

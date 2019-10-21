@@ -163,6 +163,7 @@ public class Game_Manager : MonoBehaviour
         yield return new WaitForSeconds(3.0f);
         CameraMain.GetComponent<CameraTopDown>().enabled = true;
         GetComponent<RespawnCheckpoint>().Respawn();
+        
         Player.transform.rotation = Quaternion.identity;
         Player.GetComponent<Player_Health>().Revive();
 
