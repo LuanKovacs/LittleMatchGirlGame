@@ -95,7 +95,8 @@ public class Player_Movement : MonoBehaviour
             curStam = curStam -= drainStam * Time.deltaTime;
         }
 
-        if (Input.GetKey("left shift") && SpntPan.GetComponent<CanvasGroup>().alpha == 1)//***Tianna!!***
+        if (Input.GetKey("left shift") && SpntPan.GetComponent<CanvasGroup>().alpha == 1
+            || Input.GetKey("joystick button 0") && SpntPan.GetComponent<CanvasGroup>().alpha == 1)//***Tianna!!***
         {
             //Sprint TUT
             SpntPan.GetComponent<CanvasGroup>().alpha = 0;//***Tianna!!***
@@ -123,10 +124,10 @@ public class Player_Movement : MonoBehaviour
             // anim.Play("Run");
             //       Vector3 movement = new Vector3(h, 0f, v);
 
-            Vector3 direction = new Vector3(Input.GetAxis("HorizontalKey"), 0, Input.GetAxis("VerticalKey"));
-            Vector3 rightMovement = right * Input.GetAxis("HorizontalKey");
-            Vector3 upMovement = forward * Input.GetAxis("VerticalKey");
-            Vector3 movement = Vector3.Normalize(rightMovement + upMovement);
+            //Vector3 direction = new Vector3(Input.GetAxis("HorizontalKey"), 0, Input.GetAxis("VerticalKey"));
+           // Vector3 rightMovement = right * Input.GetAxis("HorizontalKey");
+           // Vector3 upMovement = forward * Input.GetAxis("VerticalKey");
+            //Vector3 movement = Vector3.Normalize(rightMovement + upMovement);
 
             movement = Vector3.ClampMagnitude(movement, 1.0f) * moveSpeed;
 
