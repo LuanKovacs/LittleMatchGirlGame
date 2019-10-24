@@ -11,6 +11,8 @@ public class Game_Manager : MonoBehaviour
         EventManager.StartListening("UnlockMatches", UnlockMatches);
         EventManager.StartListening("BeginChase", BeginChase);
         EventManager.StartListening("EndChase", EndChase);
+        EventManager.StartListening("BeginCityChase", BeginCityChase);
+        EventManager.StartListening("EndCityChase", EndChase);
 
         EventManager.StartListening("DarkRoomStart", DarkRoomStart);
         EventManager.StartListening("DarkRoomEnd", DarkRoomEnd);
@@ -41,6 +43,7 @@ public class Game_Manager : MonoBehaviour
     public GameObject CameraMain;
     public GameObject puzzleSetBridge;
     public GameObject ForestChase;
+    public GameObject CityChase;
     public GameObject Monster;
     public GameObject ChurchPuzzle;
     public GameObject RuinedChurch;
@@ -79,6 +82,11 @@ public class Game_Manager : MonoBehaviour
     void BeginChase()
     {
         ForestChase.SetActive(true);
+    }
+
+    void BeginCityChase()
+    {
+        CityChase.SetActive(true);
     }
 
     void EndChase()
