@@ -29,6 +29,8 @@ public class Game_Manager : MonoBehaviour
         EventManager.StopListening("UnlockMatches", UnlockMatches);
         EventManager.StopListening("BeginChase", BeginChase);
         EventManager.StartListening("EndChase", EndChase);
+        EventManager.StartListening("BeginCityChase", BeginCityChase);
+        EventManager.StartListening("EndCityChase", EndChase);
 
         EventManager.StopListening("DarkRoomStart", DarkRoomStart);
         EventManager.StopListening("DarkRoomEnd", DarkRoomEnd);

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BrightenMatch : MonoBehaviour
 {
-    public Light lt;
+    public GameObject lt;
     public GameObject startTrigger;
     public GameObject endTrigger;
     public float intensityOG; //RT update
@@ -14,7 +14,7 @@ public class BrightenMatch : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        lt = GetComponent<Light>();
+        //lit = lt.GetComponent<Light>();
     }
 
     // Update is called once per frame
@@ -25,16 +25,19 @@ public class BrightenMatch : MonoBehaviour
 
     void OnTriggerEnter(Collider darkCol)
     {
+
+        Light lit = lt.GetComponent<Light>();
         if (darkCol.gameObject == startTrigger)
         {
-           lt.spotAngle = 125.9f;
-           lt.intensity = intensityNew;
+            Debug.Log("Brighten");
+            lit.spotAngle = 125.9f;
+            lit.intensity = intensityNew;
         }
 
         if (darkCol.gameObject == endTrigger)
         {
-            lt.spotAngle = 87.7f;
-            lt.intensity = intensityOG;
+            lit.spotAngle = 87.7f;
+            lit.intensity = intensityOG;
         }
     }
 

@@ -33,6 +33,8 @@ public class Player_Movement : MonoBehaviour
     float camRayLength = 100f;
     RaycastHit hit;
     LayerMask mask;
+    float rotation = 180f;
+    private LightMatchScript matchSrpt;
 
     void OnEnable()
     {
@@ -41,7 +43,7 @@ public class Player_Movement : MonoBehaviour
 
     void Awake()
     {
-        floorMask = LayerMask.GetMask("worldFloor"); ;
+        floorMask = LayerMask.GetMask("worldFloor"); 
         playerRigidbody = GetComponent<Rigidbody>();
 
     }
@@ -65,15 +67,42 @@ public class Player_Movement : MonoBehaviour
 
     private void Update()
     {
+
+       /* else if (this.InMyState)
+        {
+            this.InMyState = false;
+            // You have just leaved your state!
+        }*/
         if (Physics.Raycast(transform.position * 1.0f, transform.TransformDirection(Vector3.forward), out hit, 3))
         {
             if (hit.collider.tag == "Interactable")
             {
                 if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown("joystick button 2"))
                 {
-                    print("interact");
-                    TriggerEventScript tEvent = hit.collider.GetComponent<TriggerEventScript>();
-                    tEvent.CallEvent();
+                    //print("interact");
+                    GameObject GameManager = GameObject.Find("GameManager");
+                    GameObject PuzzleChurch = GameManager.transform.Find("Puzzle Church").gameObject;
+
+                    if(PuzzleChurch.activeSelf)
+                    {
+                       
+                        transform.Rotate(0, rotation, 0);
+                        anim.Play("Sit");
+                      
+
+                    }
+
+                    if(!this.anim.GetCurrentAnimatorStateInfo(0).IsName("Sit"))
+                    {
+                       
+                         TriggerEventScript tEvent = hit.collider.GetComponent<TriggerEventScript>();
+                         tEvent.CallEvent();
+
+                        anim.Play("Idle");
+                    }
+                    
+
+                    
                 }
             }
         }
@@ -116,7 +145,15 @@ public class Player_Movement : MonoBehaviour
 
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
-
+        matchSrpt = GetComponent<LightMatchScript>();
+        if (matchSrpt.isLit == true)
+        {
+            anim.Play("MatchIdle");
+        }
+        /*else
+        {
+            return;
+        }*/
         if (canMove)
         {
             Move(h, v);
@@ -134,6 +171,8 @@ public class Player_Movement : MonoBehaviour
             anim.SetFloat("Speed", movement.magnitude);
 
             transform.Translate(movement * Time.fixedDeltaTime, Space.World);
+
+            
 
             if (mouseTurning)
             {
