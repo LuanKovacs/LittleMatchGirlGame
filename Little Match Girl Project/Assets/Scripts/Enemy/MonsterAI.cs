@@ -7,6 +7,8 @@ public class MonsterAI : MonoBehaviour
     public Transform targetPos;
     public float speed = 5.0f;
     public bool move;
+    
+    public Animator anim;
 
     private void OnEnable() 
     {
@@ -29,6 +31,23 @@ public class MonsterAI : MonoBehaviour
         
             //transform.position = Vector3.MoveTowards(transform.position, targetPos.position, speed * Time.deltaTime);
             //transform.position = new Vector3(Mathf.Clamp (transform.position.x, transform.position.x - 1f , transform.position.x - 1f), transform.position.y, transform.position.z);
+        }
+
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Roar"))
+        {
+
+            GameObject mainCamera = GameObject.Find("Main Camera");
+            Animator anim = mainCamera.GetComponent<Animator>();
+
+            anim.enabled = true;
+ 
+        }
+        else
+        {
+            GameObject mainCamera = GameObject.Find("Main Camera");
+            Animator anim = mainCamera.GetComponent<Animator>();
+
+            anim.enabled = false;
         }
     }
 

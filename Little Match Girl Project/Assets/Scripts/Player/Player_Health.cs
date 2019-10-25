@@ -17,6 +17,7 @@ public class Player_Health : MonoBehaviour
 
     Player_Movement playerMove;
     Rigidbody playerRBref;
+    
 
     public void Revive() 
     {
@@ -65,6 +66,20 @@ public class Player_Health : MonoBehaviour
             //HealthPanel.alpha += Time.deltaTime / curHP;
 
         }
+        if(curHP <= 10)
+        {
+            GameObject Player = GameObject.Find("Player");
+            GameObject PlayerModel = Player.transform.Find("CharacterModel&Rig").gameObject;
+            Animator anim = PlayerModel.GetComponent<Animator>();
+            anim.Play("Death");
+        }
+        else
+        {
+            GameObject Player = GameObject.Find("Player");
+            GameObject PlayerModel = Player.transform.Find("CharacterModel&Rig").gameObject;
+            Animator anim = PlayerModel.GetComponent<Animator>();
+            anim.Play("Entry");
+        }
 
         if (isDead)
         {
@@ -73,6 +88,7 @@ public class Player_Health : MonoBehaviour
             playerRBref.AddTorque(transform.right * 5 * 5);
             playerMove.canMove = false;
             EventManager.TriggerEvent("PlayerDeath");
+
         }
 
         if (curHP <= 0 && !isDead)

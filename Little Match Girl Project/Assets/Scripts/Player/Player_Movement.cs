@@ -53,6 +53,11 @@ public class Player_Movement : MonoBehaviour
         moveSpeed = walkSpeed;
         curStam = maxStam;
         SpntPan.GetComponent<CanvasGroup>().alpha = 0;//***Tianna!!***
+
+        
+        GameObject PlayerModel = transform.Find("CharacterModel&Rig").gameObject;
+        Animator anim = PlayerModel.GetComponent<Animator>();
+        anim.Play("StartingPosition");
     }
 
     private void OnDrawGizmos()
@@ -150,10 +155,7 @@ public class Player_Movement : MonoBehaviour
         {
             anim.Play("MatchIdle");
         }
-        /*else
-        {
-            return;
-        }*/
+
         if (canMove)
         {
             Move(h, v);

@@ -19,6 +19,7 @@ public class Game_Manager : MonoBehaviour
 
         EventManager.StartListening("ChurchTransition", ChurchTransition);
         EventManager.StartListening("ChurchExit", ChurchExit);
+        EventManager.StartListening("FinalCutScene", FinalCutScene);
 
         EventManager.StartListening("PlayerDeath", PlayerDeath);
     }
@@ -160,6 +161,14 @@ public class Game_Manager : MonoBehaviour
     {
         CameraMain.GetComponent<CameraTopDown>().enabled = false;
         StartCoroutine(DeathState());
+    }
+
+    void FinalCutScene()
+    {
+        GameObject Player = GameObject.Find("Player");
+        GameObject PlayerModel = Player.transform.Find("CharacterModel&Rig").gameObject;
+        Animator anim = PlayerModel.GetComponent<Animator>();
+        anim.Play("");
     }
 
     IEnumerator DeathState()
