@@ -5111,6 +5111,8 @@ MonoBehaviour:
   isLit: 0
   maxMatchTime: 10
   matchTUT: {fileID: 0}
+  spotLightReg: {fileID: 0}
+  spotLightDA: {fileID: 0}
 --- !u!1 &7364628137727275440
 GameObject:
   m_ObjectHideFlags: 0
