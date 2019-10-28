@@ -10,6 +10,7 @@ TagManager:
   - PuzzleAnswer
   - Interactable
   - Checkpoints
+  - Ground
   layers:
   - Default
   - TransparentFX
