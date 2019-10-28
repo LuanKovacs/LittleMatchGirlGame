@@ -66,7 +66,7 @@ public class Player_Health : MonoBehaviour
             //HealthPanel.alpha += Time.deltaTime / curHP;
 
         }
-        if(curHP <= 10)
+        if(curHP <= 10)//Death anim play
         {
             GameObject Player = GameObject.Find("Player");
             GameObject PlayerModel = Player.transform.Find("CharacterModel&Rig").gameObject;

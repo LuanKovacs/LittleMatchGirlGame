@@ -36,6 +36,8 @@ public class Player_Movement : MonoBehaviour
     float rotation = 180f;
     private LightMatchScript matchSrpt;
 
+    bool sitting;
+
     void OnEnable()
     {
         canMove = true;
@@ -72,6 +74,13 @@ public class Player_Movement : MonoBehaviour
 
     private void Update()
     {
+        //Testing
+        if(Input.GetKeyDown(KeyCode.T))
+        {
+            //BeginToSit();
+            sitting = true;
+        }
+        
 
        /* else if (this.InMyState)
         {
@@ -104,10 +113,7 @@ public class Player_Movement : MonoBehaviour
                          tEvent.CallEvent();
 
                         anim.Play("Idle");
-                    }
-                    
-
-                    
+                    }                   
                 }
             }
         }
@@ -140,6 +146,7 @@ public class Player_Movement : MonoBehaviour
 
     void FixedUpdate()
     {
+        
         forward = Camera.main.transform.forward;
         forward.y = 0;
         forward = Vector3.Normalize(forward);
@@ -156,6 +163,11 @@ public class Player_Movement : MonoBehaviour
             anim.Play("MatchIdle");
         }
 
+        if (sitting)//Scripted Movement
+        {
+            MoveIntoPlace();
+        }
+
         if (canMove)
         {
             Move(h, v);
@@ -169,12 +181,8 @@ public class Player_Movement : MonoBehaviour
             //Vector3 movement = Vector3.Normalize(rightMovement + upMovement);
 
             movement = Vector3.ClampMagnitude(movement, 1.0f) * moveSpeed;
-
             anim.SetFloat("Speed", movement.magnitude);
-
             transform.Translate(movement * Time.fixedDeltaTime, Space.World);
-
-            
 
             if (mouseTurning)
             {
@@ -256,6 +264,36 @@ public class Player_Movement : MonoBehaviour
         {
             SpntPan.GetComponent<CanvasGroup>().alpha = 1;//***Tianna!!***
         }
+    }
+
+    public void BeginToSit()
+    {
+        //StartCoroutine(MoveIntoPlace());
+    }
+
+    //Player Character scripted movement for sitting
+    //IEnumerator MoveIntoPlace()
+    void MoveIntoPlace()
+    {
+        canMove = false;
+        Vector3 curPos = transform.position;
+        Transform tarPos = GameObject.FindWithTag("SitPos").transform;
+        //move player to target location
+        //and copy rotation of target
+        //movement = Vector3.ClampMagnitude(movement, 1.0f) * moveSpeed;
+        anim.SetFloat("Speed", 8);//Anim play walk
+        //transform.Translate(movement * Time.fixedDeltaTime, Space.World);
+        if(curPos != tarPos.position && !canMove)
+        {
+        transform.LookAt(tarPos);
+        transform.position = Vector3.MoveTowards(curPos, tarPos.position, 5 * Time.deltaTime);
+        }
+        else
+        {
+            
+        }
+        //transform.rotation = tarPos.rotation.eulerAngles;
+       // yield break;
     }
  
 }//End
