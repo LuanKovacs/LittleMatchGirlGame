@@ -7,6 +7,7 @@ public class MonsterAI : MonoBehaviour
     public Transform targetPos;
     public float speed = 5.0f;
     public bool move;
+    public Animator CamAnimator;
     
     public Animator anim;
 
@@ -35,19 +36,12 @@ public class MonsterAI : MonoBehaviour
 
         if (anim.GetCurrentAnimatorStateInfo(0).IsName("Roar"))
         {
-
-            GameObject mainCamera = GameObject.Find("Main Camera");
-            Animator anim = mainCamera.GetComponent<Animator>();
-
-            anim.enabled = true;
+            CamAnimator.enabled = true;
  
         }
         else
         {
-            GameObject mainCamera = GameObject.Find("Main Camera");
-            Animator anim = mainCamera.GetComponent<Animator>();
-
-            anim.enabled = false;
+            CamAnimator.enabled = false;
         }
     }
 
