@@ -71,14 +71,14 @@ public class Player_Health : MonoBehaviour
             GameObject Player = GameObject.Find("Player");
             GameObject PlayerModel = Player.transform.Find("CharacterModel&Rig").gameObject;
             Animator anim = PlayerModel.GetComponent<Animator>();
-            anim.Play("Death");
+            anim.Play("Death");//Tianna!!!!
         }
         else
         {
             GameObject Player = GameObject.Find("Player");
             GameObject PlayerModel = Player.transform.Find("CharacterModel&Rig").gameObject;
             Animator anim = PlayerModel.GetComponent<Animator>();
-            anim.Play("Entry");
+            anim.Play("Entry");//Tianna!!!!
         }
 
         if (isDead)
@@ -88,6 +88,11 @@ public class Player_Health : MonoBehaviour
             playerRBref.AddTorque(transform.right * 5 * 5);
             playerMove.canMove = false;
             EventManager.TriggerEvent("PlayerDeath");
+
+            GameObject Player = GameObject.Find("Player");
+            GameObject PlayerModel = Player.transform.Find("CharacterModel&Rig").gameObject;
+            Animator anim = PlayerModel.GetComponent<Animator>();
+            anim.Play("Entry");//Tianna!!!!
 
         }
 

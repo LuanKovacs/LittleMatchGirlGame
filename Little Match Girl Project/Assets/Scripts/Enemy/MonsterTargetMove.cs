@@ -8,7 +8,7 @@ public class MonsterTargetMove : MonoBehaviour
     public float speed = 8.0f;
     public GameObject player;
     Player_Health playerHPref;
-    public GameObject burst;
+
 
 
     void Awake()

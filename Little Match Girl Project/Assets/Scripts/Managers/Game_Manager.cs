@@ -97,6 +97,7 @@ public class Game_Manager : MonoBehaviour
         //ForestMonsterChase.SetActive(false);
         //Disable Monster
         //Play Burst Particles
+        //^^All of this happens in the "PS_Burst" script^^
     }
 
     void DarkRoomStart()
