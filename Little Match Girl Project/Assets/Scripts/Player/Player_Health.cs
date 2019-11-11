@@ -14,6 +14,8 @@ public class Player_Health : MonoBehaviour
     public bool isDead;
     public Image HealthPanel;//Tianna!!!!
     public GameObject matchTUT;
+    public GameObject citytrigger;
+    public GameObject foresttrigger;
 
     Player_Movement playerMove;
     Rigidbody playerRBref;
@@ -27,6 +29,12 @@ public class Player_Health : MonoBehaviour
         playerRBref.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
 
         playerMove.canMove = true;
+
+        GameObject Player = GameObject.Find("Player");
+        GameObject PlayerModel = Player.transform.Find("CharacterModel&Rig").gameObject;
+        Animator anim = PlayerModel.GetComponent<Animator>();
+        anim.Play("Entry");//Tianna!!!!
+
     }
 
     private void Start()
@@ -89,10 +97,24 @@ public class Player_Health : MonoBehaviour
             playerMove.canMove = false;
             EventManager.TriggerEvent("PlayerDeath");
 
-            GameObject Player = GameObject.Find("Player");
-            GameObject PlayerModel = Player.transform.Find("CharacterModel&Rig").gameObject;
-            Animator anim = PlayerModel.GetComponent<Animator>();
-            anim.Play("Entry");//Tianna!!!!
+            GameObject forestEvent = GameObject.Find("ForestMonsterChase");
+            GameObject cityEvent = GameObject.Find("CityMonsterChase");
+            GameObject camera = GameObject.Find("Main Camera");
+            Animator camAnim = camera.GetComponent<Animator>();
+            
+            if (forestEvent != null)//Tianna!!!!
+            {
+                forestEvent.SetActive(false);
+                foresttrigger.SetActive(true);
+                camAnim.enabled = false;
+
+            }
+            if (cityEvent != null)//Tianna!!!!
+            {
+                cityEvent.SetActive(false);
+                citytrigger.SetActive(true);
+                camAnim.enabled = false;
+            }
 
         }
 

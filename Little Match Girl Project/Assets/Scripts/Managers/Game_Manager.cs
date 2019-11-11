@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Game_Manager : MonoBehaviour
 {
@@ -38,6 +39,7 @@ public class Game_Manager : MonoBehaviour
 
         EventManager.StopListening("ChurchTransition", ChurchTransition);
         EventManager.StopListening("ChurchExit", ChurchExit);
+        EventManager.StopListening("FinalCutScene", FinalCutScene);
 
         EventManager.StopListening("PlayerDeath", PlayerDeath);
     }
@@ -51,6 +53,8 @@ public class Game_Manager : MonoBehaviour
     public GameObject ChurchPuzzle;
     public GameObject RuinedChurch;
 
+
+    public GameObject winPanel;
     public GameObject losePanel;
     public GameObject allLighting;
     Color32 setColor = new Color32(51,66,91, 0);
@@ -164,14 +168,26 @@ public class Game_Manager : MonoBehaviour
         StartCoroutine(DeathState());
     }
 
-    void FinalCutScene()
+    void FinalCutScene()//Tianna!!!!
     {
         GameObject Player = GameObject.Find("Player");
         GameObject PlayerModel = Player.transform.Find("CharacterModel&Rig").gameObject;
         Animator anim = PlayerModel.GetComponent<Animator>();
         anim.Play("");
-    }
 
+        StartCoroutine(DefaultWin());
+
+    }
+    IEnumerator DefaultWin()//Tianna!!!!
+    {
+        
+        winPanel.SetActive(true);
+        yield return new WaitForSeconds(2.0f);
+        Debug.Log("Start menu?");
+        //StartCoroutine(StartGame());
+        SceneManager.LoadScene("New LMG");
+
+    }
     IEnumerator DeathState()
     {
         losePanel.SetActive(true);
