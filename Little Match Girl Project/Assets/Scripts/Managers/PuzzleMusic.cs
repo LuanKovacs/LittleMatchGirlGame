@@ -13,7 +13,7 @@ public class PuzzleMusic : MonoBehaviour
     public CameraTopDown mainCamera;
     public GameObject playerLight;
     public GameObject dirLight;
-    public int curGoal;
+    int curGoal;
     bool PuzzleComplete;
 
     void OnEnable()
