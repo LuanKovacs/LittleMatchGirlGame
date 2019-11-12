@@ -1,0 +1,729 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="134">
+	<RootPaths>
+		<ProjectRoot>F:\Uni\Creative Media Project\Production\Little Match Girl_sound (phase 4)\CRE312_Assign3-DavC-33171037\Wwise project\The Little Match Girl\</ProjectRoot>
+		<SourceFilesRoot>F:\Uni\Creative Media Project\Production\Little Match Girl_sound (phase 4)\CRE312_Assign3-DavC-33171037\Wwise project\The Little Match Girl\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>F:\Uni\Creative Media Project\Production\Little Match Girl_sound (phase 4)\CRE312_Assign3-DavC-33171037\Wwise project\The Little Match Girl\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>F:\Uni\Creative Media Project\Production\Little Match Girl_sound (phase 4)\CRE312_Assign3-DavC-33171037\Wwise project\The Little Match Girl\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3161908922" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+			<IncludedEvents>
+				<Event Id="1585810604" Name="Bliazzard_creature_scream" ObjectPath="\Events\Default Work Unit\Bliazzard_creature_scream" DurationType="OneShot" DurationMin="5.425722" DurationMax="21.176571"/>
+				<Event Id="3037339097" Name="Blizzard_creature" ObjectPath="\Events\Default Work Unit\Blizzard_creature" DurationType="Infinite"/>
+				<Event Id="1870191356" Name="Branches_snapping" ObjectPath="\Events\Default Work Unit\Branches_snapping" DurationType="OneShot" DurationMin="1.319508" DurationMax="2.639016"/>
+				<Event Id="4049931288" Name="Church_bell" ObjectPath="\Events\Default Work Unit\Church_bell" DurationType="OneShot" DurationMin="4.996479" DurationMax="4.996479"/>
+				<Event Id="1962582049" Name="Crow_scare" ObjectPath="\Events\Default Work Unit\Crow_scare" DurationType="OneShot" DurationMin="0.932472" DurationMax="1.641791"/>
+				<Event Id="2848348995" Name="Crows" ObjectPath="\Events\Default Work Unit\Crows" MaxAttenuation="100.000000" DurationType="OneShot" DurationMin="0.293466" DurationMax="0.661906"/>
+				<Event Id="2109043066" Name="Fire_crackling" ObjectPath="\Events\Default Work Unit\Fire_crackling" MaxAttenuation="100.000000" DurationType="Infinite"/>
+				<Event Id="2385628198" Name="Footsteps" ObjectPath="\Events\Default Work Unit\Footsteps" DurationType="OneShot" DurationMin="0.323265" DurationMax="1.434021"/>
+				<Event Id="2073873008" Name="Girl_breathing" ObjectPath="\Events\Default Work Unit\Girl_breathing" DurationType="OneShot" DurationMin="0.680455" DurationMax="1.222417"/>
+				<Event Id="3589338066" Name="Heart_beat" ObjectPath="\Events\Default Work Unit\Heart_beat" DurationType="Infinite"/>
+				<Event Id="3936468003" Name="Lighting_match" ObjectPath="\Events\Default Work Unit\Lighting_match" DurationType="OneShot" DurationMin="0.880987" DurationMax="1.528934"/>
+				<Event Id="33754718" Name="Match_blown_out" ObjectPath="\Events\Default Work Unit\Match_blown_out" DurationType="OneShot" DurationMin="0.254053" DurationMax="1.516577"/>
+				<Event Id="2025997070" Name="Puzzle_game" ObjectPath="\Events\Default Work Unit\Puzzle_game" DurationType="OneShot" DurationMin="3.959500" DurationMax="3.959500"/>
+				<Event Id="1050267453" Name="Spotlight_effect" ObjectPath="\Events\Default Work Unit\Spotlight_effect" DurationType="OneShot" DurationMin="3.000000" DurationMax="3.000000"/>
+				<Event Id="670208879" Name="Sticks_cracking" ObjectPath="\Events\Default Work Unit\Sticks_cracking" DurationType="OneShot" DurationMin="0.282049" DurationMax="2.609534"/>
+				<Event Id="4101366284" Name="Striking_match" ObjectPath="\Events\Default Work Unit\Striking_match" DurationType="OneShot" DurationMin="0.200000" DurationMax="0.345792"/>
+				<Event Id="125079528" Name="Teetch_chattering" ObjectPath="\Events\Default Work Unit\Teetch_chattering" DurationType="Infinite"/>
+				<Event Id="2062015187" Name="Wind_1" ObjectPath="\Events\Default Work Unit\Wind_1" DurationType="Infinite"/>
+				<Event Id="2062015184" Name="Wind_2" ObjectPath="\Events\Default Work Unit\Wind_2" DurationType="Infinite"/>
+				<Event Id="3164481935" Name="Wings_flapping" ObjectPath="\Events\Default Work Unit\Wings_flapping" MaxAttenuation="100.000000" DurationType="OneShot" DurationMin="1.303179" DurationMax="3.212880"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="10105964" Language="SFX">
+					<ShortName>Sand_01.wav</ShortName>
+					<Path>SFX\Sand_01_E5FEFA51.wem</Path>
+				</File>
+				<File Id="18139735" Language="SFX">
+					<ShortName>Sand_02.wav</ShortName>
+					<Path>SFX\Sand_02_E5FEFA51.wem</Path>
+				</File>
+				<File Id="21185845" Language="SFX">
+					<ShortName>Sticks cracking_01.wav</ShortName>
+					<Path>SFX\Sticks cracking_01_E5FEFA51.wem</Path>
+				</File>
+				<File Id="23958802" Language="SFX">
+					<ShortName>Rumble_01.wav</ShortName>
+					<Path>SFX\Rumble_01_EA4F517B.wem</Path>
+				</File>
+				<File Id="30499908" Language="SFX">
+					<ShortName>Snow_06.wav</ShortName>
+					<Path>SFX\Snow_06_E5FEFA51.wem</Path>
+				</File>
+				<File Id="38984507" Language="SFX">
+					<ShortName>Dirt_01.wav</ShortName>
+					<Path>SFX\Dirt_01_E5FEFA51.wem</Path>
+				</File>
+				<File Id="51571960" Language="SFX">
+					<ShortName>Dirt_02.wav</ShortName>
+					<Path>SFX\Dirt_02_E5FEFA51.wem</Path>
+				</File>
+				<File Id="73121443" Language="SFX">
+					<ShortName>Stricking match_01.wav</ShortName>
+					<Path>SFX\Stricking match_01_E5FEFA51.wem</Path>
+				</File>
+				<File Id="83621153" Language="SFX">
+					<ShortName>Spotlight_03.wav</ShortName>
+					<Path>SFX\Spotlight_03_523680FA.wem</Path>
+				</File>
+				<File Id="112808856" Language="SFX">
+					<ShortName>Rumble_03.wav</ShortName>
+					<Path>SFX\Rumble_03_EA4F517B.wem</Path>
+				</File>
+				<File Id="120058342" Language="SFX">
+					<ShortName>Stone_10.wav</ShortName>
+					<Path>SFX\Stone_10_E5FEFA51.wem</Path>
+				</File>
+				<File Id="120307047" Language="SFX">
+					<ShortName>Wings flapping_03_new.wav</ShortName>
+					<Path>SFX\Wings flapping_03_new_E5FEFA51.wem</Path>
+				</File>
+				<File Id="120674452" Language="SFX">
+					<ShortName>Crow_18.wav</ShortName>
+					<Path>SFX\Crow_18_E5FEFA51.wem</Path>
+				</File>
+				<File Id="122667148" Language="SFX">
+					<ShortName>Stone_03.wav</ShortName>
+					<Path>SFX\Stone_03_E5FEFA51.wem</Path>
+				</File>
+				<File Id="135939373" Language="SFX">
+					<ShortName>Ghastly vocal_01.wav</ShortName>
+					<Path>SFX\Ghastly vocal_01_E5FEFA51.wem</Path>
+				</File>
+				<File Id="150258649" Language="SFX">
+					<ShortName>Dirt_10.wav</ShortName>
+					<Path>SFX\Dirt_10_E5FEFA51.wem</Path>
+				</File>
+				<File Id="157066837" Language="SFX">
+					<ShortName>Broken glass_07.wav</ShortName>
+					<Path>SFX\Broken glass_07_E5FEFA51.wem</Path>
+				</File>
+				<File Id="159305188" Language="SFX">
+					<ShortName>Snow_08.wav</ShortName>
+					<Path>SFX\Snow_08_E5FEFA51.wem</Path>
+				</File>
+				<File Id="169280749" Language="SFX">
+					<ShortName>Broken glass_03.wav</ShortName>
+					<Path>SFX\Broken glass_03_E5FEFA51.wem</Path>
+				</File>
+				<File Id="171566908" Language="SFX">
+					<ShortName>Broken glass_05.wav</ShortName>
+					<Path>SFX\Broken glass_05_E5FEFA51.wem</Path>
+				</File>
+				<File Id="190526092" Language="SFX">
+					<ShortName>Lighting match_03.wav</ShortName>
+					<Path>SFX\Lighting match_03_E2C79C17.wem</Path>
+				</File>
+				<File Id="192561037" Language="SFX">
+					<ShortName>Crow_12.wav</ShortName>
+					<Path>SFX\Crow_12_E5FEFA51.wem</Path>
+				</File>
+				<File Id="192692127" Language="SFX">
+					<ShortName>Stone_04.wav</ShortName>
+					<Path>SFX\Stone_04_E5FEFA51.wem</Path>
+				</File>
+				<File Id="197816207" Language="SFX">
+					<ShortName>Spotlight_02.wav</ShortName>
+					<Path>SFX\Spotlight_02_C2E6119F.wem</Path>
+				</File>
+				<File Id="210552173" Language="SFX">
+					<ShortName>Dirt_12.wav</ShortName>
+					<Path>SFX\Dirt_12_E5FEFA51.wem</Path>
+				</File>
+				<File Id="223202098" Language="SFX">
+					<ShortName>Chog_01.wav</ShortName>
+					<Path>SFX\Chog_01_E5FEFA51.wem</Path>
+				</File>
+				<File Id="240825963" Language="SFX">
+					<ShortName>Branch snap_03.wav</ShortName>
+					<Path>SFX\Branch snap_03_E5FEFA51.wem</Path>
+				</File>
+				<File Id="241578197" Language="SFX">
+					<ShortName>Low end amb_02.wav</ShortName>
+					<Path>SFX\Low end amb_02_EA4F517B.wem</Path>
+				</File>
+				<File Id="242765150" Language="SFX">
+					<ShortName>wind_02.wav</ShortName>
+					<Path>SFX\wind_02_E5FEFA51.wem</Path>
+				</File>
+				<File Id="243289368" Language="SFX">
+					<ShortName>Light wind_05.wav</ShortName>
+					<Path>SFX\Light wind_05_E5FEFA51.wem</Path>
+				</File>
+				<File Id="283867326" Language="SFX">
+					<ShortName>Stone_07.wav</ShortName>
+					<Path>SFX\Stone_07_E5FEFA51.wem</Path>
+				</File>
+				<File Id="286868418" Language="SFX">
+					<ShortName>Fire crackling_04.wav</ShortName>
+					<Path>SFX\Fire crackling_04_E5FEFA51.wem</Path>
+				</File>
+				<File Id="289549421" Language="SFX">
+					<ShortName>Crow_04.wav</ShortName>
+					<Path>SFX\Crow_04_E5FEFA51.wem</Path>
+				</File>
+				<File Id="290746235" Language="SFX">
+					<ShortName>Snow_01.wav</ShortName>
+					<Path>SFX\Snow_01_E5FEFA51.wem</Path>
+				</File>
+				<File Id="297062394" Language="SFX">
+					<ShortName>Low end amb_03.wav</ShortName>
+					<Path>SFX\Low end amb_03_EA4F517B.wem</Path>
+				</File>
+				<File Id="313711638" Language="SFX">
+					<ShortName>Broken glass_02.wav</ShortName>
+					<Path>SFX\Broken glass_02_E5FEFA51.wem</Path>
+				</File>
+				<File Id="317654748" Language="SFX">
+					<ShortName>Lighting match_01.wav</ShortName>
+					<Path>SFX\Lighting match_01_8E4C3FC9.wem</Path>
+				</File>
+				<File Id="322452636" Language="SFX">
+					<ShortName>Wings flap_01.wav</ShortName>
+					<Path>SFX\Wings flap_01_3085761E.wem</Path>
+				</File>
+				<File Id="323925953" Language="SFX">
+					<ShortName>Fire crackling_01.wav</ShortName>
+					<Path>SFX\Fire crackling_01_E5FEFA51.wem</Path>
+				</File>
+				<File Id="328049618" Language="SFX">
+					<ShortName>Ghastly vocal_05.wav</ShortName>
+					<Path>SFX\Ghastly vocal_05_E5FEFA51.wem</Path>
+				</File>
+				<File Id="338346346" Language="SFX">
+					<ShortName>Broken glass_09.wav</ShortName>
+					<Path>SFX\Broken glass_09_E5FEFA51.wem</Path>
+				</File>
+				<File Id="338863051" Language="SFX">
+					<ShortName>Crow scare_03.wav</ShortName>
+					<Path>SFX\Crow scare_03_E5FEFA51.wem</Path>
+				</File>
+				<File Id="341595007" Language="SFX">
+					<ShortName>Teeth chattering_01.wav</ShortName>
+					<Path>SFX\Teeth chattering_01_E5FEFA51.wem</Path>
+				</File>
+				<File Id="348912420" Language="SFX">
+					<ShortName>Branch snap_02.wav</ShortName>
+					<Path>SFX\Branch snap_02_E5FEFA51.wem</Path>
+				</File>
+				<File Id="351114388" Language="SFX">
+					<ShortName>Rumble_04.wav</ShortName>
+					<Path>SFX\Rumble_04_EA4F517B.wem</Path>
+				</File>
+				<File Id="362376508" Language="SFX">
+					<ShortName>Crow_06.wav</ShortName>
+					<Path>SFX\Crow_06_E5FEFA51.wem</Path>
+				</File>
+				<File Id="363770000" Language="SFX">
+					<ShortName>Crow scare_01.wav</ShortName>
+					<Path>SFX\Crow scare_01_E5FEFA51.wem</Path>
+				</File>
+				<File Id="366734609" Language="SFX">
+					<ShortName>Heavy gust_06.wav</ShortName>
+					<Path>SFX\Heavy gust_06_2052B5F2.wem</Path>
+				</File>
+				<File Id="406709651" Language="SFX">
+					<ShortName>Crow_17.wav</ShortName>
+					<Path>SFX\Crow_17_E5FEFA51.wem</Path>
+				</File>
+				<File Id="407194915" Language="SFX">
+					<ShortName>Light wind_01.wav</ShortName>
+					<Path>SFX\Light wind_01_E5FEFA51.wem</Path>
+				</File>
+				<File Id="415200458" Language="SFX">
+					<ShortName>Dirt_05.wav</ShortName>
+					<Path>SFX\Dirt_05_E5FEFA51.wem</Path>
+				</File>
+				<File Id="417267745" Language="SFX">
+					<ShortName>Ghastly vocal_07.wav</ShortName>
+					<Path>SFX\Ghastly vocal_07_E5FEFA51.wem</Path>
+				</File>
+				<File Id="420425265" Language="SFX">
+					<ShortName>Spotlight_01.wav</ShortName>
+					<Path>SFX\Spotlight_01_99B31E14.wem</Path>
+				</File>
+				<File Id="426151767" Language="SFX">
+					<ShortName>Girl breathing_06.wav</ShortName>
+					<Path>SFX\Girl breathing_06_E5FEFA51.wem</Path>
+				</File>
+				<File Id="427092499" Language="SFX">
+					<ShortName>Heavy gust_03.wav</ShortName>
+					<Path>SFX\Heavy gust_03_37D66870.wem</Path>
+				</File>
+				<File Id="429075722" Language="SFX">
+					<ShortName>Stone_12.wav</ShortName>
+					<Path>SFX\Stone_12_E5FEFA51.wem</Path>
+				</File>
+				<File Id="430855390" Language="SFX">
+					<ShortName>Vocoder_02.wav</ShortName>
+					<Path>SFX\Vocoder_02_F664B070.wem</Path>
+				</File>
+				<File Id="436902843" Language="SFX">
+					<ShortName>Errie wind_02.wav</ShortName>
+					<Path>SFX\Errie wind_02_E5FEFA51.wem</Path>
+				</File>
+				<File Id="439147576" Language="SFX">
+					<ShortName>Branch snap_01.wav</ShortName>
+					<Path>SFX\Branch snap_01_E5FEFA51.wem</Path>
+				</File>
+				<File Id="439544390" Language="SFX">
+					<ShortName>Stricking match_05.wav</ShortName>
+					<Path>SFX\Stricking match_05_E5FEFA51.wem</Path>
+				</File>
+				<File Id="442747883" Language="SFX">
+					<ShortName>Girl breathing_03.wav</ShortName>
+					<Path>SFX\Girl breathing_03_E5FEFA51.wem</Path>
+				</File>
+				<File Id="452156859" Language="SFX">
+					<ShortName>Stricking match_03.wav</ShortName>
+					<Path>SFX\Stricking match_03_E5FEFA51.wem</Path>
+				</File>
+				<File Id="455072946" Language="SFX">
+					<ShortName>High pitch sound_01.wav</ShortName>
+					<Path>SFX\High pitch sound_01_E5FEFA51.wem</Path>
+				</File>
+				<File Id="466749671" Language="SFX">
+					<ShortName>Snow_05.wav</ShortName>
+					<Path>SFX\Snow_05_E5FEFA51.wem</Path>
+				</File>
+				<File Id="469074141" Language="SFX">
+					<ShortName>Stone_11.wav</ShortName>
+					<Path>SFX\Stone_11_E5FEFA51.wem</Path>
+				</File>
+				<File Id="469144847" Language="SFX">
+					<ShortName>Crow scare_02.wav</ShortName>
+					<Path>SFX\Crow scare_02_E5FEFA51.wem</Path>
+				</File>
+				<File Id="501955582" Language="SFX">
+					<ShortName>Broken glass_01.wav</ShortName>
+					<Path>SFX\Broken glass_01_E5FEFA51.wem</Path>
+				</File>
+				<File Id="502598266" Language="SFX">
+					<ShortName>Ghastly vocal_06.wav</ShortName>
+					<Path>SFX\Ghastly vocal_06_E5FEFA51.wem</Path>
+				</File>
+				<File Id="506597550" Language="SFX">
+					<ShortName>Stone_06.wav</ShortName>
+					<Path>SFX\Stone_06_E5FEFA51.wem</Path>
+				</File>
+				<File Id="507404173" Language="SFX">
+					<ShortName>Snow_07.wav</ShortName>
+					<Path>SFX\Snow_07_E5FEFA51.wem</Path>
+				</File>
+				<File Id="535997865" Language="SFX">
+					<ShortName>Crow_16.wav</ShortName>
+					<Path>SFX\Crow_16_E5FEFA51.wem</Path>
+				</File>
+				<File Id="544878297" Language="SFX">
+					<ShortName>Stone_14.wav</ShortName>
+					<Path>SFX\Stone_14_E5FEFA51.wem</Path>
+				</File>
+				<File Id="548394140" Language="SFX">
+					<ShortName>Snow_04.wav</ShortName>
+					<Path>SFX\Snow_04_E5FEFA51.wem</Path>
+				</File>
+				<File Id="551479429" Language="SFX">
+					<ShortName>Broken glass_06.wav</ShortName>
+					<Path>SFX\Broken glass_06_E5FEFA51.wem</Path>
+				</File>
+				<File Id="552211887" Language="SFX">
+					<ShortName>Tone_03.wav</ShortName>
+					<Path>SFX\Tone_03_E5FEFA51.wem</Path>
+				</File>
+				<File Id="552693701" Language="SFX">
+					<ShortName>Match Blown out_04.wav</ShortName>
+					<Path>SFX\Match Blown out_04_CA3641A7.wem</Path>
+				</File>
+				<File Id="563837847" Language="SFX">
+					<ShortName>Branch snap_04.wav</ShortName>
+					<Path>SFX\Branch snap_04_E5FEFA51.wem</Path>
+				</File>
+				<File Id="572839605" Language="SFX">
+					<ShortName>Light wind_04.wav</ShortName>
+					<Path>SFX\Light wind_04_E5FEFA51.wem</Path>
+				</File>
+				<File Id="573197985" Language="SFX">
+					<ShortName>Stone_08.wav</ShortName>
+					<Path>SFX\Stone_08_E5FEFA51.wem</Path>
+				</File>
+				<File Id="573513792" Language="SFX">
+					<ShortName>Dirt_06.wav</ShortName>
+					<Path>SFX\Dirt_06_E5FEFA51.wem</Path>
+				</File>
+				<File Id="583865372" Language="SFX">
+					<ShortName>Sand_04.wav</ShortName>
+					<Path>SFX\Sand_04_E5FEFA51.wem</Path>
+				</File>
+				<File Id="584685030" Language="SFX">
+					<ShortName>Wings flap_04.wav</ShortName>
+					<Path>SFX\Wings flap_04_E5FEFA51.wem</Path>
+				</File>
+				<File Id="590416315" Language="SFX">
+					<ShortName>Broken glass_04.wav</ShortName>
+					<Path>SFX\Broken glass_04_E5FEFA51.wem</Path>
+				</File>
+				<File Id="591403987" Language="SFX">
+					<ShortName>Sticks cracking_05.wav</ShortName>
+					<Path>SFX\Sticks cracking_05_E5FEFA51.wem</Path>
+				</File>
+				<File Id="595345630" Language="SFX">
+					<ShortName>Vocoder_03.wav</ShortName>
+					<Path>SFX\Vocoder_03_799EA939.wem</Path>
+				</File>
+				<File Id="596076711" Language="SFX">
+					<ShortName>Dirt_11.wav</ShortName>
+					<Path>SFX\Dirt_11_E5FEFA51.wem</Path>
+				</File>
+				<File Id="600780753" Language="SFX">
+					<ShortName>Stricking match_02.wav</ShortName>
+					<Path>SFX\Stricking match_02_E5FEFA51.wem</Path>
+				</File>
+				<File Id="601840590" Language="SFX">
+					<ShortName>Snow_10.wav</ShortName>
+					<Path>SFX\Snow_10_E5FEFA51.wem</Path>
+				</File>
+				<File Id="617046666" Language="SFX">
+					<ShortName>Ghastly vocal_03.wav</ShortName>
+					<Path>SFX\Ghastly vocal_03_E5FEFA51.wem</Path>
+				</File>
+				<File Id="617622679" Language="SFX">
+					<ShortName>Girl breathing_07.wav</ShortName>
+					<Path>SFX\Girl breathing_07_E5FEFA51.wem</Path>
+				</File>
+				<File Id="632879307" Language="SFX">
+					<ShortName>Broken glass_08.wav</ShortName>
+					<Path>SFX\Broken glass_08_E5FEFA51.wem</Path>
+				</File>
+				<File Id="637213074" Language="SFX">
+					<ShortName>Sticks cracking_02.wav</ShortName>
+					<Path>SFX\Sticks cracking_02_E5FEFA51.wem</Path>
+				</File>
+				<File Id="638704617" Language="SFX">
+					<ShortName>Heavy gust_01.wav</ShortName>
+					<Path>SFX\Heavy gust_01_E5FEFA51.wem</Path>
+				</File>
+				<File Id="641098417" Language="SFX">
+					<ShortName>Snow_09.wav</ShortName>
+					<Path>SFX\Snow_09_E5FEFA51.wem</Path>
+				</File>
+				<File Id="651596308" Language="SFX">
+					<ShortName>Fire crackling_02.wav</ShortName>
+					<Path>SFX\Fire crackling_02_E5FEFA51.wem</Path>
+				</File>
+				<File Id="652838016" Language="SFX">
+					<ShortName>Fire crackling_05.wav</ShortName>
+					<Path>SFX\Fire crackling_05_E5FEFA51.wem</Path>
+				</File>
+				<File Id="660533787" Language="SFX">
+					<ShortName>Crow_14.wav</ShortName>
+					<Path>SFX\Crow_14_E5FEFA51.wem</Path>
+				</File>
+				<File Id="664234519" Language="SFX">
+					<ShortName>Snow_11.wav</ShortName>
+					<Path>SFX\Snow_11_E5FEFA51.wem</Path>
+				</File>
+				<File Id="664947369" Language="SFX">
+					<ShortName>Stone_09.wav</ShortName>
+					<Path>SFX\Stone_09_E5FEFA51.wem</Path>
+				</File>
+				<File Id="673659549" Language="SFX">
+					<ShortName>Crow_15.wav</ShortName>
+					<Path>SFX\Crow_15_E5FEFA51.wem</Path>
+				</File>
+				<File Id="678515893" Language="SFX">
+					<ShortName>Rattle_01.wav</ShortName>
+					<Path>SFX\Rattle_01_E5FEFA51.wem</Path>
+				</File>
+				<File Id="687640115" Language="SFX">
+					<ShortName>Wings flapping_07_new.wav</ShortName>
+					<Path>SFX\Wings flapping_07_new_E5FEFA51.wem</Path>
+				</File>
+				<File Id="690444990" Language="SFX">
+					<ShortName>Teeth chattering_02.wav</ShortName>
+					<Path>SFX\Teeth chattering_02_E5FEFA51.wem</Path>
+				</File>
+				<File Id="703086431" Language="SFX">
+					<ShortName>Errie wind_01.wav</ShortName>
+					<Path>SFX\Errie wind_01_E5FEFA51.wem</Path>
+				</File>
+				<File Id="704758567" Language="SFX">
+					<ShortName>Sticks cracking_04.wav</ShortName>
+					<Path>SFX\Sticks cracking_04_E5FEFA51.wem</Path>
+				</File>
+				<File Id="707196245" Language="SFX">
+					<ShortName>Crow_11.wav</ShortName>
+					<Path>SFX\Crow_11_E5FEFA51.wem</Path>
+				</File>
+				<File Id="708040810" Language="SFX">
+					<ShortName>High pitch sound_02.wav</ShortName>
+					<Path>SFX\High pitch sound_02_E5FEFA51.wem</Path>
+				</File>
+				<File Id="721279935" Language="SFX">
+					<ShortName>Chog_02.wav</ShortName>
+					<Path>SFX\Chog_02_E5FEFA51.wem</Path>
+				</File>
+				<File Id="724221619" Language="SFX">
+					<ShortName>Girl breathing_02.wav</ShortName>
+					<Path>SFX\Girl breathing_02_E5FEFA51.wem</Path>
+				</File>
+				<File Id="735679633" Language="SFX">
+					<ShortName>Branch snap_05.wav</ShortName>
+					<Path>SFX\Branch snap_05_E5FEFA51.wem</Path>
+				</File>
+				<File Id="738291434" Language="SFX">
+					<ShortName>Broken glass_13.wav</ShortName>
+					<Path>SFX\Broken glass_13_E5FEFA51.wem</Path>
+				</File>
+				<File Id="738572541" Language="SFX">
+					<ShortName>Dirt_03.wav</ShortName>
+					<Path>SFX\Dirt_03_E5FEFA51.wem</Path>
+				</File>
+				<File Id="745599875" Language="SFX">
+					<ShortName>Broken glass_10.wav</ShortName>
+					<Path>SFX\Broken glass_10_E5FEFA51.wem</Path>
+				</File>
+				<File Id="755060084" Language="SFX">
+					<ShortName>Tone_02.wav</ShortName>
+					<Path>SFX\Tone_02_E5FEFA51.wem</Path>
+				</File>
+				<File Id="756695702" Language="SFX">
+					<ShortName>Rattle_03.wav</ShortName>
+					<Path>SFX\Rattle_03_E5FEFA51.wem</Path>
+				</File>
+				<File Id="778613323" Language="SFX">
+					<ShortName>Church bell_01.wav</ShortName>
+					<Path>SFX\Church bell_01_4AE93929.wem</Path>
+				</File>
+				<File Id="787654622" Language="SFX">
+					<ShortName>Snow_02.wav</ShortName>
+					<Path>SFX\Snow_02_E5FEFA51.wem</Path>
+				</File>
+				<File Id="805296143" Language="SFX">
+					<ShortName>Crow_03.wav</ShortName>
+					<Path>SFX\Crow_03_E5FEFA51.wem</Path>
+				</File>
+				<File Id="807791997" Language="SFX">
+					<ShortName>Crow_08.wav</ShortName>
+					<Path>SFX\Crow_08_E5FEFA51.wem</Path>
+				</File>
+				<File Id="809544886" Language="SFX">
+					<ShortName>Dirt_07.wav</ShortName>
+					<Path>SFX\Dirt_07_E5FEFA51.wem</Path>
+				</File>
+				<File Id="810907512" Language="SFX">
+					<ShortName>Scream-01.wav</ShortName>
+					<Path>SFX\Scream-01_E2408E18.wem</Path>
+				</File>
+				<File Id="814097540" Language="SFX">
+					<ShortName>Stricking match_04.wav</ShortName>
+					<Path>SFX\Stricking match_04_E5FEFA51.wem</Path>
+				</File>
+				<File Id="815226173" Language="SFX">
+					<ShortName>Crow scare_04.wav</ShortName>
+					<Path>SFX\Crow scare_04_E5FEFA51.wem</Path>
+				</File>
+				<File Id="817214681" Language="SFX">
+					<ShortName>Lighting match_02.wav</ShortName>
+					<Path>SFX\Lighting match_02_7BC78465.wem</Path>
+				</File>
+				<File Id="817368845" Language="SFX">
+					<ShortName>Rumble_02.wav</ShortName>
+					<Path>SFX\Rumble_02_C0660EF1.wem</Path>
+				</File>
+				<File Id="818226035" Language="SFX">
+					<ShortName>Stone_02.wav</ShortName>
+					<Path>SFX\Stone_02_E5FEFA51.wem</Path>
+				</File>
+				<File Id="824209932" Language="SFX">
+					<ShortName>Dirt_04.wav</ShortName>
+					<Path>SFX\Dirt_04_E5FEFA51.wem</Path>
+				</File>
+				<File Id="827073501" Language="SFX">
+					<ShortName>Sand_03.wav</ShortName>
+					<Path>SFX\Sand_03_E5FEFA51.wem</Path>
+				</File>
+				<File Id="827800874" Language="SFX">
+					<ShortName>Low end amb_01.wav</ShortName>
+					<Path>SFX\Low end amb_01_EA4F517B.wem</Path>
+				</File>
+				<File Id="830333050" Language="SFX">
+					<ShortName>Stricking match_06.wav</ShortName>
+					<Path>SFX\Stricking match_06_E5FEFA51.wem</Path>
+				</File>
+				<File Id="831388924" Language="SFX">
+					<ShortName>Fire crackling_03.wav</ShortName>
+					<Path>SFX\Fire crackling_03_E5FEFA51.wem</Path>
+				</File>
+				<File Id="835327910" Language="SFX">
+					<ShortName>Vocoder_01.wav</ShortName>
+					<Path>SFX\Vocoder_01_7E117271.wem</Path>
+				</File>
+				<File Id="841070217" Language="SFX">
+					<ShortName>Snow_12.wav</ShortName>
+					<Path>SFX\Snow_12_E5FEFA51.wem</Path>
+				</File>
+				<File Id="847147475" Language="SFX">
+					<ShortName>Background grow.wav</ShortName>
+					<Path>SFX\Background grow_E5FEFA51.wem</Path>
+				</File>
+				<File Id="854930524" Language="SFX">
+					<ShortName>Heavy gust_05.wav</ShortName>
+					<Path>SFX\Heavy gust_05_E5FEFA51.wem</Path>
+				</File>
+				<File Id="863070728" Language="SFX">
+					<ShortName>Rattle_02.wav</ShortName>
+					<Path>SFX\Rattle_02_E5FEFA51.wem</Path>
+				</File>
+				<File Id="865972532" Language="SFX">
+					<ShortName>Dirt_09.wav</ShortName>
+					<Path>SFX\Dirt_09_E5FEFA51.wem</Path>
+				</File>
+				<File Id="876476175" Language="SFX">
+					<ShortName>Low end rumble_01.wav</ShortName>
+					<Path>SFX\Low end rumble_01_E5FEFA51.wem</Path>
+				</File>
+				<File Id="880349655" Language="SFX">
+					<ShortName>Heavy gust_02.wav</ShortName>
+					<Path>SFX\Heavy gust_02_CA695A46.wem</Path>
+				</File>
+				<File Id="889497109" Language="SFX">
+					<ShortName>wind_01.wav</ShortName>
+					<Path>SFX\wind_01_E5FEFA51.wem</Path>
+				</File>
+				<File Id="890686475" Language="SFX">
+					<ShortName>Match Blown out_03.wav</ShortName>
+					<Path>SFX\Match Blown out_03_0BA9F504.wem</Path>
+				</File>
+				<File Id="917083973" Language="SFX">
+					<ShortName>Low end rumble_02.wav</ShortName>
+					<Path>SFX\Low end rumble_02_EA4F517B.wem</Path>
+				</File>
+				<File Id="923128601" Language="SFX">
+					<ShortName>Teeth chattering_03.wav</ShortName>
+					<Path>SFX\Teeth chattering_03_E5FEFA51.wem</Path>
+				</File>
+				<File Id="945423380" Language="SFX">
+					<ShortName>Light wind_02.wav</ShortName>
+					<Path>SFX\Light wind_02_E5FEFA51.wem</Path>
+				</File>
+				<File Id="945865471" Language="SFX">
+					<ShortName>Ston_05.wav</ShortName>
+					<Path>SFX\Ston_05_E5FEFA51.wem</Path>
+				</File>
+				<File Id="947311677" Language="SFX">
+					<ShortName>Ghastly vocal_08.wav</ShortName>
+					<Path>SFX\Ghastly vocal_08_E5FEFA51.wem</Path>
+				</File>
+				<File Id="952342283" Language="SFX">
+					<ShortName>Girl breathing_05.wav</ShortName>
+					<Path>SFX\Girl breathing_05_E5FEFA51.wem</Path>
+				</File>
+				<File Id="955857581" Language="SFX">
+					<ShortName>Stone_13.wav</ShortName>
+					<Path>SFX\Stone_13_E5FEFA51.wem</Path>
+				</File>
+				<File Id="965427749" Language="SFX">
+					<ShortName>Girl breathing_01.wav</ShortName>
+					<Path>SFX\Girl breathing_01_E5FEFA51.wem</Path>
+				</File>
+				<File Id="970114058" Language="SFX">
+					<ShortName>Wings flapping_05 new.wav</ShortName>
+					<Path>SFX\Wings flapping_05 new_E5FEFA51.wem</Path>
+				</File>
+				<File Id="979276870" Language="SFX">
+					<ShortName>Sticks cracking_03.wav</ShortName>
+					<Path>SFX\Sticks cracking_03_E5FEFA51.wem</Path>
+				</File>
+				<File Id="982516809" Language="SFX">
+					<ShortName>Broken glass_12.wav</ShortName>
+					<Path>SFX\Broken glass_12_E5FEFA51.wem</Path>
+				</File>
+				<File Id="986149889" Language="SFX">
+					<ShortName>Heavy gust_04.wav</ShortName>
+					<Path>SFX\Heavy gust_04_5F6B5E4A.wem</Path>
+				</File>
+				<File Id="987994536" Language="SFX">
+					<ShortName>Light wind_03.wav</ShortName>
+					<Path>SFX\Light wind_03_E5FEFA51.wem</Path>
+				</File>
+				<File Id="992767225" Language="SFX">
+					<ShortName>Snow_03.wav</ShortName>
+					<Path>SFX\Snow_03_E5FEFA51.wem</Path>
+				</File>
+				<File Id="993600802" Language="SFX">
+					<ShortName>Broken glass_14.wav</ShortName>
+					<Path>SFX\Broken glass_14_E5FEFA51.wem</Path>
+				</File>
+				<File Id="993945429" Language="SFX">
+					<ShortName>Ghastly vocal_09.wav</ShortName>
+					<Path>SFX\Ghastly vocal_09_E5FEFA51.wem</Path>
+				</File>
+				<File Id="996568587" Language="SFX">
+					<ShortName>Match Blown out_02.wav</ShortName>
+					<Path>SFX\Match Blown out_02_851C31D5.wem</Path>
+				</File>
+				<File Id="997249036" Language="SFX">
+					<ShortName>Ghastly vocal_02.wav</ShortName>
+					<Path>SFX\Ghastly vocal_02_E5FEFA51.wem</Path>
+				</File>
+				<File Id="999154703" Language="SFX">
+					<ShortName>Dirt_08.wav</ShortName>
+					<Path>SFX\Dirt_08_E5FEFA51.wem</Path>
+				</File>
+				<File Id="999247913" Language="SFX">
+					<ShortName>Match Blown out_01.wav</ShortName>
+					<Path>SFX\Match Blown out_01_0D98B76F.wem</Path>
+				</File>
+				<File Id="1004013973" Language="SFX">
+					<ShortName>Stone_01.wav</ShortName>
+					<Path>SFX\Stone_01_E5FEFA51.wem</Path>
+				</File>
+				<File Id="1009281777" Language="SFX">
+					<ShortName>Heart beat.wav</ShortName>
+					<Path>SFX\Heart beat_2C97C3B9.wem</Path>
+				</File>
+				<File Id="1020302950" Language="SFX">
+					<ShortName>Vocoder_04.wav</ShortName>
+					<Path>SFX\Vocoder_04_134ADB41.wem</Path>
+				</File>
+				<File Id="1026174739" Language="SFX">
+					<ShortName>Wings flapping_06_new.wav</ShortName>
+					<Path>SFX\Wings flapping_06_new_E5FEFA51.wem</Path>
+				</File>
+				<File Id="1026774470" Language="SFX">
+					<ShortName>Errie wind _3.wav</ShortName>
+					<Path>SFX\Errie wind _3_E5FEFA51.wem</Path>
+				</File>
+				<File Id="1030774117" Language="SFX">
+					<ShortName>Ghastly vocal_04.wav</ShortName>
+					<Path>SFX\Ghastly vocal_04_E5FEFA51.wem</Path>
+				</File>
+				<File Id="1042088058" Language="SFX">
+					<ShortName>Broken glass_11.wav</ShortName>
+					<Path>SFX\Broken glass_11_E5FEFA51.wem</Path>
+				</File>
+				<File Id="1046532744" Language="SFX">
+					<ShortName>Girl breathing_04.wav</ShortName>
+					<Path>SFX\Girl breathing_04_E5FEFA51.wem</Path>
+				</File>
+				<File Id="1049822719" Language="SFX">
+					<ShortName>Tone_01.wav</ShortName>
+					<Path>SFX\Tone_01_E5FEFA51.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>
