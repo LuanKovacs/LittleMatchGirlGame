@@ -91,7 +91,7 @@ public class Player_Movement : MonoBehaviour
         {
             if (hit.collider.tag == "Interactable")
             {
-                if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown("joystick button 2"))
+                if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown("joystick button 2"))//"X" Button
                 {
                     //print("interact");
                     GameObject GameManager = GameObject.Find("GameManager");

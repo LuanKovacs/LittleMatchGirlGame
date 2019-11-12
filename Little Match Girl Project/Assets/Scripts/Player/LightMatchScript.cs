@@ -37,7 +37,7 @@ public class LightMatchScript : MonoBehaviour
     {
 
         if (!isLit && Input.GetKeyDown(KeyCode.Space) && curMatches >= 1
-            || !isLit && Input.GetKeyDown("joystick button 1") && curMatches >= 1)
+            || !isLit && Input.GetKeyDown("joystick button 1") && curMatches >= 1)//"B" Button
         {
             matchTUT.GetComponent<CanvasGroup>().alpha = 0;//***Tianna!!***
 

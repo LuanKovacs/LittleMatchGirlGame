@@ -78,7 +78,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.9
-  m_Text: PRESS E
+  m_Text: E   OR   X
 --- !u!1 &4300114032714464756
 GameObject:
   m_ObjectHideFlags: 0
