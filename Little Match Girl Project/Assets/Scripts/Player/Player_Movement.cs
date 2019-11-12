@@ -136,7 +136,7 @@ public class Player_Movement : MonoBehaviour
         }
 
         if (Input.GetKey("left shift") && SpntPan.GetComponent<CanvasGroup>().alpha == 1
-            || Input.GetKey("joystick button 0") && SpntPan.GetComponent<CanvasGroup>().alpha == 1)//***Tianna!!***
+            || Input.GetKey("joystick button 0") && SpntPan.GetComponent<CanvasGroup>().alpha == 1)//***Tianna!!*** "A" Button
         {
             //Sprint TUT
             SpntPan.GetComponent<CanvasGroup>().alpha = 0;//***Tianna!!***
@@ -194,7 +194,7 @@ public class Player_Movement : MonoBehaviour
             }
         }
 
-        if (Input.GetKey("left shift") && !sprinting || Input.GetKey("joystick button 0") && !sprinting)
+        if (Input.GetKey("left shift") && !sprinting || Input.GetKey("joystick button 0") && !sprinting) //"A" Button
         {
             //print("Sptrinting");
             sprinting = true;
