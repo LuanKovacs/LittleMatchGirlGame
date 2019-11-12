@@ -18,6 +18,7 @@ public class Game_Manager : MonoBehaviour
         EventManager.StartListening("DarkRoomStart", DarkRoomStart);
         EventManager.StartListening("DarkRoomEnd", DarkRoomEnd);
 
+        EventManager.StartListening("ChurchMemory", ChurchMemory);
         EventManager.StartListening("ChurchTransition", ChurchTransition);
         EventManager.StartListening("ChurchExit", ChurchExit);
         EventManager.StartListening("FinalCutScene", FinalCutScene);
@@ -37,6 +38,7 @@ public class Game_Manager : MonoBehaviour
         EventManager.StopListening("DarkRoomStart", DarkRoomStart);
         EventManager.StopListening("DarkRoomEnd", DarkRoomEnd);
 
+        EventManager.StopListening("ChurchMemory", ChurchMemory);
         EventManager.StopListening("ChurchTransition", ChurchTransition);
         EventManager.StopListening("ChurchExit", ChurchExit);
         EventManager.StopListening("FinalCutScene", FinalCutScene);
@@ -52,8 +54,10 @@ public class Game_Manager : MonoBehaviour
     public GameObject Monster;
     public GameObject ChurchPuzzle;
     public GameObject RuinedChurch;
+    public GameObject ChurchTransit;
 
-
+    public GameObject BrokenChurchLight;
+    public GameObject churchSpotlit;
     public GameObject winPanel;
     public GameObject losePanel;
     public GameObject allLighting;
@@ -146,10 +150,18 @@ public class Game_Manager : MonoBehaviour
         EventManager.StopListening("DarkRoomEnd", DarkRoomEnd);
     }
 
+    void ChurchMemory()
+    {
+        StartCoroutine(AnimDelayTime());
+    }
+
     void ChurchTransition()
     {
         GameObject.Find("ChurchFBX_P").SetActive(false);
-        GameObject.Find("ChurchLight").SetActive(false);
+        churchSpotlit.SetActive(false);
+        ChurchTransit.SetActive(false);
+        BrokenChurchLight.SetActive(true);
+        //GameObject.Find("ChurchLight").SetActive(false);
         RuinedChurch.SetActive(true);
     }
 
@@ -178,13 +190,27 @@ public class Game_Manager : MonoBehaviour
         StartCoroutine(DefaultWin());
 
     }
+
+    IEnumerator AnimDelayTime()//Tianna!!!!
+    {
+        Animator anim = GameObject.Find("CharacterModel&Rig").GetComponent<Animator>();
+        anim.Play("Sit");
+
+        Player.GetComponent<Player_Health>().enabled = true;
+        Player.GetComponent<Player_Movement>().enabled = true;
+
+        yield return new WaitForSeconds(3.0f);
+        churchSpotlit.SetActive(true);
+        ChurchTransit.SetActive(true);
+        GameObject.Find("Spot Light (1)").SetActive(false);
+        GameObject.Find("ChurchLight").SetActive(false);
+        
+    }
     IEnumerator DefaultWin()//Tianna!!!!
     {
         
         winPanel.SetActive(true);
         yield return new WaitForSeconds(2.0f);
-        Debug.Log("Start menu?");
-        //StartCoroutine(StartGame());
         SceneManager.LoadScene("New LMG");
 
     }
@@ -205,7 +231,6 @@ public class Game_Manager : MonoBehaviour
 
         losePanel.SetActive(false);
         Player.GetComponent<Player_Health>().enabled = true;
-        
 
     }
 }
