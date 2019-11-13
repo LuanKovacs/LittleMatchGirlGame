@@ -13,7 +13,7 @@ public class PuzzleMusic : MonoBehaviour
     public CameraTopDown mainCamera;
     public GameObject playerLight;
     public GameObject dirLight;
-    int curGoal;
+    public int curGoal;
     bool PuzzleComplete;
 
     void OnEnable()
@@ -74,6 +74,8 @@ public class PuzzleMusic : MonoBehaviour
         if (curGoal > 0)
         {
             Plate1.tag = "PuzzleAnswer";
+            Plate2.tag = "Untagged";
+            Plate3.tag = "Untagged";
             print("RestGoal");
             curGoal = 0;
         }
