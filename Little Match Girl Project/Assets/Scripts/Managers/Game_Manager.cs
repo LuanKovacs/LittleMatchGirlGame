@@ -126,10 +126,11 @@ public class Game_Manager : MonoBehaviour
         //Forest.SetActive(false); //not permitted it says...
         //Destroy(Forest);
 
-       /*  foreach (GameObject child in Forest)
-        {
-            child.gameObject.SetActive(false);
-        }*/
+        /*  foreach (GameObject child in Forest)
+         {
+             child.gameObject.SetActive(false);
+         }*/
+        RenderSettings.fog = false;//turn off global fog
 
         RenderSettings.ambientLight = Color.black;
 
@@ -139,7 +140,7 @@ public class Game_Manager : MonoBehaviour
     void DarkRoomEnd()
     {
         GameObject startChurch = GameObject.Find("ChurchStart");
-
+        RenderSettings.fog = true;//turn on global fog
         RenderSettings.ambientLight = setColor;
 
         ChurchPuzzle.SetActive(true);
