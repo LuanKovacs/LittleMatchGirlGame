@@ -73,7 +73,7 @@ public class Game_Manager : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         Player.GetComponent<Player_Health>().enabled = true;
-        Player.GetComponent<Player_Movement>().enabled = true;
+        Player.GetComponent<Player_Movement>().canMove = true;
     }
 
     void UnlockMatches()

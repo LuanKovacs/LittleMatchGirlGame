@@ -158,9 +158,16 @@ public class Player_Movement : MonoBehaviour
         float h = Input.GetAxisRaw("Horizontal");
         float v = Input.GetAxisRaw("Vertical");
         matchSrpt = GetComponent<LightMatchScript>();
+
+        //play anims w/ matchlit
         if (matchSrpt.isLit == true)
         {
-            anim.Play("MatchIdle");
+            //anim.Play("MatchIdle");
+            anim.SetBool("match", true);
+        }
+        else
+        {
+            anim.SetBool("match", false);
         }
 
         if (sitting)//Scripted Movement
@@ -222,7 +229,6 @@ public class Player_Movement : MonoBehaviour
 
         if (h == 0 && v == 0)
         {
-            print("zero move");
             anim.SetBool("moving", false);
             movement = Vector3.zero;
         }

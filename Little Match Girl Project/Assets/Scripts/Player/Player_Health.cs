@@ -87,7 +87,7 @@ public class Player_Health : MonoBehaviour
             GameObject Player = GameObject.Find("Player");
             GameObject PlayerModel = Player.transform.Find("CharacterModel&Rig").gameObject;
             Animator anim = PlayerModel.GetComponent<Animator>();
-            anim.Play("Entry");//Tianna!!!!
+           // anim.Play("Entry");//Tianna!!!!
         }
 
         if (isDead)
