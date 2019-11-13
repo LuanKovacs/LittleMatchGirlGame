@@ -20,6 +20,7 @@ public class LightMatchScript : MonoBehaviour
 
     public GameObject spotLightReg;
     public GameObject spotLightDA;
+    public GameObject matchSound;
 
     private void Start()
     {
@@ -53,11 +54,14 @@ public class LightMatchScript : MonoBehaviour
     {
         //isLit = true;
         match.SetActive(true);
+        AkSoundEngine.PostEvent("Striking match", matchSound);
+        AkSoundEngine.PostEvent("Lighting match", matchSound);
         GetComponent<Player_Health>().GainHP(true);
         yield return new WaitForSeconds(maxMatchTime);
         isLit = false;
         match.SetActive(false);
         GetComponent<Player_Health>().GainHP(false);
+        AkSoundEngine.PostEvent("Match blown out", matchSound);
         StopCoroutine("LightMatchSeq");
     }
 

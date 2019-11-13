@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayAnimOnTrigger : MonoBehaviour
 {
-    public string sound;
+    
 
     Animator anim;
     
@@ -14,7 +14,10 @@ public class PlayAnimOnTrigger : MonoBehaviour
         {
             anim = GetComponent<Animator>();
             anim.Play("ButtonDown");
-            AkSoundEngine.SetSwitch("Puzzle_game", sound, gameObject);
+
+            GameObject Player = GameObject.Find("Player");
+            AkSoundEngine.PostEvent("Puzzle_game", Player);
+          
         }
     }
 

@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3863815648084960617}
   - component: {fileID: 3863815648084960618}
   - component: {fileID: 3863815648084960619}
-  - component: {fileID: 7865521072415359109}
   - component: {fileID: 4462581834802618394}
   - component: {fileID: 2494814401797828454}
   - component: {fileID: 2773598543090524044}
@@ -108,40 +107,6 @@ MonoBehaviour:
   canClamp: 0
   maxLeft: 0
   maxRight: 0
---- !u!114 &7865521072415359109
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 585597263956118418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d71b1f031a5c33a49b2b31f86ffc5d3c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  triggerList: f7e1664c
-  useOtherObject: 0
-  actionOnEventType: 0
-  curveInterpolation: 4
-  enableActionOnEvent: 0
-  data:
-    idInternal: 0
-    valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 5e7b62d81f402144387facb0ae319574,
-      type: 2}
-  useCallbacks: 0
-  Callbacks: []
-  playingId: 0
-  soundEmitterObject: {fileID: 0}
-  transitionDuration: 0
-  eventIdInternal: 0
-  valueGuidInternal: 
-  m_callbackDataInternal: {fileID: 0}
-  MultiPositionType: 1
-  multiPositionTypeLabel: 0
-  LargeModePositions: []
-  multiPositionArray: []
 --- !u!114 &4462581834802618394
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -69,8 +69,9 @@ public class Player_Movement : MonoBehaviour
 
     private void Update()
     {
+       
         //Testing preparation for sit animation
-        if(Input.GetKeyDown(KeyCode.T))
+        if (Input.GetKeyDown(KeyCode.T))
         {
             //BeginToSit();
             sitting = true;
@@ -174,12 +175,13 @@ public class Player_Movement : MonoBehaviour
         {
             Move(h, v);
 
+            AkSoundEngine.PostEvent("Footsteps", gameObject);
             // anim.Play("Run");
             //       Vector3 movement = new Vector3(h, 0f, v);
 
             //Vector3 direction = new Vector3(Input.GetAxis("HorizontalKey"), 0, Input.GetAxis("VerticalKey"));
-           // Vector3 rightMovement = right * Input.GetAxis("HorizontalKey");
-           // Vector3 upMovement = forward * Input.GetAxis("VerticalKey");
+            // Vector3 rightMovement = right * Input.GetAxis("HorizontalKey");
+            // Vector3 upMovement = forward * Input.GetAxis("VerticalKey");
             //Vector3 movement = Vector3.Normalize(rightMovement + upMovement);
 
             movement = Vector3.ClampMagnitude(movement, 1.0f) * moveSpeed;

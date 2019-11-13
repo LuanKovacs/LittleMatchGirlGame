@@ -10,7 +10,7 @@ public class MonsterAI : MonoBehaviour
     public Animator CamAnimator;
     
     public Animator anim;
-    public AkAmbient scream;
+    //public AkAmbient scream;
 
     private void OnEnable() 
     {
