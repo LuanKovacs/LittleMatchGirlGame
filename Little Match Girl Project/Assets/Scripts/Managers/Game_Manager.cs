@@ -110,7 +110,7 @@ public class Game_Manager : MonoBehaviour
 
     void DarkRoomStart()
     {
-        GameObject Forest = GameObject.Find("Terrain_Forest");
+        Transform Forest = GameObject.Find("Terrain_Forest").transform;
         GameObject startDark = GameObject.Find("DarkroomCheckPoint");
        // GameObject dirLight = GameObject.Find("Directional Light");
         //GameObject dirLightN = GameObject.Find("Directional Light Night");
@@ -125,11 +125,12 @@ public class Game_Manager : MonoBehaviour
 
         //Forest.SetActive(false); //not permitted it says...
         //Destroy(Forest);
-
-        /*  foreach (GameObject child in Forest)
-         {
+        //Cull forest area
+        foreach (Transform child in Forest)
+        {
              child.gameObject.SetActive(false);
-         }*/
+        }
+
         RenderSettings.fog = false;//turn off global fog
 
         RenderSettings.ambientLight = Color.black;
@@ -229,6 +230,8 @@ public class Game_Manager : MonoBehaviour
         
         Player.transform.rotation = Quaternion.identity;
         Player.GetComponent<Player_Health>().Revive();
+
+        EventManager.TriggerEvent("Reset");
 
         losePanel.SetActive(false);
         Player.GetComponent<Player_Health>().enabled = true;

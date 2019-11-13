@@ -7,6 +7,8 @@ public class TriggerEventScript : MonoBehaviour
 
     public string callEvent;
 
+    Collider colRef;
+
     private void OnEnable()
     {
         EventManager.StartListening("Reset", Reset);
@@ -17,9 +19,23 @@ public class TriggerEventScript : MonoBehaviour
         EventManager.StopListening("Reset", Reset);
     }
 
+    private void Start()
+    {
+        colRef = GetComponent<Collider>();
+    }
+
     private void Reset()
     {
-        gameObject.SetActive(true);
+       // gameObject.SetActive(true);
+        colRef.enabled = true;
+
+        if (transform.childCount > 0)
+        {
+            foreach (Transform child in transform)
+            {
+                child.gameObject.SetActive(true);
+            }
+        }
     }
 
 
@@ -29,7 +45,16 @@ public class TriggerEventScript : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             EventManager.TriggerEvent(callEvent);
-            gameObject.SetActive(false);
+           // gameObject.SetActive(false);
+            colRef.enabled = false;
+
+           if (transform.childCount > 0)
+            {
+                foreach (Transform child in transform)
+                {
+                   child.gameObject.SetActive(false);
+                }
+            }
         }
         else
         {
@@ -41,6 +66,15 @@ public class TriggerEventScript : MonoBehaviour
     {
         print(callEvent);
         EventManager.TriggerEvent(callEvent);
-        gameObject.SetActive(false);
+       // gameObject.SetActive(false);
+        colRef.enabled = false;
+
+        if (transform.childCount > 0)
+        {
+            foreach (Transform child in transform)
+            {
+               child.gameObject.SetActive(false);
+            }
+        }
     }
 }

@@ -54,7 +54,7 @@ public class Player_Movement : MonoBehaviour
         
         GameObject PlayerModel = transform.Find("CharacterModel&Rig").gameObject;
         Animator anim = PlayerModel.GetComponent<Animator>();
-        anim.Play("StartingPosition");
+       // anim.Play("StartingPosition");
     }
 
     private void OnDrawGizmos()
