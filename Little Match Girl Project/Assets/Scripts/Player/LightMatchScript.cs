@@ -45,22 +45,20 @@ public class LightMatchScript : MonoBehaviour
             {
                 curMatches -= 1;
             }
-            StartCoroutine("LightMatch");
-            print("Space");
+            isLit = true;
         }
     }
 
-    IEnumerator LightMatch()
+    IEnumerator LightMatchSeq()//start is at character rig
     {
-        
-        isLit = true;
+        //isLit = true;
         match.SetActive(true);
         GetComponent<Player_Health>().GainHP(true);
         yield return new WaitForSeconds(maxMatchTime);
         isLit = false;
         match.SetActive(false);
         GetComponent<Player_Health>().GainHP(false);
-        print("Test");
+        StopCoroutine("LightMatchSeq");
     }
 
     public void GainMatch()

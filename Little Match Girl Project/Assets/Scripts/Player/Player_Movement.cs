@@ -38,11 +38,6 @@ public class Player_Movement : MonoBehaviour
 
     bool sitting;
 
-    void OnEnable()
-    {
-        canMove = true;
-    }
-
     void Awake()
     {
         floorMask = LayerMask.GetMask("worldFloor"); 
@@ -223,14 +218,17 @@ public class Player_Movement : MonoBehaviour
 
     void Move(float h, float v)
     {
-        movement.Set(h, 0f, v);
-        anim.SetBool("moving", true);
-        movement = movement.normalized * Time.deltaTime * moveSpeed;
-
-        if (h == 0 && v == 0)
+        if (canMove)
         {
-            anim.SetBool("moving", false);
-            movement = Vector3.zero;
+            movement.Set(h, 0f, v);
+            anim.SetBool("moving", true);
+            movement = movement.normalized * Time.deltaTime * moveSpeed;
+
+            if (h == 0 && v == 0)
+            {
+                anim.SetBool("moving", false);
+                movement = Vector3.zero;
+            }
         }
     }
 
