@@ -9,6 +9,7 @@ public class PuzzleMusic : MonoBehaviour
     public GameObject Plate3;
     public int goal = 3;
     public GameObject Bridge;
+    public GameObject Memory;
 
     public CameraTopDown mainCamera;
     public GameObject playerLight;
@@ -59,6 +60,11 @@ public class PuzzleMusic : MonoBehaviour
             dirLight.SetActive(true);
             Bridge.SetActive(true);
             gameObject.SetActive(false);
+        }
+
+        if (Bridge != null)
+        {
+            Memory.SetActive(false);
         }
     }
 

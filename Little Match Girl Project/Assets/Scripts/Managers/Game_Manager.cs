@@ -86,6 +86,9 @@ public class Game_Manager : MonoBehaviour
 
     void BridgePuzzle()
     {
+        GameObject sound = GameObject.Find("Spotlight_Sound");
+
+        AkSoundEngine.PostEvent("Spotlight_effect", sound);
         puzzleSetBridge.SetActive(true);
         EventManager.StopListening("BridgePuzzle", BridgePuzzle);
     }
@@ -155,16 +158,22 @@ public class Game_Manager : MonoBehaviour
     void ChurchMemory()
     {
         StartCoroutine(AnimDelayTime());
+        GameObject sound = GameObject.Find("Spotlight_Sound (1)");
+
+        AkSoundEngine.PostEvent("Spotlight_effect", sound);
     }
 
     void ChurchTransition()
     {
+        GameObject sound = GameObject.Find("ChurchBell_Sound");
         GameObject.Find("ChurchFBX_P").SetActive(false);
         churchSpotlit.SetActive(false);
         ChurchTransit.SetActive(false);
         BrokenChurchLight.SetActive(true);
         //GameObject.Find("ChurchLight").SetActive(false);
         RuinedChurch.SetActive(true);
+
+        AkSoundEngine.PostEvent("Church_bell", sound);
     }
 
     void ChurchExit()

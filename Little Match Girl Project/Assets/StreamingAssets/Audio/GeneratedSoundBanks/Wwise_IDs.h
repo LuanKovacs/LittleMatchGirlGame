@@ -19,6 +19,7 @@ namespace AK
         static const AkUniqueID CHURCH_BELL = 4049931288U;
         static const AkUniqueID CROW_SCARE = 1962582049U;
         static const AkUniqueID CROWS = 2848348995U;
+        static const AkUniqueID ENABLE_STATES = 2131633205U;
         static const AkUniqueID FIRE_CRACKLING = 2109043066U;
         static const AkUniqueID FOOTSTEPS = 2385628198U;
         static const AkUniqueID GIRL_BREATHING = 2073873008U;
@@ -34,6 +35,25 @@ namespace AK
         static const AkUniqueID WIND_2 = 2062015184U;
         static const AkUniqueID WINGS_FLAPPING = 3164481935U;
     } // namespace EVENTS
+
+    namespace STATES
+    {
+        namespace MUSIC
+        {
+            static const AkUniqueID GROUP = 3991942870U;
+
+            namespace STATE
+            {
+                static const AkUniqueID CHASE = 417490929U;
+                static const AkUniqueID CHURCH = 2568407992U;
+                static const AkUniqueID CITY = 3888786832U;
+                static const AkUniqueID GENERAL = 133642231U;
+                static const AkUniqueID INTENSE_CHURCH = 1867380161U;
+                static const AkUniqueID MEMORIES = 457374884U;
+            } // namespace STATE
+        } // namespace MUSIC
+
+    } // namespace STATES
 
     namespace SWITCHES
     {
@@ -93,6 +113,7 @@ namespace AK
     {
         static const AkUniqueID INIT = 1355168291U;
         static const AkUniqueID MAIN = 3161908922U;
+        static const AkUniqueID MUSIC = 3991942870U;
     } // namespace BANKS
 
     namespace BUSSES

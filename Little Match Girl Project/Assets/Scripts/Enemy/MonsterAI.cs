@@ -10,6 +10,7 @@ public class MonsterAI : MonoBehaviour
     public Animator CamAnimator;
     
     public Animator anim;
+    public AkAmbient scream;
 
     private void OnEnable() 
     {
@@ -37,10 +38,14 @@ public class MonsterAI : MonoBehaviour
         if (anim.GetCurrentAnimatorStateInfo(0).IsName("Roar"))
         {
             CamAnimator.enabled = true;
- 
+            // GetComponent<AkAmbient>().enabled = true;
+            //scream.enabled = true;
+           // AkSoundEngine.PostEvent("Bliazzard creature scream", gameObject);
+
         }
         else
         {
+            //scream.enabled = false;
             CamAnimator.enabled = false;
         }
     }
