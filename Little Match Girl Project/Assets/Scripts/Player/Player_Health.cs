@@ -76,6 +76,7 @@ public class Player_Health : MonoBehaviour
         }
         if(curHP <= 10)//Death anim play
         {
+            playerMove.canMove = false;
             GameObject Player = GameObject.Find("Player");
             GameObject PlayerModel = Player.transform.Find("CharacterModel&Rig").gameObject;
             Animator anim = PlayerModel.GetComponent<Animator>();

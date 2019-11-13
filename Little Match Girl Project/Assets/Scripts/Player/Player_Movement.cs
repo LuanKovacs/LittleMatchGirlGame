@@ -74,7 +74,7 @@ public class Player_Movement : MonoBehaviour
 
     private void Update()
     {
-        //Testing
+        //Testing preparation for sit animation
         if(Input.GetKeyDown(KeyCode.T))
         {
             //BeginToSit();
@@ -217,8 +217,15 @@ public class Player_Movement : MonoBehaviour
     void Move(float h, float v)
     {
         movement.Set(h, 0f, v);
-
+        anim.SetBool("moving", true);
         movement = movement.normalized * Time.deltaTime * moveSpeed;
+
+        if (h == 0 && v == 0)
+        {
+            print("zero move");
+            anim.SetBool("moving", false);
+            movement = Vector3.zero;
+        }
     }
 
     void MoveTurn()
