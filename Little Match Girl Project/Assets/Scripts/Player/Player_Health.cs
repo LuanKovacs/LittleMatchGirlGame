@@ -20,6 +20,7 @@ public class Player_Health : MonoBehaviour
     Player_Movement playerMove;
     Rigidbody playerRBref;
     
+    
 
     public void Revive() 
     {
@@ -39,6 +40,10 @@ public class Player_Health : MonoBehaviour
 
     private void Start()
     {
+        float HeartbeatVol = 0;
+        //GameObject playerSound = GameObject.Find("player_Sound");
+        AkSoundEngine.SetRTPCValue("Heart_beat", HeartbeatVol);
+
         matchTUT.GetComponent<CanvasGroup>().alpha = 0;
         //matchTUT.canvasRenderer.SetAlpha(0f);
         curDrainHP = maxDrainHP;
@@ -76,6 +81,10 @@ public class Player_Health : MonoBehaviour
         }
         if(curHP <= 10)//Death anim play
         {
+            float HeartbeatVol = 50;
+            //GameObject playerSound = GameObject.Find("player_Sound");
+
+            AkSoundEngine.SetRTPCValue("Heart_beat", HeartbeatVol);
             playerMove.canMove = false;
             GameObject Player = GameObject.Find("Player");
             GameObject PlayerModel = Player.transform.Find("CharacterModel&Rig").gameObject;

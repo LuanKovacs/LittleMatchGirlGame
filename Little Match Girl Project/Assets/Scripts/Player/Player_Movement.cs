@@ -175,7 +175,7 @@ public class Player_Movement : MonoBehaviour
         {
             Move(h, v);
 
-            AkSoundEngine.PostEvent("Footsteps", gameObject);
+            
             // anim.Play("Run");
             //       Vector3 movement = new Vector3(h, 0f, v);
 
@@ -187,7 +187,7 @@ public class Player_Movement : MonoBehaviour
             movement = Vector3.ClampMagnitude(movement, 1.0f) * moveSpeed;
             anim.SetFloat("Speed", movement.magnitude);
             transform.Translate(movement * Time.fixedDeltaTime, Space.World);
-
+            
             if (mouseTurning)
             {
                 MouseTurning();
@@ -230,6 +230,11 @@ public class Player_Movement : MonoBehaviour
             {
                 anim.SetBool("moving", false);
                 movement = Vector3.zero;
+            }
+
+            if (anim.GetBool("moving") == true)
+            {
+                AkSoundEngine.PostEvent("Footsteps", gameObject);
             }
         }
     }

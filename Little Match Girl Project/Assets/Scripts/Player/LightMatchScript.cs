@@ -54,14 +54,14 @@ public class LightMatchScript : MonoBehaviour
     {
         //isLit = true;
         match.SetActive(true);
-        AkSoundEngine.PostEvent("Striking match", matchSound);
-        AkSoundEngine.PostEvent("Lighting match", matchSound);
+        AkSoundEngine.PostEvent("Striking_match", matchSound);
+        AkSoundEngine.PostEvent("Lighting_match", matchSound);
         GetComponent<Player_Health>().GainHP(true);
         yield return new WaitForSeconds(maxMatchTime);
         isLit = false;
         match.SetActive(false);
         GetComponent<Player_Health>().GainHP(false);
-        AkSoundEngine.PostEvent("Match blown out", matchSound);
+        AkSoundEngine.PostEvent("Match_blown_out", matchSound);
         StopCoroutine("LightMatchSeq");
     }
 
