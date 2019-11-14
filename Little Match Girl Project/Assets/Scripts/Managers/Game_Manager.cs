@@ -158,9 +158,6 @@ public class Game_Manager : MonoBehaviour
     void ChurchMemory()
     {
         StartCoroutine(AnimDelayTime());
-        GameObject sound = GameObject.Find("Spotlight_Sound (1)");
-
-        AkSoundEngine.PostEvent("Spotlight_effect", sound);
     }
 
     void ChurchTransition()
@@ -204,6 +201,7 @@ public class Game_Manager : MonoBehaviour
 
     IEnumerator AnimDelayTime()//Tianna!!!!
     {
+        GameObject sound = GameObject.Find("Spotlight_Sound (1)");
         Animator anim = GameObject.Find("CharacterModel&Rig").GetComponent<Animator>();
         anim.Play("Sit");
 
@@ -211,6 +209,8 @@ public class Game_Manager : MonoBehaviour
         Player.GetComponent<Player_Movement>().enabled = true;
 
         yield return new WaitForSeconds(3.0f);
+
+        AkSoundEngine.PostEvent("Spotlight_effect", sound);
         churchSpotlit.SetActive(true);
         ChurchTransit.SetActive(true);
         GameObject.Find("Spot Light (1)").SetActive(false);

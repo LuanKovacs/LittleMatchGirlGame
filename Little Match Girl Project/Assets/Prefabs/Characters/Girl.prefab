@@ -4995,6 +4995,7 @@ GameObject:
   - component: {fileID: 30662724}
   - component: {fileID: 30662723}
   - component: {fileID: 30662722}
+  - component: {fileID: 6125458631408197645}
   m_Layer: 10
   m_Name: Girl
   m_TagString: Player
@@ -5116,6 +5117,32 @@ MonoBehaviour:
   matchTUT: {fileID: 0}
   spotLightReg: {fileID: 0}
   spotLightDA: {fileID: 0}
+  matchSound: {fileID: 0}
+--- !u!114 &6125458631408197645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5389938730896543289}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74755895cdb5fd64493721a86230b1ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerList: f7e1664c
+  useOtherObject: 0
+  data:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 88f78e7756c8382468868adeccb1fc76,
+      type: 2}
+  valueIdInternal: 0
+  groupIdInternal: 0
+  valueGuidInternal: 
+  groupGuidInternal: 
 --- !u!1 &6077652706724385529
 GameObject:
   m_ObjectHideFlags: 0
@@ -5168,8 +5195,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 1f5f09f6a788ad843b5040db8d8e060a,
-      type: 2}
+    WwiseObjectReference: {fileID: 0}
   decodeBank: 0
   loadAsynchronous: 0
   saveDecodedBank: 0
@@ -5219,7 +5245,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: eef9c5d9ed31c314ab5720e58d3df1d7,
+    WwiseObjectReference: {fileID: 11400000, guid: b60f5eb7903518d47b53d3ede0733a8f,
       type: 2}
   useCallbacks: 0
   Callbacks: []
@@ -5253,7 +5279,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: fa7464b1abadc9d429a940a667f2a288,
+    WwiseObjectReference: {fileID: 11400000, guid: b60f5eb7903518d47b53d3ede0733a8f,
       type: 2}
   useCallbacks: 0
   Callbacks: []
@@ -5287,7 +5313,7 @@ MonoBehaviour:
   data:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 25b7570caac2ceb4296805ada77b333f,
+    WwiseObjectReference: {fileID: 11400000, guid: b60f5eb7903518d47b53d3ede0733a8f,
       type: 2}
   useCallbacks: 0
   Callbacks: []

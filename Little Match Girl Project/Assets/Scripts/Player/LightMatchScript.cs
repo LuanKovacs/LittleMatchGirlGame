@@ -47,6 +47,8 @@ public class LightMatchScript : MonoBehaviour
                 curMatches -= 1;
             }
             isLit = true;
+            AkSoundEngine.PostEvent("Striking_match", matchSound);
+            AkSoundEngine.PostEvent("Lighting_match", matchSound);
         }
     }
 
@@ -54,8 +56,6 @@ public class LightMatchScript : MonoBehaviour
     {
         //isLit = true;
         match.SetActive(true);
-        AkSoundEngine.PostEvent("Striking_match", matchSound);
-        AkSoundEngine.PostEvent("Lighting_match", matchSound);
         GetComponent<Player_Health>().GainHP(true);
         yield return new WaitForSeconds(maxMatchTime);
         isLit = false;
