@@ -17,13 +17,13 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 7088943df08b964eb4e15964e5ea23a4
     GuidInternal: 
-    m_lastTime: -8586280835839129340
+    m_lastTime: -8586277913611923823
     List: []
   - PhysicalPath: Virtual Acoustics\Factory Reflect Acoustic Textures.wwu
     ParentPhysicalPath: 
     guid: 6b663d46a83ca54f8b4a5fef12b883f6
     GuidInternal: 
-    m_lastTime: -8586280835838787771
+    m_lastTime: -8586277913610262942
     List:
     - name: Acoustic_Banner
       guid: f2532d2fccda8e408b8898b1b52a26d6
@@ -184,14 +184,14 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 5da860a7320f214c8557a594aaff2ede
     GuidInternal: 
-    m_lastTime: -8586280836004498849
+    m_lastTime: -8586277913981483113
     List: []
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     ParentPhysicalPath: 
     guid: 9aa07b7b919d034cbfac28f5e84093ed
     GuidInternal: 
-    m_lastTime: -8586279783377176103
+    m_lastTime: -8586277913615274584
     List:
     - name: Main
       guid: 78e40f0c79cc634ab6594fb6dfeac57d
@@ -216,7 +216,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 64f993c54fe3884e8614176382be8be1
     GuidInternal: 
-    m_lastTime: -8586279777630531179
+    m_lastTime: -8586277913983727035
     List:
     - name: Bliazzard_creature_scream
       guid: 2bc783fd26e36b46a4a6d2a22c2bcd7f
@@ -324,8 +324,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Footsteps
       maxAttenuation: 0
-      maxDuration: 1.434021
-      minDuration: 0.323265
+      maxDuration: 1.005896
+      minDuration: 0.146134
     - name: Girl_breathing
       guid: 0e940475c82bbf4eba1c4eae2c808357
       id: 2073873008
@@ -336,8 +336,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Girl_breathing
       maxAttenuation: 0
-      maxDuration: 1.222417
-      minDuration: 0.680455
+      maxDuration: 50.614773
+      minDuration: 49.8707
     - name: Heart_beat
       guid: 92136a1fafe4bc41989bc0baec6d2e8c
       id: 3589338066
@@ -384,20 +384,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Play_Testingevent
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
-    - name: Puzzle_game
-      guid: 26d083a37e3d8f48934842847c37ee1a
-      id: 2025997070
-      PathAndIcons:
-      - ElementName: Default Work Unit
-        ObjectType: 12
-      - ElementName: Puzzle_game
-        ObjectType: 3
-      Path: Default Work Unit\Puzzle_game
-      maxAttenuation: 0
-      maxDuration: 3.9595
-      minDuration: 3.9595
+      maxDuration: 0
+      minDuration: 0
     - name: Spotlight_effect
       guid: a04c5c4c55ea3044a67b205b65e9dd0d
       id: 1050267453
@@ -446,6 +434,42 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
+    - name: Tone_01
+      guid: 03fe23ad18d6b24090ef922df7d7dd90
+      id: 3531240261
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Tone_01
+        ObjectType: 3
+      Path: Default Work Unit\Tone_01
+      maxAttenuation: 0
+      maxDuration: 3.9595
+      minDuration: 3.9595
+    - name: Tone_02
+      guid: 5f160d209a9a31469faab3c9883b6c96
+      id: 3531240262
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Tone_02
+        ObjectType: 3
+      Path: Default Work Unit\Tone_02
+      maxAttenuation: 0
+      maxDuration: 3.9595
+      minDuration: 3.9595
+    - name: Tone_03
+      guid: f5a4ea6f5d2d1a49b818dfe1864f60f1
+      id: 3531240263
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Tone_03
+        ObjectType: 3
+      Path: Default Work Unit\Tone_03
+      maxAttenuation: 0
+      maxDuration: 3.9595
+      minDuration: 3.9595
     - name: Wind_1
       guid: a08dd160bb841c4da96541221b4021d8
       id: 2062015187
@@ -487,7 +511,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 171087b9c16ee04ca5319ced4eadbd03
     GuidInternal: 
-    m_lastTime: -8586280836005622630
+    m_lastTime: -8586277913983188449
     List:
     - name: Ambience_1
       guid: 9f1138ff043be244a2f2517d822fe8e8
@@ -543,6 +567,15 @@ MonoBehaviour:
       - ElementName: Fire_crackling
         ObjectType: 13
       Path: Default Work Unit\Fire_crackling
+    - name: Foostep_volume
+      guid: e0860210e41d0f4c80e3ebe24fb1e281
+      id: 399361682
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Foostep_volume
+        ObjectType: 13
+      Path: Default Work Unit\Foostep_volume
     - name: Girl_breathing_reverb
       guid: 6655ff7d4747004583b44b6972c4a8a2
       id: 3039458159
@@ -574,7 +607,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 225213d7dbd1d042adc0930743567776
     GuidInternal: 
-    m_lastTime: -8586280836005401282
+    m_lastTime: -8586277913982989040
     List:
     - name: Playback_Rate
       guid: e37e38283ac11643b9c3db5c521624af
@@ -598,7 +631,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 5577163b42fb8b4598bf96f557afb3b9
     GuidInternal: 
-    m_lastTime: -8586280836005158334
+    m_lastTime: -8586277913982640022
     List:
     - name: SS_Air_Fear
       guid: 59062ef746431c4ea1b1dab46a05101e
@@ -695,7 +728,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: cb7859a7e3309241b097e9acc2281136
     GuidInternal: 
-    m_lastTime: -8586280793433133830
+    m_lastTime: -8586277913613285863
     List:
     - name: Music
       guid: 6c6c8a4d401ede4f9326fc0bdbb03b29
@@ -757,7 +790,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 52b745dd242a0e49a76596bf54391944
     GuidInternal: 
-    m_lastTime: -8586280835839869711
+    m_lastTime: -8586277913612955047
     List:
     - name: Footsteps
       guid: f3f4ab7a39a06b499f7171361f589d1b
@@ -832,7 +865,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 05ef5a421b540a43b1289fee46e1bbcb
     GuidInternal: 
-    m_lastTime: -8586280835839418334
+    m_lastTime: -8586277913612203061
     List: []
   ExpandedItems:
   - /The Little Match Girl
