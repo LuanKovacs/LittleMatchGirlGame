@@ -40,15 +40,15 @@ public class Player_Health : MonoBehaviour
 
     private void Start()
     {
-        GameObject Fire = GameObject.Find("Fire_Bonfire");
-        GameObject Fire2 = GameObject.Find("Fire_Bonfire (1)");
+        //GameObject Fire = GameObject.Find("Fire_Bonfire");
+        //GameObject Fire2 = GameObject.Find("Fire_Bonfire (1)");
 
         float FireVol = 40;
         float HeartbeatVol = 0;
         //GameObject playerSound = GameObject.Find("player_Sound");
         AkSoundEngine.SetRTPCValue("Heart_beat", HeartbeatVol);
-        AkSoundEngine.SetRTPCValue("Fire_crackling", FireVol, Fire);
-        AkSoundEngine.SetRTPCValue("Fire_crackling", FireVol, Fire2);
+        AkSoundEngine.SetRTPCValue("Fire_crackling", FireVol);
+        AkSoundEngine.SetRTPCValue("Fire_crackling", FireVol);
 
         matchTUT.GetComponent<CanvasGroup>().alpha = 0;
         //matchTUT.canvasRenderer.SetAlpha(0f);
@@ -71,10 +71,10 @@ public class Player_Health : MonoBehaviour
             curHP = curHP += 10.0f * Time.deltaTime;
             HealthPanel.CrossFadeAlpha(-curHP, 100, false);//Tianna!!!!
 
-            GameObject Fire = GameObject.Find("Fire_Bonfire");
-            GameObject Fire2 = GameObject.Find("Fire_Bonfire (1)");
-            AkSoundEngine.SetRTPCValue("Fire_crackling", FireVol, Fire);
-            AkSoundEngine.SetRTPCValue("Fire_crackling", FireVol, Fire2);
+            //GameObject Fire = GameObject.Find("Fire_Bonfire");
+            //GameObject Fire2 = GameObject.Find("Fire_Bonfire (1)");
+            AkSoundEngine.SetRTPCValue("Fire_crackling", FireVol);
+            AkSoundEngine.SetRTPCValue("Fire_crackling", FireVol);
             //HealthPanel.alpha -= Time.deltaTime / curHP;
             if (curHP > maxHP)
             {
