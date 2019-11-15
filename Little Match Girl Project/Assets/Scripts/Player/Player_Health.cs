@@ -43,12 +43,14 @@ public class Player_Health : MonoBehaviour
         //GameObject Fire = GameObject.Find("Fire_Bonfire");
         //GameObject Fire2 = GameObject.Find("Fire_Bonfire (1)");
 
-        float FireVol = 40;
-        float HeartbeatVol = 0;
+        //float FireVol = 40;
+        //float HeartbeatVol = 0;
         //GameObject playerSound = GameObject.Find("player_Sound");
-        AkSoundEngine.SetRTPCValue("Heart_beat", HeartbeatVol);
-        AkSoundEngine.SetRTPCValue("Fire_crackling", FireVol);
-        AkSoundEngine.SetRTPCValue("Fire_crackling", FireVol);
+        //AkSoundEngine.SetRTPCValue("Heart_beat", HeartbeatVol);
+        //AkSoundEngine.SetRTPCValue("Fire_crackling", FireVol);
+        //AkSoundEngine.SetRTPCValue("Fire_crackling", FireVol);
+        GameObject playerSound = GameObject.Find("player_Sound");
+        AkSoundEngine.PostEvent("Heart_beat", playerSound);
 
         matchTUT.GetComponent<CanvasGroup>().alpha = 0;
         //matchTUT.canvasRenderer.SetAlpha(0f);
