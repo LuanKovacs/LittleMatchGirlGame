@@ -17,6 +17,7 @@ public class Player_Movement : MonoBehaviour
     public Animator anim;
     public GameObject SpntCol;
     public GameObject SpntPan;
+    public GameObject sitCollider;
 
     public float maxStam = 100;
     public float curStam;
@@ -87,29 +88,43 @@ public class Player_Movement : MonoBehaviour
         {
             if (hit.collider.tag == "Interactable")
             {
-                if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown("joystick button 2"))//"X" Button
-                {
-                    //print("interact");
-                    GameObject GameManager = GameObject.Find("GameManager");
-                    GameObject PuzzleChurch = GameManager.transform.Find("Puzzle Church").gameObject;
-
-                    if(PuzzleChurch.activeSelf)
+                Animator anim = GameObject.Find("CharacterModel&Rig").GetComponent<Animator>();
+                if (anim.GetBool("moving") == false)
+                { 
+                    if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown("joystick button 2"))//"X" Button
                     {
-                       
-                        transform.Rotate(0, rotation, 0);
-                        anim.Play("Sit");
-                      
+                        if (hit.collider == sitCollider)
+                        {
+                            LightMatchScript match = GameObject.Find("Player").GetComponent<LightMatchScript>();
 
+                            if (match.isLit == true)
+                            {
+                                match.isLit = false;
+                                StartCoroutine(DelayCheck());
+                            }
+                            GameObject GameManager = GameObject.Find("GameManager");
+                            GameObject PuzzleChurch = GameManager.transform.Find("Puzzle Church").gameObject;
+                            GameObject ChurchLight = PuzzleChurch.transform.Find("ChurchLight").gameObject;
+
+                            if (ChurchLight.activeSelf)
+                            {
+
+                                transform.Rotate(0, rotation, 0);
+                                anim.Play("Sit");
+
+
+                            }
+                        }
+
+                            if (!this.anim.GetCurrentAnimatorStateInfo(0).IsName("Sit"))
+                            {
+
+                                TriggerEventScript tEvent = hit.collider.GetComponent<TriggerEventScript>();
+                                tEvent.CallEvent();
+
+                                anim.Play("Idle");
+                            }
                     }
-
-                    if(!this.anim.GetCurrentAnimatorStateInfo(0).IsName("Sit"))
-                    {
-                       
-                         TriggerEventScript tEvent = hit.collider.GetComponent<TriggerEventScript>();
-                         tEvent.CallEvent();
-
-                        anim.Play("Idle");
-                    }                   
                 }
             }
         }
@@ -313,5 +328,15 @@ public class Player_Movement : MonoBehaviour
         //transform.rotation = tarPos.rotation.eulerAngles;
        // yield break;
     }
- 
+
+    IEnumerator DelayCheck()
+    {
+        yield return new WaitForSeconds(0.2f);
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
+        {
+            anim.Play("Sit");
+        }
+    }
+
+
 }//End

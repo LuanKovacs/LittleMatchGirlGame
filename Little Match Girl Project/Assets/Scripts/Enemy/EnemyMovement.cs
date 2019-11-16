@@ -39,14 +39,14 @@ public class EnemyMovement : MonoBehaviour {
         agent.speed = speed;
     }
 
-    public void HuntTarget()
+    /*public void HuntTarget()
     {
         if (agent.enabled == true)
         {
             target = GameObject.FindGameObjectWithTag("Player");
             agent.destination = target.transform.position;
         }
-    }
+    }*/
 
     private void Update()
     {
@@ -59,7 +59,7 @@ public class EnemyMovement : MonoBehaviour {
             scared = true;
             //StartCoroutine("Flee");
         }
-        else if (!isHunting && Physics.CheckSphere(transform.position, alertRadius, playerMask))
+       /* else if (!isHunting && Physics.CheckSphere(transform.position, alertRadius, playerMask))
         {
             isHunting = true;
            // scared = false;
@@ -69,7 +69,7 @@ public class EnemyMovement : MonoBehaviour {
         if (isHunting)// && Physics.CheckSphere(transform.position, scareRadius, fireMask))
         {
             HuntTarget();
-        }
+        }*/
 
         if (scared)
         {

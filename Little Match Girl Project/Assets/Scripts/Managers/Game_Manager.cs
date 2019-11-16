@@ -56,6 +56,7 @@ public class Game_Manager : MonoBehaviour
     public GameObject RuinedChurch;
     public GameObject ChurchTransit;
 
+    public GameObject sitTrigger;
     public GameObject BrokenChurchLight;
     public GameObject churchSpotlit;
     public GameObject winPanel;
@@ -157,11 +158,14 @@ public class Game_Manager : MonoBehaviour
 
     void ChurchMemory()
     {
-        StartCoroutine(AnimDelayTime());
+        Animator anim = GameObject.Find("CharacterModel&Rig").GetComponent<Animator>();
+
+            StartCoroutine(AnimDelayTime());
     }
 
     void ChurchTransition()
     {
+
         GameObject sound = GameObject.Find("ChurchBell_Sound");
         GameObject.Find("ChurchFBX_P").SetActive(false);
         churchSpotlit.SetActive(false);
@@ -203,19 +207,41 @@ public class Game_Manager : MonoBehaviour
     {
         GameObject sound = GameObject.Find("Spotlight_Sound (1)");
         Animator anim = GameObject.Find("CharacterModel&Rig").GetComponent<Animator>();
-        anim.Play("Sit");
 
         Player.GetComponent<Player_Health>().enabled = true;
         Player.GetComponent<Player_Movement>().enabled = true;
 
+        LightMatchScript match = GameObject.Find("Player").GetComponent<LightMatchScript>();
+
+        /*if (match.isLit == true)
+        {
+            match.isLit = false;
+            yield return new WaitForSeconds(0.5f);
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
+            {
+                anim.Play("Sit");
+            }
+             
+        }
+        else
+        {
+            anim.Play("Sit");
+        }
+        */
+
         yield return new WaitForSeconds(3.0f);
+
 
         AkSoundEngine.PostEvent("Spotlight_effect", sound);
         churchSpotlit.SetActive(true);
         ChurchTransit.SetActive(true);
         GameObject.Find("Spot Light (1)").SetActive(false);
         GameObject.Find("ChurchLight").SetActive(false);
-        
+
+        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Sit") != null)
+        {
+            anim.Play("Idle");
+        }
     }
     IEnumerator DefaultWin()//Tianna!!!!
     {
