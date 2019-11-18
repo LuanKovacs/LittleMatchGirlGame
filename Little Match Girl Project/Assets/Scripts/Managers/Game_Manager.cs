@@ -261,15 +261,36 @@ public class Game_Manager : MonoBehaviour
 
         yield return new WaitForSeconds(3.0f);
         CameraMain.GetComponent<CameraTopDown>().enabled = true;
-        GetComponent<RespawnCheckpoint>().Respawn();
-        
-        Player.transform.rotation = Quaternion.identity;
+
         Player.GetComponent<Player_Health>().Revive();
+        Player.GetComponent<Player_Health>().enabled = true;
+        GetComponent<RespawnCheckpoint>().Respawn();
+        Player.transform.rotation = Quaternion.identity;
 
         EventManager.TriggerEvent("Reset");
 
         losePanel.SetActive(false);
-        Player.GetComponent<Player_Health>().enabled = true;
+
+        GameObject foresttrigger = GameObject.Find("EventTrigger BeginChase");
+        GameObject citytrigger = GameObject.Find("EventTrigger BeginCityChase");
+        GameObject forestEvent = GameObject.Find("ForestMonsterChase");
+        GameObject cityEvent = GameObject.Find("CityMonsterChase");
+        GameObject camera = GameObject.Find("Main Camera");
+        Animator camAnim = camera.GetComponent<Animator>();
+
+        if (forestEvent != null)//Tianna!!!!
+        {
+            forestEvent.SetActive(false);
+            foresttrigger.SetActive(true);
+            camAnim.enabled = false;
+
+        }
+        if (cityEvent != null)//Tianna!!!!
+        {
+            cityEvent.SetActive(false);
+            citytrigger.SetActive(true);
+            camAnim.enabled = false;
+        }
 
     }
 }

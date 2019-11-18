@@ -6,8 +6,9 @@ public class TriggerEventScript : MonoBehaviour
 {
 
     public string callEvent;
-
+    public bool triggered;
     Collider colRef;
+    Player_Health playerHPref;
 
     private void OnEnable()
     {
@@ -21,6 +22,7 @@ public class TriggerEventScript : MonoBehaviour
 
     private void Start()
     {
+        playerHPref = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Health>();
         colRef = GetComponent<Collider>();
     }
 
@@ -28,7 +30,7 @@ public class TriggerEventScript : MonoBehaviour
     {
        // gameObject.SetActive(true);
         colRef.enabled = true;
-
+        triggered = false;
         if (transform.childCount > 0)
         {
             foreach (Transform child in transform)
@@ -42,7 +44,8 @@ public class TriggerEventScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        triggered = true;
+        if (other.gameObject.tag == "Player" && !playerHPref.isDead)
         {
             EventManager.TriggerEvent(callEvent);
            // gameObject.SetActive(false);
@@ -54,6 +57,10 @@ public class TriggerEventScript : MonoBehaviour
                 {
                    child.gameObject.SetActive(false);
                 }
+            }
+           else
+            {
+               // gameObject.SetActive(false);
             }
         }
         else

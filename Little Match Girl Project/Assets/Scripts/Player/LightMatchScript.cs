@@ -58,6 +58,11 @@ public class LightMatchScript : MonoBehaviour
         match.SetActive(true);
         GetComponent<Player_Health>().GainHP(true);
         yield return new WaitForSeconds(maxMatchTime);
+        MathBlown();
+    }
+
+    public void MathBlown()
+    {
         isLit = false;
         match.SetActive(false);
         GetComponent<Player_Health>().GainHP(false);

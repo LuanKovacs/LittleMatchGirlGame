@@ -9,11 +9,17 @@ public class MonsterTargetMove : MonoBehaviour
     public GameObject player;
     Player_Health playerHPref;
 
+    Vector3 startPos;
 
+    private void OnEnable()
+    {
+        transform.localPosition = startPos;
+    }
 
     void Awake()
     {
         playerHPref = player.GetComponent<Player_Health>();
+        startPos = transform.localPosition;
     }
 
     void FixedUpdate()

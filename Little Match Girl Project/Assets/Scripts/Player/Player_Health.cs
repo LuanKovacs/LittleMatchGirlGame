@@ -14,13 +14,9 @@ public class Player_Health : MonoBehaviour
     public bool isDead;
     public CanvasGroup HealthPanel;//Tianna!!!!
     public GameObject matchTUT;
-    public GameObject citytrigger;
-    public GameObject foresttrigger;
 
     Player_Movement playerMove;
-    Rigidbody playerRBref;
-    
-    
+    Rigidbody playerRBref;  
 
     public void Revive() 
     {
@@ -28,6 +24,7 @@ public class Player_Health : MonoBehaviour
         curDrainHP = maxDrainHP;
         curHP = maxHP;
         isDead = false;
+        HealthPanel.alpha = 0.0f;
         playerRBref.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
 
         playerMove.canMove = true;
@@ -103,6 +100,7 @@ public class Player_Health : MonoBehaviour
 
         if (curHP <= 10)//Death anim play
         {
+            curDrainHP = 1.5f;
             float HeartbeatVol = 10;
             //GameObject playerSound = GameObject.Find("player_Sound");
             AkSoundEngine.SetRTPCValue("Heart_beat", HeartbeatVol);
@@ -127,26 +125,6 @@ public class Player_Health : MonoBehaviour
             playerRBref.AddTorque(transform.right * 5 * 5);
             playerMove.canMove = false;
             EventManager.TriggerEvent("PlayerDeath");
-
-            GameObject forestEvent = GameObject.Find("ForestMonsterChase");
-            GameObject cityEvent = GameObject.Find("CityMonsterChase");
-            GameObject camera = GameObject.Find("Main Camera");
-            Animator camAnim = camera.GetComponent<Animator>();
-            
-            if (forestEvent != null)//Tianna!!!!
-            {
-                forestEvent.SetActive(false);
-                foresttrigger.SetActive(true);
-                camAnim.enabled = false;
-
-            }
-            if (cityEvent != null)//Tianna!!!!
-            {
-                cityEvent.SetActive(false);
-                citytrigger.SetActive(true);
-                camAnim.enabled = false;
-            }
-
         }
 
         if (curHP <= 0 && !isDead)
