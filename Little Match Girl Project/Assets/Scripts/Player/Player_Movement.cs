@@ -224,7 +224,8 @@ public class Player_Movement : MonoBehaviour
 
             }
         }
-        else if (sprinting && Input.GetKeyUp("left shift") || sprinting && Input.GetKeyUp("joystick button 0"))
+
+        if (sprinting && Input.GetKeyUp("left shift") || sprinting && Input.GetKeyUp("joystick button 0"))
         {
             // print("Not Sprinting");
             sprinting = false;

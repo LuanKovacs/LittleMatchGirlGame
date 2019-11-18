@@ -14,7 +14,7 @@ public class LightMatchScript : MonoBehaviour
     public int maxMatches = 3;
     public int curMatches = 0;
     public bool isLit;
-    public float maxMatchTime = 30f;
+    public float maxMatchTime, curMatchTime;
     public GameObject matchTUT;//***Tianna!!***
     //public GameObject objwthspt;
 
@@ -24,6 +24,7 @@ public class LightMatchScript : MonoBehaviour
 
     private void Start()
     {
+        curMatchTime = maxMatchTime;
         matchTUT.GetComponent<CanvasGroup>().alpha = 1;//***Tianna!!***
 
         /*objwthspt = objwthspt.GetComponent("callEvent");
@@ -57,7 +58,7 @@ public class LightMatchScript : MonoBehaviour
         //isLit = true;
         match.SetActive(true);
         GetComponent<Player_Health>().GainHP(true);
-        yield return new WaitForSeconds(maxMatchTime);
+        yield return new WaitForSeconds(curMatchTime);
         MathBlown();
     }
 

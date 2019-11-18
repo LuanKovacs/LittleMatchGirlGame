@@ -48,6 +48,7 @@ public class Game_Manager : MonoBehaviour
 
     public GameObject Player;
     public GameObject CameraMain;
+    public GameObject blizzard;
     public GameObject puzzleSetBridge;
     public GameObject ForestChase;
     public GameObject CityChase;
@@ -64,6 +65,17 @@ public class Game_Manager : MonoBehaviour
     public GameObject allLighting;
     Color32 setColor = new Color32(51,66,91, 0);
 
+    Player_Health playerHpRef;
+    Player_Movement playerMove;
+    LightMatchScript matchRef;
+
+    private void Awake()
+    {
+        playerHpRef = Player.GetComponent<Player_Health>();
+        playerMove = Player.GetComponent<Player_Movement>();
+        matchRef = Player.GetComponent<LightMatchScript>();
+    }
+
     public void StartGame()
     {
         CameraMain.GetComponent<CameraTopDown>().enabled = true;
@@ -73,8 +85,9 @@ public class Game_Manager : MonoBehaviour
     IEnumerator GameStart()
     {
         yield return new WaitForSeconds(1);
-        Player.GetComponent<Player_Health>().enabled = true;
-        Player.GetComponent<Player_Movement>().canMove = true;
+        playerHpRef.enabled = true;
+        playerMove.canMove = true;
+        
     }
 
     void UnlockMatches()
@@ -114,6 +127,7 @@ public class Game_Manager : MonoBehaviour
 
     void DarkRoomStart()
     {
+        blizzard.SetActive(false);
         Transform Forest = GameObject.Find("Terrain_Forest").transform;
         GameObject startDark = GameObject.Find("DarkroomCheckPoint");
        // GameObject dirLight = GameObject.Find("Directional Light");
@@ -126,6 +140,9 @@ public class Game_Manager : MonoBehaviour
         allLighting.SetActive(false);
         //dirLightN.SetActive(true);
 
+        //make matches longer
+        playerHpRef.curDrainHP = 0.0f;
+        matchRef.curMatchTime = 160.0f;
 
         //Forest.SetActive(false); //not permitted it says...
         //Destroy(Forest);
@@ -158,9 +175,8 @@ public class Game_Manager : MonoBehaviour
 
     void ChurchMemory()
     {
-        Animator anim = GameObject.Find("CharacterModel&Rig").GetComponent<Animator>();
-
-            StartCoroutine(AnimDelayTime());
+        matchRef.MathBlown();
+        StartCoroutine(AnimDelayTime());
     }
 
     void ChurchTransition()
@@ -179,11 +195,16 @@ public class Game_Manager : MonoBehaviour
 
     void ChurchExit()
     {
+        blizzard.SetActive(true);
         GameObject startGrave = GameObject.Find("GraveStart");
+        playerHpRef.curDrainHP = playerHpRef.maxDrainHP;
         ChurchPuzzle.SetActive(false);
         allLighting.SetActive(true);
         CameraMain.SetActive(true);
         Player.transform.position = startGrave.transform.position;
+
+        matchRef.curMatchTime = matchRef.maxMatchTime;
+        print("Test");
     }
 
     void PlayerDeath()
@@ -200,49 +221,55 @@ public class Game_Manager : MonoBehaviour
         anim.Play("");
 
         StartCoroutine(DefaultWin());
-
     }
 
     IEnumerator AnimDelayTime()//Tianna!!!!
     {
+
+        GameObject sit = GameObject.Find("Church Sit");
         GameObject sound = GameObject.Find("Spotlight_Sound (1)");
         Animator anim = GameObject.Find("CharacterModel&Rig").GetComponent<Animator>();
+        yield return new WaitForSeconds(0.1f);
+        Player.GetComponent<Rigidbody>().Sleep();
+        playerMove.canMove = false;
 
-        Player.GetComponent<Player_Health>().enabled = true;
-        Player.GetComponent<Player_Movement>().enabled = true;
+        anim.Play("Sit");
+        Player.transform.position = sit.transform.position;
+        Player.transform.rotation = sit.transform.rotation;
 
-        LightMatchScript match = GameObject.Find("Player").GetComponent<LightMatchScript>();
-
-        /*if (match.isLit == true)
+        /*
+        if (matchRef.isLit == true)
         {
-            match.isLit = false;
+            matchRef.isLit = false;
             yield return new WaitForSeconds(0.5f);
             if (anim.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
             {
                 anim.Play("Sit");
-            }
-             
+            }             
         }
         else
         {
             anim.Play("Sit");
         }
         */
-
         yield return new WaitForSeconds(3.0f);
-
 
         AkSoundEngine.PostEvent("Spotlight_effect", sound);
         churchSpotlit.SetActive(true);
         ChurchTransit.SetActive(true);
         GameObject.Find("Spot Light (1)").SetActive(false);
         GameObject.Find("ChurchLight").SetActive(false);
+        Player.GetComponent<Rigidbody>().WakeUp();
+        playerMove.canMove = true;
 
-        if (anim.GetCurrentAnimatorStateInfo(0).IsName("Sit") != null)
-        {
-            anim.Play("Idle");
-        }
+        anim.Play("Idle");
+        //  if (!anim.GetCurrentAnimatorStateInfo(0).IsName("Sit"))
+        // {
+        //   anim.Play("Idle");
+        //}
+
     }
+
     IEnumerator DefaultWin()//Tianna!!!!
     {
         
@@ -254,16 +281,16 @@ public class Game_Manager : MonoBehaviour
     IEnumerator DeathState()
     {
         losePanel.SetActive(true);
-        Player.GetComponent<Player_Health>().PleaseDie();
+        playerHpRef.PleaseDie();
         yield return new WaitForSeconds(0.5f);
 
-        Player.GetComponent<Player_Health>().enabled = false;
+        playerHpRef.enabled = false;
 
         yield return new WaitForSeconds(3.0f);
         CameraMain.GetComponent<CameraTopDown>().enabled = true;
 
-        Player.GetComponent<Player_Health>().Revive();
-        Player.GetComponent<Player_Health>().enabled = true;
+        playerHpRef.Revive();
+        playerHpRef.enabled = true;
         GetComponent<RespawnCheckpoint>().Respawn();
         Player.transform.rotation = Quaternion.identity;
 
