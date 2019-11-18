@@ -9,10 +9,10 @@ public class Player_Health : MonoBehaviour
     public float maxHP = 100;
     public float curHP;
     public bool gainHP;
-    public float maxDrainHP;
-    public float curDrainHP;
+    public float maxGainHP, curGainHP;
+    public float maxDrainHP, curDrainHP;
     public bool isDead;
-    public Image HealthPanel;//Tianna!!!!
+    public CanvasGroup HealthPanel;//Tianna!!!!
     public GameObject matchTUT;
     public GameObject citytrigger;
     public GameObject foresttrigger;
@@ -24,6 +24,7 @@ public class Player_Health : MonoBehaviour
 
     public void Revive() 
     {
+        curGainHP = maxGainHP;
         curDrainHP = maxDrainHP;
         curHP = maxHP;
         isDead = false;
@@ -35,7 +36,6 @@ public class Player_Health : MonoBehaviour
         GameObject PlayerModel = Player.transform.Find("CharacterModel&Rig").gameObject;
         Animator anim = PlayerModel.GetComponent<Animator>();
         anim.Play("Idle");//Tianna!!!!
-
     }
 
     private void Start()
@@ -54,6 +54,7 @@ public class Player_Health : MonoBehaviour
 
         matchTUT.GetComponent<CanvasGroup>().alpha = 0;
         //matchTUT.canvasRenderer.SetAlpha(0f);
+        curGainHP = maxGainHP;
         curDrainHP = maxDrainHP;
         curHP = maxHP;
         //HealthPanel.canvasRenderer.SetAlpha(0.0f);//Tianna!!!!
@@ -66,39 +67,44 @@ public class Player_Health : MonoBehaviour
     private void Update()
     {
        
+       
         //gain HP
-        if (gainHP == true && curHP <= maxHP)
+        if (gainHP == true && curHP < maxHP)
         {
             float FireVol = 40;
-            curHP = curHP += 10.0f * Time.deltaTime;
-            HealthPanel.CrossFadeAlpha(-curHP, 100, false);//Tianna!!!!
-
+            curHP = curHP += curGainHP * Time.deltaTime;
+            HealthPanel.alpha -= (curGainHP / 100) * Time.deltaTime;
+            // HealthPanel.CrossFadeAlpha(-curHP, 100, false);//Tianna!!!!
+            //HealthPanel.alpha = 0;
             //GameObject Fire = GameObject.Find("Fire_Bonfire");
             //GameObject Fire2 = GameObject.Find("Fire_Bonfire (1)");
             AkSoundEngine.SetRTPCValue("Fire_crackling", FireVol);
             AkSoundEngine.SetRTPCValue("Fire_crackling", FireVol);
             //HealthPanel.alpha -= Time.deltaTime / curHP;
-            if (curHP > maxHP)
+            if (curHP >= maxHP)
             {
                 curHP = maxHP;
-                HealthPanel.canvasRenderer.SetAlpha(0.0f);//Tianna!!!!
-                //HealthPanel.alpha = 0.0f;
+               // HealthPanel.canvasRenderer.SetAlpha(0.0f);//Tianna!!!!
+                HealthPanel.alpha = 0.0f;
+
             }
         }
 
         //drain HP
         if (gainHP == false && curHP >= 0)
         {
-            curHP = curHP -= curDrainHP * Time.deltaTime;
-            HealthPanel.CrossFadeAlpha(1, curHP, true);//Tianna!!!!
+            curHP -= curDrainHP * Time.deltaTime;
+            //HealthPanel.CrossFadeAlpha(1, curHP, true);//Tianna!!!!
+            //HealthPanel.canvasRenderer.SetAlpha(curHP / 1000);
             //HealthPanel.alpha += Time.deltaTime / curHP;
-
+            HealthPanel.alpha += (curDrainHP / 100) * Time.deltaTime;
         }
-        if(curHP <= 10)//Death anim play
+
+
+        if (curHP <= 10)//Death anim play
         {
             float HeartbeatVol = 10;
             //GameObject playerSound = GameObject.Find("player_Sound");
-
             AkSoundEngine.SetRTPCValue("Heart_beat", HeartbeatVol);
             playerMove.canMove = false;
             GameObject Player = GameObject.Find("Player");
@@ -145,8 +151,8 @@ public class Player_Health : MonoBehaviour
 
         if (curHP <= 0 && !isDead)
         {
-            //HealthPanel.alpha = 1.0f;
-            HealthPanel.canvasRenderer.SetAlpha(1.0f);//Tianna!!!!
+            HealthPanel.alpha = 1.0f;
+            //HealthPanel.canvasRenderer.SetAlpha(1.0f);//Tianna!!!!
             isDead = true;
             //gameObject.tag = "Dead";
         }
