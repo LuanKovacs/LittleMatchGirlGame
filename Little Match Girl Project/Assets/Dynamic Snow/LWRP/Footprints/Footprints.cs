@@ -11,25 +11,24 @@ public class Footprints : MonoBehaviour
     public string groundTag;
     public SphereCollider thisCollider;
     public float checkDist = 0.1f;
+    public float colliderRadius = 0.05f;
+    public float footprintVerticalOffset = 0.01f;
+    public LayerMask layerMask;
     // Start is called before the first frame update
     void Start()
     {
-        //GameObject g = character.Find(connectedObjectName);
-        //if (g != null)
-        //{
-        //    transform.SetParent(g.transform);
-        //}
         if (connectedTransform != null)
         {
             transform.SetParent(connectedTransform, true); //keep scale
             transform.position = connectedTransform.position;
         }
+        thisCollider.radius = colliderRadius;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.DrawRay(transform.position, Vector3.down * checkDist, Color.red, 0.0f);
+        Debug.DrawRay(transform.position , Vector3.down * checkDist, Color.red, 0.0f);
     }
 
     void OnTriggerEnter(Collider col)
@@ -39,20 +38,26 @@ public class Footprints : MonoBehaviour
         {
 
             MakeFootprint();
-            //Instantiate(footprintPrefab, col.position, Quaternion.identity);
         }
     }
 
     void MakeFootprint()
     {
-        Debug.Log("Make Footprint");
-        Ray ray = new Ray(transform.position + (Vector3.up*0.1f), Vector3.down);
+        //Debug.Log("Make Footprint");
+        Ray ray = new Ray(transform.position, Vector3.down);
         
         RaycastHit hit;
-        if (thisCollider.Raycast(ray, out hit, checkDist) )
+        if (Physics.Raycast(ray, out hit, checkDist, layerMask) )
         {
             Debug.Log(hit.point);
-            Instantiate(footprintPrefab, hit.point, Quaternion.identity);
+            GameObject footprint = Instantiate(footprintPrefab, hit.point, Quaternion.identity);
+            footprint.transform.position = hit.point + Vector3.up*footprintVerticalOffset;
+            footprint.transform.LookAt(footprint.transform.position + transform.forward, hit.normal);
+            if (flip)
+                footprint.transform.localScale = new Vector3(-footprint.transform.localScale.x,
+                                                              footprint.transform.localScale.y,
+                                                              footprint.transform.localScale.z);
+        
         }
     }
 }
