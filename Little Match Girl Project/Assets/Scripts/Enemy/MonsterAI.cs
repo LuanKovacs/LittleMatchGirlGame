@@ -7,18 +7,33 @@ public class MonsterAI : MonoBehaviour
     public Transform targetPos;
     public float speed = 5.0f;
     public bool move;
+    public Animator CamAnimator;
     
     public Animator anim;
+    //public AkAmbient scream;
+
+    Vector3 startPos;
+    Player_Health playerHpRef;
 
     private void OnEnable() 
     {
+        transform.localPosition = startPos;
         move = true;
     }
 
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
+        startPos = transform.localPosition;
+        playerHpRef = GameObject.Find("Player").GetComponent<Player_Health>();
+    }
+
+    private void Update()
+    {
+        if (playerHpRef.curHP <= 10.0f && move)
+        {
+            // targetPos = playerHpRef.gameObject.transform;
+            move = false;
+        }
     }
 
     void FixedUpdate()
@@ -35,19 +50,16 @@ public class MonsterAI : MonoBehaviour
 
         if (anim.GetCurrentAnimatorStateInfo(0).IsName("Roar"))
         {
+            CamAnimator.enabled = true;
+            // GetComponent<AkAmbient>().enabled = true;
+            //scream.enabled = true;
+            AkSoundEngine.PostEvent("Bliazzard_creature_scream", gameObject);
 
-            GameObject mainCamera = GameObject.Find("Main Camera");
-            Animator anim = mainCamera.GetComponent<Animator>();
-
-            anim.enabled = true;
- 
         }
         else
         {
-            GameObject mainCamera = GameObject.Find("Main Camera");
-            Animator anim = mainCamera.GetComponent<Animator>();
-
-            anim.enabled = false;
+            //scream.enabled = false;
+            CamAnimator.enabled = false;
         }
     }
 

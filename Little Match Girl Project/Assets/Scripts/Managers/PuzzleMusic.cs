@@ -9,11 +9,12 @@ public class PuzzleMusic : MonoBehaviour
     public GameObject Plate3;
     public int goal = 3;
     public GameObject Bridge;
+    public GameObject Memory;
 
     public CameraTopDown mainCamera;
     public GameObject playerLight;
     public GameObject dirLight;
-    int curGoal;
+    public int curGoal;
     bool PuzzleComplete;
 
     void OnEnable()
@@ -42,6 +43,7 @@ public class PuzzleMusic : MonoBehaviour
     {
         if (curGoal == 1)
         {
+            Debug.Log("tag");
             Plate2.tag = "PuzzleAnswer";
         }
 
@@ -59,6 +61,11 @@ public class PuzzleMusic : MonoBehaviour
             Bridge.SetActive(true);
             gameObject.SetActive(false);
         }
+
+        if (Bridge != null)
+        {
+            Memory.SetActive(false);
+        }
     }
 
     public void AddGoal()
@@ -73,6 +80,8 @@ public class PuzzleMusic : MonoBehaviour
         if (curGoal > 0)
         {
             Plate1.tag = "PuzzleAnswer";
+            Plate2.tag = "Untagged";
+            Plate3.tag = "Untagged";
             print("RestGoal");
             curGoal = 0;
         }

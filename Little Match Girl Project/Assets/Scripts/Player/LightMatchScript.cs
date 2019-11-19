@@ -14,15 +14,17 @@ public class LightMatchScript : MonoBehaviour
     public int maxMatches = 3;
     public int curMatches = 0;
     public bool isLit;
-    public float maxMatchTime = 30f;
+    public float maxMatchTime, curMatchTime;
     public GameObject matchTUT;//***Tianna!!***
     //public GameObject objwthspt;
 
     public GameObject spotLightReg;
     public GameObject spotLightDA;
+    public GameObject matchSound;
 
     private void Start()
     {
+        curMatchTime = maxMatchTime;
         matchTUT.GetComponent<CanvasGroup>().alpha = 1;//***Tianna!!***
 
         /*objwthspt = objwthspt.GetComponent("callEvent");
@@ -37,7 +39,7 @@ public class LightMatchScript : MonoBehaviour
     {
 
         if (!isLit && Input.GetKeyDown(KeyCode.Space) && curMatches >= 1
-            || !isLit && Input.GetKeyDown("joystick button 1") && curMatches >= 1)
+            || !isLit && Input.GetKeyDown("joystick button 1") && curMatches >= 1)//"B" Button
         {
             matchTUT.GetComponent<CanvasGroup>().alpha = 0;//***Tianna!!***
 
@@ -45,22 +47,28 @@ public class LightMatchScript : MonoBehaviour
             {
                 curMatches -= 1;
             }
-            StartCoroutine("LightMatch");
-            print("Space");
+            isLit = true;
+            AkSoundEngine.PostEvent("Striking_match", matchSound);
+            AkSoundEngine.PostEvent("Lighting_match", matchSound);
         }
     }
 
-    IEnumerator LightMatch()
+    IEnumerator LightMatchSeq()//start is at character rig
     {
-        
-        isLit = true;
+        //isLit = true;
         match.SetActive(true);
         GetComponent<Player_Health>().GainHP(true);
-        yield return new WaitForSeconds(maxMatchTime);
+        yield return new WaitForSeconds(curMatchTime);
+        MathBlown();
+    }
+
+    public void MathBlown()
+    {
         isLit = false;
         match.SetActive(false);
         GetComponent<Player_Health>().GainHP(false);
-        print("Test");
+        AkSoundEngine.PostEvent("Match_blown_out", matchSound);
+        StopCoroutine("LightMatchSeq");
     }
 
     public void GainMatch()

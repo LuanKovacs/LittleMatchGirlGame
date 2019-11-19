@@ -8,12 +8,18 @@ public class MonsterTargetMove : MonoBehaviour
     public float speed = 8.0f;
     public GameObject player;
     Player_Health playerHPref;
-    public GameObject burst;
 
+    Vector3 startPos;
+
+    private void OnEnable()
+    {
+        transform.localPosition = startPos;
+    }
 
     void Awake()
     {
         playerHPref = player.GetComponent<Player_Health>();
+        startPos = transform.localPosition;
     }
 
     void FixedUpdate()

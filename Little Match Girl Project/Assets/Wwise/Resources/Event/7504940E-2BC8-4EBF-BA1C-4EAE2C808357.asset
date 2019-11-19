@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 548d4e3616853de4894acf803988d2aa, type: 3}
+  m_Name: 7504940E-2BC8-4EBF-BA1C-4EAE2C808357
+  m_EditorClassIdentifier: 
+  objectName: Girl_breathing
+  id: 2073873008
+  guid: 7504940E-2BC8-4EBF-BA1C-4EAE2C808357

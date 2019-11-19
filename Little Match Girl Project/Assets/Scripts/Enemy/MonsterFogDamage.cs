@@ -7,10 +7,12 @@ public class MonsterFogDamage : MonoBehaviour
     public Player_Health playerHpRef;
     public float newDrainAmount = 10.0f;
 
+    LightMatchScript matchRef;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        matchRef = GameObject.Find("Player").GetComponent<LightMatchScript>();
     }
 
     // Update is called once per frame
@@ -22,6 +24,8 @@ public class MonsterFogDamage : MonoBehaviour
     {
         if (other.tag == "Player")
         {
+            matchRef.MathBlown();
+            //playerHpRef.GainHP(false);
             playerHpRef.DrainHp(newDrainAmount);
             //playerHpRef.PleaseDie();
         }
@@ -31,7 +35,8 @@ public class MonsterFogDamage : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            playerHpRef.ResetDrain();           
+            playerHpRef.ResetDrain();
+           // playerHpRef.GainHP(true);
         }
     }
 }

@@ -10,7 +10,8 @@ TagManager:
   - PuzzleAnswer
   - Interactable
   - Checkpoints
-  - Ground
+  - SitPos
+  - MatchLight
   layers:
   - Default
   - TransparentFX

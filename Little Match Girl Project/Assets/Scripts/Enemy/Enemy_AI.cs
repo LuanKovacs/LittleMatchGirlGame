@@ -11,23 +11,23 @@ public class Enemy_AI : MonoBehaviour
 {
 
     public GameObject target;
-    public float maxEnemyHP;
-    public float curEnemyHP;
-    public float atkDamage;
-    public GameObject hurtBox;
+   // public float maxEnemyHP;
+    //public float curEnemyHP;
+    //public float atkDamage;
+    //public GameObject hurtBox;
 //    public Transform head;
     public float turnSpeed = 3f;
 
     public bool chasePlayer;
-    public bool atkPlayer;
-    public float atkDelay = 1f;
+    //public bool atkPlayer;
+    //public float atkDelay = 1f;
     float distance;
 
     private void Awake()
     {
         target = GameObject.FindGameObjectWithTag("Player");
        
-        curEnemyHP = maxEnemyHP;
+        //curEnemyHP = maxEnemyHP;
     }
 
     void SightDetection()
@@ -39,14 +39,14 @@ public class Enemy_AI : MonoBehaviour
     {
         distance = Vector3.Distance(target.transform.position, transform.position);
 
-        if(distance <= 3f && !atkPlayer && chasePlayer)
+       /* if(distance <= 3f && !atkPlayer && chasePlayer)
         {
             print("testAtk");
             StartCoroutine("Attack");
-        } else {}
+        } else {}*/
     }
 
-    IEnumerator Attack()
+   /* IEnumerator Attack()
     {
 
         atkPlayer = true;
@@ -57,7 +57,7 @@ public class Enemy_AI : MonoBehaviour
         atkPlayer = false;
         yield break;
         
-    }
+    }*/
 
 
 /*    void LookAt()

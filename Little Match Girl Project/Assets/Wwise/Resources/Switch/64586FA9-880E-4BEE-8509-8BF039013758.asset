@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93b58d833b437d24aad7800e09cce876, type: 3}
+  m_Name: 64586FA9-880E-4BEE-8509-8BF039013758
+  m_EditorClassIdentifier: 
+  objectName: Tone_01
+  id: 3531240261
+  guid: 64586FA9-880E-4BEE-8509-8BF039013758
+  WwiseSwitchGroupReference: {fileID: 11400000, guid: 40fb32e250343fd41a83b4ee5b0b900e,
+    type: 2}

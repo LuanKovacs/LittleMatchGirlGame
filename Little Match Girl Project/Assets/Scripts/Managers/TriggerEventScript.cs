@@ -6,6 +6,9 @@ public class TriggerEventScript : MonoBehaviour
 {
 
     public string callEvent;
+    public bool triggered;
+    Collider colRef;
+    Player_Health playerHPref;
 
     private void OnEnable()
     {
@@ -17,19 +20,48 @@ public class TriggerEventScript : MonoBehaviour
         EventManager.StopListening("Reset", Reset);
     }
 
+    private void Start()
+    {
+        playerHPref = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_Health>();
+        colRef = GetComponent<Collider>();
+    }
+
     private void Reset()
     {
-        gameObject.SetActive(true);
+       // gameObject.SetActive(true);
+        colRef.enabled = true;
+        triggered = false;
+        if (transform.childCount > 0)
+        {
+            foreach (Transform child in transform)
+            {
+                child.gameObject.SetActive(true);
+            }
+        }
     }
 
 
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Player")
+        triggered = true;
+        if (other.gameObject.tag == "Player" && !playerHPref.isDead)
         {
             EventManager.TriggerEvent(callEvent);
-            gameObject.SetActive(false);
+           // gameObject.SetActive(false);
+            colRef.enabled = false;
+
+           if (transform.childCount > 0)
+            {
+                foreach (Transform child in transform)
+                {
+                   child.gameObject.SetActive(false);
+                }
+            }
+           else
+            {
+               // gameObject.SetActive(false);
+            }
         }
         else
         {
@@ -41,6 +73,15 @@ public class TriggerEventScript : MonoBehaviour
     {
         print(callEvent);
         EventManager.TriggerEvent(callEvent);
-        gameObject.SetActive(false);
+       // gameObject.SetActive(false);
+        colRef.enabled = false;
+
+        if (transform.childCount > 0)
+        {
+            foreach (Transform child in transform)
+            {
+               child.gameObject.SetActive(false);
+            }
+        }
     }
 }

@@ -27,7 +27,7 @@ public class LightBonfireScript : MonoBehaviour
 
     void OnTriggerEnter(Collider other) 
     {
-        if(other.gameObject.tag == "Player" && !lit)
+        if(other.gameObject.tag == "MatchLight" && !lit)
         {
             lit = true;
             partFire.SetActive(true);

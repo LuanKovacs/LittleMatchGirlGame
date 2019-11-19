@@ -9,8 +9,8 @@ public class WwSound : MonoBehaviour
     {
         float rtpc = 0;
         //AkSoundEngine.SetState("Dead_or_Alive", "Alive");
-        //AkSoundEngine.SetRTPCValue("Ambience_1", rtpc);
-        //AkSoundEngine.PostEvent("Wind_1", gameObject);
+        AkSoundEngine.SetRTPCValue("Ambience_1", rtpc);
+        AkSoundEngine.PostEvent("Wind_1", gameObject);
     }
 
     // Update is called once per frame
