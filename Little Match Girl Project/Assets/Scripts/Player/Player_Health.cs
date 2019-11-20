@@ -142,11 +142,6 @@ public class Player_Health : MonoBehaviour
         }*/
     }
 
-    private void OnGUI()
-    {
-        GUI.Label(new Rect(10, 10, 100, 20), "HP/" + curHP.ToString());
-    }
-
     public void GainHP(bool can)
     {
         gainHP = can;
@@ -175,7 +170,11 @@ public class Player_Health : MonoBehaviour
         isDead = true;
     
     }
-
-
+/*
+    private void OnGUI()
+    {
+        GUI.Label(new Rect(10, 10, 100, 20), "HP/" + curHP.ToString());
+    }
+*/
 }
 

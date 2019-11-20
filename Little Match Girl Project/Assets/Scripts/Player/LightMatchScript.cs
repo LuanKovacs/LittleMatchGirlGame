@@ -75,9 +75,10 @@ public class LightMatchScript : MonoBehaviour
     {
         curMatches = maxMatches;
     }
-
+/*
     private void OnGUI()
     {
         GUI.Label(new Rect(10, 30, 100, 20), "Matches/" + curMatches.ToString());
     }
+*/
 }//End

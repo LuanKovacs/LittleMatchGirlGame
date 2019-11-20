@@ -57,7 +57,7 @@ public class Player_Movement : MonoBehaviour
         Animator anim = PlayerModel.GetComponent<Animator>();
        // anim.Play("StartingPosition");
     }
-
+/*
     private void OnDrawGizmos()
     {
         if (Physics.Raycast(transform.position * 1.0f, transform.TransformDirection(Vector3.forward), out hit, 3))
@@ -67,7 +67,7 @@ public class Player_Movement : MonoBehaviour
             //it works but wrong
         }
     }
-
+*/
     private void Update()
     {
        
@@ -213,16 +213,19 @@ public class Player_Movement : MonoBehaviour
             }
         }
 
-        if (Input.GetKey("left shift") && !sprinting || Input.GetKey("joystick button 0") && !sprinting) //"A" Button
+        if (curStam <= 0)
+        {
+            sprinting = false;
+            gainStam = true;
+            moveSpeed = walkSpeed;
+        }
+        else
+        if (Input.GetKey("left shift") && !sprinting && curStam > 0 || Input.GetKey("joystick button 0") && !sprinting && curStam > 0) //"A" Button
         {
             //print("Sptrinting");
             sprinting = true;
-            if (curStam >= 0)
-            {
-                gainStam = false;
-                moveSpeed = sprintSpeed;
-
-            }
+            gainStam = false;
+            moveSpeed = sprintSpeed;
         }
 
         if (sprinting && Input.GetKeyUp("left shift") || sprinting && Input.GetKeyUp("joystick button 0"))
@@ -232,6 +235,8 @@ public class Player_Movement : MonoBehaviour
             gainStam = true;
             moveSpeed = walkSpeed;
         }
+
+
     }
 
     void Move(float h, float v)
@@ -287,11 +292,6 @@ public class Player_Movement : MonoBehaviour
         canMove = ableToMove;
     }
 
-    private void OnGUI()
-    {
-        GUI.Label(new Rect(10, 20, 100, 20), "Stamina/" + curStam.ToString());
-    }
-
     private void OnTriggerEnter(Collider col)//***Tianna!!***
     {
         if (col.gameObject == SpntCol)//***Tianna!!***
@@ -338,6 +338,11 @@ public class Player_Movement : MonoBehaviour
             anim.Play("Sit");
         }
     }
-
+/*
+    private void OnGUI()
+    {
+        GUI.Label(new Rect(10, 20, 100, 20), "Stamina/" + curStam.ToString());
+    }
+*/
 
 }//End
