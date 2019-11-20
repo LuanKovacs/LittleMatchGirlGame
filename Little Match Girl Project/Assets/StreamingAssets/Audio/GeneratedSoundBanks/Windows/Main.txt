@@ -1,0 +1,242 @@
+Event	ID	Name			Wwise Object Path	Notes
+	33754718	Match_blown_out			\Default Work Unit\Match_blown_out	
+	125079528	Teetch_chattering			\Default Work Unit\Teetch_chattering	
+	670208879	Sticks_cracking			\Default Work Unit\Sticks_cracking	
+	1050267453	Spotlight_effect			\Default Work Unit\Spotlight_effect	
+	1572917658	Play_Testingevent			\Default Work Unit\Play_Testingevent	
+	1585810604	Bliazzard_creature_scream			\Default Work Unit\Bliazzard_creature_scream	
+	1870191356	Branches_snapping			\Default Work Unit\Branches_snapping	
+	1962582049	Crow_scare			\Default Work Unit\Crow_scare	
+	2062015184	Wind_2			\Default Work Unit\Wind_2	
+	2062015187	Wind_1			\Default Work Unit\Wind_1	
+	2073873008	Girl_breathing			\Default Work Unit\Girl_breathing	
+	2109043066	Fire_crackling			\Default Work Unit\Fire_crackling	
+	2131633205	Enable_States			\Default Work Unit\Enable_States	
+	2385628198	Footsteps			\Default Work Unit\Footsteps	
+	2848348995	Crows			\Default Work Unit\Crows	
+	3037339097	Blizzard_creature			\Default Work Unit\Blizzard_creature	
+	3164481935	Wings_flapping			\Default Work Unit\Wings_flapping	
+	3531240261	Tone_01			\Default Work Unit\Tone_01	
+	3531240262	Tone_02			\Default Work Unit\Tone_02	
+	3531240263	Tone_03			\Default Work Unit\Tone_03	
+	3589338066	Heart_beat			\Default Work Unit\Heart_beat	
+	3936468003	Lighting_match			\Default Work Unit\Lighting_match	
+	4049931288	Church_bell			\Default Work Unit\Church_bell	
+	4101366284	Striking_match			\Default Work Unit\Striking_match	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	2385628198	Footsteps			\Default Work Unit\Footsteps	
+
+Switch	ID	Name	Switch Group			Notes
+	787898836	Snow	Footsteps			
+	1216965916	Stone	Footsteps			
+	2195636714	Dirt	Footsteps			
+	2449969375	Glass	Footsteps			
+
+State Group	ID	Name			Wwise Object Path	Notes
+	3991942870	Music			\Default Work Unit\Music	
+
+State	ID	Name	State Group			Notes
+	0	None	Music			
+	133642231	General	Music			
+	417490929	Chase	Music			
+	457374884	Memories	Music			
+	1867380161	Intense_Church	Music			
+	2568407992	Church	Music			
+	3888786832	City	Music			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	399361682	Foostep_volume			\Default Work Unit\Foostep_volume	
+	958934735	Crow_reverb			\Default Work Unit\Crow_reverb	
+	1609058600	Blizzard_creature_scream_volume			\Default Work Unit\Blizzard_creature_scream_volume	
+	1625584349	Ambience_1			\Default Work Unit\Ambience_1	
+	1625584350	Ambience_2			\Default Work Unit\Ambience_2	
+	2109043066	Fire_crackling			\Default Work Unit\Fire_crackling	
+	3037339097	Blizzard_creature			\Default Work Unit\Blizzard_creature	
+	3039458159	Girl_breathing_reverb			\Default Work Unit\Girl_breathing_reverb	
+	4219873143	Heart_beat_volume			\Default Work Unit\Heart_beat_volume	
+
+Effect plug-ins	ID	Name	Type				Notes
+	48620415	Have_U_Ever_Been_Outside	Wwise RoomVerb			
+	353638566	Wwise Gain (Custom)	Wwise Gain			
+	638959197	Have_U_Ever_Been_Outside (Custom)	Wwise RoomVerb			
+	1069397101	Wwise Guitar Distortion (Custom)	Wwise Guitar Distortion			
+	1588715066	Echoes_Linear	Wwise Delay			
+	1706684651	Plate_Medium	Wwise RoomVerb			
+	3491912473	Club_Music_Distant_03	Wwise Parametric EQ			
+	3491912478	Club_Music_Distant_04	Wwise Parametric EQ			
+	3559982155	Hall_Stop_Screaming	Wwise RoomVerb			
+	3604890626	High_Pass_60Hz	Wwise Parametric EQ			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	10105964	Sand_01	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Sand_01_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Blizzard creature\Blizzard creature\Sand\Sand_01		129712
+	18139735	Sand_02	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Sand_02_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Blizzard creature\Blizzard creature\Sand\Sand_02		85868
+	21185845	Sticks cracking_01	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Sticks cracking_01_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Sticks cracking\Sticks cracking_01		146566
+	23958802	Rumble_01	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Rumble_01_EA4F517B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Blizzard creature\Blizzard creature\Rumble\Rumble_01		7461
+	30499908	Snow_06	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Snow_06_59B75D18.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Little girl footsteps\Footsteps\Snow\Snow_06		34364
+	38984507	Dirt_01	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Dirt_01_0C63F3D7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Little girl footsteps\Footsteps\Dirt\Dirt_01		36332
+	51571960	Dirt_02	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Dirt_02_86A08E10.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Little girl footsteps\Footsteps\Dirt\Dirt_02		27940
+	73121443	Stricking match_01	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Stricking match_01_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Matches\Striking match\Stricking match_01		17784
+	83621153	Spotlight_03	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Spotlight_03_523680FA.wem		\Actor-Mixer Hierarchy\Default Work Unit\Jump scares\Spotlight effect\Spotlight_03		529264
+	112808856	Rumble_03	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Rumble_03_EA4F517B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Blizzard creature\Blizzard creature\Rumble\Rumble_03		12103
+	120058342	Stone_10	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Stone_10_B91665FB.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Little girl footsteps\Footsteps\Stone\Stone_10		48868
+	120307047	Wings flapping_03_new	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Wings flapping_03_new_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Jump scares\Wings flapping\Wings flapping_03_new		421640
+	120674452	Crow_18	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Crow_18_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Crows\Crow_18		96736
+	122667148	Stone_03	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Stone_03_6D9EA818.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Little girl footsteps\Footsteps\Stone\Stone_03		40624
+	135939373	Ghastly vocal_01	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Ghastly vocal_01_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Blizzard creature\Blizzard creature\Ghastly vocals\Ghastly vocal_01		100034
+	150258649	Dirt_10	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Dirt_10_EF747199.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Little girl footsteps\Footsteps\Dirt\Dirt_10		37804
+	157066837	Broken glass_07	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Broken glass_07_B01B6117.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Little girl footsteps\Footsteps\Glass\Broken glass_07		30200
+	159305188	Snow_08	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Snow_08_76E490AD.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Little girl footsteps\Footsteps\Snow\Snow_08		32764
+	169280749	Broken glass_03	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Broken glass_03_F5929F05.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Little girl footsteps\Footsteps\Glass\Broken glass_03		42218
+	171566908	Broken glass_05	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Broken glass_05_38579257.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Little girl footsteps\Footsteps\Glass\Broken glass_05		65098
+	190526092	Lighting match_03	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Lighting match_03_E2C79C17.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Matches\Lighting matches\Lighting match_03		88732
+	192561037	Crow_12	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Crow_12_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Crows\Crow_12		57468
+	192692127	Stone_04	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Stone_04_D5EA0CAB.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Little girl footsteps\Footsteps\Stone\Stone_04		42608
+	197816207	Spotlight_02	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Spotlight_02_C2E6119F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Jump scares\Spotlight effect\Spotlight_02		529264
+	210552173	Dirt_12	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Dirt_12_D056ADE3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Little girl footsteps\Footsteps\Dirt\Dirt_12		33488
+	223202098	Chog_01	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Chog_01_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Blizzard creature\Blizzard creature scream\Chog\Chog_01		888960
+	240825963	Branch snap_03	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Branch snap_03_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Jump scares\Branches snapping\Branch snap_03		352860
+	241578197	Low end amb_02	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Low end amb_02_EA4F517B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Wind 2\Wind 2\Low end ambience\Low end amb_02		14885
+	242765150	wind_02	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\wind_02_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Blizzard creature\Blizzard creature\Wind\wind_02		425992
+	243289368	Light wind_05	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Light wind_05_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Wind 2\Wind 2\Light wind\Light wind_05		608052
+	283867326	Stone_07	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Stone_07_173B02B5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Little girl footsteps\Footsteps\Stone\Stone_07		37732
+	286868418	Fire crackling_04	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Fire crackling_04_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Fire crackling\Fire crackling_04		474556
+	289549421	Crow_04	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Crow_04_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Crows\Crow_04		86644
+	290746235	Snow_01	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Snow_01_0DF19333.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Little girl footsteps\Footsteps\Snow\Snow_01		29120
+	297062394	Low end amb_03	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Low end amb_03_EA4F517B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Wind 2\Wind 2\Low end ambience\Low end amb_03		37415
+	313711638	Broken glass_02	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Broken glass_02_08423B68.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Little girl footsteps\Footsteps\Glass\Broken glass_02		35802
+	317654748	Lighting match_01	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Lighting match_01_8E4C3FC9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Matches\Lighting matches\Lighting match_01		101622
+	322452636	Wings flap_01	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Wings flap_01_3085761E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Jump scares\Wings flapping\Wings flap_01		230024
+	323925953	Fire crackling_01	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Fire crackling_01_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Fire crackling\Fire crackling_01		1061468
+	328049618	Ghastly vocal_05	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Ghastly vocal_05_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Blizzard creature\Blizzard creature\Ghastly vocals\Ghastly vocal_05		130090
+	338346346	Broken glass_09	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Broken glass_09_6A573AA5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Little girl footsteps\Footsteps\Glass\Broken glass_09		39110
+	338863051	Crow scare_03	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Crow scare_03_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Jump scares\Crow scare\Crow scare_03		201188
+	341595007	Teeth chattering_01	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Teeth chattering_01_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocal\Teeth chattering\Teeth chattering_01		102788
+	348912420	Branch snap_02	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Branch snap_02_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Jump scares\Branches snapping\Branch snap_02		232920
+	351114388	Rumble_04	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Rumble_04_EA4F517B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Blizzard creature\Blizzard creature\Rumble\Rumble_04		8005
+	362376508	Crow_06	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Crow_06_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Crows\Crow_06		73044
+	363770000	Crow scare_01	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Crow scare_01_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Jump scares\Crow scare\Crow scare_01		289756
+	366734609	Heavy gust_06	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Heavy gust_06_2052B5F2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Blizzard creature\Blizzard creature\Heavy Gust\Heavy gust_06		23764
+	406709651	Crow_17	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Crow_17_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Crows\Crow_17		77412
+	407194915	Light wind_01	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Light wind_01_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Wind 2\Wind 2\Light wind\Light wind_01		389888
+	415200458	Dirt_05	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Dirt_05_FBA64F60.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Little girl footsteps\Footsteps\Dirt\Dirt_05		44556
+	417267745	Ghastly vocal_07	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Ghastly vocal_07_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Blizzard creature\Blizzard creature\Ghastly vocals\Ghastly vocal_07		119596
+	420425265	Spotlight_01	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Spotlight_01_99B31E14.wem		\Actor-Mixer Hierarchy\Default Work Unit\Jump scares\Spotlight effect\Spotlight_01		529264
+	426151767	Girl breathing_06	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Girl breathing_06_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocal\Girl breathing\Girl breathing_06		107960
+	427092499	Heavy gust_03	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Heavy gust_03_37D66870.wem		\Actor-Mixer Hierarchy\Default Work Unit\Blizzard creature\Blizzard creature\Heavy Gust\Heavy gust_03		21206
+	429075722	Stone_12	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Stone_12_DBF0996B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Little girl footsteps\Footsteps\Stone\Stone_12		46208
+	430855390	Vocoder_02	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Vocoder_02_F664B070.wem		\Actor-Mixer Hierarchy\Default Work Unit\Blizzard creature\Blizzard creature\Vocoder\Vocoder_02		512344
+	436902843	Errie wind_02	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Errie wind_02_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Wind 1\Wind 1\Eerie wind\Errie wind_02		887620
+	439147576	Branch snap_01	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Branch snap_01_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Jump scares\Branches snapping\Branch snap_01		176460
+	439544390	Stricking match_05	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Stricking match_05_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Matches\Striking match\Stricking match_05		25756
+	442747883	Girl breathing_03	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Girl breathing_03_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocal\Girl breathing\Girl breathing_03		84992
+	452156859	Stricking match_03	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Stricking match_03_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Matches\Striking match\Stricking match_03		22626
+	455072946	High pitch sound_01	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\High pitch sound_01_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Wind 1\Wind 1\High pitch sound\High pitch sound_01		556342
+	466749671	Snow_05	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Snow_05_0B825183.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Little girl footsteps\Footsteps\Snow\Snow_05		28780
+	469074141	Stone_11	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Stone_11_D289E72B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Little girl footsteps\Footsteps\Stone\Stone_11		47872
+	469144847	Crow scare_02	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Crow scare_02_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Jump scares\Crow scare\Crow scare_02		227020
+	501955582	Broken glass_01	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Broken glass_01_EE3CD60A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Little girl footsteps\Footsteps\Glass\Broken glass_01		88848
+	502598266	Ghastly vocal_06	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Ghastly vocal_06_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Blizzard creature\Blizzard creature\Ghastly vocals\Ghastly vocal_06		81260
+	506597550	Stone_06	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Stone_06_74D02D3A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Little girl footsteps\Footsteps\Stone\Stone_06		46232
+	507404173	Snow_07	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Snow_07_F28271BA.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Little girl footsteps\Footsteps\Snow\Snow_07		30940
+	535997865	Crow_16	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Crow_16_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Crows\Crow_16		88452
+	544878297	Stone_14	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Stone_14_F863B86D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Little girl footsteps\Footsteps\Stone\Stone_14		40376
+	548394140	Snow_04	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Snow_04_088F2DA8.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Little girl footsteps\Footsteps\Snow\Snow_04		31136
+	551479429	Broken glass_06	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Broken glass_06_FD74F31D.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Little girl footsteps\Footsteps\Glass\Broken glass_06		33786
+	552211887	Tone_03	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Tone_03_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Puzzle game\Tone_03		698516
+	552693701	Match Blown out_04	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Match Blown out_04_CA3641A7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Matches\Match blown out\Match Blown out_04		33368
+	563837847	Branch snap_04	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Branch snap_04_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Jump scares\Branches snapping\Branch snap_04		352860
+	572839605	Light wind_04	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Light wind_04_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Wind 2\Wind 2\Light wind\Light wind_04		760864
+	573197985	Stone_08	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Stone_08_4586911E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Little girl footsteps\Footsteps\Stone\Stone_08		46548
+	573513792	Dirt_06	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Dirt_06_B905942C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Little girl footsteps\Footsteps\Dirt\Dirt_06		43348
+	583865372	Sand_04	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Sand_04_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Blizzard creature\Blizzard creature\Sand\Sand_04		109250
+	584685030	Wings flap_04	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Wings flap_04_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Jump scares\Wings flapping\Wings flap_04		566928
+	590416315	Broken glass_04	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Broken glass_04_059D1604.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Little girl footsteps\Footsteps\Glass\Broken glass_04		39630
+	591403987	Sticks cracking_05	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Sticks cracking_05_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Sticks cracking\Sticks cracking_05		111886
+	595345630	Vocoder_03	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Vocoder_03_799EA939.wem		\Actor-Mixer Hierarchy\Default Work Unit\Blizzard creature\Blizzard creature\Vocoder\Vocoder_03		224792
+	596076711	Dirt_11	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Dirt_11_84438D5B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Little girl footsteps\Footsteps\Dirt\Dirt_11		32708
+	600780753	Stricking match_02	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Stricking match_02_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Matches\Striking match\Stricking match_02		18912
+	601840590	Snow_10	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Snow_10_E6CEC1B7.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Little girl footsteps\Footsteps\Snow\Snow_10		31832
+	617046666	Ghastly vocal_03	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Ghastly vocal_03_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Blizzard creature\Blizzard creature\Ghastly vocals\Ghastly vocal_03		147442
+	617622679	Girl breathing_07	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Girl breathing_07_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocal\Girl breathing\Girl breathing_07		98274
+	632879307	Broken glass_08	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Broken glass_08_9E1EAB71.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Little girl footsteps\Footsteps\Glass\Broken glass_08		43048
+	637213074	Sticks cracking_02	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Sticks cracking_02_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Sticks cracking\Sticks cracking_02		30664
+	638704617	Heavy gust_01	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Heavy gust_01_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Blizzard creature\Blizzard creature\Heavy Gust\Heavy gust_01		29714
+	641098417	Snow_09	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Snow_09_B7D42DC0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Little girl footsteps\Footsteps\Snow\Snow_09		27908
+	651596308	Fire crackling_02	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Fire crackling_02_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Fire crackling\Fire crackling_02		420104
+	652838016	Fire crackling_05	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Fire crackling_05_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Fire crackling\Fire crackling_05		1306620
+	660533787	Crow_14	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Crow_14_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Crows\Crow_14		81116
+	664234519	Snow_11	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Snow_11_62CA5715.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Little girl footsteps\Footsteps\Snow\Snow_11		29136
+	664947369	Stone_09	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Stone_09_D8F6125F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Little girl footsteps\Footsteps\Stone\Stone_09		47484
+	673659549	Crow_15	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Crow_15_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Crows\Crow_15		64996
+	678515893	Rattle_01	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Rattle_01_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Blizzard creature\Blizzard creature\Rattle\Rattle_01		48326
+	687640115	Wings flapping_07_new	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Wings flapping_07_new_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Jump scares\Wings flapping\Wings flapping_07_new		346844
+	690444990	Teeth chattering_02	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Teeth chattering_02_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocal\Teeth chattering\Teeth chattering_02		178132
+	703086431	Errie wind_01	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Errie wind_01_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Wind 1\Wind 1\Eerie wind\Errie wind_01		415004
+	704758567	Sticks cracking_04	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Sticks cracking_04_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Sticks cracking\Sticks cracking_04		77170
+	707196245	Crow_11	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Crow_11_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Crows\Crow_11		66288
+	708040810	High pitch sound_02	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\High pitch sound_02_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Wind 1\Wind 1\High pitch sound\High pitch sound_02		462016
+	721279935	Chog_02	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Chog_02_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Blizzard creature\Blizzard creature scream\Chog\Chog_02		888960
+	724221619	Girl breathing_02	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Girl breathing_02_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocal\Girl breathing\Girl breathing_02		63764
+	735679633	Branch snap_05	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Branch snap_05_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Jump scares\Branches snapping\Branch snap_05		266632
+	738291434	Broken glass_13	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Broken glass_13_CBC70019.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Little girl footsteps\Footsteps\Glass\Broken glass_13		41020
+	738572541	Dirt_03	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Dirt_03_7F52B839.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Little girl footsteps\Footsteps\Dirt\Dirt_03		37276
+	745599875	Broken glass_10	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Broken glass_10_899AFBF5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Little girl footsteps\Footsteps\Glass\Broken glass_10		69864
+	755060084	Tone_02	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Tone_02_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Puzzle game\Tone_02		698516
+	756695702	Rattle_03	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Rattle_03_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Blizzard creature\Blizzard creature\Rattle\Rattle_03		63466
+	778613323	Church bell_01	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Church bell_01_4AE93929.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Church bell_01		881440
+	787654622	Snow_02	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Snow_02_A93BF5A0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Little girl footsteps\Footsteps\Snow\Snow_02		28748
+	805296143	Crow_03	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Crow_03_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Crows\Crow_03		67188
+	807791997	Crow_08	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Crow_08_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Crows\Crow_08		78980
+	809544886	Dirt_07	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Dirt_07_AA1500B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Little girl footsteps\Footsteps\Dirt\Dirt_07		26188
+	810907512	Scream_01	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Scream-01_E2408E18.wem		\Actor-Mixer Hierarchy\Default Work Unit\Blizzard creature\Blizzard creature scream\Scream_01		704788
+	814097540	Stricking match_04	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Stricking match_04_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Matches\Striking match\Stricking match_04		30642
+	815226173	Crow scare_04	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Crow scare_04_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Jump scares\Crow scare\Crow scare_04		164632
+	817214681	Lighting match_02	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Lighting match_02_7BC78465.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Matches\Lighting matches\Lighting match_02		125528
+	817368845	Rumble_02	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Rumble_02_C0660EF1.wem		\Actor-Mixer Hierarchy\Default Work Unit\Blizzard creature\Blizzard creature\Rumble\Rumble_02		10043
+	818226035	Stone_02	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Stone_02_187BA981.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Little girl footsteps\Footsteps\Stone\Stone_02		41936
+	824209932	Dirt_04	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Dirt_04_66D539DB.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Little girl footsteps\Footsteps\Dirt\Dirt_04		35032
+	827073501	Sand_03	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Sand_03_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Blizzard creature\Blizzard creature\Sand\Sand_03		90738
+	827800874	Low end amb_01	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Low end amb_01_EA4F517B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Wind 2\Wind 2\Low end ambience\Low end amb_01		31784
+	830333050	Stricking match_06	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Stricking match_06_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Matches\Striking match\Stricking match_06		26732
+	831388924	Fire crackling_03	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Fire crackling_03_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Fire crackling\Fire crackling_03		394046
+	835327910	Vocoder_01	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Vocoder_01_7E117271.wem		\Actor-Mixer Hierarchy\Default Work Unit\Blizzard creature\Blizzard creature\Vocoder\Vocoder_01		742412
+	841070217	Snow_12	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Snow_12_DC3ED301.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Little girl footsteps\Footsteps\Snow\Snow_12		31312
+	847147475	Background growl	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Background grow_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Blizzard creature\Blizzard creature scream\Chog\Background growl		1759140
+	854930524	Heavy gust_05	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Heavy gust_05_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Blizzard creature\Blizzard creature\Heavy Gust\Heavy gust_05		27024
+	863070728	Rattle_02	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Rattle_02_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Blizzard creature\Blizzard creature\Rattle\Rattle_02		85738
+	865972532	Dirt_09	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Dirt_09_A8B6408A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Little girl footsteps\Footsteps\Dirt\Dirt_09		25904
+	876476175	Low end rumble_01	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Low end rumble_01_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Wind 2\Wind 2\Low end ambience\Low end rumble_01		551066
+	880349655	Heavy gust_02	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Heavy gust_02_CA695A46.wem		\Actor-Mixer Hierarchy\Default Work Unit\Blizzard creature\Blizzard creature\Heavy Gust\Heavy gust_02		25498
+	889497109	wind_01	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\wind_01_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Blizzard creature\Blizzard creature\Wind\wind_01		389888
+	890686475	Match Blown out_03	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Match Blown out_03_0BA9F504.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Matches\Match blown out\Match Blown out_03		46718
+	917083973	Low end rumble_02	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Low end rumble_02_EA4F517B.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Wind 2\Wind 2\Low end ambience\Low end rumble_02		31751
+	923128601	Teeth chattering_03	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Teeth chattering_03_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocal\Teeth chattering\Teeth chattering_03		178132
+	945423380	Light wind_02	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Light wind_02_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Wind 2\Wind 2\Light wind\Light wind_02		425992
+	945865471	Stone_05	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Ston_05_FDA8206C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Little girl footsteps\Footsteps\Stone\Stone_05		39356
+	947311677	Ghastly vocal_08	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Ghastly vocal_08_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Blizzard creature\Blizzard creature\Ghastly vocals\Ghastly vocal_08		151882
+	952342283	Girl breathing_05	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Girl breathing_05_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocal\Girl breathing\Girl breathing_05		72674
+	955857581	Stone_13	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Stone_13_DC21DBC0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Little girl footsteps\Footsteps\Stone\Stone_13		39544
+	965427749	Girl breathing_01	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Girl breathing_01_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocal\Girl breathing\Girl breathing_01		67540
+	970114058	Wings flapping_05 new	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Wings flapping_05 new_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Jump scares\Wings flapping\Wings flapping_05 new		352864
+	979276870	Sticks cracking_03	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Sticks cracking_03_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Sticks cracking\Sticks cracking_03		74468
+	982516809	Broken glass_12	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Broken glass_12_432A6296.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Little girl footsteps\Footsteps\Glass\Broken glass_12		28948
+	986149889	Heavy gust_04	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Heavy gust_04_5F6B5E4A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Blizzard creature\Blizzard creature\Heavy Gust\Heavy gust_04		24588
+	987994536	Light wind_03	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Light wind_03_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Wind 2\Wind 2\Light wind\Light wind_03		326628
+	992767225	Snow_03	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Snow_03_EADA37C4.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Little girl footsteps\Footsteps\Snow\Snow_03		37448
+	993600802	Broken glass_14	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Broken glass_14_D753F36A.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Little girl footsteps\Footsteps\Glass\Broken glass_14		38094
+	993945429	Ghastly vocal_09	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Ghastly vocal_09_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Blizzard creature\Blizzard creature\Ghastly vocals\Ghastly vocal_09		193448
+	996568587	Match Blown out_02	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Match Blown out_02_851C31D5.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Matches\Match blown out\Match Blown out_02		51032
+	997249036	Ghastly vocal_02	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Ghastly vocal_02_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Blizzard creature\Blizzard creature\Ghastly vocals\Ghastly vocal_02		207978
+	999154703	Dirt_08	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Dirt_08_9BC987EE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Little girl footsteps\Footsteps\Dirt\Dirt_08		31072
+	999247913	Match Blown out_01	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Match Blown out_01_0D98B76F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Matches\Match blown out\Match Blown out_01		71576
+	1004013973	Stone_01	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Stone_01_892F62E2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Little girl footsteps\Footsteps\Stone\Stone_01		39876
+	1009281777	Heart beat	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Heart beat_2C97C3B9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Game warinings\Heart beat		1639
+	1020302950	Vocoder_04	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Vocoder_04_134ADB41.wem		\Actor-Mixer Hierarchy\Default Work Unit\Blizzard creature\Blizzard creature\Vocoder\Vocoder_04		595112
+	1026174739	Wings flapping_06_new	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Wings flapping_06_new_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Jump scares\Wings flapping\Wings flapping_06_new		402968
+	1026774470	Errie wind _3	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Errie wind _3_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Wind 1\Wind 1\Eerie wind\Errie wind _3		1220744
+	1030774117	Ghastly vocal_04	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Ghastly vocal_04_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Blizzard creature\Blizzard creature\Ghastly vocals\Ghastly vocal_04		184166
+	1042088058	Broken glass_11	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Broken glass_11_94F0EC67.wem		\Actor-Mixer Hierarchy\Default Work Unit\Character foley\Little girl footsteps\Footsteps\Glass\Broken glass_11		40494
+	1046532744	Girl breathing_04	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Girl breathing_04_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocal\Girl breathing\Girl breathing_04		92180
+	1049822719	Tone_01	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\Tone_01_E5FEFA51.wem		\Actor-Mixer Hierarchy\Default Work Unit\Puzzle game\Tone_01		698516
+

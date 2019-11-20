@@ -1,0 +1,24 @@
+Event	ID	Name			Wwise Object Path	Notes
+	2131633205	Enable_States			\Default Work Unit\Enable_States	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	3991942870	Music			\Default Work Unit\Music	
+
+State	ID	Name	State Group			Notes
+	0	None	Music			
+	133642231	General	Music			
+	417490929	Chase	Music			
+	457374884	Memories	Music			
+	1867380161	Intense_Church	Music			
+	2568407992	Church	Music			
+	3888786832	City	Music			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	116759887	The_Church_of_the_Dying	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\BGmusic.wav\The_Church_of_the_Dying_A224571F.wem		\Interactive Music Hierarchy\Music\BG Music\Intense Church\The_Church_of_the_Dying\The_Church_of_the_Dying		4200064
+	139895379	Gale_Run (1)	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\BGmusic.wav\Gale_Run (1)_A224571F.wem		\Interactive Music Hierarchy\Music\BG Music\Chase\Gale_Run (1)\Gale_Run (1)		9252928
+	494399568	Musicbox_flashback_01	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\BGmusic.wav\Musicbox_flashback_01_A224571F.wem		\Interactive Music Hierarchy\Music\BG Music\Memories\Musicbox_flashback_01\Musicbox_flashback_01		3259284
+	512541580	Church	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\BGmusic.wav\Church_A224571F.wem		\Interactive Music Hierarchy\Music\BG Music\Church\Church\Church		14123584
+	543626650	City_of_Past_Present_and_Future (2)	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\BGmusic.wav\City_of_Past_Present_and_Future (2)_A224571F.wem		\Interactive Music Hierarchy\Music\BG Music\City\City_of_Past_Present_and_Future (2)\City_of_Past_Present_and_Future (2)		38757952
+	772458131	Normal_version	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\BGmusic.wav\Normal_version_A224571F.wem		\Interactive Music Hierarchy\Music\Normal Musicbox\Normal_version		2932776
+	840433878	Meloncholy_Deep_Mixed (1)	F:\Murdoch\CRE312\Little Match Girl\Wwise project\Wwise project\The Little Match Girl\.cache\Windows\SFX\BGmusic.wav\Meloncholy_Deep_Mixed (1)_A224571F.wem		\Interactive Music Hierarchy\Music\BG Music\General\Meloncholy_Deep_Mixed (1)\Meloncholy_Deep_Mixed (1)		18911296
+
