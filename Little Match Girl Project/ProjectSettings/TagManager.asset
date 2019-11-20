@@ -12,6 +12,7 @@ TagManager:
   - Checkpoints
   - SitPos
   - MatchLight
+  - Ground
   layers:
   - Default
   - TransparentFX
