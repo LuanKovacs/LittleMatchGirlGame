@@ -98,13 +98,18 @@ public class Player_Health : MonoBehaviour
             HealthPanel.alpha += (curDrainHP / 100) * Time.deltaTime;
         }
 
+        if (curHP <= 60)
+        {
+
+        }
 
         if (curHP <= 10)//Death anim play
         {
             curDrainHP = 1.5f;
-            float HeartbeatVol = 10;
+           // float HeartbeatVol = 60;
             //GameObject playerSound = GameObject.Find("player_Sound");
-            AkSoundEngine.SetRTPCValue("Heart_beat", HeartbeatVol);
+           // AkSoundEngine.SetRTPCValue("Heart_beat", HeartbeatVol);
+            Debug.Log("it Worked?");
             playerMove.canMove = false;
             GameObject Player = GameObject.Find("Player");
             GameObject PlayerModel = Player.transform.Find("CharacterModel&Rig").gameObject;

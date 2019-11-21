@@ -191,7 +191,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 9aa07b7b919d034cbfac28f5e84093ed
     GuidInternal: 
-    m_lastTime: -8586277913615274584
+    m_lastTime: -8586272605370256666
     List:
     - name: Main
       guid: 78e40f0c79cc634ab6594fb6dfeac57d
@@ -216,7 +216,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 64f993c54fe3884e8614176382be8be1
     GuidInternal: 
-    m_lastTime: -8586277449993834285
+    m_lastTime: -8586272605363285137
     List:
     - name: Bliazzard_creature_scream
       guid: 2bc783fd26e36b46a4a6d2a22c2bcd7f
@@ -374,6 +374,18 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 1.516577
       minDuration: 0.254053
+    - name: Play_BG_Music
+      guid: e019f8046fd80f44b19b3051f07f66dc
+      id: 3113730691
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Play_BG_Music
+        ObjectType: 3
+      Path: Default Work Unit\Play_BG_Music
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Chase
       guid: c56781d39244b24797dc4c65b5660572
       id: 3471094664
@@ -384,8 +396,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Play_Chase
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Play_Church
       guid: 0ecd304b0cd48e45929055101dddd1cd
       id: 1219117175
@@ -396,8 +408,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Play_Church
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Play_City
       guid: c8ab70c2c127d2419b99843b361d4185
       id: 3366829419
@@ -408,8 +420,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Play_City
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Play_General
       guid: 0e004e1a795a8940abbecc22f32eb4f6
       id: 2020325386
@@ -420,8 +432,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Play_General
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Play_Intense_Church
       guid: eb4632dd20e20b40a0c6e6cab9539a96
       id: 2213437498
@@ -432,8 +444,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Play_Intense_Church
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Play_Memories
       guid: 4a46f39a223624479a70af64a6270453
       id: 3542492639
@@ -444,8 +456,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Play_Memories
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Play_Normal_Musicbox
       guid: 98b7a8fb11b0fe418315f021f4c6ddd3
       id: 438778646
@@ -456,8 +468,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Play_Normal_Musicbox
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 16.625
+      minDuration: 16.625
     - name: Play_Testingevent
       guid: 8279e96b1e26a64db34dcdffd41c7cda
       id: 1572917658
@@ -480,8 +492,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Seek_setState
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Spotlight_effect
       guid: a04c5c4c55ea3044a67b205b65e9dd0d
       id: 1050267453
@@ -966,10 +978,6 @@ MonoBehaviour:
   ExpandedItems:
   - /The Little Match Girl
   - /The Little Match Girl/Events
-  - /The Little Match Girl/States
-  - /The Little Match Girl/States/Default Work Unit
-  - /The Little Match Girl/States/Default Work Unit/Music
-  - /The Little Match Girl/Switches
-  - /The Little Match Girl/Switches/Default Work Unit
+  - /The Little Match Girl/Events/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

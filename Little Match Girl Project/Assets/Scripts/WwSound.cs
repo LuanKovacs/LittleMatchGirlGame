@@ -11,6 +11,8 @@ public class WwSound : MonoBehaviour
         //AkSoundEngine.SetState("Dead_or_Alive", "Alive");
         AkSoundEngine.SetRTPCValue("Ambience_1", rtpc);
         AkSoundEngine.PostEvent("Wind_1", gameObject);
+       // AkSoundEngine.PostEvent("Play_BG_Music", gameObject);
+       // AkSoundEngine.PostEvent("Play_Chase", gameObject);
     }
 
     // Update is called once per frame
