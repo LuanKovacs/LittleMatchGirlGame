@@ -25,7 +25,7 @@ public class Player_Movement : MonoBehaviour
     public float regenStam = 5.0f;
     public float drainStam = 0.1f;
 
-    bool sprinting;
+    bool sprinting, canSprint;
     float moveSpeed;
     Vector3 movement;
     Vector3 forward, right;
@@ -87,8 +87,7 @@ public class Player_Movement : MonoBehaviour
         if (Physics.Raycast(transform.position * 1.0f, transform.TransformDirection(Vector3.forward), out hit, 3))
         {
             if (hit.collider.tag == "Interactable")
-            {
-                Animator anim = GameObject.Find("CharacterModel&Rig").GetComponent<Animator>();
+            { 
                 if (anim.GetBool("moving") == false)
                 { 
                     if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown("joystick button 2"))//"X" Button
@@ -108,17 +107,12 @@ public class Player_Movement : MonoBehaviour
 
                             if (ChurchLight.activeSelf)
                             {
-
                                 transform.Rotate(0, rotation, 0);
                                 anim.Play("Sit");
-
-
                             }
                         }
-
                             if (!this.anim.GetCurrentAnimatorStateInfo(0).IsName("Sit"))
                             {
-
                                 TriggerEventScript tEvent = hit.collider.GetComponent<TriggerEventScript>();
                                 tEvent.CallEvent();
 
@@ -129,29 +123,11 @@ public class Player_Movement : MonoBehaviour
             }
         }
 
-        //gain Stam
-        if (gainStam == true && curStam <= maxStam)
-        {
-            curStam = curStam += regenStam * Time.deltaTime;
-
-            if (curStam > maxStam)
-            {
-                curStam = maxStam;
-            }
-        }
-
-        //drain Stam
-        if (curStam >= 0 && Input.GetKey(KeyCode.LeftShift))
-        {
-            curStam = curStam -= drainStam * Time.deltaTime;
-        }
-
         if (Input.GetKey("left shift") && SpntPan.GetComponent<CanvasGroup>().alpha == 1
             || Input.GetKey("joystick button 0") && SpntPan.GetComponent<CanvasGroup>().alpha == 1)//***Tianna!!*** "A" Button
         {
             //Sprint TUT
             SpntPan.GetComponent<CanvasGroup>().alpha = 0;//***Tianna!!***
-
         }
     }
 
@@ -189,8 +165,6 @@ public class Player_Movement : MonoBehaviour
         if (canMove)
         {
             Move(h, v);
-
-            
             // anim.Play("Run");
             //       Vector3 movement = new Vector3(h, 0f, v);
 
@@ -213,29 +187,11 @@ public class Player_Movement : MonoBehaviour
             }
         }
 
-        if (curStam <= 0)
+        if (movement != Vector3.zero)
         {
-            sprinting = false;
-            gainStam = true;
-            moveSpeed = walkSpeed;
+            Sprint();   
+            print("moving"); 
         }
-        else
-        if (Input.GetKey("left shift") && !sprinting && curStam > 0 || Input.GetKey("joystick button 0") && !sprinting && curStam > 0) //"A" Button
-        {
-            //print("Sptrinting");
-            sprinting = true;
-            gainStam = false;
-            moveSpeed = sprintSpeed;
-        }
-
-        if (sprinting && Input.GetKeyUp("left shift") || sprinting && Input.GetKeyUp("joystick button 0"))
-        {
-            // print("Not Sprinting");
-            sprinting = false;
-            gainStam = true;
-            moveSpeed = walkSpeed;
-        }
-
 
     }
 
@@ -256,8 +212,59 @@ public class Player_Movement : MonoBehaviour
             if (anim.GetBool("moving") == true)
             {
                 AkSoundEngine.PostEvent("Footsteps", gameObject);
+            }         
+        }
+    }
+
+    void Sprint()
+    {
+        if (curStam > 1 && canSprint)
+        {
+            if (Input.GetKey("left shift") && !sprinting || Input.GetKey("joystick button 0") && !sprinting) //"A" Button
+            {
+                //print("Sptrinting");
+                sprinting = true;
+                gainStam = false;
+                moveSpeed = sprintSpeed;                       
+            }
+            else if (sprinting && Input.GetKeyUp("left shift") || sprinting && Input.GetKeyUp("joystick button 0"))
+            {
+                // print("Not Sprinting");
+                sprinting = false;
+                gainStam = true;
+                moveSpeed = walkSpeed;
             }
         }
+        else
+        if (sprinting && curStam <= 0)
+        {
+            canSprint = false;
+            sprinting = false;
+            gainStam = true;
+            moveSpeed = walkSpeed;
+        }
+
+        if (!canSprint && curStam >= maxStam)
+        {
+            canSprint = true;
+        }
+
+        //gain Stam
+        if (gainStam == true && curStam <= maxStam)
+        {
+            curStam = curStam += regenStam * Time.deltaTime;
+            
+            if (curStam > maxStam)
+            {
+                curStam = maxStam;
+            }
+        }
+
+        //drain Stam
+        if (curStam >= 0 && sprinting)
+        {
+            curStam = curStam -= drainStam * Time.deltaTime;
+        }   
     }
 
     void MoveTurn()
