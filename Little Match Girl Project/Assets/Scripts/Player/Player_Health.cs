@@ -23,6 +23,7 @@ public class Player_Health : MonoBehaviour
         curGainHP = maxGainHP;
         curDrainHP = maxDrainHP;
         curHP = maxHP;
+        gainHP = false;
         isDead = false;
         HealthPanel.alpha = 0.0f;
         playerRBref.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
