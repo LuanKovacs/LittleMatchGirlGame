@@ -63,6 +63,7 @@ public class Game_Manager : MonoBehaviour
     public GameObject winPanel;
     public GameObject losePanel;
     public GameObject allLighting;
+    public GameObject Gmusic;
     Color32 setColor = new Color32(51,66,91, 0);
 
     Player_Health playerHpRef;
@@ -78,6 +79,7 @@ public class Game_Manager : MonoBehaviour
 
     public void StartGame()
     {
+        Gmusic.SetActive(true);
         CameraMain.GetComponent<CameraTopDown>().enabled = true;
         StartCoroutine(GameStart());
     }

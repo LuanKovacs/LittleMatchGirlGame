@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 548d4e3616853de4894acf803988d2aa, type: 3}
+  m_Name: D38167C5-4492-47B2-97DC-4C65B5660572
+  m_EditorClassIdentifier: 
+  objectName: Play_Chase
+  id: 3471094664
+  guid: D38167C5-4492-47B2-97DC-4C65B5660572

@@ -396,8 +396,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Play_Chase
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 52.45388
+      minDuration: 52.45388
     - name: Play_Church
       guid: 0ecd304b0cd48e45929055101dddd1cd
       id: 1219117175
@@ -408,8 +408,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Play_Church
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 80.06531
+      minDuration: 80.06531
     - name: Play_City
       guid: c8ab70c2c127d2419b99843b361d4185
       id: 3366829419
@@ -420,8 +420,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Play_City
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 219.71593
+      minDuration: 219.71593
     - name: Play_General
       guid: 0e004e1a795a8940abbecc22f32eb4f6
       id: 2020325386
@@ -432,8 +432,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Play_General
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 107.20653
+      minDuration: 107.20653
     - name: Play_Intense_Church
       guid: eb4632dd20e20b40a0c6e6cab9539a96
       id: 2213437498
@@ -444,8 +444,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Play_Intense_Church
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 23.809542
+      minDuration: 23.809542
     - name: Play_Memories
       guid: 4a46f39a223624479a70af64a6270453
       id: 3542492639
@@ -456,8 +456,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Play_Memories
       maxAttenuation: 0
-      maxDuration: 0
-      minDuration: 0
+      maxDuration: 18.47596
+      minDuration: 18.47596
     - name: Play_Normal_Musicbox
       guid: 98b7a8fb11b0fe418315f021f4c6ddd3
       id: 438778646
@@ -977,7 +977,8 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /The Little Match Girl
-  - /The Little Match Girl/Events
-  - /The Little Match Girl/Events/Default Work Unit
+  - /The Little Match Girl/States
+  - /The Little Match Girl/States/Default Work Unit
+  - /The Little Match Girl/States/Default Work Unit/Music
   autoPopulateEnabled: 1
   CurrentPluginConfig: 
