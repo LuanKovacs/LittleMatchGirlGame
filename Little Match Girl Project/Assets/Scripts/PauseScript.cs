@@ -14,6 +14,7 @@ public class PauseScript : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape) && !isPaused)
         {
             Pause();
+            //AkSoundEngine.PostEvent("Play_Musicbox", gameObject);
         }
 
         else

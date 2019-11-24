@@ -60,6 +60,7 @@ public class PuzzleMusic : MonoBehaviour
             dirLight.SetActive(true);
             Bridge.SetActive(true);
             gameObject.SetActive(false);
+            AkSoundEngine.PostEvent("Play_General", gameObject);
         }
 
         if (Bridge != null)

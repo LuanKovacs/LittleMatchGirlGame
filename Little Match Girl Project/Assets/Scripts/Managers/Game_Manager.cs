@@ -72,20 +72,21 @@ public class Game_Manager : MonoBehaviour
 
     private void Awake()
     {
+        
         playerHpRef = Player.GetComponent<Player_Health>();
         playerMove = Player.GetComponent<Player_Movement>();
         matchRef = Player.GetComponent<LightMatchScript>();
     }
 
     public void StartGame()
-    {
-        Gmusic.SetActive(true);
+    {       
         CameraMain.GetComponent<CameraTopDown>().enabled = true;
         StartCoroutine(GameStart());
     }
 
     IEnumerator GameStart()
     {
+        Gmusic.SetActive(true);
         yield return new WaitForSeconds(1);
         playerHpRef.enabled = true;
         playerMove.canMove = true;

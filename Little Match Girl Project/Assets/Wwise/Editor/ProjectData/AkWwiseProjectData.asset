@@ -191,7 +191,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 9aa07b7b919d034cbfac28f5e84093ed
     GuidInternal: 
-    m_lastTime: -8586272605370256666
+    m_lastTime: -8586270333864918413
     List:
     - name: Main
       guid: 78e40f0c79cc634ab6594fb6dfeac57d
@@ -216,7 +216,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 64f993c54fe3884e8614176382be8be1
     GuidInternal: 
-    m_lastTime: -8586272605363285137
+    m_lastTime: -8586270333869186970
     List:
     - name: Bliazzard_creature_scream
       guid: 2bc783fd26e36b46a4a6d2a22c2bcd7f
@@ -396,8 +396,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Play_Chase
       maxAttenuation: 0
-      maxDuration: 52.45388
-      minDuration: 52.45388
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Church
       guid: 0ecd304b0cd48e45929055101dddd1cd
       id: 1219117175
@@ -408,8 +408,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Play_Church
       maxAttenuation: 0
-      maxDuration: 80.06531
-      minDuration: 80.06531
+      maxDuration: -1
+      minDuration: -1
     - name: Play_City
       guid: c8ab70c2c127d2419b99843b361d4185
       id: 3366829419
@@ -420,8 +420,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Play_City
       maxAttenuation: 0
-      maxDuration: 219.71593
-      minDuration: 219.71593
+      maxDuration: -1
+      minDuration: -1
     - name: Play_General
       guid: 0e004e1a795a8940abbecc22f32eb4f6
       id: 2020325386
@@ -432,8 +432,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Play_General
       maxAttenuation: 0
-      maxDuration: 107.20653
-      minDuration: 107.20653
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Intense_Church
       guid: eb4632dd20e20b40a0c6e6cab9539a96
       id: 2213437498
@@ -444,8 +444,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Play_Intense_Church
       maxAttenuation: 0
-      maxDuration: 23.809542
-      minDuration: 23.809542
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Memories
       guid: 4a46f39a223624479a70af64a6270453
       id: 3542492639
@@ -456,20 +456,20 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Play_Memories
       maxAttenuation: 0
-      maxDuration: 18.47596
-      minDuration: 18.47596
-    - name: Play_Normal_Musicbox
-      guid: 98b7a8fb11b0fe418315f021f4c6ddd3
-      id: 438778646
+      maxDuration: -1
+      minDuration: -1
+    - name: Play_Musicbox
+      guid: 1273544b777cbc4cae52cbb714397537
+      id: 811609326
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: Play_Normal_Musicbox
+      - ElementName: Play_Musicbox
         ObjectType: 3
-      Path: Default Work Unit\Play_Normal_Musicbox
+      Path: Default Work Unit\Play_Musicbox
       maxAttenuation: 0
-      maxDuration: 16.625
-      minDuration: 16.625
+      maxDuration: -1
+      minDuration: -1
     - name: Play_Testingevent
       guid: 8279e96b1e26a64db34dcdffd41c7cda
       id: 1572917658
@@ -518,6 +518,18 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 2.609534
       minDuration: 0.282049
+    - name: Stop_Musicbox
+      guid: b44fec7285303f41b5c72be9396d344f
+      id: 702602660
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Stop_Musicbox
+        ObjectType: 3
+      Path: Default Work Unit\Stop_Musicbox
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Striking_match
       guid: 27f098cfb58fdb40bcfbcb9377da98f5
       id: 4101366284
@@ -836,7 +848,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: cb7859a7e3309241b097e9acc2281136
     GuidInternal: 
-    m_lastTime: -8586277913613285863
+    m_lastTime: -8586271054787858891
     List:
     - name: Music
       guid: 6c6c8a4d401ede4f9326fc0bdbb03b29
@@ -883,6 +895,12 @@ MonoBehaviour:
         id: 457374884
         PathAndIcons:
         - ElementName: Memories
+          ObjectType: 8
+      - name: Musicbox
+        guid: 235f0f92c4f26143867c3287af798961
+        id: 2785641797
+        PathAndIcons:
+        - ElementName: Musicbox
           ObjectType: 8
       - name: None
         guid: 722c31dd5962c542854db22156e4baa8
@@ -977,8 +995,7 @@ MonoBehaviour:
     List: []
   ExpandedItems:
   - /The Little Match Girl
-  - /The Little Match Girl/States
-  - /The Little Match Girl/States/Default Work Unit
-  - /The Little Match Girl/States/Default Work Unit/Music
+  - /The Little Match Girl/Events
+  - /The Little Match Girl/Events/Default Work Unit
   autoPopulateEnabled: 1
   CurrentPluginConfig: 

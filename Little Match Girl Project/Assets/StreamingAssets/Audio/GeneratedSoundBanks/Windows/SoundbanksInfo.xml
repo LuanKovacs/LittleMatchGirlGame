@@ -738,12 +738,12 @@
 				<Event Id="2131633205" Name="Enable_States" ObjectPath="\Events\Default Work Unit\Enable_States" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="3113730691" Name="Play_BG_Music" ObjectPath="\Events\Default Work Unit\Play_BG_Music" DurationType="Infinite"/>
 				<Event Id="3471094664" Name="Play_Chase" ObjectPath="\Events\Default Work Unit\Play_Chase" DurationType="Infinite"/>
-				<Event Id="1219117175" Name="Play_Church" ObjectPath="\Events\Default Work Unit\Play_Church" DurationType="OneShot" DurationMin="80.065308" DurationMax="80.065308"/>
-				<Event Id="3366829419" Name="Play_City" ObjectPath="\Events\Default Work Unit\Play_City" DurationType="OneShot" DurationMin="219.715927" DurationMax="219.715927"/>
-				<Event Id="2020325386" Name="Play_General" ObjectPath="\Events\Default Work Unit\Play_General" DurationType="OneShot" DurationMin="107.206528" DurationMax="107.206528"/>
+				<Event Id="1219117175" Name="Play_Church" ObjectPath="\Events\Default Work Unit\Play_Church" DurationType="Infinite"/>
+				<Event Id="3366829419" Name="Play_City" ObjectPath="\Events\Default Work Unit\Play_City" DurationType="Infinite"/>
+				<Event Id="2020325386" Name="Play_General" ObjectPath="\Events\Default Work Unit\Play_General" DurationType="Infinite"/>
 				<Event Id="2213437498" Name="Play_Intense_Church" ObjectPath="\Events\Default Work Unit\Play_Intense_Church" DurationType="Infinite"/>
-				<Event Id="3542492639" Name="Play_Memories" ObjectPath="\Events\Default Work Unit\Play_Memories" DurationType="OneShot" DurationMin="18.475960" DurationMax="18.475960"/>
-				<Event Id="438778646" Name="Play_Normal_Musicbox" ObjectPath="\Events\Default Work Unit\Play_Normal_Musicbox" DurationType="OneShot" DurationMin="16.625000" DurationMax="16.625000"/>
+				<Event Id="3542492639" Name="Play_Memories" ObjectPath="\Events\Default Work Unit\Play_Memories" DurationType="Infinite"/>
+				<Event Id="811609326" Name="Play_Musicbox" ObjectPath="\Events\Default Work Unit\Play_Musicbox" DurationType="Infinite"/>
 				<Event Id="1521930547" Name="Seek_setState" ObjectPath="\Events\Default Work Unit\Seek_setState" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
