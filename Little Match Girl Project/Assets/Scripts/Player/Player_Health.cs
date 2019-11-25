@@ -13,6 +13,7 @@ public class Player_Health : MonoBehaviour
     public float maxDrainHP, curDrainHP;
     public bool isDead;
     public CanvasGroup HealthPanel;//Tianna!!!!
+    public CanvasGroup losePanel;//Tianna!!!!
     public GameObject matchTUT;
 
     Player_Movement playerMove;
@@ -26,6 +27,7 @@ public class Player_Health : MonoBehaviour
         gainHP = false;
         isDead = false;
         HealthPanel.alpha = 0.0f;
+        losePanel.alpha = 0.0f;
         playerRBref.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
 
         playerMove.canMove = true;

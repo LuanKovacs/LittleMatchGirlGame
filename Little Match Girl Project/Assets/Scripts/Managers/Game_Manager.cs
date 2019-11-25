@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Game_Manager : MonoBehaviour
 {
@@ -57,22 +58,25 @@ public class Game_Manager : MonoBehaviour
     public GameObject RuinedChurch;
     public GameObject ChurchTransit;
 
+   
     public GameObject sitTrigger;
     public GameObject BrokenChurchLight;
     public GameObject churchSpotlit;
     public GameObject winPanel;
     public GameObject losePanel;
+    public CanvasGroup LosePanelGroup;//Tianna!!!!
     public GameObject allLighting;
     public GameObject Gmusic;
     Color32 setColor = new Color32(51,66,91, 0);
 
+    
     Player_Health playerHpRef;
     Player_Movement playerMove;
     LightMatchScript matchRef;
 
     private void Awake()
     {
-        
+        LosePanelGroup.alpha = 0.0f;
         playerHpRef = Player.GetComponent<Player_Health>();
         playerMove = Player.GetComponent<Player_Movement>();
         matchRef = Player.GetComponent<LightMatchScript>();
@@ -284,6 +288,7 @@ public class Game_Manager : MonoBehaviour
     IEnumerator DeathState()
     {
         losePanel.SetActive(true);
+        LosePanelGroup.alpha += (0.999f) * Time.deltaTime * 2f;//********Tianna
         playerHpRef.PleaseDie();
         yield return new WaitForSeconds(0.5f);
 
