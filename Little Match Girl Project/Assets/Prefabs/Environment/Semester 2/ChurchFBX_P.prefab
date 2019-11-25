@@ -808,7 +808,7 @@ Transform:
   m_GameObject: {fileID: 1513297009635122733}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
-  m_LocalScale: {x: 1.7530985, y: 1.7530985, z: 1.7530985}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_Children:
   - {fileID: 7863326720055416929}
   - {fileID: 4830748340163458369}
@@ -956,7 +956,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1839115252139578320}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.592, y: 0.057, z: 0.299}
+  m_LocalPosition: {x: -0.8572, y: 0.057, z: 0.395}
   m_LocalScale: {x: 0.032727912, y: 0.11876629, z: 0.09949285}
   m_Children: []
   m_Father: {fileID: 667932664586164565}
@@ -1391,7 +1391,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3161363416388810231}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.592, y: 0.057, z: -0.2894}
+  m_LocalPosition: {x: -0.857, y: 0.057, z: -0.393}
   m_LocalScale: {x: 0.032727912, y: 0.11876629, z: 0.09949285}
   m_Children: []
   m_Father: {fileID: 667932664586164565}
@@ -4345,6 +4345,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 667932664586164565}
     m_Modifications:
+    - target: {fileID: 1559810600286053557, guid: 57680082f14f2644d919ac76fc3622c0,
+        type: 3}
+      propertyPath: m_Name
+      value: ChurchWindows
+      objectReference: {fileID: 0}
+    - target: {fileID: 1559810600286053557, guid: 57680082f14f2644d919ac76fc3622c0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 2593746430533736102, guid: 57680082f14f2644d919ac76fc3622c0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4400,30 +4410,95 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4356499648549039698, guid: 57680082f14f2644d919ac76fc3622c0,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
-    - target: {fileID: 1559810600286053557, guid: 57680082f14f2644d919ac76fc3622c0,
-        type: 3}
-      propertyPath: m_Name
-      value: ChurchWindows
-      objectReference: {fileID: 0}
-    - target: {fileID: 1559810600286053557, guid: 57680082f14f2644d919ac76fc3622c0,
-        type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 4294967295
-      objectReference: {fileID: 0}
     - target: {fileID: 3744642541886429711, guid: 57680082f14f2644d919ac76fc3622c0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.9542
+      value: 7.063
       objectReference: {fileID: 0}
     - target: {fileID: 3744642541886429711, guid: 57680082f14f2644d919ac76fc3622c0,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.089
+      objectReference: {fileID: 0}
+    - target: {fileID: 3744642541886429711, guid: 57680082f14f2644d919ac76fc3622c0,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3744642541886429711, guid: 57680082f14f2644d919ac76fc3622c0,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3744642541886429711, guid: 57680082f14f2644d919ac76fc3622c0,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3744642541886429711, guid: 57680082f14f2644d919ac76fc3622c0,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.612
+      objectReference: {fileID: 0}
+    - target: {fileID: 8184434560947959679, guid: 57680082f14f2644d919ac76fc3622c0,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8184434560947959679, guid: 57680082f14f2644d919ac76fc3622c0,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8184434560947959679, guid: 57680082f14f2644d919ac76fc3622c0,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8184434560947959679, guid: 57680082f14f2644d919ac76fc3622c0,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.062318
+      objectReference: {fileID: 0}
+    - target: {fileID: 8184434560947959679, guid: 57680082f14f2644d919ac76fc3622c0,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.089312136
+      objectReference: {fileID: 0}
+    - target: {fileID: 8263452527725636014, guid: 57680082f14f2644d919ac76fc3622c0,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8263452527725636014, guid: 57680082f14f2644d919ac76fc3622c0,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8263452527725636014, guid: 57680082f14f2644d919ac76fc3622c0,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8263452527725636014, guid: 57680082f14f2644d919ac76fc3622c0,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 7.0646687
+      objectReference: {fileID: 0}
+    - target: {fileID: 8263452527725636014, guid: 57680082f14f2644d919ac76fc3622c0,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.08923647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8263452527725636014, guid: 57680082f14f2644d919ac76fc3622c0,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.612
+      objectReference: {fileID: 0}
+    - target: {fileID: 4356499648549039698, guid: 57680082f14f2644d919ac76fc3622c0,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 5268330277698710816, guid: 57680082f14f2644d919ac76fc3622c0,
         type: 3}
