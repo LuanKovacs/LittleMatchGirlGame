@@ -40,13 +40,6 @@ public class MenuSound : MonoBehaviour
                 hasPlayed = false;
             }
 
-
-            if (!pauseMenu.activeSelf)
-                {
-                    Debug.Log("no menu");
-                    AkSoundEngine.PostEvent("Stop_Musicbox", gameObject);
-                    hasPlayed = false;
-                }
         }
     
 }
