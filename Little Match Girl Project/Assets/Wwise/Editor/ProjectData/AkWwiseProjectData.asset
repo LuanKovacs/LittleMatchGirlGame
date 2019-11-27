@@ -191,7 +191,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 9aa07b7b919d034cbfac28f5e84093ed
     GuidInternal: 
-    m_lastTime: -8586270333864918413
+    m_lastTime: -8586267838204510802
     List:
     - name: Main
       guid: 78e40f0c79cc634ab6594fb6dfeac57d
@@ -216,7 +216,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 64f993c54fe3884e8614176382be8be1
     GuidInternal: 
-    m_lastTime: -8586270333869186970
+    m_lastTime: -8586267838205723049
     List:
     - name: Bliazzard_creature_scream
       guid: 2bc783fd26e36b46a4a6d2a22c2bcd7f
@@ -518,6 +518,18 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 2.609534
       minDuration: 0.282049
+    - name: Stop_Memories
+      guid: 1aaf65bc5bade649bb875c9ff4708189
+      id: 3847506185
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Stop_Memories
+        ObjectType: 3
+      Path: Default Work Unit\Stop_Memories
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: Stop_Musicbox
       guid: b44fec7285303f41b5c72be9396d344f
       id: 702602660

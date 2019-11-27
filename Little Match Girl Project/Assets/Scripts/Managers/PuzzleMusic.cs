@@ -15,7 +15,7 @@ public class PuzzleMusic : MonoBehaviour
     public GameObject playerLight;
     public GameObject dirLight;
     public int curGoal;
-    bool PuzzleComplete;
+    public bool PuzzleComplete;
 
     void OnEnable()
     {
@@ -26,6 +26,7 @@ public class PuzzleMusic : MonoBehaviour
     {
         playerLight = GameObject.Find("PlayerLight");
         dirLight = GameObject.Find("Directional Light");
+        
     }
     // Start is called before the first frame update
     void Start()
@@ -60,7 +61,8 @@ public class PuzzleMusic : MonoBehaviour
             dirLight.SetActive(true);
             Bridge.SetActive(true);
             gameObject.SetActive(false);
-            AkSoundEngine.PostEvent("Play_General", gameObject);
+            
+            Debug.Log("stop music");
         }
 
         if (Bridge != null)

@@ -183,6 +183,7 @@ public class Game_Manager : MonoBehaviour
     void ChurchMemory()
     {
         matchRef.MathBlown();
+        AkSoundEngine.PostEvent("Play_Memories", gameObject);
         StartCoroutine(AnimDelayTime());
     }
 
@@ -196,7 +197,7 @@ public class Game_Manager : MonoBehaviour
         BrokenChurchLight.SetActive(true);
         //GameObject.Find("ChurchLight").SetActive(false);
         RuinedChurch.SetActive(true);
-
+        AkSoundEngine.PostEvent("Stop_Memories", gameObject);
         AkSoundEngine.PostEvent("Church_bell", sound);
     }
 
