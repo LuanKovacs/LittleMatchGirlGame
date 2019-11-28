@@ -528,8 +528,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Stop_Memories
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Musicbox
       guid: b44fec7285303f41b5c72be9396d344f
       id: 702602660

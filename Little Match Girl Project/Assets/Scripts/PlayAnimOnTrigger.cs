@@ -16,7 +16,7 @@ public class PlayAnimOnTrigger : MonoBehaviour
             anim.Play("ButtonDown");
 
             GameObject Player = GameObject.Find("Player");
-            AkSoundEngine.PostEvent("Puzzle_game", Player);
+            
           
         }
     }

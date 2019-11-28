@@ -7,7 +7,7 @@ public class MemoryMusic : MonoBehaviour
     public GameObject musicMemory;
     public GameObject churchMemory;
 
-    bool hasPlayed = false;
+    public bool hasPlayed = false;
     PuzzleMusic musicPuzzle;
     // Start is called before the first frame update
     //void Awake()
@@ -28,48 +28,69 @@ public class MemoryMusic : MonoBehaviour
              AkSoundEngine.PostEvent("Play_General", gameObject);
              AkSoundEngine.PostEvent("Stop_Memories", gameObject);
          }*/
-        if (hasPlayed == true)
-        {
-            return;
-            //AkSoundEngine.PostEvent("Stop_Memories", gameObject);
-        }
-        else
-        {
+
+       
+        //{
             if (hasPlayed == false)
             {
-                if (musicMemory.active)
-                {
-                    Debug.Log("play music");
-                    AkSoundEngine.PostEvent("Play_Memories", gameObject);
-                    hasPlayed = true;
-                }
-                if (churchMemory.active)
+                if (musicMemory.activeInHierarchy)
                 {
                     hasPlayed = true;
                     AkSoundEngine.PostEvent("Play_Memories", gameObject);
+                    return;
                 }
+                //else
+        
+                if (churchMemory.activeInHierarchy)
+                {
+                    hasPlayed = true;
+                    AkSoundEngine.PostEvent("Play_Memories", gameObject);
+                    return;
+                }
+                /*else
+                {
+                    AkSoundEngine.PostEvent("Stop_Memories", gameObject);
+                    hasPlayed = false;
+                }*/
             }
 
-        }
-        if (musicMemory = null)
-        {
-            Debug.Log("StOop MuuusIc");
-            AkSoundEngine.PostEvent("Stop_Memories", gameObject);
-            hasPlayed = false;
-        }
-        
+             if (hasPlayed == true)
+            {
+                
+            //AkSoundEngine.PostEvent("Stop_Memories", gameObject);
 
-        if (churchMemory = null)
-        {
-            AkSoundEngine.PostEvent("Stop_Memories", gameObject);
-            hasPlayed = false;
-        }
-        
+                    if (!musicMemory.activeSelf)
+                    {
+                         if (!churchMemory.activeSelf)
+                         { 
+                                //Debug.Log("StOop MuuusIc");
+                                AkSoundEngine.PostEvent("Stop_Memories", gameObject);
+                                AkSoundEngine.PostEvent("Play_General", gameObject);
+                                hasPlayed = false;
+                         }
+                       
+                    }
 
+                    if (!churchMemory.activeInHierarchy)
+                    {
+                        if (!musicMemory.activeInHierarchy)
+                        {
+                            //Debug.Log("StOop MuuusIc");
+                            AkSoundEngine.PostEvent("Stop_Memories", gameObject);
+                            AkSoundEngine.PostEvent("Play_Church", gameObject);
+                            hasPlayed = false;
+                        }
+                    }
+
+            // Debug.Log("do not repeat");
+            return;
+        }
+    }
+               
         //if (hasPlayed = true)
         //{
           //  return;
             //AkSoundEngine.PostEvent("Stop_Memories", gameObject);
         //}
-    }
 }
+//}

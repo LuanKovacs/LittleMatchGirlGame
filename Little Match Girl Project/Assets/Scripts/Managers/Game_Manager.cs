@@ -73,6 +73,7 @@ public class Game_Manager : MonoBehaviour
     Player_Health playerHpRef;
     Player_Movement playerMove;
     LightMatchScript matchRef;
+    bool musicPlayed = false;
 
     private void Awake()
     {
@@ -182,9 +183,14 @@ public class Game_Manager : MonoBehaviour
 
     void ChurchMemory()
     {
+      
+
         matchRef.MathBlown();
-        AkSoundEngine.PostEvent("Play_Memories", gameObject);
+     
+
         StartCoroutine(AnimDelayTime());
+
+        
     }
 
     void ChurchTransition()
@@ -197,7 +203,6 @@ public class Game_Manager : MonoBehaviour
         BrokenChurchLight.SetActive(true);
         //GameObject.Find("ChurchLight").SetActive(false);
         RuinedChurch.SetActive(true);
-        AkSoundEngine.PostEvent("Stop_Memories", gameObject);
         AkSoundEngine.PostEvent("Church_bell", sound);
     }
 
@@ -233,7 +238,6 @@ public class Game_Manager : MonoBehaviour
 
     IEnumerator AnimDelayTime()//Tianna!!!!
     {
-
         GameObject sit = GameObject.Find("Church Sit");
         GameObject sound = GameObject.Find("Spotlight_Sound (1)");
         Animator anim = GameObject.Find("CharacterModel&Rig").GetComponent<Animator>();

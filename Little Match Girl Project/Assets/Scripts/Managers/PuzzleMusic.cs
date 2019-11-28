@@ -62,7 +62,6 @@ public class PuzzleMusic : MonoBehaviour
             Bridge.SetActive(true);
             gameObject.SetActive(false);
             
-            Debug.Log("stop music");
         }
 
         if (Bridge != null)
