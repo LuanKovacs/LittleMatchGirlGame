@@ -57,6 +57,7 @@ public class Game_Manager : MonoBehaviour
     public GameObject ChurchPuzzle;
     public GameObject RuinedChurch;
     public GameObject ChurchTransit;
+    public GameObject MemoryMusic;
 
    
     public GameObject sitTrigger;
@@ -177,6 +178,7 @@ public class Game_Manager : MonoBehaviour
         CameraMain.SetActive(false);
 
         Player.transform.position = startChurch.transform.position;
+        AkSoundEngine.PostEvent("Play_Intense_Church", MemoryMusic);
 
         EventManager.StopListening("DarkRoomEnd", DarkRoomEnd);
     }

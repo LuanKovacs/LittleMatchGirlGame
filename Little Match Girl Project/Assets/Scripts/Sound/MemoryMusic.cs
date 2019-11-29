@@ -42,7 +42,7 @@ public class MemoryMusic : MonoBehaviour
                 //else
         
                 if (churchMemory.activeInHierarchy)
-                {
+                {  
                     hasPlayed = true;
                     AkSoundEngine.PostEvent("Play_Memories", gameObject);
                     return;
@@ -77,6 +77,8 @@ public class MemoryMusic : MonoBehaviour
                         {
                             //Debug.Log("StOop MuuusIc");
                             AkSoundEngine.PostEvent("Stop_Memories", gameObject);
+                            //AkSoundEngine.PostEvent("Stop_General", gameObject);
+                            AkSoundEngine.PostEvent("Stop_Intense_Church", gameObject);
                             AkSoundEngine.PostEvent("Play_Church", gameObject);
                             hasPlayed = false;
                         }
