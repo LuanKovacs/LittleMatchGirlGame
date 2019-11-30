@@ -59,6 +59,7 @@ public class Game_Manager : MonoBehaviour
     public GameObject ChurchTransit;
     public GameObject MemoryMusic;
     public GameObject BackgroundMusic;
+    public GameObject BadChurchMusic;
 
     public GameObject sitTrigger;
     public GameObject BrokenChurchLight;
@@ -209,12 +210,15 @@ public class Game_Manager : MonoBehaviour
 
         GameObject sound = GameObject.Find("ChurchBell_Sound");
         GameObject.Find("ChurchFBX_P").SetActive(false);
+        
         churchSpotlit.SetActive(false);
         ChurchTransit.SetActive(false);
         BrokenChurchLight.SetActive(true);
         //GameObject.Find("ChurchLight").SetActive(false);
         RuinedChurch.SetActive(true);
         AkSoundEngine.PostEvent("Church_bell", sound);
+        BadChurchMusic.SetActive(true);
+        
     }
 
     void ChurchExit()
@@ -280,6 +284,7 @@ public class Game_Manager : MonoBehaviour
         AkSoundEngine.PostEvent("Spotlight_effect", sound);
         churchSpotlit.SetActive(true);
         ChurchTransit.SetActive(true);
+        GameObject.Find("GoodChurchMusic").SetActive(false);
         GameObject.Find("Spot Light (1)").SetActive(false);
         GameObject.Find("ChurchLight").SetActive(false);
         Player.GetComponent<Rigidbody>().WakeUp();

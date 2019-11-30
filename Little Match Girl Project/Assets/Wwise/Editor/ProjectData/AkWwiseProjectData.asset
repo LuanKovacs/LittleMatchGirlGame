@@ -528,8 +528,8 @@ MonoBehaviour:
         ObjectType: 3
       Path: Default Work Unit\Stop_Blizzard_creature
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Chase
       guid: e2ea97823caf124cb115342a98437f84
       id: 1372817730
