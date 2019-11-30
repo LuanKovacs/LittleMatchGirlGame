@@ -23,12 +23,6 @@ public class MemoryMusic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /* if (musicPuzzle.curGoal == musicPuzzle.goal && !musicPuzzle.PuzzleComplete)
-             {
-             AkSoundEngine.PostEvent("Play_General", gameObject);
-             AkSoundEngine.PostEvent("Stop_Memories", gameObject);
-         }*/
-
        
         //{
             if (hasPlayed == false)
@@ -47,17 +41,10 @@ public class MemoryMusic : MonoBehaviour
                     AkSoundEngine.PostEvent("Play_Memories", gameObject);
                     return;
                 }
-                /*else
-                {
-                    AkSoundEngine.PostEvent("Stop_Memories", gameObject);
-                    hasPlayed = false;
-                }*/
             }
 
              if (hasPlayed == true)
             {
-                
-            //AkSoundEngine.PostEvent("Stop_Memories", gameObject);
 
                     if (!musicMemory.activeSelf)
                     {
@@ -65,7 +52,7 @@ public class MemoryMusic : MonoBehaviour
                          { 
                                 //Debug.Log("StOop MuuusIc");
                                 AkSoundEngine.PostEvent("Stop_Memories", gameObject);
-                                AkSoundEngine.PostEvent("Play_General", gameObject);
+                                //AkSoundEngine.PostEvent("Play_General", gameObject);
                                 hasPlayed = false;
                          }
                        
@@ -77,9 +64,9 @@ public class MemoryMusic : MonoBehaviour
                         {
                             //Debug.Log("StOop MuuusIc");
                             AkSoundEngine.PostEvent("Stop_Memories", gameObject);
-                            //AkSoundEngine.PostEvent("Stop_General", gameObject);
-                            AkSoundEngine.PostEvent("Stop_Intense_Church", gameObject);
-                            AkSoundEngine.PostEvent("Play_Church", gameObject);
+                            
+                            //AkSoundEngine.PostEvent("Stop_Intense_Church", gameObject);
+                            //AkSoundEngine.PostEvent("Play_Church", gameObject);
                             hasPlayed = false;
                         }
                     }

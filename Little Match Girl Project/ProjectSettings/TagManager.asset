@@ -13,6 +13,7 @@ TagManager:
   - SitPos
   - MatchLight
   - Ground
+  - PSburst
   layers:
   - Default
   - TransparentFX

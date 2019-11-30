@@ -58,7 +58,7 @@ public class Game_Manager : MonoBehaviour
     public GameObject RuinedChurch;
     public GameObject ChurchTransit;
     public GameObject MemoryMusic;
-    public GameObject CityMusic;
+    public GameObject BackgroundMusic;
 
     public GameObject sitTrigger;
     public GameObject BrokenChurchLight;
@@ -67,7 +67,7 @@ public class Game_Manager : MonoBehaviour
     public GameObject losePanel;
     public CanvasGroup LosePanelGroup;//Tianna!!!!
     public GameObject allLighting;
-    public GameObject Gmusic;
+    //public GameObject BGmusic;
     Color32 setColor = new Color32(51,66,91, 0);
 
     
@@ -92,7 +92,7 @@ public class Game_Manager : MonoBehaviour
 
     IEnumerator GameStart()
     {
-        Gmusic.SetActive(true);
+        BackgroundMusic.SetActive(true);
         yield return new WaitForSeconds(1);
         playerHpRef.enabled = true;
         playerMove.canMove = true;
@@ -119,16 +119,24 @@ public class Game_Manager : MonoBehaviour
     void BeginChase()
     {
         ForestChase.SetActive(true);
+        AkSoundEngine.PostEvent("Stop_General", BackgroundMusic);
+        AkSoundEngine.PostEvent("Blizzard_creature", BackgroundMusic);
+        AkSoundEngine.PostEvent("Play_Chase", BackgroundMusic);
     }
 
     void BeginCityChase()
     {
         CityChase.SetActive(true);
-        AkSoundEngine.PostEvent("Stop_City", CityMusic);
+        AkSoundEngine.PostEvent("Stop_City", BackgroundMusic);
+        AkSoundEngine.PostEvent("Blizzard_creature", BackgroundMusic);
+        AkSoundEngine.PostEvent("Play_Chase", BackgroundMusic);
     }
 
     void EndChase()
     {
+        AkSoundEngine.PostEvent("Play_General", BackgroundMusic);
+        AkSoundEngine.PostEvent("Stop_Blizzard_creature", BackgroundMusic);
+        AkSoundEngine.PostEvent("Stop_Chase", BackgroundMusic);
         //ForestMonsterChase.SetActive(false);
         //Disable Monster
         //Play Burst Particles
@@ -179,7 +187,7 @@ public class Game_Manager : MonoBehaviour
         CameraMain.SetActive(false);
 
         Player.transform.position = startChurch.transform.position;
-        AkSoundEngine.PostEvent("Play_Intense_Church", MemoryMusic);
+        //AkSoundEngine.PostEvent("Play_Intense_Church", MemoryMusic);
 
         EventManager.StopListening("DarkRoomEnd", DarkRoomEnd);
     }

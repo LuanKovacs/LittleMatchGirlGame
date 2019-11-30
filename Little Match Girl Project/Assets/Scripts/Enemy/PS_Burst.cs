@@ -20,18 +20,20 @@ public class PS_Burst : MonoBehaviour
 
     void OnTriggerEnter(Collider col)//***Tianna!!***
     {
-        GameObject targetPos = GameObject.Find("MonsterTargetPos");
-        GameObject enemRig = GameObject.Find("enemyrig 1");
-        GameObject monFog = GameObject.Find("MontersFogHurtBox");
-        GameObject psFog = GameObject.Find("PS_Fog");
+        if (col.gameObject.tag == "PSburst")
+        {
+            GameObject targetPos = GameObject.Find("MonsterTargetPos");
+            GameObject enemRig = GameObject.Find("enemyrig 1");
+            GameObject monFog = GameObject.Find("MontersFogHurtBox");
+            GameObject psFog = GameObject.Find("PS_Fog");
 
-        Debug.Log("The Crow has Landed!");
-              particleFX.SetActive(true);
+            Debug.Log("The Crow has Landed!");
+            particleFX.SetActive(true);
 
-              targetPos.SetActive(false);
-              enemRig.SetActive(false);
-              monFog.SetActive(false);
-              psFog.SetActive(false);
-
+            targetPos.SetActive(false);
+            enemRig.SetActive(false);
+            monFog.SetActive(false);
+            psFog.SetActive(false);
+        }
     }
 }

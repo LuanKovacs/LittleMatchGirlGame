@@ -191,7 +191,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 9aa07b7b919d034cbfac28f5e84093ed
     GuidInternal: 
-    m_lastTime: -8586265225031297507
+    m_lastTime: -8586265020423495086
     List:
     - name: Main
       guid: 78e40f0c79cc634ab6594fb6dfeac57d
@@ -216,7 +216,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 64f993c54fe3884e8614176382be8be1
     GuidInternal: 
-    m_lastTime: -8586265225127744007
+    m_lastTime: -8586265020424215799
     List:
     - name: Bliazzard_creature_scream
       guid: 2bc783fd26e36b46a4a6d2a22c2bcd7f
@@ -518,6 +518,30 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 2.609534
       minDuration: 0.282049
+    - name: Stop_Blizzard_creature
+      guid: af826f0166447444974c1e1022022b6f
+      id: 2085867218
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Stop_Blizzard_creature
+        ObjectType: 3
+      Path: Default Work Unit\Stop_Blizzard_creature
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Stop_Chase
+      guid: e2ea97823caf124cb115342a98437f84
+      id: 1372817730
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Stop_Chase
+        ObjectType: 3
+      Path: Default Work Unit\Stop_Chase
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_Church
       guid: 2eb1aa6265041f42b01eaefee62c11ff
       id: 50938553

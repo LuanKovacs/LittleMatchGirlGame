@@ -27,8 +27,8 @@ public class CityMusic : MonoBehaviour
         {
             Debug.Log("Stop_Church");
             //isTriggered = true;
-            AkSoundEngine.PostEvent("Stop_Church", MemoryMusic);
-            AkSoundEngine.PostEvent("Play_City", gameObject);
+           // AkSoundEngine.PostEvent("Stop_Church", MemoryMusic);
+            //AkSoundEngine.PostEvent("Play_City", gameObject);
         }
     }
 }
