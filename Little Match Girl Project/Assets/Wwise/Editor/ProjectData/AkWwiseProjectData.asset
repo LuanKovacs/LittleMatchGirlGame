@@ -191,7 +191,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 9aa07b7b919d034cbfac28f5e84093ed
     GuidInternal: 
-    m_lastTime: -8586265911448220696
+    m_lastTime: -8586265225031297507
     List:
     - name: Main
       guid: 78e40f0c79cc634ab6594fb6dfeac57d
@@ -216,7 +216,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 64f993c54fe3884e8614176382be8be1
     GuidInternal: 
-    m_lastTime: -8586265911452927631
+    m_lastTime: -8586265225127744007
     List:
     - name: Bliazzard_creature_scream
       guid: 2bc783fd26e36b46a4a6d2a22c2bcd7f
@@ -527,6 +527,30 @@ MonoBehaviour:
       - ElementName: Stop_Church
         ObjectType: 3
       Path: Default Work Unit\Stop_Church
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_City
+      guid: 712d3afc39f7d549a62b30d1c776b1de
+      id: 1363414509
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Stop_City
+        ObjectType: 3
+      Path: Default Work Unit\Stop_City
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_General
+      guid: 4fa78db3bb47b54da4a18efd45449807
+      id: 282925696
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Stop_General
+        ObjectType: 3
+      Path: Default Work Unit\Stop_General
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0

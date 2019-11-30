@@ -58,8 +58,8 @@ public class Game_Manager : MonoBehaviour
     public GameObject RuinedChurch;
     public GameObject ChurchTransit;
     public GameObject MemoryMusic;
+    public GameObject CityMusic;
 
-   
     public GameObject sitTrigger;
     public GameObject BrokenChurchLight;
     public GameObject churchSpotlit;
@@ -124,6 +124,7 @@ public class Game_Manager : MonoBehaviour
     void BeginCityChase()
     {
         CityChase.SetActive(true);
+        AkSoundEngine.PostEvent("Stop_City", CityMusic);
     }
 
     void EndChase()
