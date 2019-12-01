@@ -11,6 +11,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2062015184	Wind_2			\Default Work Unit\Wind_2	
 	2062015187	Wind_1			\Default Work Unit\Wind_1	
 	2073873008	Girl_breathing			\Default Work Unit\Girl_breathing	
+	2085867218	Stop_Blizzard_creature			\Default Work Unit\Stop_Blizzard_creature	
 	2109043066	Fire_crackling			\Default Work Unit\Fire_crackling	
 	2131633205	Enable_States			\Default Work Unit\Enable_States	
 	2385628198	Footsteps			\Default Work Unit\Footsteps	
@@ -44,6 +45,7 @@ State	ID	Name	State Group			Notes
 	457374884	Memories	Music			
 	1867380161	Intense_Church	Music			
 	2568407992	Church	Music			
+	2785641797	Musicbox	Music			
 	3888786832	City	Music			
 
 Game Parameter	ID	Name			Wwise Object Path	Notes

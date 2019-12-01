@@ -71,14 +71,14 @@ public class Player_Health : MonoBehaviour
         //gain HP
         if (gainHP == true && curHP < maxHP)
         {
-            float FireVol = 40;
+            float FireVol = 60;
             curHP = curHP += curGainHP * Time.deltaTime;
             HealthPanel.alpha -= (curGainHP / 100) * Time.deltaTime;
             // HealthPanel.CrossFadeAlpha(-curHP, 100, false);//Tianna!!!!
             //HealthPanel.alpha = 0;
             //GameObject Fire = GameObject.Find("Fire_Bonfire");
             //GameObject Fire2 = GameObject.Find("Fire_Bonfire (1)");
-            AkSoundEngine.SetRTPCValue("Fire_crackling", FireVol);
+            //AkSoundEngine.SetRTPCValue("Fire_crackling", FireVol);
             AkSoundEngine.SetRTPCValue("Fire_crackling", FireVol);
             //HealthPanel.alpha -= Time.deltaTime / curHP;
             if (curHP >= maxHP)

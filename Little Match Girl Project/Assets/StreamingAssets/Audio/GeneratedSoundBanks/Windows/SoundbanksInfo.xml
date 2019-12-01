@@ -38,6 +38,7 @@
 				<Event Id="1521930547" Name="Seek_setState" ObjectPath="\Events\Default Work Unit\Seek_setState" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="1050267453" Name="Spotlight_effect" ObjectPath="\Events\Default Work Unit\Spotlight_effect" DurationType="OneShot" DurationMin="3.000000" DurationMax="3.000000"/>
 				<Event Id="670208879" Name="Sticks_cracking" ObjectPath="\Events\Default Work Unit\Sticks_cracking" DurationType="OneShot" DurationMin="0.282049" DurationMax="2.609534"/>
+				<Event Id="2085867218" Name="Stop_Blizzard_creature" ObjectPath="\Events\Default Work Unit\Stop_Blizzard_creature" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 				<Event Id="4101366284" Name="Striking_match" ObjectPath="\Events\Default Work Unit\Striking_match" DurationType="OneShot" DurationMin="0.200000" DurationMax="0.345792"/>
 				<Event Id="125079528" Name="Teetch_chattering" ObjectPath="\Events\Default Work Unit\Teetch_chattering" DurationType="Infinite"/>
 				<Event Id="3531240261" Name="Tone_01" ObjectPath="\Events\Default Work Unit\Tone_01" DurationType="OneShot" DurationMin="3.959500" DurationMax="3.959500"/>
@@ -745,6 +746,13 @@
 				<Event Id="3542492639" Name="Play_Memories" ObjectPath="\Events\Default Work Unit\Play_Memories" DurationType="Infinite"/>
 				<Event Id="811609326" Name="Play_Musicbox" ObjectPath="\Events\Default Work Unit\Play_Musicbox" DurationType="Infinite"/>
 				<Event Id="1521930547" Name="Seek_setState" ObjectPath="\Events\Default Work Unit\Seek_setState" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1372817730" Name="Stop_Chase" ObjectPath="\Events\Default Work Unit\Stop_Chase" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="50938553" Name="Stop_Church" ObjectPath="\Events\Default Work Unit\Stop_Church" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="1363414509" Name="Stop_City" ObjectPath="\Events\Default Work Unit\Stop_City" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="282925696" Name="Stop_General" ObjectPath="\Events\Default Work Unit\Stop_General" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="2580568564" Name="Stop_Intense_Church" ObjectPath="\Events\Default Work Unit\Stop_Intense_Church" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="3847506185" Name="Stop_Memories" ObjectPath="\Events\Default Work Unit\Stop_Memories" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
+				<Event Id="702602660" Name="Stop_Musicbox" ObjectPath="\Events\Default Work Unit\Stop_Musicbox" MaxAttenuation="0.000000" DurationType="OneShot" DurationMin="0.000000" DurationMax="0.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="116759887" Language="SFX">

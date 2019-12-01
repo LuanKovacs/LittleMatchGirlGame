@@ -1,14 +1,21 @@
 Event	ID	Name			Wwise Object Path	Notes
+	50938553	Stop_Church			\Default Work Unit\Stop_Church	
+	282925696	Stop_General			\Default Work Unit\Stop_General	
+	702602660	Stop_Musicbox			\Default Work Unit\Stop_Musicbox	
 	811609326	Play_Musicbox			\Default Work Unit\Play_Musicbox	
 	1219117175	Play_Church			\Default Work Unit\Play_Church	
+	1363414509	Stop_City			\Default Work Unit\Stop_City	
+	1372817730	Stop_Chase			\Default Work Unit\Stop_Chase	
 	1521930547	Seek_setState			\Default Work Unit\Seek_setState	
 	2020325386	Play_General			\Default Work Unit\Play_General	
 	2131633205	Enable_States			\Default Work Unit\Enable_States	
 	2213437498	Play_Intense_Church			\Default Work Unit\Play_Intense_Church	
+	2580568564	Stop_Intense_Church			\Default Work Unit\Stop_Intense_Church	
 	3113730691	Play_BG_Music			\Default Work Unit\Play_BG_Music	
 	3366829419	Play_City			\Default Work Unit\Play_City	
 	3471094664	Play_Chase			\Default Work Unit\Play_Chase	
 	3542492639	Play_Memories			\Default Work Unit\Play_Memories	
+	3847506185	Stop_Memories			\Default Work Unit\Stop_Memories	
 
 State Group	ID	Name			Wwise Object Path	Notes
 	3991942870	Music			\Default Work Unit\Music	
