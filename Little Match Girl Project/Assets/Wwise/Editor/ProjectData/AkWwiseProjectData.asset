@@ -191,7 +191,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 9aa07b7b919d034cbfac28f5e84093ed
     GuidInternal: 
-    m_lastTime: -8586263508054812252
+    m_lastTime: -8586263323052838578
     List:
     - name: Main
       guid: 78e40f0c79cc634ab6594fb6dfeac57d
@@ -216,7 +216,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 64f993c54fe3884e8614176382be8be1
     GuidInternal: 
-    m_lastTime: -8586263488283732046
+    m_lastTime: -8586263323056605774
     List:
     - name: Bliazzard_creature_scream
       guid: 2bc783fd26e36b46a4a6d2a22c2bcd7f
@@ -563,6 +563,18 @@ MonoBehaviour:
       - ElementName: Stop_City
         ObjectType: 3
       Path: Default Work Unit\Stop_City
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Stop_Fire_crackling
+      guid: e2b43e7d69fa844ea6995272b085a13d
+      id: 924022583
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Stop_Fire_crackling
+        ObjectType: 3
+      Path: Default Work Unit\Stop_Fire_crackling
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
