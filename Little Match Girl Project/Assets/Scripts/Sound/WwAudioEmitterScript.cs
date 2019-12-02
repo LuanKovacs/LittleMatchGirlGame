@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class WwAudioEmitterScript : MonoBehaviour
 {
-    public string EventName = "default";
-    public string StopEvent = "default";
+   // public string EventName = "default";
+   // public string StopEvent = "default";
     public bool IsInCollider = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        AkSoundEngine.RegisterGameObj(gameObject);   
+       // AkSoundEngine.RegisterGameObj(gameObject);   
     }
 
     // Update is called once per frame
@@ -24,20 +24,20 @@ public class WwAudioEmitterScript : MonoBehaviour
     {
         if (other.tag != "Player" || IsInCollider) { return; }
         IsInCollider = true;
-        AkSoundEngine.PostEvent(EventName, gameObject);
+        //AkSoundEngine.PostEvent(EventName, gameObject);
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (other.tag != "Player" || !IsInCollider) { return; }
-        AkSoundEngine.PostEvent(StopEvent, gameObject);
+        //AkSoundEngine.PostEvent(StopEvent, gameObject);
         IsInCollider = false;
     }
 
     private void OnTriggerStay(Collider other)
     {
         if (other.tag != "Player" || IsInCollider) { return; }
-        AkSoundEngine.PostEvent(EventName, gameObject);
+        //AkSoundEngine.PostEvent(EventName, gameObject);
         IsInCollider = true;
     }
 }

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="134">
 	<RootPaths>
-		<ProjectRoot>F:\Uni\Creative Media Project\Production\Little Match Girl_sound (phase 5)\Wwise project\The Little Match Girl\</ProjectRoot>
-		<SourceFilesRoot>F:\Uni\Creative Media Project\Production\Little Match Girl_sound (phase 5)\Wwise project\The Little Match Girl\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>F:\Uni\Creative Media Project\Production\Little Match Girl_sound (phase 5)\Wwise project\The Little Match Girl\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>D:\Uni\Creative Media Project\Production\Little Match Girl_sound (phase 5)\Wwise project\The Little Match Girl\</ProjectRoot>
+		<SourceFilesRoot>D:\Uni\Creative Media Project\Production\Little Match Girl_sound (phase 5)\Wwise project\The Little Match Girl\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>D:\Uni\Creative Media Project\Production\Little Match Girl_sound (phase 5)\Wwise project\The Little Match Girl\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>F:\Uni\Creative Media Project\Production\Little Match Girl_sound (phase 5)\Wwise project\The Little Match Girl\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>D:\Uni\Creative Media Project\Production\Little Match Girl_sound (phase 5)\Wwise project\The Little Match Girl\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>

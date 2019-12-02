@@ -191,8 +191,10 @@ public class Player_Movement : MonoBehaviour
         {
             Sprint();   
             print("moving"); 
+            //StartCoroutine(DelayFootstep());
         }
 
+    
     }
 
     void Move(float h, float v)
@@ -211,7 +213,8 @@ public class Player_Movement : MonoBehaviour
 
             if (anim.GetBool("moving") == true)
             {
-                AkSoundEngine.PostEvent("Footsteps", gameObject);
+                
+                //StartCoroutine(DelayFootstep());
             }         
         }
     }
@@ -344,6 +347,16 @@ public class Player_Movement : MonoBehaviour
         {
             anim.Play("Sit");
         }
+    }
+
+    IEnumerator DelayFootstep()
+    {
+        AkSoundEngine.PostEvent("Footsteps", gameObject);
+        yield return new WaitForSeconds(1f);
+        AkSoundEngine.PostEvent("Stop_Footsteps", gameObject);
+       // yield return new WaitForSeconds(1f);
+        //AkSoundEngine.PostEvent("Footsteps", gameObject);
+        Debug.Log("have Waited");
     }
 /*
     private void OnGUI()

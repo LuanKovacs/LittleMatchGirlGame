@@ -191,7 +191,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 9aa07b7b919d034cbfac28f5e84093ed
     GuidInternal: 
-    m_lastTime: -8586265020423495086
+    m_lastTime: -8586263508054812252
     List:
     - name: Main
       guid: 78e40f0c79cc634ab6594fb6dfeac57d
@@ -216,7 +216,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 64f993c54fe3884e8614176382be8be1
     GuidInternal: 
-    m_lastTime: -8586265020424215799
+    m_lastTime: -8586263488283732046
     List:
     - name: Bliazzard_creature_scream
       guid: 2bc783fd26e36b46a4a6d2a22c2bcd7f
@@ -338,15 +338,15 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 50.614773
       minDuration: 49.8707
-    - name: Heart_beat
-      guid: 92136a1fafe4bc41989bc0baec6d2e8c
-      id: 3589338066
+    - name: Heart_beat_02
+      guid: 290105823dbe664a884577bb166d5f99
+      id: 2503839347
       PathAndIcons:
       - ElementName: Default Work Unit
         ObjectType: 12
-      - ElementName: Heart_beat
+      - ElementName: Heart_beat_02
         ObjectType: 3
-      Path: Default Work Unit\Heart_beat
+      Path: Default Work Unit\Heart_beat_02
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -566,6 +566,18 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
+    - name: Stop_Footsteps
+      guid: 89245d83dc9dc54eb6842f3e35173b28
+      id: 2963349357
+      PathAndIcons:
+      - ElementName: Default Work Unit
+        ObjectType: 12
+      - ElementName: Stop_Footsteps
+        ObjectType: 3
+      Path: Default Work Unit\Stop_Footsteps
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Stop_General
       guid: 4fa78db3bb47b54da4a18efd45449807
       id: 282925696
@@ -715,7 +727,7 @@ MonoBehaviour:
     ParentPhysicalPath: 
     guid: 171087b9c16ee04ca5319ced4eadbd03
     GuidInternal: 
-    m_lastTime: -8586277913983188449
+    m_lastTime: -8586263486020417715
     List:
     - name: Ambience_1
       guid: 9f1138ff043be244a2f2517d822fe8e8

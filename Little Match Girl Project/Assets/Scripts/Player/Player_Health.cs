@@ -43,14 +43,16 @@ public class Player_Health : MonoBehaviour
         //GameObject Fire = GameObject.Find("Fire_Bonfire");
         //GameObject Fire2 = GameObject.Find("Fire_Bonfire (1)");
 
-        //float FireVol = 40;
-        //float HeartbeatVol = 0;
+        //float FireVol = 10;
+        float HeartbeatVol = 60;
         //GameObject playerSound = GameObject.Find("player_Sound");
-        //AkSoundEngine.SetRTPCValue("Heart_beat", HeartbeatVol);
+        AkSoundEngine.PostEvent("Heart_beat_02", gameObject);
+        AkSoundEngine.SetRTPCValue("Heart_beat_02", HeartbeatVol);
         //AkSoundEngine.SetRTPCValue("Fire_crackling", FireVol);
+        //AkSoundEngine.PostEvent("Fire_crackling", gameObject);
         //AkSoundEngine.SetRTPCValue("Fire_crackling", FireVol);
         GameObject playerSound = GameObject.Find("player_Sound");
-        AkSoundEngine.PostEvent("Heart_beat", playerSound);
+        //AkSoundEngine.PostEvent("Heart_beat", playerSound);
 
         matchTUT.GetComponent<CanvasGroup>().alpha = 0;
         //matchTUT.canvasRenderer.SetAlpha(0f);
@@ -71,7 +73,7 @@ public class Player_Health : MonoBehaviour
         //gain HP
         if (gainHP == true && curHP < maxHP)
         {
-            float FireVol = 60;
+            //float FireVol = 10;
             curHP = curHP += curGainHP * Time.deltaTime;
             HealthPanel.alpha -= (curGainHP / 100) * Time.deltaTime;
             // HealthPanel.CrossFadeAlpha(-curHP, 100, false);//Tianna!!!!
@@ -79,7 +81,7 @@ public class Player_Health : MonoBehaviour
             //GameObject Fire = GameObject.Find("Fire_Bonfire");
             //GameObject Fire2 = GameObject.Find("Fire_Bonfire (1)");
             //AkSoundEngine.SetRTPCValue("Fire_crackling", FireVol);
-            AkSoundEngine.SetRTPCValue("Fire_crackling", FireVol);
+           // AkSoundEngine.SetRTPCValue("Fire_crackling", FireVol);
             //HealthPanel.alpha -= Time.deltaTime / curHP;
             if (curHP >= maxHP)
             {
@@ -108,9 +110,9 @@ public class Player_Health : MonoBehaviour
         if (curHP <= 10)//Death anim play
         {
             curDrainHP = 1.5f;
-           // float HeartbeatVol = 60;
+            //float HeartbeatVol = 60;
             //GameObject playerSound = GameObject.Find("player_Sound");
-           // AkSoundEngine.SetRTPCValue("Heart_beat", HeartbeatVol);
+            //AkSoundEngine.SetRTPCValue("Heart_beat", HeartbeatVol);
             Debug.Log("it Worked?");
             playerMove.canMove = false;
             GameObject Player = GameObject.Find("Player");
