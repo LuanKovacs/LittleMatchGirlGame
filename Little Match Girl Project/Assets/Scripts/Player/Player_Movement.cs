@@ -52,7 +52,7 @@ public class Player_Movement : MonoBehaviour
         curStam = maxStam;
         SpntPan.GetComponent<CanvasGroup>().alpha = 0;//***Tianna!!***
 
-        AkSoundEngine.SetRTPCValue("Foostep_volume", 5);
+        AkSoundEngine.SetRTPCValue("Foostep_volume", 1.5f);
 
         StartCoroutine(DelayFootstep());
 
