@@ -52,7 +52,10 @@ public class Player_Movement : MonoBehaviour
         curStam = maxStam;
         SpntPan.GetComponent<CanvasGroup>().alpha = 0;//***Tianna!!***
 
-        
+        AkSoundEngine.SetRTPCValue("Foostep_volume", 5);
+
+        StartCoroutine(DelayFootstep());
+
         GameObject PlayerModel = transform.Find("CharacterModel&Rig").gameObject;
         Animator anim = PlayerModel.GetComponent<Animator>();
        // anim.Play("StartingPosition");
@@ -191,7 +194,7 @@ public class Player_Movement : MonoBehaviour
         {
             Sprint();   
             print("moving"); 
-            //StartCoroutine(DelayFootstep());
+            
         }
 
     
@@ -351,12 +354,26 @@ public class Player_Movement : MonoBehaviour
 
     IEnumerator DelayFootstep()
     {
-        AkSoundEngine.PostEvent("Footsteps", gameObject);
-        yield return new WaitForSeconds(1f);
-        AkSoundEngine.PostEvent("Stop_Footsteps", gameObject);
-       // yield return new WaitForSeconds(1f);
-        //AkSoundEngine.PostEvent("Footsteps", gameObject);
-        Debug.Log("have Waited");
+        while(true)
+        {
+
+
+
+            if(anim.GetBool("moving") == true)
+            {
+
+                AkSoundEngine.PostEvent("Footsteps", gameObject);
+
+            }
+            
+            yield return new WaitForSeconds(0.25f);
+            // AkSoundEngine.PostEvent("Stop_Footsteps", gameObject);
+            // yield return new WaitForSeconds(1f);
+            //AkSoundEngine.PostEvent("Footsteps", gameObject);
+            Debug.Log("have Waited");
+
+        }
+        
     }
 /*
     private void OnGUI()

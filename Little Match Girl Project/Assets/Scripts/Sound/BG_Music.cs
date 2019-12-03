@@ -23,7 +23,7 @@ public class BG_Music : MonoBehaviour
     {
         if (BchurchPlayed == false)
         {
-            if (BadChurchMusic != null)
+            if (BadChurchMusic.activeInHierarchy)
             {
                 Debug.Log("play bad church music");
                 AkSoundEngine.PostEvent("Play_Church", gameObject);
@@ -92,7 +92,7 @@ public class BG_Music : MonoBehaviour
         }
     }
 
-    /* void OnTriggerExit(Collider other)
+     void OnTriggerExit(Collider other)
      {
          if (other.gameObject.tag == "Player")
          {
@@ -102,8 +102,8 @@ public class BG_Music : MonoBehaviour
                  {
                      //Debug.Log("play good church music");
                      //AkSoundEngine.PostEvent("Play_Intense_Church", gameObject);
-                     // AkSoundEngine.PostEvent("Stop_General", gameObject);
-                     AkSoundEngine.SetRTPCValue("Play_General", FadeVol);
+                     AkSoundEngine.PostEvent("Stop_General", gameObject);
+                     //AkSoundEngine.SetRTPCValue("Play_General", FadeVol);
 
 
                      GchurchPlayed = false;
@@ -145,5 +145,5 @@ public class BG_Music : MonoBehaviour
                  }
              }
          }
-     }*/
+     }
 }

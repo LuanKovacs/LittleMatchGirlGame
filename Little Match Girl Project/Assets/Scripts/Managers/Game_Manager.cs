@@ -75,7 +75,7 @@ public class Game_Manager : MonoBehaviour
     Player_Health playerHpRef;
     Player_Movement playerMove;
     LightMatchScript matchRef;
-    bool musicPlayed = false;
+ 
 
     private void Awake()
     {

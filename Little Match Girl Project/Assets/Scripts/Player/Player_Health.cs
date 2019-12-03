@@ -6,6 +6,7 @@ using UnityEngine.UI;//Tianna!!!!
 
 public class Player_Health : MonoBehaviour
 {
+
     public float maxHP = 100;
     public float curHP;
     public bool gainHP;
@@ -18,6 +19,8 @@ public class Player_Health : MonoBehaviour
 
     Player_Movement playerMove;
     Rigidbody playerRBref;  
+    public float HeartbeatVol = 60;
+    public float BreathingVol = 5;
 
     public void Revive() 
     {
@@ -40,19 +43,16 @@ public class Player_Health : MonoBehaviour
 
     private void Start()
     {
-        //GameObject Fire = GameObject.Find("Fire_Bonfire");
-        //GameObject Fire2 = GameObject.Find("Fire_Bonfire (1)");
+      
+        
+   
+        //AkSoundEngine.PostEvent("Girl_breathing", gameObject);
+        // AkSoundEngine.SetRTPCValue("Girl_breathing", BreathingVol);
 
-        //float FireVol = 10;
-        float HeartbeatVol = 60;
-        //GameObject playerSound = GameObject.Find("player_Sound");
+        AkSoundEngine.SetRTPCValue("Heart_beat_volume", HeartbeatVol);
         AkSoundEngine.PostEvent("Heart_beat_02", gameObject);
-        AkSoundEngine.SetRTPCValue("Heart_beat_02", HeartbeatVol);
-        //AkSoundEngine.SetRTPCValue("Fire_crackling", FireVol);
-        //AkSoundEngine.PostEvent("Fire_crackling", gameObject);
-        //AkSoundEngine.SetRTPCValue("Fire_crackling", FireVol);
-        GameObject playerSound = GameObject.Find("player_Sound");
-        //AkSoundEngine.PostEvent("Heart_beat", playerSound);
+        
+
 
         matchTUT.GetComponent<CanvasGroup>().alpha = 0;
         //matchTUT.canvasRenderer.SetAlpha(0f);
@@ -70,6 +70,7 @@ public class Player_Health : MonoBehaviour
     {
        
        
+
         //gain HP
         if (gainHP == true && curHP < maxHP)
         {
@@ -99,6 +100,7 @@ public class Player_Health : MonoBehaviour
             //HealthPanel.CrossFadeAlpha(1, curHP, true);//Tianna!!!!
             //HealthPanel.canvasRenderer.SetAlpha(curHP / 1000);
             //HealthPanel.alpha += Time.deltaTime / curHP;
+            //********** */
             HealthPanel.alpha += (curDrainHP / 100) * Time.deltaTime;
         }
 
@@ -110,15 +112,15 @@ public class Player_Health : MonoBehaviour
         if (curHP <= 10)//Death anim play
         {
             curDrainHP = 1.5f;
-            //float HeartbeatVol = 60;
-            //GameObject playerSound = GameObject.Find("player_Sound");
-            //AkSoundEngine.SetRTPCValue("Heart_beat", HeartbeatVol);
+ 
             Debug.Log("it Worked?");
             playerMove.canMove = false;
             GameObject Player = GameObject.Find("Player");
             GameObject PlayerModel = Player.transform.Find("CharacterModel&Rig").gameObject;
             Animator anim = PlayerModel.GetComponent<Animator>();
             anim.Play("Death");//Tianna!!!!
+
+             AkSoundEngine.SetRTPCValue("Heart_beat_volume", HeartbeatVol);
         }
         else
         {
