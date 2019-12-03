@@ -24,8 +24,15 @@ public class Player_Health : MonoBehaviour
     public float HeartbeatVol = 0;
     public float BreathingVol = 5;
 
+    GameObject EnemySound;
+    
+
     public void Revive() 
     {
+        EnemySound = GameObject.Find("Monster");
+
+        AkSoundEngine.StopAll(EnemySound);
+
         HeartbeatVol = 0f;
         curGainHP = maxGainHP;
         curDrainHP = maxDrainHP;

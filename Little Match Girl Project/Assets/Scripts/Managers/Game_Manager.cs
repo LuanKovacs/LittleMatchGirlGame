@@ -68,8 +68,12 @@ public class Game_Manager : MonoBehaviour
     public GameObject losePanel;
     public CanvasGroup LosePanelGroup;//Tianna!!!!
     public GameObject allLighting;
+    public GameObject FinalDoors;
+
+    public object result;
     //public GameObject BGmusic;
     Color32 setColor = new Color32(51,66,91, 0);
+
 
     
     Player_Health playerHpRef;
@@ -244,12 +248,26 @@ public class Game_Manager : MonoBehaviour
 
     void FinalCutScene()//Tianna!!!!
     {
+        GameObject CityMusic = GameObject.Find("CityMusic");
         GameObject Player = GameObject.Find("Player");
         GameObject PlayerModel = Player.transform.Find("CharacterModel&Rig").gameObject;
         Animator anim = PlayerModel.GetComponent<Animator>();
-        anim.Play("");
-
+        //StartCoroutine(MoveToFinalAnim());
+        //anim.GetBool("moving") = false;
+        AkSoundEngine.SetRTPCValue("Foostep_volume", 0f);
+        AkSoundEngine.StopAll(Player);
+        AkSoundEngine.PostEvent("Stop_City", CityMusic);
+        AkSoundEngine.PostEvent("Play_Musicbox", gameObject);
+        anim.Play("FinalDeath");
+        Player_Movement canmove = Player.GetComponent<Player_Movement>();
+        canmove.canMove = false;
+        losePanel.SetActive(true);
+        LosePanelGroup.alpha += (0.999f) * Time.deltaTime * 3f;
+        FinalDoors.SetActive(true);
         StartCoroutine(DefaultWin());
+   
+        //********Tianna
+        // FinalDoors.SetActive(true);
     }
 
     IEnumerator AnimDelayTime()//Tianna!!!!
@@ -303,7 +321,10 @@ public class Game_Manager : MonoBehaviour
     {
         
         winPanel.SetActive(true);
-        yield return new WaitForSeconds(2.0f);
+        //yield return new WaitForSeconds(2.0f);
+        
+        yield return new WaitForSeconds(5.0f);
+        AkSoundEngine.PostEvent("Stop_Musicbox", gameObject);
         SceneManager.LoadScene("New LMG");
 
     }
@@ -349,5 +370,36 @@ public class Game_Manager : MonoBehaviour
             camAnim.enabled = false;
         }
 
+    }
+
+    IEnumerator MoveToFinalAnim()
+    {
+        Debug.Log("coroutine is playing!!");
+
+        Player_Movement canmove = Player.GetComponent<Player_Movement>();
+
+        canmove.canMove = false;
+        Vector3 currentPos = transform.position;
+        Transform tarPos = GameObject.FindWithTag("FinalPos").transform;
+
+        //GameObject Player = GameObject.Find("Player");
+        GameObject PlayerModel = Player.transform.Find("CharacterModel&Rig").gameObject;
+        Animator anim = PlayerModel.GetComponent<Animator>();
+
+        anim.SetFloat("Speed", 8);//Anim play walk
+
+        if (currentPos != tarPos.position && !canmove.canMove)
+        {
+            Debug.Log("hasPassed");
+            transform.LookAt(tarPos);
+            transform.position = Vector3.MoveTowards(currentPos, tarPos.position, 5 * Time.deltaTime);
+            yield return new WaitForSeconds(5.0f);
+        }
+        else
+        {
+            
+        }
+
+        //yield return result;
     }
 }

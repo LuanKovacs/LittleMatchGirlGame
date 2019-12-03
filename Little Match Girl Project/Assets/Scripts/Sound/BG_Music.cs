@@ -12,6 +12,11 @@ public class BG_Music : MonoBehaviour
 
     public GameObject BadChurchMusic;
     public string ObjName;
+
+    public GameObject GoodChurch;
+    public GameObject BadChurch;
+    public GameObject Forest;
+    public GameObject City;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,11 +31,16 @@ public class BG_Music : MonoBehaviour
             if (BadChurchMusic.activeInHierarchy)
             {
                 Debug.Log("play bad church music");
-                AkSoundEngine.PostEvent("Play_Church", gameObject);
-                AkSoundEngine.PostEvent("Stop_Intense_Church", gameObject);
+                AkSoundEngine.PostEvent("Play_Church", BadChurch);
+                AkSoundEngine.PostEvent("Stop_Intense_Church", GoodChurch);
 
                 BchurchPlayed = true;
             }
+        }
+
+        if (CityPlayed == true)
+        {
+            AkSoundEngine.PostEvent("Stop_Church", BadChurch);
         }
     }
 
@@ -43,8 +53,8 @@ public class BG_Music : MonoBehaviour
                 if (ObjName == "GoodChurchMusic")
                 {
                     Debug.Log("play good church music");
-                    AkSoundEngine.PostEvent("Play_Intense_Church", gameObject);
-                    AkSoundEngine.PostEvent("Stop_General", gameObject);
+                    AkSoundEngine.PostEvent("Play_Intense_Church", GoodChurch);
+                    AkSoundEngine.PostEvent("Stop_General", Forest);
 
                     GchurchPlayed = true;
                 }
@@ -67,8 +77,9 @@ public class BG_Music : MonoBehaviour
                 if (ObjName == "CityMusic")
                 {
                     Debug.Log("play city music");
-                    AkSoundEngine.PostEvent("Play_City", gameObject);
-                    AkSoundEngine.PostEvent("Stop_Church", gameObject);
+                    AkSoundEngine.PostEvent("Play_City", City);
+                    AkSoundEngine.PostEvent("Stop_Church", BadChurch);
+                    Debug.Log("STOP church muse");
 
                     CityPlayed = true;
                 }
@@ -79,7 +90,7 @@ public class BG_Music : MonoBehaviour
                 if (ObjName == "ForestMusic")
                 {
                     Debug.Log("play forest music");
-                    AkSoundEngine.PostEvent("Play_General", gameObject);
+                    AkSoundEngine.PostEvent("Play_General", Forest);
 
                     ForestPlayed = true;
                 }
@@ -92,7 +103,7 @@ public class BG_Music : MonoBehaviour
         }
     }
 
-     void OnTriggerExit(Collider other)
+   /*  void OnTriggerExit(Collider other)
      {
          if (other.gameObject.tag == "Player")
          {
@@ -145,5 +156,5 @@ public class BG_Music : MonoBehaviour
                  }
              }
          }
-     }
+     }*/
 }
