@@ -95,6 +95,7 @@ public class Game_Manager : MonoBehaviour
     {
         BackgroundMusic.SetActive(true);
         yield return new WaitForSeconds(1);
+        EventManager.TriggerEvent("GameStart");
         playerHpRef.enabled = true;
         playerMove.canMove = true;
         
