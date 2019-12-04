@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class MenuSwitch : MonoBehaviour
 {
@@ -58,6 +59,11 @@ public class MenuSwitch : MonoBehaviour
                 OnCanvas.SetActive(true);
                 GameObject.Find("EventSystem").GetComponent<EventSystem>().SetSelectedGameObject(FirstButton, null);
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            SceneManager.LoadScene("New LMG");
         }
     }
 }
