@@ -1,0 +1,49 @@
+Event	ID	Name			Wwise Object Path	Notes
+	50938553	Stop_Church			\Default Work Unit\Stop_Church	
+	282925696	Stop_General			\Default Work Unit\Stop_General	
+	702602660	Stop_Musicbox			\Default Work Unit\Stop_Musicbox	
+	811609326	Play_Musicbox			\Default Work Unit\Play_Musicbox	
+	1219117175	Play_Church			\Default Work Unit\Play_Church	
+	1363414509	Stop_City			\Default Work Unit\Stop_City	
+	1372817730	Stop_Chase			\Default Work Unit\Stop_Chase	
+	1521930547	Seek_setState			\Default Work Unit\Seek_setState	
+	2020325386	Play_General			\Default Work Unit\Play_General	
+	2131633205	Enable_States			\Default Work Unit\Enable_States	
+	2213437498	Play_Intense_Church			\Default Work Unit\Play_Intense_Church	
+	2503839347	Heart_beat_02			\Default Work Unit\Heart_beat_02	
+	2580568564	Stop_Intense_Church			\Default Work Unit\Stop_Intense_Church	
+	3113730691	Play_BG_Music			\Default Work Unit\Play_BG_Music	
+	3366829419	Play_City			\Default Work Unit\Play_City	
+	3471094664	Play_Chase			\Default Work Unit\Play_Chase	
+	3542492639	Play_Memories			\Default Work Unit\Play_Memories	
+	3847506185	Stop_Memories			\Default Work Unit\Stop_Memories	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	3991942870	Music			\Default Work Unit\Music	
+
+State	ID	Name	State Group			Notes
+	0	None	Music			
+	133642231	General	Music			
+	417490929	Chase	Music			
+	457374884	Memories	Music			
+	1867380161	Intense_Church	Music			
+	2568407992	Church	Music			
+	2785641797	Musicbox	Music			
+	3888786832	City	Music			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	4219873143	Heart_beat_volume			\Default Work Unit\Heart_beat_volume	
+
+Effect plug-ins	ID	Name	Type				Notes
+	3491912473	Club_Music_Distant_03	Wwise Parametric EQ			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	116759887	The_Church_of_the_Dying	D:\Uni\Creative Media Project\Production\Little Match Girl_sound (phase 5)\Wwise project\The Little Match Girl\.cache\Windows\SFX\BGmusic.wav\The_Church_of_the_Dying_A224571F.wem		\Interactive Music Hierarchy\Music\BG Music\Intense Church\The_Church_of_the_Dying\The_Church_of_the_Dying		4200064
+	139895379	Gale_Run (1)	D:\Uni\Creative Media Project\Production\Little Match Girl_sound (phase 5)\Wwise project\The Little Match Girl\.cache\Windows\SFX\BGmusic.wav\Gale_Run (1)_A224571F.wem		\Interactive Music Hierarchy\Music\BG Music\Chase\Gale_Run (1)\Gale_Run (1)		9252928
+	494399568	Musicbox_flashback_01	D:\Uni\Creative Media Project\Production\Little Match Girl_sound (phase 5)\Wwise project\The Little Match Girl\.cache\Windows\SFX\BGmusic.wav\Musicbox_flashback_01_A224571F.wem		\Interactive Music Hierarchy\Music\BG Music\Memories\Musicbox_flashback_01\Musicbox_flashback_01		3259284
+	512541580	Church	D:\Uni\Creative Media Project\Production\Little Match Girl_sound (phase 5)\Wwise project\The Little Match Girl\.cache\Windows\SFX\BGmusic.wav\Church_A224571F.wem		\Interactive Music Hierarchy\Music\BG Music\Church\Church\Church		14123584
+	543626650	City_of_Past_Present_and_Future (2)	D:\Uni\Creative Media Project\Production\Little Match Girl_sound (phase 5)\Wwise project\The Little Match Girl\.cache\Windows\SFX\BGmusic.wav\City_of_Past_Present_and_Future (2)_A224571F.wem		\Interactive Music Hierarchy\Music\BG Music\City\City_of_Past_Present_and_Future (2)\City_of_Past_Present_and_Future (2)		38757952
+	772458131	Normal_version	D:\Uni\Creative Media Project\Production\Little Match Girl_sound (phase 5)\Wwise project\The Little Match Girl\.cache\Windows\SFX\BGmusic.wav\Normal_version_A224571F.wem		\Interactive Music Hierarchy\Music\BG Music\Musicbox\Normal Musicbox\Normal_version		2932776
+	840433878	Meloncholy_Deep_Mixed (1)	D:\Uni\Creative Media Project\Production\Little Match Girl_sound (phase 5)\Wwise project\The Little Match Girl\.cache\Windows\SFX\BGmusic.wav\Meloncholy_Deep_Mixed (1)_A224571F.wem		\Interactive Music Hierarchy\Music\BG Music\General\Meloncholy_Deep_Mixed (1)\Meloncholy_Deep_Mixed (1)		18911296
+	1009281777	Heart beat_sfx	D:\Uni\Creative Media Project\Production\Little Match Girl_sound (phase 5)\Wwise project\The Little Match Girl\.cache\Windows\SFX\Heart beat_A224571F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Game warinings\Heart beat\Heart beat_sfx		219428
+
