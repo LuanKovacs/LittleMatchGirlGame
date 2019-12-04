@@ -28,7 +28,8 @@ public class RespawnCheckpoint : MonoBehaviour
     }
 
     public void Respawn()
-    {    
+    {
+        checkpoints = GameObject.FindGameObjectsWithTag("Checkpoints");
         StartCoroutine(StartRespawn());
     }
 
