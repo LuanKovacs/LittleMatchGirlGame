@@ -64,6 +64,7 @@ public class Game_Manager : MonoBehaviour
     public GameObject sitTrigger;
     public GameObject BrokenChurchLight;
     public GameObject churchSpotlit;
+    public GameObject DetectShadows;
     public GameObject winPanel;
     public GameObject losePanel;
     public CanvasGroup LosePanelGroup;//Tianna!!!!
@@ -228,6 +229,7 @@ public class Game_Manager : MonoBehaviour
 
     void ChurchExit()
     {
+        DetectShadows.SetActive(true);
         blizzard.SetActive(true);
         GameObject startGrave = GameObject.Find("GraveStart");
         playerHpRef.curDrainHP = playerHpRef.maxDrainHP;
