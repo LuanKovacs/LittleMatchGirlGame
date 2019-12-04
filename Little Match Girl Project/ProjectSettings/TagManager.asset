@@ -15,6 +15,7 @@ TagManager:
   - Ground
   - PSburst
   - FinalPos
+  - npc
   layers:
   - Default
   - TransparentFX
