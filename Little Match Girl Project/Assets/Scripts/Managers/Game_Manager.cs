@@ -323,7 +323,7 @@ public class Game_Manager : MonoBehaviour
         winPanel.SetActive(true);
         //yield return new WaitForSeconds(2.0f);
         
-        yield return new WaitForSeconds(5.0f);
+        yield return new WaitForSeconds(10.0f);
         AkSoundEngine.PostEvent("Stop_Musicbox", gameObject);
         SceneManager.LoadScene("New LMG");
 
