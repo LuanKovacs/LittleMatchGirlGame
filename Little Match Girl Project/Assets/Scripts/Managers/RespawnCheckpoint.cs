@@ -46,16 +46,19 @@ public class RespawnCheckpoint : MonoBehaviour
         float closestDistSqr = Mathf.Infinity;
         foreach (GameObject checkP in checkpoints)
         {
-            print("Foreach");
-            Vector3 dirToTarget = checkP.transform.position - curPos;
-            float distSqrToTarget = dirToTarget.sqrMagnitude;
-            if (distSqrToTarget < closestDistSqr)
-            {
-                closestDistSqr = distSqrToTarget;
-                respawnTarget = checkP.transform;
+            if (checkP.activeSelf == true)
+            { 
+                print("Foreach");
+                Vector3 dirToTarget = checkP.transform.position - curPos;
+                float distSqrToTarget = dirToTarget.sqrMagnitude;
+                if (distSqrToTarget < closestDistSqr)
+                {
+                    closestDistSqr = distSqrToTarget;
+                    respawnTarget = checkP.transform;
                 
-                Player.position = checkP.transform.position;//Teleport player
-                print("Respawn");
+                    Player.position = checkP.transform.position;//Teleport player
+                    print("Respawn");
+                }
             }
         }
     }

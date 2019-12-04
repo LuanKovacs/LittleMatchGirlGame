@@ -228,6 +228,7 @@ public class Game_Manager : MonoBehaviour
 
     void ChurchExit()
     {
+        GameObject.Find("GraveStart").SetActive(true);
         blizzard.SetActive(true);
         GameObject startGrave = GameObject.Find("GraveStart");
         playerHpRef.curDrainHP = playerHpRef.maxDrainHP;
