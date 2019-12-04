@@ -228,7 +228,6 @@ public class Game_Manager : MonoBehaviour
 
     void ChurchExit()
     {
-        GameObject.Find("GraveStart").SetActive(true);
         blizzard.SetActive(true);
         GameObject startGrave = GameObject.Find("GraveStart");
         playerHpRef.curDrainHP = playerHpRef.maxDrainHP;
@@ -337,18 +336,17 @@ public class Game_Manager : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
 
         playerHpRef.enabled = false;
+        GetComponent<RespawnCheckpoint>().Respawn();
 
         yield return new WaitForSeconds(3.0f);
-        CameraMain.GetComponent<CameraTopDown>().enabled = true;
-
+        Player.transform.rotation = Quaternion.identity;
         playerHpRef.Revive();
         playerHpRef.enabled = true;
-        GetComponent<RespawnCheckpoint>().Respawn();
-        Player.transform.rotation = Quaternion.identity;
 
         EventManager.TriggerEvent("Reset");
 
         losePanel.SetActive(false);
+        CameraMain.GetComponent<CameraTopDown>().enabled = true;
 
         GameObject foresttrigger = GameObject.Find("EventTrigger BeginChase");
         GameObject citytrigger = GameObject.Find("EventTrigger BeginCityChase");
