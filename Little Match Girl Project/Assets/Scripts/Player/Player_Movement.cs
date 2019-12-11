@@ -171,10 +171,14 @@ public class Player_Movement : MonoBehaviour
             // anim.Play("Run");
             //       Vector3 movement = new Vector3(h, 0f, v);
 
-            //Vector3 direction = new Vector3(Input.GetAxis("HorizontalKey"), 0, Input.GetAxis("VerticalKey"));
+   //borken         //Vector3 direction = new Vector3(Input.GetAxis("HorizontalKey"), 0, Input.GetAxis("VerticalKey"));
             // Vector3 rightMovement = right * Input.GetAxis("HorizontalKey");
             // Vector3 upMovement = forward * Input.GetAxis("VerticalKey");
             //Vector3 movement = Vector3.Normalize(rightMovement + upMovement);
+
+            //working         
+            //movement = Vector3.Normalize(right * h + forward * v);
+            //movement = Vector3.ClampMagnitude(movement, 1.0f) * moveSpeed;
 
             movement = Vector3.ClampMagnitude(movement, 1.0f) * moveSpeed;
             anim.SetFloat("Speed", movement.magnitude);
